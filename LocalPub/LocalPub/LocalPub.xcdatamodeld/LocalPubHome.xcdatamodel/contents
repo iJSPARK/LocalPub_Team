@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19574" systemVersion="20G165" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CallList" representedClassName="CallList" syncable="YES">
+        <attribute name="callDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="callGender" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="callImage" optional="YES" attributeType="String"/>
+        <attribute name="callName" optional="YES" attributeType="String"/>
+        <attribute name="callTime" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="callUID" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="CallList" positionX="-63" positionY="27" width="128" height="119"/>
+    </elements>
+</model>

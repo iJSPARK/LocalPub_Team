@@ -1,0 +1,88 @@
+/* 
+  Localizable.strings
+  LocalPub
+
+  Created by Serang MacBook Pro 16 on 2022/01/19.
+  
+*/
+
+"CurrentLanguage"= "Current Language";
+
+"Agreement" = "Agreement";
+"ProfileInformation" = "Profile Information";
+"SelectLanguages" = "Select Language";
+"SelfIntroduce" = "Self Introduce";
+
+"Verification" = "Verification";
+"Join" = "Join";
+"Login" = "LogIn";
+"Logout" = "Logout";
+"Save" = "Save";
+
+"InputEmail" = "Input eMail";
+"InputPW" = "Input PassWord";
+"InputPhone" = "Phone Number";
+"InputVerificationCode" = "Input Code";
+"InputName" = "Input Name";
+
+"eMail" = "eMail";
+"PW" = "PW";
+"PhoneNo" = "Cell Phone No.";
+"PhoneCode" = "Code";
+
+"Name" = "Name";
+"Gender" = "Gender";
+"Birth" = "Birth";
+
+"Male" = "Male";
+"Female" = "Female";
+
+"SelectResidence" = "Select Residence";
+"Residence" = "Residence";
+
+"Seoul" = "Seoul";
+"Busan" = "Busan";
+"Incheon" = "Incheon";
+
+"SelectLanguage" = "Select Language";
+"NativeLanguage" = "Native Language";
+"PracticeLanguage" = "Practice Language";
+
+"Korean" = "Korean";
+"English" = "English";
+"French" = "French";
+"Japanese" = "Japanese";
+
+"Experience" = "Language Experience";
+"AboutMe" = "About Me";
+
+"JoinError" = "Join Error";
+"EmailAleadyInUse" = "Email is aleady in use!";
+"WeekPassword" = "The password must be 6 characters long or more!";
+
+"CheckEmailVerification" = "Verify your Email Verification";
+"SentEmailVerification" = "Email Verification is sented!";
+"NotEmailVerification" = "Email is not verified!";
+"SuccessEmailVerification" = "Email is verified!";
+
+"CheckPhoneVerification" = "Verify your Phone Verification";
+"SentPhoneVerification" = "Phone Verification is sented!";
+"NotPhoneVerification" = "Phone is not verified!";
+"SuccessPhoneVerification" = "Phone is verified!";
+
+"LoginError" = "Login Error";
+"LoginSuccess" = "Login Success";
+
+"VerificationError" = "Verification Error";
+"VerificationSuccess" = "Verification Success";
+
+"FindFriend" = "Find Friend";
+
+"CallList" = "Call Friends List";
+"NotAnyCalls" = "You don't have any Calls yet.";
+
+"CallDate" = "Call Date";
+"CallTime" = "Call Time";
+
+"Continue" = "Continue";
+"Nationality" = "Nationality";
