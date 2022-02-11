@@ -25,6 +25,7 @@ class CountryCodeViewController: UIViewController, UITableViewDelegate, UITableV
             let selectedData = countryCodeInfos[indexPath.row]
             LP.selectedCountryCode = selectedData
         }
+        self.navigationItem.title = "제목을 바꿔요"
     }
     
 //    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

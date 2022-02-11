@@ -43,7 +43,7 @@ class loginPhoneViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         print(selectedCountryCode)
-        let text = NSAttributedString(string: selectedCountryCode.countryEmoji + selectedCountryCode.countryCode, attributes: [.font: UIFont.systemFont(ofSize: 15)])
+        let text = NSAttributedString(string: selectedCountryCode.countryEmoji + " " + selectedCountryCode.countryCode, attributes: [.font: UIFont.systemFont(ofSize: 15)])
         countryCodeButton.setAttributedTitle(text, for: .normal)
     }
     
