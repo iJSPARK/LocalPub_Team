@@ -4,12 +4,7 @@
 //
 //  Created by Junseo Park on 2/6/22.
 //
-
-// enum으로 지역 여러개
-// 뷰 (테이블/컬렉션) 올림
-// 모델 (데이터 입력, 업로드)
-// 국기 이모지 빼고 phonenmber 문자열 앞에다 붙임
-// 디폴드 값 = 유저 (iso ㅣocation)
+// 초기값 = 유저 (iso ㅣocation)
 
 import Foundation
 
