@@ -14,8 +14,8 @@ class loginPhoneViewController: UIViewController {
     
     let myUserDefaults = UserDefaults.standard
     
-    var selectedCountryCode = Country(countryEmoji: "input", countryName: "input", countryCode: "input")
-        
+    var selectedCountryCode = countryCodeInfos[0]
+    
     @IBOutlet var navLoginPhone: UINavigationItem!
     
     @IBOutlet var txtPhoneNo: UITextField!
