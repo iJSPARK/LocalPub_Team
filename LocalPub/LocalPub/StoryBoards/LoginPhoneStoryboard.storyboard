@@ -67,15 +67,15 @@
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="PhoneNumberBox" translatesAutoresizingMaskIntoConstraints="NO" id="BVE-RZ-jYw">
                                                         <rect key="frame" x="0.0" y="0.0" width="272" height="44"/>
                                                         <constraints>
+                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="9ep-pG-6fw"/>
                                                             <constraint firstAttribute="height" constant="44" id="Cps-Sd-qtg"/>
                                                             <constraint firstAttribute="width" constant="272" id="s7q-Nm-NcW"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Olc-Gw-SiP">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Olc-Gw-SiP">
                                                         <rect key="frame" x="0.0" y="0.0" width="88" height="44"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="88" id="auy-8R-ZEV"/>
-                                                            <constraint firstAttribute="height" constant="44" id="vk1-G7-nkp"/>
                                                         </constraints>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Button">
@@ -85,21 +85,21 @@
                                                             <segue destination="aVJ-rh-CFU" kind="presentation" identifier="" modalPresentationStyle="fullScreen" id="rak-FH-l3R"/>
                                                         </connections>
                                                     </button>
-                                                    <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wRn-yf-mzh">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wRn-yf-mzh">
                                                         <rect key="frame" x="108" y="0.0" width="154" height="44"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="44" id="WVE-g0-FRu"/>
-                                                        </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                     </textField>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
+                                                    <constraint firstItem="Olc-Gw-SiP" firstAttribute="top" secondItem="P7x-Xx-9yz" secondAttribute="top" id="6Dy-Fh-IC6"/>
                                                     <constraint firstItem="Olc-Gw-SiP" firstAttribute="leading" secondItem="P7x-Xx-9yz" secondAttribute="leading" id="DjI-aB-awg"/>
                                                     <constraint firstItem="wRn-yf-mzh" firstAttribute="leading" secondItem="Olc-Gw-SiP" secondAttribute="trailing" constant="20" id="FfC-4b-HLc"/>
-                                                    <constraint firstAttribute="height" constant="44" id="P1W-FO-ray"/>
+                                                    <constraint firstItem="wRn-yf-mzh" firstAttribute="top" secondItem="P7x-Xx-9yz" secondAttribute="top" id="GiV-ga-mgS"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Olc-Gw-SiP" secondAttribute="bottom" id="O8V-ZF-3iU"/>
                                                     <constraint firstAttribute="width" constant="272" id="Vqz-xH-uoi"/>
+                                                    <constraint firstAttribute="bottom" secondItem="wRn-yf-mzh" secondAttribute="bottom" id="fBv-R8-f0f"/>
                                                     <constraint firstAttribute="trailing" secondItem="wRn-yf-mzh" secondAttribute="trailing" constant="10" id="hU4-CS-Lsr"/>
                                                     <constraint firstItem="BVE-RZ-jYw" firstAttribute="leading" secondItem="P7x-Xx-9yz" secondAttribute="leading" id="zxy-td-Eh9"/>
                                                 </constraints>
@@ -131,14 +131,11 @@
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="VerificationBox" translatesAutoresizingMaskIntoConstraints="NO" id="Cfc-sh-fVB">
                                                 <rect key="frame" x="0.0" y="0.0" width="358" height="44"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="44" id="OWy-Fp-8HI"/>
+                                                    <constraint firstAttribute="height" constant="44" id="QgG-Ev-kid"/>
                                                 </constraints>
                                             </imageView>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NEd-vU-EfR">
                                                 <rect key="frame" x="10" y="0.0" width="338" height="44"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="44" id="p4q-H5-V1u"/>
-                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             </textField>
@@ -149,7 +146,6 @@
                                             <constraint firstAttribute="bottom" secondItem="Cfc-sh-fVB" secondAttribute="bottom" id="B8s-ZY-7iL"/>
                                             <constraint firstItem="NEd-vU-EfR" firstAttribute="leading" secondItem="g2O-eH-iec" secondAttribute="leading" constant="10" id="H7S-6j-TIB"/>
                                             <constraint firstAttribute="width" constant="358" id="Iux-Nx-68S"/>
-                                            <constraint firstAttribute="height" constant="44" id="KST-lp-loN"/>
                                             <constraint firstAttribute="trailing" secondItem="NEd-vU-EfR" secondAttribute="trailing" constant="10" id="Prr-du-dVG"/>
                                             <constraint firstItem="Cfc-sh-fVB" firstAttribute="leading" secondItem="g2O-eH-iec" secondAttribute="leading" id="WR6-02-10e"/>
                                             <constraint firstAttribute="bottom" secondItem="NEd-vU-EfR" secondAttribute="bottom" id="dip-Vd-1cJ"/>
@@ -170,7 +166,7 @@
                             <constraint firstItem="RlP-u2-svO" firstAttribute="trailing" secondItem="5mW-x9-1PZ" secondAttribute="trailing" constant="16" id="SNT-iE-8js"/>
                             <constraint firstItem="RlP-u2-svO" firstAttribute="bottom" secondItem="5mW-x9-1PZ" secondAttribute="bottom" constant="20" id="TQR-Ks-MNj"/>
                             <constraint firstItem="5mW-x9-1PZ" firstAttribute="leading" secondItem="RlP-u2-svO" secondAttribute="leading" constant="16" id="nKb-Ly-0B7"/>
-                            <constraint firstItem="RlP-u2-svO" firstAttribute="trailing" secondItem="4SH-aK-cC4" secondAttribute="trailing" constant="16" id="tN9-tY-4cw"/>
+                            <constraint firstItem="RlP-u2-svO" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="4SH-aK-cC4" secondAttribute="trailing" constant="16" id="tN9-tY-4cw"/>
                             <constraint firstItem="SwB-0i-uyD" firstAttribute="top" secondItem="RlP-u2-svO" secondAttribute="top" constant="20" id="u1h-yr-Lkp"/>
                         </constraints>
                     </view>

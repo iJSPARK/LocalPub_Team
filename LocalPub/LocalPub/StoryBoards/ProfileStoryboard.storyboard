@@ -188,14 +188,14 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="E2b-k0-PQf" secondAttribute="trailing" constant="16" id="0Hq-qG-0YB"/>
+                            <constraint firstItem="daD-32-JJ9" firstAttribute="leading" secondItem="qeU-GO-Qn6" secondAttribute="leading" constant="16" id="MXa-wY-CPc"/>
+                            <constraint firstItem="qeU-GO-Qn6" firstAttribute="trailing" secondItem="daD-32-JJ9" secondAttribute="trailing" constant="16" id="QNx-jo-TrD"/>
                             <constraint firstItem="qeU-GO-Qn6" firstAttribute="trailing" secondItem="dzM-JG-TQv" secondAttribute="trailing" constant="16" id="SdQ-5A-AuZ"/>
                             <constraint firstItem="daD-32-JJ9" firstAttribute="top" secondItem="E2b-k0-PQf" secondAttribute="bottom" constant="20" id="Th5-V9-f09"/>
                             <constraint firstItem="qeU-GO-Qn6" firstAttribute="bottom" secondItem="dzM-JG-TQv" secondAttribute="bottom" constant="20" id="YLD-cO-W9L"/>
                             <constraint firstItem="E2b-k0-PQf" firstAttribute="top" secondItem="qeU-GO-Qn6" secondAttribute="top" constant="20" id="a3c-Z0-uz1"/>
                             <constraint firstItem="E2b-k0-PQf" firstAttribute="leading" secondItem="oKw-jF-AXG" secondAttribute="leading" constant="16" id="bEK-Yf-xJM"/>
-                            <constraint firstItem="qeU-GO-Qn6" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="daD-32-JJ9" secondAttribute="trailing" constant="16" id="cby-ol-SP0"/>
                             <constraint firstItem="dzM-JG-TQv" firstAttribute="leading" secondItem="qeU-GO-Qn6" secondAttribute="leading" constant="16" id="vle-qQ-JNi"/>
-                            <constraint firstItem="daD-32-JJ9" firstAttribute="leading" secondItem="qeU-GO-Qn6" secondAttribute="leading" constant="16" id="wRR-PF-lC0"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Profile Information" id="h4R-2C-LKO" userLabel="I"/>
