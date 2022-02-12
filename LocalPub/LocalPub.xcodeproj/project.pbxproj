@@ -39,6 +39,9 @@
 		8470BDD927B5A13200D1A7C6 /* AgreementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470BDD827B5A13200D1A7C6 /* AgreementViewController.swift */; };
 		8470BDDB27B5A16000D1A7C6 /* AgreementStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8470BDDA27B5A16000D1A7C6 /* AgreementStoryboard.storyboard */; };
 		8470C00227B5A1B100D1A7C6 /* MyCheckBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470C00127B5A1B100D1A7C6 /* MyCheckBtn.swift */; };
+		8470C06327B835CE00D1A7C6 /* PictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470C06227B835CE00D1A7C6 /* PictureViewController.swift */; };
+		8470C06527B8362200D1A7C6 /* PictureStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8470C06427B8362200D1A7C6 /* PictureStoryboard.storyboard */; };
+		8470C06727B8388200D1A7C6 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470C06627B8388200D1A7C6 /* ImageManager.swift */; };
 		84A1D51E2797DC4E00CF7104 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A1D51D2797DC4E00CF7104 /* AppDelegate.swift */; };
 		84A1D5202797DC4E00CF7104 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A1D51F2797DC4E00CF7104 /* SceneDelegate.swift */; };
 		84A1D5222797DC4E00CF7104 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A1D5212797DC4E00CF7104 /* MainViewController.swift */; };
@@ -81,6 +84,9 @@
 		8470BDD827B5A13200D1A7C6 /* AgreementViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgreementViewController.swift; sourceTree = "<group>"; };
 		8470BDDA27B5A16000D1A7C6 /* AgreementStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AgreementStoryboard.storyboard; sourceTree = "<group>"; };
 		8470C00127B5A1B100D1A7C6 /* MyCheckBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCheckBtn.swift; sourceTree = "<group>"; };
+		8470C06227B835CE00D1A7C6 /* PictureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureViewController.swift; sourceTree = "<group>"; };
+		8470C06427B8362200D1A7C6 /* PictureStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PictureStoryboard.storyboard; sourceTree = "<group>"; };
+		8470C06627B8388200D1A7C6 /* ImageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 		84A1D51A2797DC4E00CF7104 /* LocalPub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocalPub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A1D51D2797DC4E00CF7104 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84A1D51F2797DC4E00CF7104 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -193,6 +199,7 @@
 				84E2267E27A3F16800097CF5 /* User.swift */,
 				8470BD9827B2FA3E00D1A7C6 /* Call.swift */,
 				8470BD8127B2F25B00D1A7C6 /* Image.swift */,
+				8470C06627B8388200D1A7C6 /* ImageManager.swift */,
 				8470BD8327B2F44C00D1A7C6 /* Misc.swift */,
 				7980EDAF27AF82B4000578A5 /* Country.swift */,
 				8470C00127B5A1B100D1A7C6 /* MyCheckBtn.swift */,
@@ -219,6 +226,7 @@
 				84A1D53A2799526C00CF7104 /* ProfileViewController.swift */,
 				84A1D5B8279C632200CF7104 /* LanguageViewController.swift */,
 				84A1D5BA279C635000CF7104 /* IntroduceViewController.swift */,
+				8470C06227B835CE00D1A7C6 /* PictureViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -234,6 +242,7 @@
 				84E2268027A41D3900097CF5 /* ProfileStoryboard.storyboard */,
 				84E2268227A41D4700097CF5 /* LanguageStoryboard.storyboard */,
 				84E2268427A41D5500097CF5 /* IntroduceStoryboard.storyboard */,
+				8470C06427B8362200D1A7C6 /* PictureStoryboard.storyboard */,
 				84A1D5D5279C790A00CF7104 /* LaunchScreen.storyboard */,
 			);
 			path = StoryBoards;
@@ -333,6 +342,7 @@
 				84A1D53627980EB000CF7104 /* Localizable.strings in Resources */,
 				84E2268327A41D4700097CF5 /* LanguageStoryboard.storyboard in Resources */,
 				8470BDCB27B44A8B00D1A7C6 /* FindFriendStoryboard.storyboard in Resources */,
+				8470C06527B8362200D1A7C6 /* PictureStoryboard.storyboard in Resources */,
 				84A1D52A2797DC5100CF7104 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -385,6 +395,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8470BD9927B2FA3E00D1A7C6 /* Call.swift in Sources */,
+				8470C06327B835CE00D1A7C6 /* PictureViewController.swift in Sources */,
 				8470BDC727B2FDAF00D1A7C6 /* CallList+CoreDataProperties.swift in Sources */,
 				84A1D5222797DC4E00CF7104 /* MainViewController.swift in Sources */,
 				8470BDD927B5A13200D1A7C6 /* AgreementViewController.swift in Sources */,
@@ -404,6 +415,7 @@
 				7980EDB627AF9F68000578A5 /* CountryCodeViewController.swift in Sources */,
 				84E2269B27A6E81700097CF5 /* LoginPhoneViewController.swift in Sources */,
 				8470BDC427B2FDAF00D1A7C6 /* CallListViewController.swift in Sources */,
+				8470C06727B8388200D1A7C6 /* ImageManager.swift in Sources */,
 				84A1D53B2799526C00CF7104 /* ProfileViewController.swift in Sources */,
 				8470BD8A27B2F8FE00D1A7C6 /* LocalPub.xcdatamodeld in Sources */,
 				8470BDC627B2FDAF00D1A7C6 /* UserViewController.swift in Sources */,

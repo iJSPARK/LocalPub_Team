@@ -23,6 +23,7 @@ class mainViewController: UIViewController {
     @IBOutlet var btnProfile: UIButton!
     @IBOutlet var btnLanguage: UIButton!
     @IBOutlet var btnIntroduce: UIButton!
+    @IBOutlet var btnPicture: UIButton!
     @IBOutlet var btnHome: UIButton!
     
     override func viewDidLoad() {
@@ -72,6 +73,7 @@ class mainViewController: UIViewController {
         btnProfile.setTitle( "ProfileInformation".localized(), for: .normal)
         btnLanguage.setTitle( "SelectLanguages".localized(), for: .normal)
         btnIntroduce.setTitle( "SelfIntroduce".localized(), for: .normal)
+        btnPicture.setTitle( "GetPicture".localized(), for: .normal)
         btnHome.setTitle( "Home".localized(), for: .normal)
         
     }
@@ -89,6 +91,7 @@ class mainViewController: UIViewController {
         btnProfile.layer.isHidden = false
         btnLanguage.layer.isHidden = false
         btnIntroduce.layer.isHidden = false
+        btnPicture.layer.isHidden = false
         btnHome.layer.isHidden = false
 
 //      if let dvc = self.storyboard?.instantiateViewController(identifier: "loginViewController" ) {
@@ -119,6 +122,7 @@ class mainViewController: UIViewController {
         btnProfile.layer.isHidden = true
         btnLanguage.layer.isHidden = true
         btnIntroduce.layer.isHidden = true
+        btnPicture.layer.isHidden = true
         btnHome.layer.isHidden = true
         
     }
@@ -128,16 +132,7 @@ class mainViewController: UIViewController {
         LogOut()
         
     }
-    
-    @IBAction func imageTest(_ sender: UIButton) {
-        
-        let image = UIImage( named: "password.png" )
-        
-        uploadImage( filePath: "PW", img: image! ) { url in
-            print( "url: \(url)" )
-        }
 
-    }
     
 }
     
