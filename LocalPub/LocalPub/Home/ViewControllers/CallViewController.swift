@@ -26,7 +26,8 @@ class CallViewController: UIViewController {
         
         super.viewDidLoad()
         
-        drawUserImage( imgView: callImage, userUID: callUID!, userGender: callGender! )
+        let filePath = "/all/\(callUID!).jpg"
+        drawUserImage( imgView: callImage, filePath: filePath )
         
         callNameLabel.text = callName!
         

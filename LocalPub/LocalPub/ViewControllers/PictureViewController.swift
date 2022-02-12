@@ -48,17 +48,51 @@ class pictureViewController: UIViewController {
         imageMainView.clipsToBounds = true
         imageMainView.layer.borderColor = UIColor.gray.cgColor
         
-        if imageMainView.image == nil {
-            imageMainView.image = ImageFileManager.shared.getSavedImage( named: userUID )
-        }
- 
         imageSecondaryView.layer.cornerRadius = imageSecondaryView.frame.height/3
         imageSecondaryView.layer.borderWidth = 1
         imageSecondaryView.clipsToBounds = true
         imageSecondaryView.layer.borderColor = UIColor.gray.cgColor
         
+        if imageMainView.image == nil {
+            
+            let fileName = userUID
+            if let img = ImageFileManager.shared.getSavedImage( named: fileName ) {
+                
+                imageMainView.image = img
+                
+            } else {
+
+                downloadUserImage( fileName ) { completion in
+                    
+                    if let img = completion {
+                        self.imageMainView.image = img
+                        ImageFileManager.shared.saveImage( image: img, name: fileName ) { onSuccess in }
+
+                    }
+                }
+            }
+                        
+        }
+
         if imageSecondaryView.image == nil {
-            imageSecondaryView.image = ImageFileManager.shared.getSavedImage( named: "\(userUID)_Secondary" )
+            
+            let fileName = "\(userUID)_Secondary"
+            if let img = ImageFileManager.shared.getSavedImage( named: fileName ) {
+                
+                imageSecondaryView.image = img
+                
+            } else {
+
+                downloadUserImage( fileName ) { completion in
+                    
+                    if let img = completion {
+                        self.imageSecondaryView.image = img
+                        ImageFileManager.shared.saveImage( image: img, name: fileName ) { onSuccess in }
+
+                    }
+                }
+            }
+            
         }
         
         btnContinue.isHidden = true
@@ -180,6 +214,14 @@ extension pictureViewController : UIImagePickerControllerDelegate, UINavigationC
                     }
                 }
             }
+            
+            uploadImage( filePath: "Users/\(fileName)", img: userImage! ){ completion in
+            
+                if let url = completion {
+                    print( "Success Save to Firebase Store: \(url)" )
+                }
+            }
+ 
             
         }
         
