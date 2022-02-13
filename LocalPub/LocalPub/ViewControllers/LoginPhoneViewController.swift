@@ -14,11 +14,11 @@ class loginPhoneViewController: UIViewController {
     
     let myUserDefaults = UserDefaults.standard
     
-    var selectedCountryCode = Country(countryEmoji: "input", countryName: "input", countryCode: "input")
-        
+    var selectedCountryCode = countryInfo[0]
+    
     @IBOutlet var navLoginPhone: UINavigationItem!
     
-    @IBOutlet var txtPhoneNo: UITextField!
+    @IBOutlet var txtPhoneNo: UITextField! 
     @IBOutlet var txtPhoneCode: UITextField!
     
     @IBOutlet var btnSendPhoneVerificationCode: UIButton!
@@ -34,7 +34,7 @@ class loginPhoneViewController: UIViewController {
         // Target: txtPhoneCode 눌렀을때 실행할 함수가 있는 object (self)
         // #selector: 실행할 함수 선택
         // text 값 바뀔때마다 글자수 감시
-        txtPhoneCode.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: .editingChanged)
+        txtPhoneCode.addTarget(self, action: #selector(textFieldDidChanged(textField:)), for: .editingChanged)
         
         SetLocalized()
         btnPhoneVerification.isEnabled = false
@@ -42,13 +42,12 @@ class loginPhoneViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        print(selectedCountryCode)
-        let text = NSAttributedString(string: selectedCountryCode.countryEmoji + selectedCountryCode.countryCode, attributes: [.font: UIFont.systemFont(ofSize: 15)])
+        let text = NSAttributedString(string: selectedCountryCode.countryEmoji + " " + selectedCountryCode.countryCode, attributes: [.font: UIFont.systemFont(ofSize: 15)])
         countryCodeButton.setAttributedTitle(text, for: .normal)
     }
     
     // 6 자리면 승인 버튼 ON
-    @objc func textFieldDidChange(textField: UITextField) {
+    @objc func textFieldDidChanged(textField: UITextField) {
         guard textField.text?.count == 6 else { return }
         btnPhoneVerification.isEnabled = true
     }
@@ -80,7 +79,7 @@ class loginPhoneViewController: UIViewController {
         guard let phoneNumber = txtPhoneNo.text else {
             return
         }
-        
+    
         let phoneNo = selectedCountryCode.countryCode + phoneNumber
         
         PhoneAuthProvider.provider()
@@ -161,8 +160,6 @@ class loginPhoneViewController: UIViewController {
     @IBAction func unwindToLoginPhone(_ unwindSegue: UIStoryboardSegue) {
         //let sourceViewController = unwindSegue.source
     }
-
-
 }
 
 

@@ -7,11 +7,15 @@
 
 import UIKit
 
-class languageViewController: UIViewController {
+class languageViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    // 사용자 언어
+    // yourlanguage/practicelangage
+    let languages = ["korea", "english", "japanese"]
 
     let myUserDefaults = UserDefaults.standard
     
-    let listLanguages = [ "Korean", "English", "French", "Japanese" ]
+    @IBOutlet weak var languagesTableView: UITableView!
     
     @IBOutlet var navLanguage: UINavigationItem!
     
@@ -20,65 +24,91 @@ class languageViewController: UIViewController {
     
     @IBOutlet var lblPracticeLanguage: UILabel!
     @IBOutlet var btnPracticeLanguage: UIButton!
-    
+    //
     override func viewDidLoad() {
         
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        SetLocalized()
-        
-        SetLanguageMenu()
-        
-    }
-    
-    func SetLocalized() {
-        
-        navLanguage.title = "SelectLanguages".localized()
-        
-        lblNativeLanguage.text = "NativeLanguage".localized()
-        
-        lblPracticeLanguage.text = "PracticeLanguage".localized()
-        
-    }
-    
-    func SetLanguageMenu() {
-        
-        var nativeLanguageActions: Array<UIAction> = []
-        var practiceLanguageActions: Array<UIAction> = []
-        for i in 0...listLanguages.count-1 {
-            nativeLanguageActions.append( UIAction( title: listLanguages[i].localized(), state: .off, handler: { _ in self.setNativeLanguage(i) } ) )
-            practiceLanguageActions.append( UIAction( title: listLanguages[i].localized(), state: .off, handler: { _ in self.setPracticeLanguage(i) } ) )
-            
-        }
+        languagesTableView.delegate = self
+        languagesTableView.dataSource = self
 
-        let nativeLanguageButtonMenu = UIMenu( title: "SelectLanguage".localized(), children: nativeLanguageActions )
-        let practiceLanguageButtonMenu = UIMenu( title: "SelectLanguage".localized(), children: practiceLanguageActions )
+        // SetLocalized()
         
-        btnNativeLanguage.menu = nativeLanguageButtonMenu
-        btnPracticeLanguage.menu = practiceLanguageButtonMenu
-        
-        btnNativeLanguage.setTitle( listLanguages[ myUserDefaults.integer( forKey: UserDefault.NativeLanguage.toString() ) ].localized(), for: .normal)
- 
-        btnPracticeLanguage.setTitle( listLanguages[ myUserDefaults.integer( forKey: UserDefault.PracticeLanguage.toString() ) ].localized(), for: .normal)
-        
+        // SetLanguageMenu()
     }
     
-    func setNativeLanguage(_ i: Int ) {
-    
-        btnNativeLanguage.setTitle( listLanguages[i].localized(), for: .normal)
-        
-        SaveUserDefault( key: UserDefault.NativeLanguage.toString(), value: i )
-        
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 2
     }
     
-    func setPracticeLanguage(_ i: Int ) {
-    
-        btnPracticeLanguage.setTitle( listLanguages[i].localized(), for: .normal)
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier:"languageCell")
         
-        SaveUserDefault( key: UserDefault.PracticeLanguage.toString(), value: i )
+        let language = languages[indexPath.row]
         
+        cell?.textLabel?.text = language
+        
+        
+        return cell!
     }
+    
+//    func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
+//        <#code#>
+//    }
+//
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        <#code#>
+//    }
+    
+    
+//    func SetLocalized() {
+//
+//        navLanguage.title = "SelectLanguages".localized()
+//
+//        lblNativeLanguage.text = "NativeLanguage".localized()
+//
+//        lblPracticeLanguage.text = "PracticeLanguage".localized()
+//
+//    }
+    
+//    func SetLanguageMenu() {
+//
+//        var nativeLanguageActions: Array<UIAction> = []
+//        var practiceLanguageActions: Array<UIAction> = []
+//        for i in 0...listLanguages.count-1 {
+//            nativeLanguageActions.append( UIAction( title: listLanguages[i].localized(), state: .off, handler: { _ in self.setNativeLanguage(i) } ) )
+//            practiceLanguageActions.append( UIAction( title: listLanguages[i].localized(), state: .off, handler: { _ in self.setPracticeLanguage(i) } ) )
+//
+//        }
+//
+//        let nativeLanguageButtonMenu = UIMenu( title: "SelectLanguage".localized(), children: nativeLanguageActions )
+//        let practiceLanguageButtonMenu = UIMenu( title: "SelectLanguage".localized(), children: practiceLanguageActions )
+//
+//        btnNativeLanguage.menu = nativeLanguageButtonMenu
+//        btnPracticeLanguage.menu = practiceLanguageButtonMenu
+//
+//        btnNativeLanguage.setTitle( listLanguages[ myUserDefaults.integer( forKey: UserDefault.NativeLanguage.toString() ) ].localized(), for: .normal)
+//
+//        btnPracticeLanguage.setTitle( listLanguages[ myUserDefaults.integer( forKey: UserDefault.PracticeLanguage.toString() ) ].localized(), for: .normal)
+//
+//    }
+//
+//    func setNativeLanguage(_ i: Int ) {
+//
+//        btnNativeLanguage.setTitle( listLanguages[i].localized(), for: .normal)
+//
+//        SaveUserDefault( key: UserDefault.NativeLanguage.toString(), value: i )
+//
+//    }
+//
+//    func setPracticeLanguage(_ i: Int ) {
+//
+//        btnPracticeLanguage.setTitle( listLanguages[i].localized(), for: .normal)
+//
+//        SaveUserDefault( key: UserDefault.PracticeLanguage.toString(), value: i )
+//
+//    }
     
 }
 
