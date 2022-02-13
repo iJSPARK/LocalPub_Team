@@ -24,7 +24,7 @@ class languageViewController: UIViewController, UITableViewDelegate, UITableView
     
     @IBOutlet var lblPracticeLanguage: UILabel!
     @IBOutlet var btnPracticeLanguage: UIButton!
-    
+    //
     override func viewDidLoad() {
         
         super.viewDidLoad()
