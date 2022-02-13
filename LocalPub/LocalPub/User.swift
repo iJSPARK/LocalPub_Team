@@ -18,7 +18,7 @@ enum UserDefault: String {
     case Gender = "Gender"
     case Birth = "Birth"
     case Residence = "Residence"
-    case Nationaity = "Nationality"
+    case Nationality = "Nationality"
     case NativeLanguage = "NativeLanguage"
     case PracticeLanguage = "PracticeLanguage"
     case Experience = "Experience"
@@ -44,8 +44,8 @@ func initUserDefaultValue() -> [ UserDefault : Any ] {
         .PhoneVerificationID: "",
         .Name: "",
         .Gender: -1,
-        .Nationaity: "",
         .Birth: "",
+        .Nationality: "",
         .Residence: "",
         .NativeLanguage: 0,
         .PracticeLanguage: 0,

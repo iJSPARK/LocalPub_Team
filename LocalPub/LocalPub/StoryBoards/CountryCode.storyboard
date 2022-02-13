@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Country-->
+        <!--Country Code View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController id="Y6W-OH-hqX" customClass="CountryCodeViewController" customModule="LocalPub" customModuleProvider="target" sceneMemberID="viewController">
@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="88" width="390" height="756"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="gray" indentationWidth="10" reuseIdentifier="countryCodeCell" id="PQt-UH-6No">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="countryCodeCell" id="PQt-UH-6No">
                                         <rect key="frame" x="0.0" y="44.666666030883789" width="390" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PQt-UH-6No" id="Too-HK-Nc8">
@@ -43,7 +43,7 @@
                             <constraint firstItem="272-W5-1Re" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="gWh-FT-icj"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Country" id="Cp0-kW-yVZ"/>
+                    <navigationItem key="navigationItem" id="Cp0-kW-yVZ"/>
                     <connections>
                         <outlet property="countryCodeTableView" destination="272-W5-1Re" id="ejH-TF-BXX"/>
                     </connections>

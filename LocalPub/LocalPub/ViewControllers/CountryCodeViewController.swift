@@ -17,36 +17,33 @@ class CountryCodeViewController: UIViewController, UITableViewDelegate, UITableV
         super.viewDidLoad()
         countryCodeTableView.delegate = self
         countryCodeTableView.dataSource = self
+        SetLocalized()
     }
-    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let indexPath = self.countryCodeTableView.indexPathForSelectedRow, let LP = segue.destination as? loginPhoneViewController {
-            let selectedData = countryCodeInfos[indexPath.row]
+            let selectedData = countryInfo[indexPath.row]
             LP.selectedCountryCode = selectedData
         }
-        self.navigationItem.title = "제목을 바꿔요"
     }
     
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        print("Tap Cell")
-//        let LP = loginPhoneViewController()
-//        let selectedData = countryCodeInfos[indexPath.row]
-//        LP.selectedCountryCode = selectedData
-//        self.presentingViewController?.dismiss(animated: true, completion: nil)
-//    }
+    func SetLocalized() {
+        self.navigationItem.title = "CountryCode".localized()
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return countryCodeInfos.count
+        return countryInfo.count
     }
     
   
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = countryCodeTableView.dequeueReusableCell(withIdentifier: "countryCodeCell")
         
-        let countryCodeInfo = countryCodeInfos[indexPath.row]
+        let countryInfos = countryInfo[indexPath.row]
         
-        cell?.textLabel?.text = countryCodeInfo.countryEmoji + countryCodeInfo.countryName + countryCodeInfo.countryCode
+        let text = countryInfos.countryEmoji + " " + countryInfos.countryName + " (" + countryInfos.countryCode + ")"
+        
+        cell?.textLabel?.text = text
         
         return cell!
     }

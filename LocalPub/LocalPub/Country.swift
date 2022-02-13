@@ -20,7 +20,7 @@ struct Country {
     }
 }
 
-let countryCodeInfos: [Country] = [
+let countryInfo: [Country] = [
     Country(countryEmoji: "🇰🇷", countryName: "Korea", countryCode: "+82"),
     Country(countryEmoji: "🇺🇸", countryName: "US", countryCode: "+1"),
     Country(countryEmoji: "🇯🇵", countryName: "Japen", countryCode: "+81")
