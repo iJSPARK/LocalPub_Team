@@ -15,24 +15,27 @@ struct Call: Codable {
        
     var callUID: String?
     var callDate: String?
-    var callName: String?
     var callGender: Bool
+    var callLanguage: String
+    var callName: String?
     var callTime: Int64
-    var callImage: String?
+    var callArea: [String]?
     
     init( callUID: String,
           callDate: String,
-          callName: String,
           callGender: Bool,
+          callLanguage: String,
+          callName: String,
           callTime: Int64,
-          callImage: String ) {
+          callArea: [String] ) {
         
         self.callUID = callUID
         self.callDate = callDate
-        self.callName = callName
         self.callGender = callGender
+        self.callLanguage = callLanguage
+        self.callName = callName
         self.callTime = callTime
-        self.callImage = callImage
+        self.callArea = callArea
         
     }
 }
@@ -137,10 +140,11 @@ func MakeUserCall() {
                     call.callUID = callMaked.callUID!
                     //call.callDate = callMaked.callDate!
                     call.callDate = callDate
-                    call.callName = callMaked.callName!
                     call.callGender = callMaked.callGender
+                    call.callLanguage = callMaked.callLanguage
+                    call.callName = callMaked.callName!
                     call.callTime = callMaked.callTime
-                    call.callImage = callMaked.callImage!
+                    call.callArea = callMaked.callArea!
 
                     do {
                         try context.save()
