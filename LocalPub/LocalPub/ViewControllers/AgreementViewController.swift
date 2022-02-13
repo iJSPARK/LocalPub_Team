@@ -60,6 +60,17 @@ class agreementViewController: UIViewController {
         // Do any additional setup after loading the view.
 
         navAgreement.title = "Agreement".localized()
+        
+        //필요한 초기화를 함.
+        
+        CheckBtnTC.setState(true)
+        
+        CheckBtnPTC.setState(true)
+           
+        CheckBtnTL.setState(true)
+           
+        CheckBtnMA.setState(true)
+        
     }
     
     @IBAction func pressBtnAA(_ sender: MyCheckBtn) {
@@ -68,6 +79,54 @@ class agreementViewController: UIViewController {
         _ = btns.map { btn in btn.setState( sender.isActivated ) }
         
     }
+    
+    //TC버튼 눌렀을때 동작
+    
+    @IBAction func touchTC() {
+        if CheckBtnTC.isActivated == true {
+            CheckBtnTC.setState(false)
+        }
+        else {
+        CheckBtnTC.setState(true)
+        }
+        
+    }
+    
+    @IBAction func touchPTC() {
+        if CheckBtnPTC.isActivated == true {
+            CheckBtnPTC.setState(false)
+        }
+        else {
+        CheckBtnPTC.setState(true)
+        }
+        
+    }
+    
+    @IBAction func touchTL() {
+        if CheckBtnTL.isActivated == true {
+                CheckBtnTL.setState(false)
+        }
+        else {
+            CheckBtnTL.setState(true)
+        }
+    }
+    
+    @IBAction func touchMA() {
+        if CheckBtnMA.isActivated == true {
+            CheckBtnMA.setState(false)
+        }
+        else {
+        CheckBtnMA.setState(true)
+        }
+        
+        
+        
+        
+        
+        
+    }
+    
+    
     
     
     
