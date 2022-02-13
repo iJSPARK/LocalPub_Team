@@ -24,8 +24,8 @@ class MyCheckBtn: UIButton {
 
         //2. 변경된 상태에 따른 이미지 변경
         
-        let activatedImage = UIImage(systemName: "checkmark.circle.fill")?.withTintColor(#colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1)).withRenderingMode(.alwaysOriginal)
-        let normalImage = UIImage(systemName: "checkmark.circle")?.withTintColor(#colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)).withRenderingMode(.alwaysOriginal)
+        let activatedImage = UIImage(systemName: "checkmark.circle.fill")?.withTintColor(#colorLiteral(red: 0.7422353625, green: 0.2466334403, blue: 0.8593617082, alpha: 1)).withRenderingMode(.alwaysOriginal)
+        let normalImage = UIImage(systemName: "checkmark.circle")?.withTintColor(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)).withRenderingMode(.alwaysOriginal)
         self.setImage(self.isActivated ? activatedImage : normalImage, for: .normal)
     }
 }
