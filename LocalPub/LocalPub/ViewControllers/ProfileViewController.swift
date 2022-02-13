@@ -232,13 +232,18 @@ class profileViewController: UIViewController, UITextFieldDelegate {
         SaveUserDefault( key: UserDefault.Nationality.toString(), value: selectedNationality!.countryName )
         
         SaveUserDefault( key: UserDefault.Gender.toString(), value: scGender.selectedSegmentIndex )
+        
+//        // 회원가입 완료시 False
+//        scGender.isEnabled = false
+//        birthDateTextField.isEnabled = false
+//        nationalityButton.isEnabled =  false
     }
     
     @IBAction func unwindToNationality(_ unwindSegue: UIStoryboardSegue) {
         let sourceViewController = unwindSegue.source
         // Use data from the view controller which initiated the unwind segue
     }
-    
+
     /*
     @IBAction func selectBirth(_ sender: UIDatePicker) {
         
