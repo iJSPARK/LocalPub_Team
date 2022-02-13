@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import FirebaseStorage
 
-func uploadImage( filePath: String, img: UIImage, contentType: String = "image/png" ) {
+func uploadImage( filePath: String, img: UIImage, contentType: String = "image/jpeg" ) {
     
     var imgData = Data()
     imgData = img.jpegData(compressionQuality: 0.8)!
@@ -28,7 +28,7 @@ func uploadImage( filePath: String, img: UIImage, contentType: String = "image/p
     
 }
 
-func uploadImage( filePath: String, img: UIImage, contentType: String = "image/png", completion: @escaping (URL) -> Void ) {
+func uploadImage( filePath: String, img: UIImage, contentType: String = "image/jpeg", completion: @escaping (URL?) -> Void ) {
     
     var data = Data()
     data = img.jpegData(compressionQuality: 0.8)!
@@ -43,6 +43,7 @@ func uploadImage( filePath: String, img: UIImage, contentType: String = "image/p
         if let error = error {
             
             print( error.localizedDescription )
+            completion(nil)
             
         } else {
             
@@ -58,18 +59,19 @@ func uploadImage( filePath: String, img: UIImage, contentType: String = "image/p
     
 }
 
-func getRefURL( userUID: String, userGender: Bool ) -> String {
+func getRefURL( filePath: String ) -> String {
     
     //let strGender = ( Gender ? "female" : "male" )
     //let refURL = "gs://localpub-99413.appspot.com/Users/\(strGender)/\(userUID).jpg"
-    let refURL = "gs://localpub-99413.appspot.com/Users/all/\(userUID).jpg"
-
+    //let refURL = "gs://localpub-99413.appspot.com/Users/all/\(userUID).jpg"
+    let refURL = "gs://localpub-99413.appspot.com/Users/\(filePath)"
+    
     return refURL
 }
 
-func drawUserImage( imgView: UIImageView, userUID: String, userGender: Bool ) {
+func drawUserImage( imgView: UIImageView, filePath: String ) {
 
-    let refURL = getRefURL( userUID: userUID, userGender: userGender )
+    let refURL = getRefURL( filePath: filePath )
     
     Storage.storage().reference( forURL: refURL ).downloadURL { (url, error) in
         
@@ -88,12 +90,11 @@ func drawUserImage( imgView: UIImageView, userUID: String, userGender: Bool ) {
 
 }
 
-
-func downloadUserImage(_ userUID: String, userGender: Bool ) async throws -> UIImage? {
+func downloadUserImage(_ filePath: String ) async throws -> UIImage? {
         
     try await withUnsafeThrowingContinuation { continuation in
     
-        let refURL = getRefURL( userUID: userUID, userGender: userGender )
+        let refURL = getRefURL( filePath: filePath )
         
         Storage.storage().reference( forURL: refURL ).downloadURL { (url, error) in
 
@@ -118,16 +119,43 @@ func downloadUserImage(_ userUID: String, userGender: Bool ) async throws -> UII
 
 }
 
-func downloadUserImageURL(_ userUID: String, userGender: Bool, completion: @escaping (URL) -> Void ) {
+func downloadUserImageURL(_ filePath: String, completion: @escaping (URL?) -> Void ) {
     
-    let refURL = getRefURL( userUID: userUID, userGender: userGender )
+    let refURL = getRefURL( filePath: filePath )
     
     let firebaseReference = Storage.storage().reference( forURL: refURL )
             
     firebaseReference.downloadURL { (url, error) in
+        
         if let url = url {
             //print( "Download URL: \(url)" )
             completion( url )
+            
+        } else {
+            completion( nil )
+        }
+    }
+    
+}
+
+func downloadUserImage(_ filePath: String, completion: @escaping (UIImage?) -> Void ) {
+    
+    let refURL = getRefURL( filePath: filePath )
+    
+    let firebaseReference = Storage.storage().reference( forURL: refURL )
+            
+    firebaseReference.downloadURL { (url, error) in
+        
+        if let url = url {
+            //print( "Download URL: \(url)" )
+            
+            let data = NSData( contentsOf: url )
+            let image = UIImage( data: data! as Data )
+            
+            completion( image! )
+            
+        } else {
+            completion( nil )
         }
     }
     

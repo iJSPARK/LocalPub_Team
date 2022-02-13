@@ -28,6 +28,7 @@ enum UserDefault: String {
     case CreationDate = "CreationDate"
     case SignedInDate = "SignedInDate"
     case LogDate = "LogDate"
+    case LastUpdate = "LastUpdate"
     case AuthState = "AuthState"
     
     func toString() -> String {
@@ -56,6 +57,7 @@ func initUserDefaultValue() -> [ UserDefault : Any ] {
         .CreationDate: -1,
         .SignedInDate: -1,
         .LogDate: -1,
+        .LastUpdate: -1,
         .AuthState: 0
     ]
     

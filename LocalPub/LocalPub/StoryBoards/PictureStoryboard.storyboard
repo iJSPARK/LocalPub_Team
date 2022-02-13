@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MvX-uI-U7b">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Picture View Controller-->
+        <scene sceneID="v07-Ab-HrX">
+            <objects>
+                <viewController storyboardIdentifier="pictureController" id="MvX-uI-U7b" customClass="pictureViewController" customModule="LocalPub" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="O6B-G2-Xre">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="usC-GF-m8M">
+                                <rect key="frame" x="16" y="74" width="344" height="61.666666666666657"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please upload your photos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EZo-DH-qFr">
+                                        <rect key="frame" x="0.0" y="0.0" width="344" height="24"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your photos will never be shown to unspecified random users" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N98-um-PJ9">
+                                        <rect key="frame" x="0.0" y="27.999999999999996" width="344" height="33.666666666666657"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Picture for safe calls" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GWI-8D-p1L">
+                                <rect key="frame" x="16" y="165.66666666666666" width="131.66666666666666" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" systemColor="tintColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="obw-wF-AjN">
+                                <rect key="frame" x="16" y="197.66666666666666" width="344" height="89.999999999999972"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.shield.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="oR7-Ig-5Gb">
+                                        <rect key="frame" x="0.0" y="1" width="30" height="88.333333333333329"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="pXn-J8-Dqe"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pictures are needed to prevent malicious users. Please upload 1+ photo that clearly shows your face." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5qC-3B-uPP">
+                                        <rect key="frame" x="30" y="0.0" width="314" height="90"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="7Dd-EW-k1s"/>
+                                </constraints>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c8e-Nn-I6k">
+                                <rect key="frame" x="30" y="317.66666666666669" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="hTs-9v-CHZ"/>
+                                    <constraint firstAttribute="width" constant="150" id="jOV-0l-T1c"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ewI-tc-Vuc">
+                                <rect key="frame" x="195" y="317.66666666666669" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="FRB-XD-cZG"/>
+                                    <constraint firstAttribute="width" constant="150" id="l4t-t3-OgN"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="daI-cO-9sD">
+                                <rect key="frame" x="17" y="691" width="358" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Continue">
+                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="18"/>
+                                    <color key="baseBackgroundColor" red="0.74117647060000003" green="0.2470588235" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KoP-yM-u3S">
+                                <rect key="frame" x="30" y="482.66666666666669" width="150" height="47.666666666666686"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="Vnx-c6-X73"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="        Main (Face required)" titleAlignment="center">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="GetMainImage:" destination="MvX-uI-U7b" eventType="touchUpInside" id="vfx-lG-QHc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AG4-1j-F8Q">
+                                <rect key="frame" x="195" y="482.66666666666669" width="150" height="47.666666666666686"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="c7V-rS-Z3I"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" titleAlignment="center">
+                                    <string key="title">      Secondary
+(Express yourself)</string>
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="GetSecondaryImage:" destination="MvX-uI-U7b" eventType="touchUpInside" id="gi8-7D-00T"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ajr-cp-dkq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="KoP-yM-u3S" firstAttribute="top" secondItem="c8e-Nn-I6k" secondAttribute="bottom" constant="15" id="5Gt-T4-c4J"/>
+                            <constraint firstItem="obw-wF-AjN" firstAttribute="top" secondItem="GWI-8D-p1L" secondAttribute="bottom" constant="15" id="9A8-0C-UZK"/>
+                            <constraint firstItem="GWI-8D-p1L" firstAttribute="top" secondItem="usC-GF-m8M" secondAttribute="bottom" constant="30" id="9Gv-sI-HUf"/>
+                            <constraint firstItem="AG4-1j-F8Q" firstAttribute="top" secondItem="ewI-tc-Vuc" secondAttribute="bottom" constant="15" id="ASO-ay-D6K"/>
+                            <constraint firstItem="ewI-tc-Vuc" firstAttribute="leading" secondItem="c8e-Nn-I6k" secondAttribute="trailing" constant="15" id="IMz-VY-K8v"/>
+                            <constraint firstItem="obw-wF-AjN" firstAttribute="leading" secondItem="ajr-cp-dkq" secondAttribute="leading" constant="16" id="Wuf-Z8-Dmw"/>
+                            <constraint firstItem="usC-GF-m8M" firstAttribute="leading" secondItem="ajr-cp-dkq" secondAttribute="leading" constant="16" id="YR9-W1-lrV"/>
+                            <constraint firstAttribute="trailing" secondItem="usC-GF-m8M" secondAttribute="trailing" constant="30" id="a73-Wz-tUN"/>
+                            <constraint firstItem="usC-GF-m8M" firstAttribute="top" secondItem="ajr-cp-dkq" secondAttribute="top" constant="30" id="a9q-Ds-ChM"/>
+                            <constraint firstItem="ewI-tc-Vuc" firstAttribute="top" secondItem="obw-wF-AjN" secondAttribute="bottom" constant="30" id="cEP-Hv-T3b"/>
+                            <constraint firstItem="KoP-yM-u3S" firstAttribute="leading" secondItem="ajr-cp-dkq" secondAttribute="leading" constant="30" id="dbW-Lv-YSu"/>
+                            <constraint firstItem="GWI-8D-p1L" firstAttribute="leading" secondItem="ajr-cp-dkq" secondAttribute="leading" constant="16" id="hLZ-GW-Pfg"/>
+                            <constraint firstItem="c8e-Nn-I6k" firstAttribute="top" secondItem="obw-wF-AjN" secondAttribute="bottom" constant="30" id="ie4-kr-Ie3"/>
+                            <constraint firstItem="AG4-1j-F8Q" firstAttribute="leading" secondItem="KoP-yM-u3S" secondAttribute="trailing" constant="15" id="pTQ-eK-59J"/>
+                            <constraint firstItem="AG4-1j-F8Q" firstAttribute="top" secondItem="ewI-tc-Vuc" secondAttribute="bottom" constant="15" id="s4o-Wt-CPJ"/>
+                            <constraint firstItem="c8e-Nn-I6k" firstAttribute="leading" secondItem="ajr-cp-dkq" secondAttribute="leading" constant="30" id="wC2-2B-nFe"/>
+                            <constraint firstItem="ajr-cp-dkq" firstAttribute="trailing" secondItem="obw-wF-AjN" secondAttribute="trailing" constant="30" id="xY3-94-Wh7"/>
+                            <constraint firstItem="AG4-1j-F8Q" firstAttribute="leading" secondItem="KoP-yM-u3S" secondAttribute="trailing" constant="15" id="yda-U0-OQu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnContinue" destination="daI-cO-9sD" id="843-cS-Xxv"/>
+                        <outlet property="btnMainPicture" destination="KoP-yM-u3S" id="tAG-N1-jQa"/>
+                        <outlet property="btnSecondaryPicture" destination="AG4-1j-F8Q" id="8X0-iU-8ZW"/>
+                        <outlet property="imageMainView" destination="c8e-Nn-I6k" id="Ldj-0z-P44"/>
+                        <outlet property="imageSecondaryView" destination="ewI-tc-Vuc" id="jMn-4b-PyR"/>
+                        <outlet property="lblSecurityCalls" destination="GWI-8D-p1L" id="t7s-s9-yne"/>
+                        <outlet property="lblSecurityDescription" destination="5qC-3B-uPP" id="PrY-ar-7rn"/>
+                        <outlet property="lblUploadPicture" destination="EZo-DH-qFr" id="AdO-qK-beW"/>
+                        <outlet property="lblUploadPictureDescription" destination="N98-um-PJ9" id="bO9-H0-Bv4"/>
+                        <outlet property="stackSecurity" destination="obw-wF-AjN" id="yGb-E0-FeH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KGg-lo-ObG" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130.43478260869566" y="114.50892857142857"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="checkmark.shield.fill" catalog="system" width="128" height="118"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
