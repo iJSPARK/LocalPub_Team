@@ -65,8 +65,8 @@ class CallListViewController: UIViewController {
         
         super.viewWillAppear(animated)
         
-        print( "Tab: \(self.tabBarController!.selectedIndex)" )
-        print( "isCellView: \(isCellView)" )
+        //print( "Tab: \(self.tabBarController!.selectedIndex)" )
+        //print( "isCellView: \(isCellView)" )
 
         if !isCellView {
             fetchCallList()

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class pictureViewController: UIViewController {
     
@@ -53,6 +54,20 @@ class pictureViewController: UIViewController {
         imageSecondaryView.layer.borderWidth = 1
         imageSecondaryView.clipsToBounds = true
         imageSecondaryView.layer.borderColor = UIColor.gray.cgColor
+        
+        
+        GetUserData() { userData in
+         
+            let dateform = DateFormatter()
+            dateform.dateFormat = "yyyy-MM-dd HH:mm:ss"
+            
+            let lastUpdate = userData![UserDefault.LastUpdate.toString()]!
+            print( "LastUpdate: \(lastUpdate), \(type(of:lastUpdate))" )
+            
+            let lastUpdateDefault = self.myUserDefaults.value(forKey: UserDefault.LastUpdate.toString() ) as! Date
+            print( "LastUpdateDefault: \(lastUpdateDefault), \(type(of:lastUpdateDefault))" )
+            
+        }
         
         if imageMainView.image == nil {
             

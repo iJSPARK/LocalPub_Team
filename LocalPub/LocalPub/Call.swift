@@ -7,9 +7,9 @@
 
 import Foundation
 import UIKit
-import CoreData
 import Alamofire
-import CloudKit
+import CoreData
+import Firebase
 
 struct Call: Codable {
        
@@ -153,6 +153,8 @@ func MakeUserCall() {
                     } catch {
                         print( error.localizedDescription )
                     }
+                    
+                    SaveCallData( call: call )
 
                 }
             
@@ -168,3 +170,54 @@ func MakeUserCall() {
     
 }
 
+func SaveCallData( call: CallList ) {
+    
+    if let userUID = Auth.auth().currentUser?.uid {
+        
+        //let db = Database.database().reference()
+        let ref = Database.database(url: "https://localpub-99413-default-rtdb.asia-southeast1.firebasedatabase.app/").reference()
+
+        
+        let callData: [String:Any] = [ "callGender": call.callGender,
+                                       "callLanguage": call.callLanguage!,
+                                       "callUID": call.callUID!,
+                                       "callName": call.callName!,
+                                       "callTime": call.callTime,
+                                       "callArea": call.callArea! ]
+        
+        let dateform = DateFormatter()
+        dateform.dateFormat = "yyyy-MM-dd HH:mm:ss"
+
+        let callDate = dateform.string( from: call.callDate!)
+        
+        let child = "/CallList/\(userUID)/\(callDate)/"
+        
+        let childUpdates = [ child: callData ]
+        
+        ref.updateChildValues( childUpdates ) { (error, retRef) in
+        //ref.child( child ).setValue( callData ) { (error, retRef) in
+            if let error = error {
+                print( "Firebase Realtime DB: Data cound not be saved: \(error)")
+            } else {
+                print( "Save Call Data to Firebase Realtime DB : OK!")
+                
+            }
+
+        }
+        
+        ref.child( child ).getData( completion: { (error, snapshot) in
+            
+            if let error = error {
+                print( "Load error: \(error) \(error.localizedDescription)" )
+                return
+            }
+            
+            print( "Load Call Data from Firebase Realtime DB : OK!" )
+            print( snapshot.value! )
+            
+        })
+        
+
+    }
+    
+}

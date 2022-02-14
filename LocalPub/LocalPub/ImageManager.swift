@@ -24,6 +24,7 @@ class ImageFileManager {
               do {
                   
                 try data.write( to: directory.appendingPathComponent(name)! )
+                SaveUserDefault( key: UserDefault.LastUpdate.toString(), value: Date() )
                 onSuccess(true)
                   
               } catch let error as NSError {
