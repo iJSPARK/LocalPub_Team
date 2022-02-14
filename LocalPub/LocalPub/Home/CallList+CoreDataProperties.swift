@@ -18,7 +18,7 @@ extension CallList {
 
     @NSManaged public var callDate: Date?
     @NSManaged public var callGender: Bool
-    @NSManaged public var callLanguage: String
+    @NSManaged public var callLanguage: String?
     @NSManaged public var callUID: String?
     @NSManaged public var callName: String?
     @NSManaged public var callTime: Int64

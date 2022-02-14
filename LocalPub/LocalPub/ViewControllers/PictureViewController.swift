@@ -32,6 +32,7 @@ class pictureViewController: UIViewController {
     @IBOutlet var btnContinue: UIButton!
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
@@ -117,7 +118,6 @@ class pictureViewController: UIViewController {
 
     }
     
-    
     @IBAction func GetMainImage(_ sender: UIButton) {
         isMainImage = true
         GetUserImage()
@@ -140,7 +140,6 @@ class pictureViewController: UIViewController {
         AlertCancel( title: "TakePictureTitle".localized(), message: "TakePictureDescription".localized(), alerts: alerts, viewController: self )
         
     }
-    
     
     func openLibrary() {
         

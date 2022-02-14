@@ -140,12 +140,8 @@ class CallListViewController: UIViewController {
 
         if let indexPath = self.callListTable.indexPathForSelectedRow,
             let RVC = segue.destination as? CallViewController {
-
-            RVC.callUID =  callList[indexPath.row].callUID
-            RVC.callName = callList[indexPath.row].callName
-            RVC.callGender = callList[indexPath.row].callGender
-            RVC.callDate = callList[indexPath.row].callDate
-            RVC.callTime = callList[indexPath.row].callTime
+            
+            RVC.call = callList[indexPath.row]
             
             isCellView = true
 

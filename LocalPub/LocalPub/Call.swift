@@ -16,7 +16,7 @@ struct Call: Codable {
     var callUID: String?
     var callDate: String?
     var callGender: Bool
-    var callLanguage: String
+    var callLanguage: String?
     var callName: String?
     var callTime: Int64
     var callArea: [String]?
