@@ -9,11 +9,7 @@ import UIKit
 
 class CountryCodeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    let countryCodeInfos: [Country] = [
-        Country(countryEmoji: "🇰🇷", countryName: "Korea", countryCode: "+82"),
-        Country(countryEmoji: "🇺🇸", countryName: "US", countryCode: "+1"),
-        Country(countryEmoji: "🇯🇵", countryName: "Japen", countryCode: "+81")
-    ]
+    
 
     @IBOutlet weak var countryCodeTableView: UITableView!
     
@@ -21,35 +17,33 @@ class CountryCodeViewController: UIViewController, UITableViewDelegate, UITableV
         super.viewDidLoad()
         countryCodeTableView.delegate = self
         countryCodeTableView.dataSource = self
+        SetLocalized()
     }
-    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let indexPath = self.countryCodeTableView.indexPathForSelectedRow, let LP = segue.destination as? loginPhoneViewController {
-            let selectedData = countryCodeInfos[indexPath.row]
+            let selectedData = countryInfo[indexPath.row]
             LP.selectedCountryCode = selectedData
         }
     }
     
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        print("Tap Cell")
-//        let LP = loginPhoneViewController()
-//        let selectedData = countryCodeInfos[indexPath.row]
-//        LP.selectedCountryCode = selectedData
-//        self.presentingViewController?.dismiss(animated: true, completion: nil)
-//    }
+    func SetLocalized() {
+        self.navigationItem.title = "CountryCode".localized()
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return countryCodeInfos.count
+        return countryInfo.count
     }
     
   
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = countryCodeTableView.dequeueReusableCell(withIdentifier: "countryCodeCell")
         
-        let countryCodeInfo = countryCodeInfos[indexPath.row]
+        let countryInfos = countryInfo[indexPath.row]
         
-        cell?.textLabel?.text = countryCodeInfo.countryEmoji + countryCodeInfo.countryName + countryCodeInfo.countryCode
+        let text = countryInfos.countryEmoji + " " + countryInfos.countryName + " (" + countryInfos.countryCode + ")"
+        
+        cell?.textLabel?.text = text
         
         return cell!
     }
