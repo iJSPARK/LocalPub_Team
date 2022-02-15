@@ -231,6 +231,7 @@
 				84A1D5212797DC4E00CF7104 /* MainViewController.swift */,
 				84E2269A27A6E81700097CF5 /* LoginPhoneViewController.swift */,
 				7980EDB527AF9F68000578A5 /* CountryCodeViewController.swift */,
+				79A6F70427B7DAF700D0872C /* NationalityViewController.swift */,
 				84E2269827A6E7D200097CF5 /* LoginMailViewController.swift */,
 				8470BDD827B5A13200D1A7C6 /* AgreementViewController.swift */,
 				84A1D53A2799526C00CF7104 /* ProfileViewController.swift */,
@@ -239,7 +240,6 @@
 				79A6F70627B8E08000D0872C /* SelectLanguageViewController.swift */,
 				84A1D5BA279C635000CF7104 /* IntroduceViewController.swift */,
 				8470C06227B835CE00D1A7C6 /* PictureViewController.swift */,
-				79A6F70427B7DAF700D0872C /* NationalityViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
