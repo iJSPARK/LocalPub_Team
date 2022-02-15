@@ -44,10 +44,10 @@ class CallViewController: UIViewController {
         
         callTimeLabel.text = "CallTime".localized() + ": \( call.callTime )"
       
-        let gender = call.callGender ? "Male" : "Female"
-        callWantLabel.text = "Want: " + ": \( gender ), \( call.callLanguage ?? "" )"
+        let gender = call.callGender == 0 ? "Female" : "Male"
+        callWantLabel.text = "Want: " + ": \( gender ), \( call.callLanguage )"
         
-        if let area: [String] = call.callArea {
+        if let area = call.callArea {
             
             mapView.layer.cornerRadius = 20
             mapView.layer.borderWidth = 1
@@ -62,7 +62,7 @@ class CallViewController: UIViewController {
             annotation.subtitle = "\(area[0]), \(area[1])"
 
             //let coord = CLLocationCoordinate2D( latitude: 37.55769, longitude: 126.92450 )
-            let coord = CLLocationCoordinate2D( latitude: Double(area[0])!, longitude: Double(area[1])! )
+            let coord = CLLocationCoordinate2D( latitude: area[0], longitude: area[1] )
             
             let pSpan = MKCoordinateSpan( latitudeDelta: 0.6, longitudeDelta: 0.6 )
             

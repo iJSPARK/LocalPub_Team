@@ -15,19 +15,19 @@ struct Call: Codable {
        
     var callUID: String?
     var callDate: String?
-    var callGender: Bool
-    var callLanguage: String?
+    var callGender: Int16
+    var callLanguage: Int16
     var callName: String?
-    var callTime: Int64
-    var callArea: [String]?
+    var callTime: Int16
+    var callArea: [Double]?
     
     init( callUID: String,
           callDate: String,
-          callGender: Bool,
-          callLanguage: String,
+          callGender: Int16,
+          callLanguage: Int16,
           callName: String,
-          callTime: Int64,
-          callArea: [String] ) {
+          callTime: Int16,
+          callArea: [Double] ) {
         
         self.callUID = callUID
         self.callDate = callDate
@@ -45,9 +45,10 @@ func MakeCall() async throws -> Call {
     
     try await withUnsafeThrowingContinuation { continuation in
         
-        let id = String( Int.random(in: 1..<100) )
-        let url = "https://61795804aa7f3400174049d7.mockapi.io/users/" + id
-
+        //let id = String( Int.random(in: 1..<100) )
+        //let url = "https://61795804aa7f3400174049d7.mockapi.io/users/" + id
+        let url = "http://52.79.148.164/callmockdata"
+        
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .iso8601
         
@@ -92,8 +93,9 @@ class CustomDecoder: JSONDecoder {
 
 func MakeUserCall() {
     
-    let id = String( Int.random(in: 1..<100) )
-    let url = "https://61795804aa7f3400174049d7.mockapi.io/users/" + id
+    //let id = String( Int.random(in: 1..<100) )
+    //let url = "https://61795804aa7f3400174049d7.mockapi.io/users/" + id
+    let url = "http://52.79.148.164/callmockdata"
 
     let decoder = JSONDecoder()
     decoder.dateDecodingStrategy = .iso8601
@@ -124,8 +126,9 @@ func MakeUserCall() {
                     let iso8601DateFormatter = ISO8601DateFormatter()
                     iso8601DateFormatter.formatOptions = [.withInternetDateTime, .withFractionalSeconds] // option형태의 포맷
                     iso8601DateFormatter.timeZone = TimeZone(abbreviation: "KST")
-                    //let callDate = iso8601DateFormatter.date( from: callMaked.callDate! )!
+                    //let callDate = iso8601DateFormatter.date( from: callMaked.callDate! )
                     let callDate = Date()
+                    
                     
                     //let dateString: String = "2022-02-22 22:22:22"
                     //let dateFormatter = DateFormatter()
@@ -176,10 +179,9 @@ func SaveCallData( call: CallList ) {
         
         //let db = Database.database().reference()
         let ref = Database.database(url: "https://localpub-99413-default-rtdb.asia-southeast1.firebasedatabase.app/").reference()
-
         
         let callData: [String:Any] = [ "callGender": call.callGender,
-                                       "callLanguage": call.callLanguage!,
+                                       "callLanguage": call.callLanguage,
                                        "callUID": call.callUID!,
                                        "callName": call.callName!,
                                        "callTime": call.callTime,
@@ -188,7 +190,7 @@ func SaveCallData( call: CallList ) {
         let dateform = DateFormatter()
         dateform.dateFormat = "yyyy-MM-dd HH:mm:ss"
 
-        let callDate = dateform.string( from: call.callDate!)
+        let callDate = dateform.string( from: call.callDate! )
         
         let child = "/CallList/\(userUID)/\(callDate)/"
         
