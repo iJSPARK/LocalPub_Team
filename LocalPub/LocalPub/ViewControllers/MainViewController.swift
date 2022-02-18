@@ -134,6 +134,27 @@ class mainViewController: UIViewController {
     }
 
     
+    @IBAction func saveTest(_ sender: UIButton) {
+        
+        let value = LanguageInfo( language: Language.korean, level: 2 )
+        
+        SaveUserDefault( key: UserDefault.NativeLanguageInfo.toString(), value: value )
+        
+    }
+    
+    
+    @IBAction func getTest(_ sender: Any) {
+        
+        let value = [ 0, 1, 2 ]
+        
+        SaveUserDefault( key: UserDefault.ForeignLanguageInfo.toString(), value: value )
+        
+        print( "Waht?")
+    }
+    
+    
+    
+    
 }
     
 

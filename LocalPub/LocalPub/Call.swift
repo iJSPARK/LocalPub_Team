@@ -14,7 +14,7 @@ import Firebase
 struct Call: Codable {
        
     var callUID: String?
-    var callDate: String?
+    var callDate: Date?
     var callGender: Int16
     var callLanguage: Int16
     var callName: String?
@@ -22,7 +22,7 @@ struct Call: Codable {
     var callArea: [Double]?
     
     init( callUID: String,
-          callDate: String,
+          callDate: Date,
           callGender: Int16,
           callLanguage: Int16,
           callName: String,
@@ -50,12 +50,13 @@ func MakeCall() async throws -> Call {
         let url = "http://52.79.148.164/callmockdata"
         
         let decoder = JSONDecoder()
-        decoder.dateDecodingStrategy = .iso8601
+        //decoder.dateDecodingStrategy = .iso8601
+    
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZZZZZ"
+        decoder.dateDecodingStrategy = .formatted(dateFormatter)
         
-        AF.request(url).validate().responseDecodable(of: Call.self, decoder: decoder) {
-        //AF.request(url).validate().responseDecodable(of: Call.self, decoder: CustomDecoder() ) {
-
-            response in
+        AF.request(url).validate().responseDecodable(of: Call.self, decoder: decoder) { response in
 
             //print( response )
             
@@ -82,11 +83,15 @@ func MakeCall() async throws -> Call {
 }
 
 class CustomDecoder: JSONDecoder {
+    
     let dateFormatter = DateFormatter()
 
     override init() {
         super.init()
-        dateDecodingStrategy = .iso8601
+        //dateDecodingStrategy = .iso8601
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZZZZZ"
+        
+        dateDecodingStrategy = .formatted( dateFormatter )
     }
 }
 
@@ -97,11 +102,7 @@ func MakeUserCall() {
     //let url = "https://61795804aa7f3400174049d7.mockapi.io/users/" + id
     let url = "http://52.79.148.164/callmockdata"
 
-    let decoder = JSONDecoder()
-    decoder.dateDecodingStrategy = .iso8601
-    
-    AF.request(url).validate().responseDecodable(of: Call.self, decoder: decoder) {
-    //AF.request(url).validate().responseDecodable(of: Call.self, decoder: CustomDecoder() ) {
+    AF.request(url).validate().responseDecodable( of: Call.self, decoder: CustomDecoder() ) {
 
         response in
 
@@ -123,26 +124,28 @@ func MakeUserCall() {
                 
                 if let call = NSManagedObject( entity: entity, insertInto: context) as? CallList {
                     
-                    let iso8601DateFormatter = ISO8601DateFormatter()
-                    iso8601DateFormatter.formatOptions = [.withInternetDateTime, .withFractionalSeconds] // option형태의 포맷
-                    iso8601DateFormatter.timeZone = TimeZone(abbreviation: "KST")
-                    //let callDate = iso8601DateFormatter.date( from: callMaked.callDate! )
-                    let callDate = Date()
-                    
-                    
-                    //let dateString: String = "2022-02-22 22:22:22"
-                    //let dateFormatter = DateFormatter()
-                    //dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-                    //dateFormatter.timeZone = NSTimeZone( name: "Asia/Seoul") as TimeZone?
-                    //dateFormatter.locale = Locale(identifier: "ko_kr") // 한국 시간 지정
-                    //dateFormatter.timeZone = TimeZone(abbreviation: "KST") // 한국 시간대 지정
-                    //let callDate: Date = dateFormatter.date(from: call.callDate! )
+//                    let iso8601DateFormatter = ISO8601DateFormatter()
+//                    iso8601DateFormatter.formatOptions = [.withInternetDateTime, .withFractionalSeconds, .withTimeZone ] // option형태의 포맷
+//                    //iso8601DateFormatter.timeZone = TimeZone( abbreviation: "KST" )
+//                    let callDate = iso8601DateFormatter.date( from: callMaked.callDate! )
+//                    //print( callDate ?? "NIL" )
 
-                    //print( callDate )
+//                    let dateFormatter = DateFormatter()
+//                    //let dateString: String = "2022-02-22T22:22:22.222222+09:00"
+//                    dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZZZZZ"
+//
+//                    //dateFormatter.locale = Locale( identifier: "ko_kr" ) // 한국 시간 지정
+//                    //dateFormatter.timeZone = NSTimeZone( name: "Asia/Seoul" ) as TimeZone?
+//                    //dateFormatter.timeZone = TimeZone( abbreviation: "KST" ) // 한국 시간대 지정
+//                    let callDate = dateFormatter.date( from: callMaked.callDate! )
+//                    //let callDate = Date()
+//                    //print( callDate ?? "NIL" )
+
+                    print( callMaked.callDate! )
                     
                     call.callUID = callMaked.callUID!
-                    //call.callDate = callMaked.callDate!
-                    call.callDate = callDate
+                    call.callDate = callMaked.callDate!
+                    //call.callDate = callDate
                     call.callGender = callMaked.callGender
                     call.callLanguage = callMaked.callLanguage
                     call.callName = callMaked.callName!

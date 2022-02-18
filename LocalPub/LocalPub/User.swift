@@ -77,7 +77,7 @@ func SaveUserDefault( key: String, value: Any ) {
     if let userUID = myUserDefaults.string( forKey: UserDefault.UID.toString() ) {
         
         let docRef = db.collection("User").document( userUID )
-
+        
         docRef.updateData( [
             UserDefault.LogDate.toString(): logDate,
             key: value ] ) { err in
