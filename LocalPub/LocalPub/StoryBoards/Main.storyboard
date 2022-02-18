@@ -95,24 +95,6 @@
                                     <segue destination="U1N-dQ-mXw" kind="show" id="xPm-jo-wM5"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CwJ-kp-rwx">
-                                <rect key="frame" x="31" y="681" width="136" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="SaveTest"/>
-                                <connections>
-                                    <action selector="saveTest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wy9-bJ-bYJ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I9q-ig-pgl">
-                                <rect key="frame" x="207" y="681" width="136" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="GetTest"/>
-                                <connections>
-                                    <action selector="getTest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BYa-07-2mj"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

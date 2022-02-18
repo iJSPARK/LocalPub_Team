@@ -188,6 +188,49 @@ func GetUserDefault( user: Firebase.User, eMailPW: String  ) {
     
 }
 
+func GetUserDefaultFromDB( key: String, completion: @escaping (Any?) -> Void ) {
+        
+    let db: Firestore = Firestore.firestore()
+    let myUserDefaults = UserDefaults.standard
+    
+    if let userUID = myUserDefaults.string( forKey: UserDefault.UID.toString() ) {
+    
+        db.collection("User").whereField( "UID", isEqualTo: userUID ).getDocuments() { ( querySnapshot, err ) in
+            
+            if let err = err {
+                
+                print( "Error getting documents: \(err)" )
+                
+                completion(nil)
+                
+            } else {
+                
+                for document in querySnapshot!.documents {
+                    
+                    print( "\(document.documentID) => \(type(of:document.data())) : count \(document.data().count)" )
+                    
+                    for userData in document.data(){
+                        
+                        if userData.key == key {
+                            
+                            print( "User Data: \(userData.key) -> \(userData.value)" )
+                            
+                            myUserDefaults.set( userData.value, forKey: userData.key )
+                        
+                            completion( userData.value )
+                        }
+
+                    }
+                }
+                
+            }
+            
+        }
+            
+    }
+    
+}
+
 func GetUserData( completion: @escaping ([String:Any]?) -> Void ) {
     
     let db: Firestore = Firestore.firestore()
