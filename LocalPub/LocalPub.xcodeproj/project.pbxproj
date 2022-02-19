@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		796A8FD627BE0D390051B543 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796A8FD527BE0D390051B543 /* Language.swift */; };
 		7980EDB027AF82B4000578A5 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7980EDAF27AF82B4000578A5 /* Country.swift */; };
 		7980EDB627AF9F68000578A5 /* CountryCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7980EDB527AF9F68000578A5 /* CountryCodeViewController.swift */; };
 		7980EDB827AFA5E7000578A5 /* CountryCode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7980EDB727AFA5E6000578A5 /* CountryCode.storyboard */; };
@@ -66,6 +67,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		796A8FD527BE0D390051B543 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		7980EDAF27AF82B4000578A5 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		7980EDB527AF9F68000578A5 /* CountryCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCodeViewController.swift; sourceTree = "<group>"; };
 		7980EDB727AFA5E6000578A5 /* CountryCode.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CountryCode.storyboard; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 				84A1D51D2797DC4E00CF7104 /* AppDelegate.swift */,
 				84A1D51F2797DC4E00CF7104 /* SceneDelegate.swift */,
 				84E2267E27A3F16800097CF5 /* User.swift */,
+				796A8FD527BE0D390051B543 /* Language.swift */,
 				8470BD9827B2FA3E00D1A7C6 /* Call.swift */,
 				8470BD8127B2F25B00D1A7C6 /* Image.swift */,
 				8470BD8327B2F44C00D1A7C6 /* Misc.swift */,
@@ -422,6 +425,7 @@
 				8470BDC927B3915D00D1A7C6 /* CallViewController.swift in Sources */,
 				79A6F70B27B8F1FF00D0872C /* LanguageTableViewCell.swift in Sources */,
 				7980EDB627AF9F68000578A5 /* CountryCodeViewController.swift in Sources */,
+				796A8FD627BE0D390051B543 /* Language.swift in Sources */,
 				84E2269B27A6E81700097CF5 /* LoginPhoneViewController.swift in Sources */,
 				8470BDC427B2FDAF00D1A7C6 /* CallListViewController.swift in Sources */,
 				84A1D53B2799526C00CF7104 /* ProfileViewController.swift in Sources */,

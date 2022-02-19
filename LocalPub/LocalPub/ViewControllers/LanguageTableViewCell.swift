@@ -8,7 +8,7 @@
 import UIKit
 
 class LanguageTableViewCell: UITableViewCell {
-
+    
     @IBOutlet weak var languageLabel: UILabel!
   
     @IBOutlet weak var languageLevelLabel: UILabel!
@@ -26,9 +26,14 @@ class LanguageTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-//    func update(with language: String) {
-//        languageLabel.text = language
-//        languageLevelImage.image =
-//    }
+    func update(with userLanguages: LanguageInfo  ) {
+    
+
+        let image = UIImage(named: imageLevel)
+                
+                
+        languageLevelImage.image = image
+        languageLevelLabel.text = ""
+    }
 
 }

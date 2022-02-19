@@ -45,8 +45,8 @@
 "Incheon" = "인천";
 
 "SelectLanguage" = "언어 선택";
-"NativeLanguage" = "유창한 언어";
-"PracticeLanguage" = "연습할 언어";
+"NativeLanguage" = "모국어";
+"ForeignLanguage" = "외국어";
 
 "Korean" = "한국어";
 "English" = "영어";

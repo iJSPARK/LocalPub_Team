@@ -8,10 +8,6 @@
 import UIKit
 
 class languageViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
-    // 사용자 언어
-    // yourlanguage/practicelangage
-    let languages = ["korea", "english", "japanese"]
 
     let myUserDefaults = UserDefaults.standard
     
@@ -24,7 +20,7 @@ class languageViewController: UIViewController, UITableViewDelegate, UITableView
     
     @IBOutlet var lblPracticeLanguage: UILabel!
     @IBOutlet var btnPracticeLanguage: UIButton!
-    //
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -43,14 +39,18 @@ class languageViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier:"languageCell")
+        let cell = tableView.dequeueReusableCell(withIdentifier:"userLanguageCell") as! LanguageTableViewCell
         
-        let language = languages[indexPath.row]
-        
-        cell?.textLabel?.text = language
+        let myUserLanguages = userLangages(nativeLanguage: LanguageInfo, foreignLanguages: [LanguageInfo])
         
         
-        return cell!
+        
+        let nativeLanguage = userLanguage
+        
+        cell.update(with: language)
+//        cell?.textLabel?.text = language
+        
+        return cell
     }
     
 //    func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {

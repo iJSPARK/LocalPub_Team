@@ -7,23 +7,37 @@
 
 import UIKit
 
-class SelectLanguageViewController: UIViewController {
+class SelectLanguageViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    let language: [Language] = [.english, .korean, .japanese, .russian, .ukraine, .chinese]
+    
+    @IBOutlet weak var selectLanguageTableView: UITableView!
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let indexPath = self.selectLanguageTableView.indexPathForSelectedRow, let L = segue.destination as? languageViewController {
+            let selectedData = language[indexPath.row].description // arrray
+            // L.lang = selectedData
+            
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func SetLocalized() {
+        self.navigationItem.title = "".localized()
     }
-    */
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return countryInfo.count
+    }
+    
+  
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = selectLanguageTableView.dequeueReusableCell(withIdentifier: "selectLanguageCell")
+        
+        // let countryInfo = countryInfo[indexPath.row]
+        
+        // cell?.textLabel?.text = countryInfo.countryEmoji + " " + countryInfo.countryName
+        
+        return cell!
+    }
 
 }
