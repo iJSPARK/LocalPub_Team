@@ -23,7 +23,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="checkmark.circle" catalog="system" title=""/>
                                 <connections>
-                                    <action selector="pressBtnAA:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aol-Nv-OaL"/>
+                                    <action selector="touchAll:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7pC-z1-Ct9"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UTE-ez-yqh" customClass="MyCheckBtn" customModule="LocalPub" customModuleProvider="target">
@@ -33,7 +33,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="checkmark.circle" catalog="system" title=""/>
                                 <connections>
-                                    <action selector="touchTC" destination="BYZ-38-t0r" eventType="touchUpInside" id="ssP-eK-KXF"/>
+                                    <action selector="Btns:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2ys-Ky-BpJ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yMM-bp-mKM" customClass="MyCheckBtn" customModule="LocalPub" customModuleProvider="target">
@@ -43,7 +43,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="checkmark.circle" catalog="system" title=""/>
                                 <connections>
-                                    <action selector="touchPTC" destination="BYZ-38-t0r" eventType="touchUpInside" id="OYr-tM-wEM"/>
+                                    <action selector="Btns:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F0m-WE-qlx"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4bw-lA-shv" customClass="MyCheckBtn" customModule="LocalPub" customModuleProvider="target">
@@ -53,7 +53,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="checkmark.circle" catalog="system" title=""/>
                                 <connections>
-                                    <action selector="touchTL" destination="BYZ-38-t0r" eventType="touchUpInside" id="1is-Vy-bp1"/>
+                                    <action selector="Btns:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nCd-yl-6nw"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I5B-z8-PjR" customClass="MyCheckBtn" customModule="LocalPub" customModuleProvider="target">
@@ -63,7 +63,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="checkmark.circle" catalog="system" title=""/>
                                 <connections>
-                                    <action selector="touchMA" destination="BYZ-38-t0r" eventType="touchUpInside" id="r7H-nT-8eb"/>
+                                    <action selector="Btns:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mNM-J4-mTw"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hYh-G3-YXW">
@@ -134,8 +134,7 @@ Services (optional)</string>
                                     <color key="baseBackgroundColor" red="0.68627452850000004" green="0.2823529541" blue="0.83137255909999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="clickNext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pzZ-Zz-kwf"/>
-                                    <segue destination="eH2-oI-6UK" kind="show" id="dew-KX-PPm"/>
+                                    <action selector="Next:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GYn-nS-rtC"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -145,11 +144,11 @@ Services (optional)</string>
                     <navigationItem key="navigationItem" title="Agreement" id="BvV-xM-VMG"/>
                     <connections>
                         <outlet property="BtnContinue" destination="wTS-bL-noD" id="UEs-yL-dG0"/>
-                        <outlet property="CheckBtnAA" destination="sXg-4Q-DFj" id="JuC-XE-jWS"/>
-                        <outlet property="CheckBtnMA" destination="I5B-z8-PjR" id="gIk-Y0-UtS"/>
-                        <outlet property="CheckBtnPTC" destination="yMM-bp-mKM" id="GOv-wf-RuS"/>
-                        <outlet property="CheckBtnTC" destination="UTE-ez-yqh" id="KZv-wX-Vzy"/>
-                        <outlet property="CheckBtnTL" destination="4bw-lA-shv" id="nnY-UP-urF"/>
+                        <outlet property="CheckBtnAA" destination="sXg-4Q-DFj" id="c8U-BR-sO3"/>
+                        <outlet property="CheckBtnMA" destination="I5B-z8-PjR" id="chC-sZ-gLG"/>
+                        <outlet property="CheckBtnPTC" destination="yMM-bp-mKM" id="zlB-No-DM1"/>
+                        <outlet property="CheckBtnTC" destination="UTE-ez-yqh" id="ugs-UF-c4s"/>
+                        <outlet property="CheckBtnTL" destination="4bw-lA-shv" id="WmW-LH-v2G"/>
                         <outlet property="ClickAA" destination="hYh-G3-YXW" id="42g-qU-RhV"/>
                         <outlet property="ClickMA" destination="0mN-A9-iiA" id="QSZ-CR-pan"/>
                         <outlet property="ClickPTC" destination="07O-gE-GDa" id="WN0-xP-rql"/>
@@ -164,7 +163,7 @@ Services (optional)</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1838.4615384615383" y="79.620853080568722"/>
+            <point key="canvasLocation" x="1566" y="79"/>
         </scene>
         <!--ProfileStoryboard-->
         <scene sceneID="y6c-Ac-6OQ">
