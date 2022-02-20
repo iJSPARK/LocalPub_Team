@@ -144,6 +144,7 @@ Services (optional)</string>
                     </view>
                     <navigationItem key="navigationItem" title="Agreement" id="BvV-xM-VMG"/>
                     <connections>
+                        <outlet property="BtnContinue" destination="wTS-bL-noD" id="UEs-yL-dG0"/>
                         <outlet property="CheckBtnAA" destination="sXg-4Q-DFj" id="JuC-XE-jWS"/>
                         <outlet property="CheckBtnMA" destination="I5B-z8-PjR" id="gIk-Y0-UtS"/>
                         <outlet property="CheckBtnPTC" destination="yMM-bp-mKM" id="GOv-wf-RuS"/>

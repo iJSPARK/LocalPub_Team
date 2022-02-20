@@ -41,12 +41,21 @@ class agreementViewController: UIViewController {
     @IBOutlet var btns: [MyCheckBtn]!
     
     var checkBtnAction : ((Bool) -> Void)?
-
     
+   @IBOutlet var BtnContinue: UIButton!
+
+    //@IBOutlet var btns
 
 
-    @IBAction func clickNext(_ sender: Any) {
-    }
+    //@IBAction func clickNext(_ sender: Any) {
+        
+        //    @IBAction func phoneVerification(_ sender: UIButton) {
+        
+        //guard let verificationCode = txtPhoneCode.text else {
+          //  return
+   //     }
+        
+  //  }
     
     //다음버튼의 기본값은 회색이고 눌리지 않음.
     //AA 원형 체크박스버튼, 또는 TC와 PTC 원형 체크박스버튼 두개가 컬러일때 다음버튼의 색은 회색에서 컬러로 변함.
@@ -61,7 +70,7 @@ class agreementViewController: UIViewController {
 
         navAgreement.title = "Agreement".localized()
         
-        //필요한 초기화를 함.
+        
         
         CheckBtnTC.setState(true)
         
@@ -71,13 +80,30 @@ class agreementViewController: UIViewController {
            
         CheckBtnMA.setState(true)
         
+        CheckBtnAA.setState(true)
+        
+        BtnContinue.isEnabled = true
+        
     }
     
+    func checkNextEnable() {
+        if
+            CheckBtnTC.isActivated &&
+                CheckBtnPTC.isActivated {
+            BtnContinue.isEnabled = true
+        }
+        else {
+            BtnContinue.isEnabled = false
+        }
+    }
+    
+    
+    
     @IBAction func pressBtnAA(_ sender: MyCheckBtn) {
-        
+
         sender.setState( !sender.isActivated )
         _ = btns.map { btn in btn.setState( sender.isActivated ) }
-        
+
     }
     
     //TC버튼 눌렀을때 동작
@@ -118,16 +144,6 @@ class agreementViewController: UIViewController {
         else {
         CheckBtnMA.setState(true)
         }
-        
-        
-        
-        
-        
-        
     }
-    
-    
-    
-    
-    
 }
+
