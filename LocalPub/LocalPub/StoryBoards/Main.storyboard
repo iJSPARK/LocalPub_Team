@@ -23,6 +23,33 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mYF-xb-xBY">
+                                <rect key="frame" x="277" y="98" width="84" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="LogOut"/>
+                                <connections>
+                                    <action selector="LogOut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6GT-4E-90B"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fIx-p6-e7f">
+                                <rect key="frame" x="31" y="296" width="330" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="LogIn"/>
+                                <connections>
+                                    <segue destination="mZP-za-CyX" kind="show" id="Gan-0f-fs1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cwR-QC-oDP">
+                                <rect key="frame" x="31" y="345" width="330" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Agreement"/>
+                                <connections>
+                                    <segue destination="qOY-B9-PzH" kind="show" id="6Nj-Ot-SV9"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JWj-WK-mtn">
                                 <rect key="frame" x="31.000000000000227" y="398" width="330" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -30,6 +57,15 @@
                                 <buttonConfiguration key="configuration" style="tinted" title="Profile Information"/>
                                 <connections>
                                     <segue destination="fbo-qF-GVE" kind="show" id="k2d-3F-sS7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aVr-t2-J0V">
+                                <rect key="frame" x="31" y="451" width="330" height="31.000000000000114"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Select Language"/>
+                                <connections>
+                                    <segue destination="U1N-dQ-mXw" kind="show" id="xPm-jo-wM5"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WGL-QU-t1q">
@@ -41,42 +77,6 @@
                                     <segue destination="nda-Am-NyC" kind="show" id="m5z-Oq-q2J"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mYF-xb-xBY">
-                                <rect key="frame" x="277" y="98" width="84" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="LogOut"/>
-                                <connections>
-                                    <action selector="LogOut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6GT-4E-90B"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fIx-p6-e7f">
-                                <rect key="frame" x="31.000000000000227" y="296" width="330" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="LogIn"/>
-                                <connections>
-                                    <segue destination="mZP-za-CyX" kind="show" id="Gan-0f-fs1"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cwR-QC-oDP">
-                                <rect key="frame" x="31.000000000000227" y="345" width="330" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Agreement"/>
-                                <connections>
-                                    <segue destination="qOY-B9-PzH" kind="show" id="6Nj-Ot-SV9"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wd5-Wf-EWM">
-                                <rect key="frame" x="31" y="614" width="330" height="31.000000000000114"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Home"/>
-                                <connections>
-                                    <segue destination="UAj-xe-XVB" kind="show" id="TnT-iC-3a5"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HUg-2H-Okt">
                                 <rect key="frame" x="31" y="563" width="330" height="31.000000000000114"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -86,13 +86,13 @@
                                     <segue destination="u73-Ij-DlM" kind="show" id="W6D-4d-a2J"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aVr-t2-J0V">
-                                <rect key="frame" x="31" y="451" width="330" height="31.000000000000114"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wd5-Wf-EWM">
+                                <rect key="frame" x="31" y="614" width="330" height="31.000000000000114"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Select Language"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Home"/>
                                 <connections>
-                                    <segue destination="U1N-dQ-mXw" kind="show" id="xPm-jo-wM5"/>
+                                    <segue destination="UAj-xe-XVB" kind="show" id="TnT-iC-3a5"/>
                                 </connections>
                             </button>
                         </subviews>

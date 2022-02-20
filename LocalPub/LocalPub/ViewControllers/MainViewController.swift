@@ -133,6 +133,23 @@ class mainViewController: UIViewController {
         
     }
 
+//    func test {
+//        
+//        SaveUserDefault( key: UserDefault.SignedInDate.toString(), value: 변환함수(구조체) )
+//        
+//        GetUserDefaultFromDB( key: String ) { value in
+//          
+//            if let value = value {
+//                
+//                let nativaLanguage = 변환함수(value)
+//                
+//            }
+//        }
+//        
+//        
+//    }
+    
+    
     
 }
     

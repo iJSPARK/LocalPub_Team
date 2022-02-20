@@ -73,15 +73,6 @@
                                     <constraint firstAttribute="width" constant="150" id="l4t-t3-OgN"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="daI-cO-9sD">
-                                <rect key="frame" x="17" y="691" width="358" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Continue">
-                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="18"/>
-                                    <color key="baseBackgroundColor" red="0.74117647060000003" green="0.2470588235" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
-                                </buttonConfiguration>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KoP-yM-u3S">
                                 <rect key="frame" x="30" y="482.66666666666669" width="150" height="47.666666666666686"/>
                                 <constraints>
@@ -109,6 +100,15 @@
                                 <connections>
                                     <action selector="GetSecondaryImage:" destination="MvX-uI-U7b" eventType="touchUpInside" id="gi8-7D-00T"/>
                                 </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="daI-cO-9sD">
+                                <rect key="frame" x="17" y="691" width="358" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Continue">
+                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="18"/>
+                                    <color key="baseBackgroundColor" red="0.74117647060000003" green="0.2470588235" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </buttonConfiguration>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ajr-cp-dkq"/>
