@@ -26,14 +26,12 @@ class LanguageTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func update(with userLanguages: LanguageInfo  ) {
-    
-
-        let image = UIImage(named: imageLevel)
-                
-                
-        languageLevelImage.image = image
-        languageLevelLabel.text = ""
+    func update(with userLanguages: LanguageInfo) {
+        languageLabel.text = userLanguages.language.toString()
+        languageLevelLabel.text = userLanguages.level.toString()
+        if let image = UIImage(named: languageLevelLabel.text!) {
+            languageLevelImage.image = image
+        }
     }
-
+      
 }
