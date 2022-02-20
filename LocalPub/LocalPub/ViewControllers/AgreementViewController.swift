@@ -56,19 +56,46 @@ class agreementViewController: UIViewController {
 
         navAgreement.title = "Agreement".localized()
         
-        CheckBtnTC.setState(true)
+        CheckBtnAA.setState(true)
         
+        CheckBtnTC.setState(true)
         CheckBtnPTC.setState(true)
-           
         CheckBtnTL.setState(true)
-           
         CheckBtnMA.setState(true)
         
-      //  CheckBtnAA.setState(true)
-        
-     //   BtnContinue.isEnabled = false
+        BtnContinue.isEnabled = false
         
     }
+    
+    @IBAction func touchAll(_ sender: MyCheckBtn) {
+        
+        sender.setState( !sender.isActivated )
+        
+        btns.forEach { $0.setState( sender.isActivated )
+            
+        }
+            
+        checkNextEnable()
+    
+    }
+    
+    @IBAction func Btns(_ sender: MyCheckBtn) {
+
+        sender.setState( !sender.isActivated )
+            
+        checkNextEnable()
+        
+        if CheckBtnTC.isActivated &&      CheckBtnPTC.isActivated &&
+            CheckBtnTL.isActivated &&
+            CheckBtnMA.isActivated {
+            CheckBtnAA.setState(true)
+
+        } else {
+            CheckBtnAA.setState(false)
+        }
+                    
+    }
+        
     
     func checkNextEnable() {
         if
@@ -79,92 +106,10 @@ class agreementViewController: UIViewController {
         else {
             BtnContinue.isEnabled = false
         }
+        
+
+        
     }
     
     
-    @IBAction func Btns(_ sender: MyCheckBtn) {
-
-        sender.setState( !sender.isActivated )
-
-        
-//            if sender.isActivated == true {
-//                sender.isActivated = false
-//            }
-//            else {
-//                sender.isActivated = true
-//            }
-            
-            checkNextEnable()
-                    
-//            if CheckBtnTC.isActivated == true &&
-//            CheckBtnPTC.isActivated == true &&
-//                CheckBtnTL.isActivated == true &&
-//                CheckBtnMA.isActivated == true {
-//                CheckBtnAA.isActivated = true
-//            }
-//            else {
-//                CheckBtnAA.isActivated = false
-//            }
-    }
-        
-    
-    @IBAction func touchAll(_ sender: MyCheckBtn) {
-        sender.setState( !sender.isActivated )
-        btns.forEach { $0.setState( sender.isActivated )
-            
-        }
-        
-//
-//        sender.setState = (sender.status == true ? false : true)
-//            sender.status.toggle()
-//
-//            [buttonRequired1, buttonRequired2, buttonOpt1, buttonOpt2].forEach { $0.status = sender.status }
-            
-    //        buttonRequired1.status = sender.status
-    //        buttonRequired2.status = sender.status
-    //        buttonOpt1.status = sender.status
-    //        buttonOpt2.status = sender.status
-            
-            checkNextEnable()
-            
-    //        if sender.status == true {
-    //            sender.status = false
-    //        }
-    //        else {
-    //            sender.status = true
-    //        }
-
-        
-        
-        
-   //     if CheckBtnTC.isActivated == true {
-   //         CheckBtnTC.setState(false)
-     //   }
-     //   else {
-     //   CheckBtnTC.setState(true)
-     //   }
-        
-     //  if CheckBtnPTC.isActivated == true {
-     //       CheckBtnPTC.setState(false)
-      //  }
-       // else {
-       // CheckBtnPTC.setState(true)
-       // }
-        
-      //  if CheckBtnTL.isActivated == true {
-      //          CheckBtnTL.setState(false)
-      //  }
-      //  else {
-       //     CheckBtnTL.setState(true)
-       // }
-
-      //  if CheckBtnMA.isActivated == true {
-      //      CheckBtnMA.setState(false)
-      //  }
-      //  else {
-      //  CheckBtnMA.setState(true)
-      //  }
-    
-    
-}
 }
