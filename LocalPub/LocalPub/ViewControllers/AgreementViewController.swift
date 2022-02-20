@@ -54,16 +54,25 @@ class agreementViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
 
-        navAgreement.title = "Agreement".localized()
-        
         CheckBtnAA.setState(true)
-        
         CheckBtnTC.setState(true)
         CheckBtnPTC.setState(true)
         CheckBtnTL.setState(true)
         CheckBtnMA.setState(true)
         
         BtnContinue.isEnabled = false
+        
+    }
+    
+    func SetLocalized() {
+        
+        navAgreement.title = "Agreement".localized()
+        
+        ClickAA.setTitle( "AA".localized(), for: .normal )
+        ClickTC.setTitle( "TC".localized(), for: .normal )
+        ClickPTC.setTitle( "PTC".localized(), for: .normal )
+        ClickTL.setTitle( "TL".localized(), for: .normal )
+        ClickMA.setTitle( "MA".localized(), for: .normal )
         
     }
     

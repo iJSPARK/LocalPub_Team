@@ -106,3 +106,10 @@
 "CameraError" = "Camera Error!";
 "CameraRunError" = "Can't run Camera";
 "CountryCode" = "Country Code";
+
+"AA" = "Accept all";
+"TC" = "Terms and conditions (required)";
+"PTC" = "Privacy terms and conditions(required)";
+"TL" = "Terms and Conditions of Location-Based
+Services (optional)";
+"MA" = "Marketing Agreement (optional)";
