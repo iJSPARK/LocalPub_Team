@@ -134,8 +134,7 @@ Services (optional)</string>
                                     <color key="baseBackgroundColor" red="0.68627452850000004" green="0.2823529541" blue="0.83137255909999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="clickNext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pzZ-Zz-kwf"/>
-                                    <segue destination="eH2-oI-6UK" kind="show" id="dew-KX-PPm"/>
+                                    <action selector="Next:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GYn-nS-rtC"/>
                                 </connections>
                             </button>
                         </subviews>
