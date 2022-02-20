@@ -45,23 +45,9 @@ class agreementViewController: UIViewController {
    @IBOutlet var BtnContinue: UIButton!
 
     //@IBOutlet var btns
-
-
-    //@IBAction func clickNext(_ sender: Any) {
-        
-        //    @IBAction func phoneVerification(_ sender: UIButton) {
-        
-        //guard let verificationCode = txtPhoneCode.text else {
-          //  return
-   //     }
-        
-  //  }
     
     //다음버튼의 기본값은 회색이고 눌리지 않음.
     //AA 원형 체크박스버튼, 또는 TC와 PTC 원형 체크박스버튼 두개가 컬러일때 다음버튼의 색은 회색에서 컬러로 변함.
-    //다음버튼은 컬러일때 클릭이 가능함.
-    //다음버튼을 클릭하면 메인페이지로 돌아감.
-    
     
     override func viewDidLoad() {
         
@@ -69,8 +55,6 @@ class agreementViewController: UIViewController {
         // Do any additional setup after loading the view.
 
         navAgreement.title = "Agreement".localized()
-        
-        
         
         CheckBtnTC.setState(true)
         
@@ -80,9 +64,9 @@ class agreementViewController: UIViewController {
            
         CheckBtnMA.setState(true)
         
-        CheckBtnAA.setState(true)
+      //  CheckBtnAA.setState(true)
         
-        BtnContinue.isEnabled = true
+     //   BtnContinue.isEnabled = false
         
     }
     
@@ -98,52 +82,89 @@ class agreementViewController: UIViewController {
     }
     
     
-    
-    @IBAction func pressBtnAA(_ sender: MyCheckBtn) {
+    @IBAction func Btns(_ sender: MyCheckBtn) {
 
         sender.setState( !sender.isActivated )
-        _ = btns.map { btn in btn.setState( sender.isActivated ) }
 
+        
+//            if sender.isActivated == true {
+//                sender.isActivated = false
+//            }
+//            else {
+//                sender.isActivated = true
+//            }
+            
+            checkNextEnable()
+                    
+//            if CheckBtnTC.isActivated == true &&
+//            CheckBtnPTC.isActivated == true &&
+//                CheckBtnTL.isActivated == true &&
+//                CheckBtnMA.isActivated == true {
+//                CheckBtnAA.isActivated = true
+//            }
+//            else {
+//                CheckBtnAA.isActivated = false
+//            }
     }
+        
     
-    //TC버튼 눌렀을때 동작
-    
-    @IBAction func touchTC() {
-        if CheckBtnTC.isActivated == true {
-            CheckBtnTC.setState(false)
-        }
-        else {
-        CheckBtnTC.setState(true)
+    @IBAction func touchAll(_ sender: MyCheckBtn) {
+        sender.setState( !sender.isActivated )
+        btns.forEach { $0.setState( sender.isActivated )
+            
         }
         
-    }
-    
-    @IBAction func touchPTC() {
-        if CheckBtnPTC.isActivated == true {
-            CheckBtnPTC.setState(false)
-        }
-        else {
-        CheckBtnPTC.setState(true)
-        }
+//
+//        sender.setState = (sender.status == true ? false : true)
+//            sender.status.toggle()
+//
+//            [buttonRequired1, buttonRequired2, buttonOpt1, buttonOpt2].forEach { $0.status = sender.status }
+            
+    //        buttonRequired1.status = sender.status
+    //        buttonRequired2.status = sender.status
+    //        buttonOpt1.status = sender.status
+    //        buttonOpt2.status = sender.status
+            
+            checkNextEnable()
+            
+    //        if sender.status == true {
+    //            sender.status = false
+    //        }
+    //        else {
+    //            sender.status = true
+    //        }
+
         
-    }
+        
+        
+   //     if CheckBtnTC.isActivated == true {
+   //         CheckBtnTC.setState(false)
+     //   }
+     //   else {
+     //   CheckBtnTC.setState(true)
+     //   }
+        
+     //  if CheckBtnPTC.isActivated == true {
+     //       CheckBtnPTC.setState(false)
+      //  }
+       // else {
+       // CheckBtnPTC.setState(true)
+       // }
+        
+      //  if CheckBtnTL.isActivated == true {
+      //          CheckBtnTL.setState(false)
+      //  }
+      //  else {
+       //     CheckBtnTL.setState(true)
+       // }
+
+      //  if CheckBtnMA.isActivated == true {
+      //      CheckBtnMA.setState(false)
+      //  }
+      //  else {
+      //  CheckBtnMA.setState(true)
+      //  }
     
-    @IBAction func touchTL() {
-        if CheckBtnTL.isActivated == true {
-                CheckBtnTL.setState(false)
-        }
-        else {
-            CheckBtnTL.setState(true)
-        }
-    }
     
-    @IBAction func touchMA() {
-        if CheckBtnMA.isActivated == true {
-            CheckBtnMA.setState(false)
-        }
-        else {
-        CheckBtnMA.setState(true)
-        }
-    }
 }
-
+}
