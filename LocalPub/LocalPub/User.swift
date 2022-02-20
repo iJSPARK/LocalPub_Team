@@ -177,6 +177,27 @@ func GetUserDefaultFromDB( key: String, completion: @escaping (Any?) -> Void ) {
     
 }
 
+//GetUserDefaultFromDB(key: "GetUserLanguageInfo") {
+//    userData in
+//
+//    let decoder = JSONDecoder()
+//
+//    if let savedNativeData = myUserDefaults.object(forKey: UserDefault.NativeLanguage.toString()) as? Data {
+//        if let savedNativeLangInfo = try? decoder.decode(LanguageInfo.self, from: savedNativeData) {
+//            print(savedNativeLangInfo.language, savedNativeLangInfo.level))
+//        }
+//    }
+//
+//    if let savedForeignData = myUserDefaults.object(forKey: UserDefault.ForeignLanguage.toString()) as? Data {
+//        if let savedForeignLangInfo = try? decoder.decode([LanguageInfo].self, from: savedForeignData) {
+//            for foreignLangInfo in savedForeignLangInfo {
+//                print(foreignLangInfo.language, foreignLangInfo.level)
+//            }
+//        }
+//    }
+//}
+
+
 func GetUserDefault( user: Firebase.User, eMailPW: String  ) {
     
     let db: Firestore = Firestore.firestore()
