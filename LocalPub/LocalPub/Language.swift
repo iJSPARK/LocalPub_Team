@@ -7,12 +7,7 @@
 
 import Foundation
 
-struct MyUserLangages {
-    let nativeLanguage: LanguageInfo
-    var foreignLanguages: [LanguageInfo]
-}
-
-struct LanguageInfo {
+struct LanguageInfo: Codable {
     var language: Language
     var level: Level
 }

@@ -19,9 +19,8 @@ enum UserDefault: String {
     case Birth = "Birth"
     case Residence = "Residence"
     case Nationality = "Nationality" // ForeignLanguage
-    case NativeLanguage = "NativeLanguage"
-    case ForeignLanguage = "ForeignLanguage"
-    case LevelLanguage = "LevelLanguage"
+    case NativeLanguageInfo = "NativeLanguageInfo"
+    case ForeignLanguageInfo = "ForeignLanguageInfo"
     case Experience = "Experience"
     case AboutMe = "AboutMe"
     case UID = "UID"
@@ -48,9 +47,8 @@ func initUserDefaultValue() -> [ UserDefault : Any ] {
         .Birth: "",
         .Nationality: "",
         .Residence: "",
-        .NativeLanguage: 0,
-        .ForeignLanguage: [0, 0, 0],
-        .LevelLanguage: [0, 0, 0],
+        .NativeLanguageInfo: 0,
+        .ForeignLanguageInfo: [0, 0, 0],
         .Experience: "",
         .AboutMe: "",
         .UID: "",  //RofzE9N1mRZp97aTzy0Au1U66mG2

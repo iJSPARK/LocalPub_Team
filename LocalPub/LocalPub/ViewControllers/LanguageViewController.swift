@@ -53,6 +53,21 @@ class languageViewController: UIViewController, UITableViewDelegate, UITableView
         return cell
     }
     
+    func languageChangedToDB(nativeLanguageInfo: LanguageInfo, foreignLanguagesInfo: [LanguageInfo]) {
+        
+        let encoder = JSONEncoder()
+        
+        if let encodedData = try? encoder.encode(nativeLanguageInfo) {
+            SaveUserDefault( key: UserDefault.NativeLanguage.toString(), value: encodedData )
+        }
+        
+        if let encodedData = try? encoder.encode(foreignLanguagesInfo) {
+            SaveUserDefault( key: UserDefault.ForeignLanguage.toString(), value: encodedData )
+        }
+        
+    }
+    
+    
 //    func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
 //        <#code#>
 //    }
