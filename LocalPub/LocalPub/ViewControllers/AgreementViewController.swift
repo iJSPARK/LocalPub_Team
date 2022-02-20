@@ -27,7 +27,6 @@ class agreementViewController: UIViewController {
 //text상자 앞에 check 버튼들 ! 위 각각의 text상자 버튼들을 눌러서 각각 상세페이지 갔다가 돌아오면 이 버튼들을 누를 수 있음. (상세페이지 갔다오지 않으면 눌러지지 않음)
 
     
-    
     @IBOutlet weak var CheckBtnAA: MyCheckBtn!//에러
     
     @IBOutlet weak var CheckBtnTC: MyCheckBtn!
@@ -69,7 +68,6 @@ class agreementViewController: UIViewController {
         // Do any additional setup after loading the view.
 
         navAgreement.title = "Agreement".localized()
-        
         
         
         CheckBtnTC.setState(true)
@@ -115,7 +113,7 @@ class agreementViewController: UIViewController {
         else {
         CheckBtnTC.setState(true)
         }
-        
+        checkNextEnable()
     }
     
     @IBAction func touchPTC() {
