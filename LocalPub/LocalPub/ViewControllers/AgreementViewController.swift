@@ -38,7 +38,6 @@ class agreementViewController: UIViewController {
         
         CheckBtnAA.setState(true)
         
-        
         _ = btns.map{ $0.setState(true) }
         
         BtnContinue.isEnabled = true
@@ -72,15 +71,15 @@ class agreementViewController: UIViewController {
     @IBAction func Btns(_ sender: MyCheckBtn) {
 
         sender.setState( !sender.isActivated )
-            
-        checkNextEnable()
 
+        checkNextEnable()
+        
         CheckBtnAA.setState( CheckBtnTC.isActivated && CheckBtnPTC.isActivated && CheckBtnTL.isActivated && CheckBtnMA.isActivated )
-                    
+            
     }
     
     func checkNextEnable() {
-        checkNextEnable()
+
         BtnContinue.isEnabled = ( CheckBtnTC.isActivated && CheckBtnPTC.isActivated )
         
     }

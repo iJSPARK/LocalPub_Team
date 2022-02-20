@@ -23,7 +23,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="checkmark.circle" catalog="system" title=""/>
                                 <connections>
-                                    <action selector="touchAll:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7pC-z1-Ct9"/>
+                                    <action selector="touchAll:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ary-A3-Fc7"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UTE-ez-yqh" customClass="MyCheckBtn" customModule="LocalPub" customModuleProvider="target">
@@ -33,7 +33,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="checkmark.circle" catalog="system" title=""/>
                                 <connections>
-                                    <action selector="Btns:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2ys-Ky-BpJ"/>
+                                    <action selector="Btns:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4uj-Xb-aZl"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yMM-bp-mKM" customClass="MyCheckBtn" customModule="LocalPub" customModuleProvider="target">
@@ -43,7 +43,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="checkmark.circle" catalog="system" title=""/>
                                 <connections>
-                                    <action selector="Btns:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F0m-WE-qlx"/>
+                                    <action selector="Btns:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pwo-Dt-5Lu"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4bw-lA-shv" customClass="MyCheckBtn" customModule="LocalPub" customModuleProvider="target">
@@ -53,7 +53,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="checkmark.circle" catalog="system" title=""/>
                                 <connections>
-                                    <action selector="Btns:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nCd-yl-6nw"/>
+                                    <action selector="Btns:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gmp-M4-FXE"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I5B-z8-PjR" customClass="MyCheckBtn" customModule="LocalPub" customModuleProvider="target">
@@ -63,7 +63,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="checkmark.circle" catalog="system" title=""/>
                                 <connections>
-                                    <action selector="Btns:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mNM-J4-mTw"/>
+                                    <action selector="Btns:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ehb-Pl-KGV"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hYh-G3-YXW">
@@ -144,11 +144,11 @@ Services (optional)</string>
                     <navigationItem key="navigationItem" title="Agreement" id="BvV-xM-VMG"/>
                     <connections>
                         <outlet property="BtnContinue" destination="wTS-bL-noD" id="UEs-yL-dG0"/>
-                        <outlet property="CheckBtnAA" destination="sXg-4Q-DFj" id="c8U-BR-sO3"/>
-                        <outlet property="CheckBtnMA" destination="I5B-z8-PjR" id="chC-sZ-gLG"/>
-                        <outlet property="CheckBtnPTC" destination="yMM-bp-mKM" id="zlB-No-DM1"/>
-                        <outlet property="CheckBtnTC" destination="UTE-ez-yqh" id="ugs-UF-c4s"/>
-                        <outlet property="CheckBtnTL" destination="4bw-lA-shv" id="WmW-LH-v2G"/>
+                        <outlet property="CheckBtnAA" destination="sXg-4Q-DFj" id="MkJ-cg-jIw"/>
+                        <outlet property="CheckBtnMA" destination="I5B-z8-PjR" id="eAS-9j-7BA"/>
+                        <outlet property="CheckBtnPTC" destination="yMM-bp-mKM" id="q3Q-Ss-hIe"/>
+                        <outlet property="CheckBtnTC" destination="UTE-ez-yqh" id="zzs-qi-gA6"/>
+                        <outlet property="CheckBtnTL" destination="4bw-lA-shv" id="EPg-GE-ZG0"/>
                         <outlet property="ClickAA" destination="hYh-G3-YXW" id="42g-qU-RhV"/>
                         <outlet property="ClickMA" destination="0mN-A9-iiA" id="QSZ-CR-pan"/>
                         <outlet property="ClickPTC" destination="07O-gE-GDa" id="WN0-xP-rql"/>
