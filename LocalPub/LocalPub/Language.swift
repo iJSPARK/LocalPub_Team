@@ -17,47 +17,31 @@ struct LanguageInfo {
     var level: Level
 }
 
-enum Language {
-    case english, korean, japanese, russian, chinese, ukraine
+enum Language: String, Codable {
+    case english = "English"
+    case korean = "Korean"
+    case japanese = "Japanese"
+    case russian = "Russian"
+    case chinese = "Chinese"
+    case ukraine = "Ukraine"
+    case french = "French"
+    case german = "German"
+    case italian = "Italian"
+    case spanish = "Spanish"
 
-    var description: String {
-        switch self {
-        case .english:
-            return "English"
-        case .korean:
-            return "Korean"
-        case .japanese:
-            return "Japanese"
-        case .russian:
-            return "Russian"
-        case .chinese:
-            return "Chinese"
-        case .ukraine:
-            return "Ukraine"
-        }
+    func toString() -> String {
+        return self.rawValue
     }
-
 }
 
-enum Level {
-    case native, fluent, good, soso, little
+enum Level: String, Codable {
+    case native = "Native"
+    case fluent = "Fluent"
+    case good = "Good"
+    case soso = "Soso"
+    case little = "Little"
     
-    var description: String {
-        switch self {
-        case .native:
-            return "Native"
-        case .fluent:
-            return "Fluent"
-        case .good:
-            return "good"
-        case .soso:
-            return "soso"
-        case .little:
-            return "Little"
-        }
+    func toString() -> String {
+        return self.rawValue
     }
 }
-
-
-
-
