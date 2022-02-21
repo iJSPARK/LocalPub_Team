@@ -9,9 +9,8 @@ import Foundation
 import UIKit
 import Firebase
 
-func Login() -> Bool {
 
-    var isLoggedIn: Bool = false
+func LoggedInCheck() {
 
     if let user = Auth.auth().currentUser {
         
@@ -19,12 +18,32 @@ func Login() -> Bool {
         
         print( "Aleady Logined! - eMail:\(user.email ?? "") / Phone:  \(user.phoneNumber ?? "")")
         
-        isLoggedIn = true
-
+        GoHome()
+        
+    } else {
+        
+        Login()
+        
     }
+}
+
     
-    return isLoggedIn
+func Login() {
+
+    setRootViewController( "LoginNavStoryboard", "loginNavController" )
     
+}
+
+func GoHome() {
+
+    setRootViewController( "HomeTabStoryboard", "homeTabController" )
+    
+}
+
+func setRootViewController(_ storyboardName: String, _ identifier: String ) {
+    
+    (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.setRootViewController( storyboardName, identifier )
+
 }
 
 func LogOut() {
@@ -32,14 +51,36 @@ func LogOut() {
     do {
         
         try Auth.auth().signOut()
+        
         print( "Sign out complete!")
         SaveUserDefault( key: UserDefault.Login.toString(), value: 0 )
         
-        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.setRootViewController( "LoginNavStoryboard", "loginNavController" )
+        Login()
         
     } catch {
         
         print( "Sign out error")
     }
     
+}
+
+func Joined(_ setJoin: Bool = false ) -> Bool {
+    
+    var isJoined: Bool = false
+    
+    if !setJoin {
+    
+        let joinValue = UserDefaults.standard.integer( forKey: UserDefault.Joined.toString() )
+        
+        isJoined = ( joinValue == 1 )
+        
+    } else {
+        
+        SaveUserDefault( key: UserDefault.Joined.toString(), value: 1 )
+        isJoined = true
+
+    }
+    
+    return isJoined
+        
 }

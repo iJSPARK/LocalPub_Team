@@ -27,7 +27,7 @@ class agreementViewController: UIViewController {
     @IBOutlet weak var ClickTL: UIButton!
     @IBOutlet weak var ClickMA: UIButton!
     
-    @IBOutlet var BtnContinue: UIButton!
+    @IBOutlet var btnNext: UIButton!
     
     override func viewDidLoad() {
         
@@ -40,7 +40,7 @@ class agreementViewController: UIViewController {
         
         _ = btns.map{ $0.setState(true) }
         
-        BtnContinue.isEnabled = true
+        checkNextEnable()
     
     }
     
@@ -54,7 +54,13 @@ class agreementViewController: UIViewController {
         ClickTL.setTitle( "TL".localized(), for: .normal )
         ClickMA.setTitle( "MA".localized(), for: .normal )
         
-        BtnContinue.setTitle( "Continue".localized(), for: .normal )
+        btnNext.setTitle( "Continue".localized(), for: .normal )
+        
+    }
+    
+    func checkNextEnable() {
+
+        btnNext.isEnabled = ( CheckBtnTC.isActivated && CheckBtnPTC.isActivated )
         
     }
     
@@ -78,13 +84,22 @@ class agreementViewController: UIViewController {
             
     }
     
-    func checkNextEnable() {
-
-        BtnContinue.isEnabled = ( CheckBtnTC.isActivated && CheckBtnPTC.isActivated )
-        
-    }
-    
     @IBAction func Next(_ sender: UIButton) {
+        
+        if Joined() {
+            
+//            guard let presentingVC = self.presentingViewController as? UINavigationController else { return }
+//            self.dismiss(animated: true) {
+//                presentingVC.popViewController(animated: true)
+//            }
+            
+            GoHome()
+            
+        } else {
+
+            self.performSegue( withIdentifier: "Picture", sender: self )
+            
+        }
     }
     
 }

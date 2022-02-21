@@ -39,8 +39,12 @@ class loginViewController: UIViewController {
         txtPhoneCode.addTarget(self, action: #selector(textFieldDidChanged(textField:)), for: .editingChanged)
         
         SetLocalized()
+        
         btnPhoneVerification.isEnabled = false
-        txtPhoneNo.text = myUserDefaults.string( forKey: UserDefault.PhoneNo.toString() )
+        
+        if let phoneNo =  myUserDefaults.string( forKey: UserDefault.PhoneNo.toString() ) {
+            txtPhoneNo.text = phoneNo.replacingOccurrences( of: selectedCountryCode.countryCode, with: "" )
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -61,22 +65,16 @@ class loginViewController: UIViewController {
     
     // setLocalized
     func SetLocalized() {
+        
         navLoginPhone.title = "Login".localized()
+        
         txtPhoneNo.placeholder = "InputPhone".localized()
         txtPhoneCode.placeholder = "InputVerificationCode".localized()
         btnPhoneVerification.setTitle( "Verification".localized(), for: .normal )
-    }
     
-    func LogIn() {
-        
-        print( "login success" )
-        
-        SaveUserDefault( key: UserDefault.Login.toString(), value: 1 )
-        
     }
     
     @IBAction func sendPhoneVerificationPhoneCode(_ sender: UIButton) {
-        
         
         guard let phoneNumber = txtPhoneNo.text else {
             return
@@ -141,9 +139,19 @@ class loginViewController: UIViewController {
                 
                 print( "Hi! \(user.phoneNumber!) has been verified!")
                 
-                AlertOK( title: "VerificationSuccess".localized(), message: "SuccessPhoneVerification".localized(), viewController: self )
+                SaveUserDefault( key: UserDefault.Login.toString(), value: 1 )
                 
-                self.LogIn()
+//                AlertOK( title: "VerificationSuccess".localized(), message: "SuccessPhoneVerification".localized(), viewController: self )
+            
+                if Joined() {
+                    
+                    GoHome()
+                    
+                } else {
+                    
+                    self.performSegue( withIdentifier: "Agreement", sender: self )
+                }
+
                     
             } else {
 

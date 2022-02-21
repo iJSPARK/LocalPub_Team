@@ -13,11 +13,12 @@ class MyCheckBtn: UIButton {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        print("MyCheckBtn - awakeFromNib() called")
+        //print("MyCheckBtn - awakeFromNib() called")
     }
     
     func setState(_ newValue: Bool){
-        print("MyCheckBtn - setState() called / newValue: \(newValue)")
+        
+        //print("MyCheckBtn - setState() called / newValue: \(newValue)")
         
         //1. 현재 버튼의 상태 변경
         self.isActivated = newValue

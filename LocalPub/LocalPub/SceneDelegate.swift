@@ -21,15 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         window = UIWindow( windowScene: windowScene )
         
-        if Login() {
-
-            setRootViewController( "HomeTabStoryboard", "homeTabController" )
-            
-        } else {
-            
-            setRootViewController( "LoginNavStoryboard", "loginNavController" )
-            
-        }
+        LoggedInCheck()
         
     }
     

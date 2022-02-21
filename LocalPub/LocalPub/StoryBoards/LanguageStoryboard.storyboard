@@ -12,6 +12,7 @@
         <!--Select Language-->
         <scene sceneID="hlb-dF-GKw">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ajQ-MP-xKM" sceneMemberID="firstResponder"/>
                 <viewController id="VZ0-ao-xLd" customClass="languageViewController" customModule="LocalPub" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yUh-31-WZW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -66,7 +67,6 @@
                         <outlet property="navLanguage" destination="Jrh-wa-eTC" id="hv1-qO-Ppw"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ajQ-MP-xKM" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1980" y="396"/>
         </scene>
@@ -216,7 +216,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z5x-Ka-mtC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3013.04347826087" y="395.75892857142856"/>
+            <point key="canvasLocation" x="2929" y="396"/>
         </scene>
     </scenes>
     <resources>

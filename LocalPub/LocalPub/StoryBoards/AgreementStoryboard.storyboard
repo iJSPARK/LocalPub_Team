@@ -134,7 +134,8 @@ Services (optional)</string>
                                     <color key="baseBackgroundColor" red="0.68627452850000004" green="0.2823529541" blue="0.83137255909999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="Next:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GYn-nS-rtC"/>
+                                    <action selector="Next:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bBO-G5-ECz"/>
+                                    <segue destination="xbv-If-NEZ" kind="unwind" unwindAction="unwindToHome:" id="HbS-da-tWA"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -143,7 +144,6 @@ Services (optional)</string>
                     </view>
                     <navigationItem key="navigationItem" title="Agreement" id="BvV-xM-VMG"/>
                     <connections>
-                        <outlet property="BtnContinue" destination="wTS-bL-noD" id="UEs-yL-dG0"/>
                         <outlet property="CheckBtnAA" destination="sXg-4Q-DFj" id="MkJ-cg-jIw"/>
                         <outlet property="CheckBtnMA" destination="I5B-z8-PjR" id="eAS-9j-7BA"/>
                         <outlet property="CheckBtnPTC" destination="yMM-bp-mKM" id="q3Q-Ss-hIe"/>
@@ -154,14 +154,17 @@ Services (optional)</string>
                         <outlet property="ClickPTC" destination="07O-gE-GDa" id="WN0-xP-rql"/>
                         <outlet property="ClickTC" destination="pJ6-lC-eTv" id="qOW-z0-7sD"/>
                         <outlet property="ClickTL" destination="AWR-mh-AZr" id="J1t-ch-CnH"/>
+                        <outlet property="btnNext" destination="wTS-bL-noD" id="sKA-lV-ngm"/>
                         <outlet property="navAgreement" destination="BvV-xM-VMG" id="Lky-yd-R2r"/>
                         <outletCollection property="btns" destination="UTE-ez-yqh" collectionClass="NSMutableArray" id="KXA-nT-KO2"/>
                         <outletCollection property="btns" destination="yMM-bp-mKM" collectionClass="NSMutableArray" id="u4H-Vv-5dv"/>
                         <outletCollection property="btns" destination="4bw-lA-shv" collectionClass="NSMutableArray" id="5FY-Eq-zxQ"/>
                         <outletCollection property="btns" destination="I5B-z8-PjR" collectionClass="NSMutableArray" id="cWb-Kc-HIk"/>
+                        <segue destination="wTx-Hs-cTg" kind="presentation" identifier="Picture" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="Jz4-Ka-4p3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="xbv-If-NEZ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1566" y="79"/>
         </scene>
@@ -274,6 +277,16 @@ Services (optional)</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7nA-JN-9jL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1209" y="894"/>
+        </scene>
+        <!--pictureController-->
+        <scene sceneID="bhV-h1-TpX">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PictureStoryboard" referencedIdentifier="pictureController" id="wTx-Hs-cTg" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="DOx-LX-fSH"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RX3-sc-NBs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2248" y="79"/>
         </scene>
     </scenes>
     <resources>

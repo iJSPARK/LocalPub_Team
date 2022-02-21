@@ -25,6 +25,7 @@ enum UserDefault: String {
     case AboutMe = "AboutMe"
     case UID = "UID"
     case Login = "Login"
+    case Joined = "Joined"
     case AuthState = "AuthState"
     case CreationDate = "CreationDate"
     case SignedInDate = "SignedInDate"
@@ -54,6 +55,7 @@ func initUserDefaultValue() -> [ UserDefault : Any ] {
         .AboutMe: "",
         .UID: "",  //RofzE9N1mRZp97aTzy0Au1U66mG2
         .Login: 0,
+        .Joined: 0,
         .AuthState: 0,
         .CreationDate: -1,
         .SignedInDate: -1,

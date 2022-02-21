@@ -178,7 +178,7 @@
                         <outlet property="navLoginPhone" destination="yRp-ru-3pq" id="SAL-vj-H56"/>
                         <outlet property="txtPhoneCode" destination="Ly0-5k-mzG" id="KCc-N4-w5f"/>
                         <outlet property="txtPhoneNo" destination="2Yb-ie-l7B" id="TaA-vM-Y0L"/>
-                        <segue destination="0tQ-0n-Qnc" kind="show" identifier="Agreement" id="BoH-YY-wBo"/>
+                        <segue destination="0tQ-0n-Qnc" kind="modal" identifier="Agreement" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="BoH-YY-wBo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DEf-2N-y4J" sceneMemberID="firstResponder"/>
@@ -211,7 +211,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DXd-qM-9yr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3321" y="900"/>
+            <point key="canvasLocation" x="4009" y="439"/>
         </scene>
         <!--Country Code View Controller-->
         <scene sceneID="rZc-hl-pWN">
@@ -256,7 +256,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lnD-gk-ga0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="P5x-a0-wfz" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4168" y="439"/>
+            <point key="canvasLocation" x="3320" y="1172"/>
         </scene>
     </scenes>
     <resources>

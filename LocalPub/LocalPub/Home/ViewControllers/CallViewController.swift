@@ -79,7 +79,6 @@ class CallViewController: UIViewController {
             mapView.isHidden = true
         }
         
-        
     }
     
     @IBAction func dismiss(_ sender: Any) {

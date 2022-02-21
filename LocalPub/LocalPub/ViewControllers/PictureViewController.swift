@@ -30,7 +30,7 @@ class pictureViewController: UIViewController {
     @IBOutlet var btnMainPicture: UIButton!
     @IBOutlet var btnSecondaryPicture: UIButton!
     
-    @IBOutlet var btnContinue: UIButton!
+    @IBOutlet var btnNext: UIButton!
     
     override func viewDidLoad() {
         
@@ -54,7 +54,6 @@ class pictureViewController: UIViewController {
         imageSecondaryView.layer.borderWidth = 1
         imageSecondaryView.clipsToBounds = true
         imageSecondaryView.layer.borderColor = UIColor.gray.cgColor
-        
         
         GetUserData() { userData in
          
@@ -113,11 +112,11 @@ class pictureViewController: UIViewController {
             
         }
         
-        btnContinue.isHidden = true
-        
         self.picker.allowsEditing = true
         
         SetLocalized()
+        
+        checkNextEnable() 
         
     }
     
@@ -131,18 +130,8 @@ class pictureViewController: UIViewController {
         btnMainPicture.setTitle( "MainPicture".localized(), for: .normal )
         btnSecondaryPicture.setTitle( "SecondaryPicture".localized(), for: .normal )
         
-        btnContinue.setTitle( "Continue".localized(), for: .normal )
+        btnNext.setTitle( "Continue".localized(), for: .normal )
 
-    }
-    
-    @IBAction func GetMainImage(_ sender: UIButton) {
-        isMainImage = true
-        GetUserImage()
-    }
-    
-    @IBAction func GetSecondaryImage(_ sender: UIButton) {
-        isMainImage = false
-        GetUserImage()
     }
     
     private func GetUserImage() {
@@ -164,7 +153,7 @@ class pictureViewController: UIViewController {
         
         picker.sourceType = .photoLibrary
 
-        present(picker, animated: false, completion: nil)
+        present( picker, animated: false, completion: nil )
     }
     
     func openCamera() {
@@ -175,18 +164,85 @@ class pictureViewController: UIViewController {
 
             picker.sourceType = .camera
 
-            present(picker, animated: false, completion: nil)
+            present( picker, animated: false, completion: nil )
 
         } else{
 
             print( "Camera not available" )
+            
             AlertOK( title: "CameraError".localized(), message: "CameraRunError".localized(), viewController: self )
 
         }
         
+    }
+    
+    func checkNextEnable() {
+
+        btnNext.isEnabled = ( imageMainView.image != nil  && imageSecondaryView.image != nil )
         
     }
     
+    func saveImage(_ isMainImage: Bool ) {
+        
+        guard let userImage = ( isMainImage ? imageMainView.image : imageSecondaryView.image ) else { return }
+        
+        let fileName = isMainImage ? userUID : "\(userUID)_Secondary"
+        
+        ImageFileManager.shared.saveImage( image: userImage, name: fileName ) { onSuccess in
+        
+            print( "saveImage onSuccess: \(fileName) : \(onSuccess)" )
+            
+            if onSuccess {
+                if self.isMainImage {
+                    self.imageMainView.image = ImageFileManager.shared.getSavedImage( named: fileName )
+                } else {
+                    self.imageSecondaryView.image = ImageFileManager.shared.getSavedImage( named: fileName )
+                }
+            }
+        }
+        
+        uploadImage( filePath: "Users/\(fileName)", img: userImage ){ completion in
+        
+            if let url = completion {
+                print( "Success Save to Firebase Store: \(url)" )
+            }
+        }
+
+    }
+    
+    @IBAction func GetMainImage(_ sender: UIButton) {
+        
+        isMainImage = true
+        GetUserImage()
+        checkNextEnable()
+    
+    }
+    
+    @IBAction func GetSecondaryImage(_ sender: UIButton) {
+        isMainImage = false
+        
+        GetUserImage()
+        checkNextEnable()
+    
+    }
+    
+    @IBAction func Next(_ sender: UIButton) {
+        
+        saveImage(true)
+        saveImage(false)
+        
+        if Joined() {
+            
+            GoHome()
+            
+        } else {
+
+            //Joined(true)
+            GoHome()
+            
+        }
+        
+    }
     
 }
 
@@ -214,31 +270,13 @@ extension pictureViewController : UIImagePickerControllerDelegate, UINavigationC
         }
         
         if userImage != nil {
-            
-
-            let fileName = isMainImage ? userUID : "\(userUID)_Secondary"
-            
-            ImageFileManager.shared.saveImage( image: userImage!, name: fileName ) { onSuccess in
-            
-                print( "saveImage onSuccess: \(fileName) : \(onSuccess)" )
                 
-                if onSuccess {
-                    if self.isMainImage {
-                        self.imageMainView.image = ImageFileManager.shared.getSavedImage( named: fileName )
-                    } else {
-                        self.imageSecondaryView.image = ImageFileManager.shared.getSavedImage( named: fileName )
-                    }
-                }
-            }
-            
-            uploadImage( filePath: "Users/\(fileName)", img: userImage! ){ completion in
-            
-                if let url = completion {
-                    print( "Success Save to Firebase Store: \(url)" )
-                }
+            if self.isMainImage {
+                self.imageMainView.image = userImage
+            } else {
+                self.imageSecondaryView.image = userImage
             }
  
-            
         }
         
         picker.dismiss( animated: true, completion: nil )
