@@ -124,11 +124,11 @@ Services (optional)</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wTS-bL-noD">
-                                <rect key="frame" x="16" y="780" width="358" height="50"/>
+                                <rect key="frame" x="16" y="732" width="358" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Verification">
+                                <buttonConfiguration key="configuration" style="filled" title="Continue">
                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="18"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="baseBackgroundColor" red="0.68627452850000004" green="0.2823529541" blue="0.83137255909999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -165,16 +165,6 @@ Services (optional)</string>
             </objects>
             <point key="canvasLocation" x="1566" y="79"/>
         </scene>
-        <!--ProfileStoryboard-->
-        <scene sceneID="y6c-Ac-6OQ">
-            <objects>
-                <viewControllerPlaceholder storyboardName="ProfileStoryboard" id="eH2-oI-6UK" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="j6U-L8-c01"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="b5s-79-iEW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1881" y="602"/>
-        </scene>
         <!--View Controller-->
         <scene sceneID="8Ic-pp-8de">
             <objects>
@@ -202,7 +192,7 @@ Services (optional)</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pzI-FQ-8ZR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3371" y="491"/>
+            <point key="canvasLocation" x="1898" y="894"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="h0h-Ko-MZB">
@@ -229,7 +219,7 @@ Services (optional)</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ey4-jX-GZC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2731" y="931"/>
+            <point key="canvasLocation" x="2595" y="894"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="7xh-Dw-nyX">
@@ -256,7 +246,7 @@ Services (optional)</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bdu-7Q-Owh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2655" y="-584"/>
+            <point key="canvasLocation" x="525" y="894"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="pze-T6-Bne">
@@ -283,7 +273,7 @@ Services (optional)</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7nA-JN-9jL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3371" y="-181"/>
+            <point key="canvasLocation" x="1209" y="894"/>
         </scene>
     </scenes>
     <resources>

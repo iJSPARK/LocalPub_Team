@@ -29,6 +29,22 @@
                                     <action selector="GetCall:" destination="FHG-28-cTh" eventType="touchUpInside" id="x3t-Me-UoH"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Current Language:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TMg-ii-AKL">
+                                <rect key="frame" x="34" y="75" width="264" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nOo-ma-Ldc">
+                                <rect key="frame" x="287" y="75" width="84" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="LogOut"/>
+                                <connections>
+                                    <action selector="tabLogOut:" destination="FHG-28-cTh" eventType="touchUpInside" id="OhG-Xa-6vT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="oFw-eK-bGG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -36,6 +52,8 @@
                     <tabBarItem key="tabBarItem" image="house" catalog="system" id="y62-8x-CeL"/>
                     <connections>
                         <outlet property="btnFindFriend" destination="OkU-TW-ZVD" id="JWf-i9-LdW"/>
+                        <outlet property="btnLogOut" destination="nOo-ma-Ldc" id="iUi-D4-O1T"/>
+                        <outlet property="lblCurrentLanguage" destination="TMg-ii-AKL" id="CnW-Bf-FL1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5YE-OB-MMY" sceneMemberID="firstResponder"/>
