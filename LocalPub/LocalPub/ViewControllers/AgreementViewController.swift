@@ -88,16 +88,16 @@ class agreementViewController: UIViewController {
         
         if Joined() {
             
-//            guard let presentingVC = self.presentingViewController as? UINavigationController else { return }
-//            self.dismiss(animated: true) {
-//                presentingVC.popViewController(animated: true)
-//            }
-            
-            GoHome()
+            //dismiss( animated: true )
+            //GoHome()
             
         } else {
 
-            self.performSegue( withIdentifier: "Picture", sender: self )
+            //self.performSegue( withIdentifier: "Picture", sender: self )
+            let storyboard = UIStoryboard( name: "PictureStoryboard", bundle: nil )
+            if let vc = storyboard.instantiateViewController(identifier: "pictureController") as? pictureViewController {
+                self.navigationController?.pushViewController(vc, animated: true )
+            }
             
         }
     }

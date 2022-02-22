@@ -149,7 +149,12 @@ class loginViewController: UIViewController {
                     
                 } else {
                     
-                    self.performSegue( withIdentifier: "Agreement", sender: self )
+                    //self.performSegue( withIdentifier: "Agreement", sender: self )
+                    let storyboard = UIStoryboard( name: "AgreementStoryboard", bundle: nil )
+                    if let vc = storyboard.instantiateViewController(identifier: "AgreementController") as? agreementViewController {
+                        self.navigationController?.pushViewController(vc, animated: true )
+                    }
+                    
                 }
 
                     
