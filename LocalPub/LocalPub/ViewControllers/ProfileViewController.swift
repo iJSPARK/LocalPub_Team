@@ -175,7 +175,6 @@ class profileViewController: UIViewController, UITextFieldDelegate {
     
     @objc func genderSelected(segmentedControl: UISegmentedControl) {
         checkText()
-
     }
     
     func createDatePicker() {

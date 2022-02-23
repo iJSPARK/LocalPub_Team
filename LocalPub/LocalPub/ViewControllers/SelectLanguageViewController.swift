@@ -8,9 +8,11 @@
 import UIKit
 
 class SelectLanguageViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
-    let language: [Language] = [.english, .korean, .japanese, .russian, .ukraine, .chinese, .french, .german, .italian]
     
+    var section: Int = -1
+    
+    let languages: [Language] = [.english, .korean, .japanese, .russian, .ukraine, .chinese, .french, .german, .italian]
+
     @IBOutlet weak var selectLanguageTableView: UITableView!
     
     override func viewDidLoad() {
@@ -18,15 +20,31 @@ class SelectLanguageViewController: UIViewController, UITableViewDelegate, UITab
         selectLanguageTableView.delegate = self
         selectLanguageTableView.dataSource = self
         SetLocalized()
+    
+        print(section)
         // Do any additional setup after loading the view.
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let indexPath = self.selectLanguageTableView.indexPathForSelectedRow, let L = segue.destination as? languageViewController {
-            let selectedData = language[indexPath.row]
-            // section 1에서 넘어왔을떄는 nativeInfo.langage
-            // section 2에서 넘어왔을때 foreginInfo.lagnuge
-            L.selectedNativeLanguage?.language = selectedData
+        if let indexPath = self.selectLanguageTableView.indexPathForSelectedRow {
+            let selectedLanguage = languages[indexPath.row]
+            if section == 0 {
+                if let L = segue.destination as? languageViewController {
+                    
+                    print("선택된 데이터 before section 0\(selectedLanguage)")
+                    
+                    print("input native")
+                    L.selectedNativeLanguage = LanguageInfo(language: selectedLanguage, level: .native)
+                    print("L.selectedNativeLanguage \(L.selectedNativeLanguage)")
+                }
+            }
+            else {
+                if let LL = segue.destination as? LevelLanguageViewController {
+                    print("선택된 데이터 before section 1 \(selectedLanguage)")
+                    print("input foreign")
+                    LL.selectedForeignLanguage = selectedLanguage
+                }
+            }
         }
     }
     
@@ -35,18 +53,26 @@ class SelectLanguageViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return languages.count
     }
-    
   
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = selectLanguageTableView.dequeueReusableCell(withIdentifier: "selectLanguageCell")
-        
-        let languages = language[indexPath.row].toString()
-        
-        cell?.textLabel?.text = languages
-        
-        return cell!
+        if section == 0 {
+            let cell = selectLanguageTableView.dequeueReusableCell(withIdentifier: "nativeCell")
+            let language = languages[indexPath.row].toString()
+            
+            cell?.textLabel?.text = language
+            
+            return cell!
+        } else {
+            let cell = selectLanguageTableView.dequeueReusableCell(withIdentifier: "foreignCell")
+            let language = languages[indexPath.row].toString()
+            
+            cell?.textLabel?.text = language
+            
+            return cell!
+        }
+    
     }
 
 }

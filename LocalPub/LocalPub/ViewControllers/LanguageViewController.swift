@@ -12,7 +12,7 @@ class languageViewController: UIViewController, UITableViewDelegate, UITableView
     let myUserDefaults = UserDefaults.standard
      
     var selectedNativeLanguage: LanguageInfo? = nil
-    var selectedForeignLanguage: [LanguageInfo]? = nil
+    var selectedForeignLanguages: [LanguageInfo] = []
     
     @IBOutlet weak var languagesTableView: UITableView!
     
@@ -33,22 +33,13 @@ class languageViewController: UIViewController, UITableViewDelegate, UITableView
         continueButton.isEnabled = false
         languagesTableView.delegate = self
         languagesTableView.dataSource = self
-        
         // SetLocalized()
         
         // SetLanguageMenu()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        guard let nativeLangInfo = selectedNativeLanguage else {
-            return
-        }
-        
-        guard let foreignLangInfo = selectedForeignLanguage else {
-            return
-        }
-        
-        // change label font
+        languagesTableView.reloadData()
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -56,17 +47,22 @@ class languageViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print("Update Tableview")
+        
         var foreginCount: Int = 0
-        if let selectedForeignLanguage = selectedForeignLanguage  {
-            if selectedForeignLanguage.count < 3 {
-            foreginCount = selectedForeignLanguage.count
-            }
+        
+        if selectedForeignLanguages.count < 3 {
+            foreginCount = selectedForeignLanguages.count + 1
+        } else {
+            foreginCount = 3
         }
+        
+        print("foregin count \(foreginCount)")
         switch section {
         case 0:
             return 1
         case 1:
-            return foreginCount + 1
+            return foreginCount
         default:
             return 0
         }
@@ -76,20 +72,56 @@ class languageViewController: UIViewController, UITableViewDelegate, UITableView
         self.navigationItem.title = "Select Language".localized()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let section = self.languagesTableView.indexPathForSelectedRow?.section, let SL = segue.destination as? SelectLanguageViewController {
+            print("Send Section \(section)")
+            SL.section = section
+        }
+        
+        
+    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier:"userLanguageCell") as! LanguageTableViewCell
-         
-    
-//        // section 1
-//        if let nativeanguageInfo == selectedNativeLanguage {
-//            cell.update(with: LanguageInfo(language: nativeanguageInfo.language, level: nativeanguageInfo.level))
-//        }
-//        // section 2
        
+        if indexPath.section == 0 {
+            print("Section in 0")
+            if let nativeLangInfo = selectedNativeLanguage {
+                print("nativeLangInfo \(nativeLangInfo)")
+                cell.updateCell(with: nativeLangInfo)
+            }
+            cell.showsReorderControl = true
+
+        }
+        
+        if indexPath.section == 1 {
+            // tableview 모든 cell을 업데이트 중, 단 빈 cell 이전의 cell로 업데이트
+            // 빈값은 cell init으로 업데이트/안 빈셀은 채워져있는걸로 업데이트
+            // row 값까지 함수 호출됨 / selectedForeignlanguages 없는 row 접근 하면 안됨
+            
+            // 1. 옵셔널때문에 append 구조체 배열 추가 안됨 > []
+            // 2. 빈 테이블 뷰 > 값없는 구조체 값에 해당하는 테이블 뷰 업데이트시 오류 > []
+    
+            print("Section in 1")
+            print(selectedForeignLanguages)
+            print("indexPath.row = \(indexPath.row)")
+                
+            if selectedForeignLanguages.isEmpty == false && indexPath.row < selectedForeignLanguages.count {
+                print(" 외국어 개수\(selectedForeignLanguages.count)")
+                let foreignLanguageInfo = selectedForeignLanguages[indexPath.row]
+                cell.updateCell(with: foreignLanguageInfo)
+            } else {
+                cell.updateCellInit()
+            }
+        
+            cell.showsReorderControl = true
+        }
+    
+        
         
         return cell
      }
+    
 
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
@@ -115,15 +147,27 @@ class languageViewController: UIViewController, UITableViewDelegate, UITableView
         }
         
     }
+    
+    
     @IBAction func unwindToLanguage(_ unwindSegue: UIStoryboardSegue) {
         let sourceViewController = unwindSegue.source
         // Use data from the view controller which initiated the unwind segue
     }
     
 //    func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
-//        <#code#>
+//        print("dfd")
+//        if indexPath.section == 0 {
+//            print("o")
+//        } else {
+//            print("0 초과")
+//        }
 //    }
+    
+
+    // tap accerssory
+//    
 //
+    // user select cell
 //    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        <#code#>
 //    }

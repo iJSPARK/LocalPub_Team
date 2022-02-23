@@ -20,15 +20,26 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="selectLanguageCell" id="yz7-OS-PhZ">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="nativeCell" id="yz7-OS-PhZ">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yz7-OS-PhZ" id="dSg-XP-S0c">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Iiy-LQ-SZy" kind="unwind" unwindAction="unwindToLanguage:" id="G5J-tq-b8e"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="foreignCell" id="OEU-dI-AF5">
+                                        <rect key="frame" x="0.0" y="88.5" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OEU-dI-AF5" id="VDi-km-fcA">
                                             <rect key="frame" x="0.0" y="0.0" width="385.5" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="26n-WA-60r" kind="unwind" unwindAction="unwindToLanguage:" id="uME-8j-beR"/>
+                                            <segue destination="bfW-ER-GSO" kind="show" id="bvu-vO-bq2"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -48,9 +59,19 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="26n-WA-60r" userLabel="Exit" sceneMemberID="exit"/>
+                <exit id="Iiy-LQ-SZy" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-26.086956521739133" y="108.48214285714285"/>
+        </scene>
+        <!--levelLanguage-->
+        <scene sceneID="PHi-7p-haj">
+            <objects>
+                <viewControllerPlaceholder storyboardName="LevelLanguage" referencedIdentifier="levelLanguage" id="bfW-ER-GSO" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="fut-pg-hnh"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ag9-qk-7Oi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="729" y="46"/>
         </scene>
     </scenes>
     <resources>
