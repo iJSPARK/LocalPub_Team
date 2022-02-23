@@ -233,12 +233,15 @@ class pictureViewController: UIViewController {
         
         if Joined() {
             
+            // Navigation Controller 사용시 - Pop
             //self.navigationController?.popViewController( animated: true )
+            
+            // Present 사용시
             dismiss( animated: true )
             
         } else {
 
-            //Joined(true)
+            //Joined( true )
             GoHome()
             
         }

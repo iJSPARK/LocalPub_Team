@@ -88,15 +88,21 @@ class agreementViewController: UIViewController {
         
         if Joined() {
             
-            //dismiss( animated: true )
-            //GoHome()
+            // Navigation Controller 사용시 - Pop
+            //self.navigationController?.popViewController( animated: true )
+            
+            // Present 사용시
+            dismiss( animated: true )
             
         } else {
 
+            // Segue 사용시
             //self.performSegue( withIdentifier: "Picture", sender: self )
+            
+            // Navigation Controller 사용시 - Push
             let storyboard = UIStoryboard( name: "PictureStoryboard", bundle: nil )
-            if let vc = storyboard.instantiateViewController(identifier: "pictureController") as? pictureViewController {
-                self.navigationController?.pushViewController(vc, animated: true )
+            if let vc = storyboard.instantiateViewController( identifier: "pictureController" ) as? pictureViewController {
+                self.navigationController?.pushViewController( vc, animated: true )
             }
             
         }
