@@ -11,8 +11,8 @@ class LanguageTableViewCell: UITableViewCell {
     
     @IBOutlet weak var languageLabel: UILabel!
   
-    @IBOutlet weak var languageLevelLabel: UILabel!
     
+    @IBOutlet weak var languageCodeLabel: UILabel!
     @IBOutlet weak var languageLevelImage: UIImageView!
      
     override func awakeFromNib() {
@@ -28,11 +28,16 @@ class LanguageTableViewCell: UITableViewCell {
     
     func updateCell(with userLanguageInfo: LanguageInfo) {
         languageLabel.text = userLanguageInfo.language.toString()
+        languageLabel.textColor = UIColor.black
+        languageCodeLabel.text = userLanguageInfo.language.toString().prefix(2).uppercased()
+        languageCodeLabel.textColor = UIColor.purple
+        languageLevelImage.image = UIImage(named: userLanguageInfo.level.toString())
     }
     
     func updateCellInit() {
         languageLabel.text = "Add Language"
-        languageLevelLabel.text = ""
+        languageLabel.textColor = UIColor.opaqueSeparator
+        languageCodeLabel.text = ""
         languageLevelImage.image = nil
     }
 }

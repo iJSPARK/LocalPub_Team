@@ -11,6 +11,8 @@ class SelectLanguageViewController: UIViewController, UITableViewDelegate, UITab
     
     var section: Int = -1
     
+    var indexForeign = 0
+    
     let languages: [Language] = [.english, .korean, .japanese, .russian, .ukraine, .chinese, .french, .german, .italian]
 
     @IBOutlet weak var selectLanguageTableView: UITableView!
@@ -21,28 +23,30 @@ class SelectLanguageViewController: UIViewController, UITableViewDelegate, UITab
         selectLanguageTableView.dataSource = self
         SetLocalized()
     
-        print(section)
+        print("print section = \(section)")
         // Do any additional setup after loading the view.
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let indexPath = self.selectLanguageTableView.indexPathForSelectedRow {
             let selectedLanguage = languages[indexPath.row]
-            if section == 0 {
+            if section == 0 { // native langugage 전달 > LanguageTableViewController
                 if let L = segue.destination as? languageViewController {
                     
-                    print("선택된 데이터 before section 0\(selectedLanguage)")
+                   //  print("선택된 데이터 before section 0\(selectedLanguage)")
                     
-                    print("input native")
+                    // print("input native")
                     L.selectedNativeLanguage = LanguageInfo(language: selectedLanguage, level: .native)
-                    print("L.selectedNativeLanguage \(L.selectedNativeLanguage)")
+                    // print("L.selectedNativeLanguage \(L.selectedNativeLanguage)")
                 }
             }
-            else {
+            else {  // foreign language 전달 > LevelLanguageViewController
                 if let LL = segue.destination as? LevelLanguageViewController {
-                    print("선택된 데이터 before section 1 \(selectedLanguage)")
-                    print("input foreign")
+                    // print("선택된 데이터 before section 1 \(selectedLanguage)")
+                    //print("input foreign")
                     LL.selectedForeignLanguage = selectedLanguage
+                    LL.indexForegin = indexForeign
+                    print("Language 선택 인덱스 \(indexForeign)")
                 }
             }
         }

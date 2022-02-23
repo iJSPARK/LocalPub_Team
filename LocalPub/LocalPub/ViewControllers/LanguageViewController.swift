@@ -13,6 +13,7 @@ class languageViewController: UIViewController, UITableViewDelegate, UITableView
      
     var selectedNativeLanguage: LanguageInfo? = nil
     var selectedForeignLanguages: [LanguageInfo] = []
+    // var indexForegin = 0
     
     @IBOutlet weak var languagesTableView: UITableView!
     
@@ -33,6 +34,7 @@ class languageViewController: UIViewController, UITableViewDelegate, UITableView
         continueButton.isEnabled = false
         languagesTableView.delegate = self
         languagesTableView.dataSource = self
+        
         // SetLocalized()
         
         // SetLanguageMenu()
@@ -40,6 +42,27 @@ class languageViewController: UIViewController, UITableViewDelegate, UITableView
     
     override func viewWillAppear(_ animated: Bool) {
         languagesTableView.reloadData()
+        print(selectedForeignLanguages)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let section = self.languagesTableView.indexPathForSelectedRow?.section, let SL = segue.destination as? SelectLanguageViewController {
+            
+            print("Send Section \(section)")
+            SL.section = section
+            
+            if let selectedIndexPath = languagesTableView.indexPathForSelectedRow  { SL.indexForeign = selectedIndexPath.row
+                print("Send indexForeign \(selectedIndexPath.row)")
+            }
+          
+            
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int)
+    {
+        let header = view as! UITableViewHeaderFooterView
+        header.textLabel?.font = UIFont.boldSystemFont(ofSize: 17)
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -47,7 +70,7 @@ class languageViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("Update Tableview")
+        // print("Update Tableview")
         
         var foreginCount: Int = 0
         
@@ -57,7 +80,7 @@ class languageViewController: UIViewController, UITableViewDelegate, UITableView
             foreginCount = 3
         }
         
-        print("foregin count \(foreginCount)")
+        // print("foregin count \(foreginCount)")
         switch section {
         case 0:
             return 1
@@ -72,43 +95,50 @@ class languageViewController: UIViewController, UITableViewDelegate, UITableView
         self.navigationItem.title = "Select Language".localized()
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let section = self.languagesTableView.indexPathForSelectedRow?.section, let SL = segue.destination as? SelectLanguageViewController {
-            print("Send Section \(section)")
-            SL.section = section
-        }
-        
-        
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+            
+            if editingStyle == .delete {
+                
+                selectedForeignLanguages.remove(at: indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: .fade)
+                
+            } else if editingStyle == .insert {
+                
+            }
     }
     
+    // prototype cell 2 > 각각 구별 > 어디서 온앤지 알음 > indifier로 코드 작성 > 간펴
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        // tableview 모든 cell을 업데이트 중, 단 빈 cell 이전의 cell로 업데이트
+        // 빈값은 cell init으로 업데이트/안 빈셀은 채워져있는걸로 업데이트
+        // row 값까지 함수 호출됨 / selectedForeignlanguages 없는 row 접근 하면 안됨
+        
+        // 1. 옵셔널때문에 append 구조체 배열 추가 안됨 > []
+        // 2. 빈 테이블 뷰 > 값없는 구조체 값에 해당하는 테이블 뷰 업데이트시 오류 > []
+        
         let cell = tableView.dequeueReusableCell(withIdentifier:"userLanguageCell") as! LanguageTableViewCell
-       
+        
         if indexPath.section == 0 {
-            print("Section in 0")
+            // print("Section in 0")
             if let nativeLangInfo = selectedNativeLanguage {
-                print("nativeLangInfo \(nativeLangInfo)")
+                // print("nativeLangInfo \(nativeLangInfo)")
                 cell.updateCell(with: nativeLangInfo)
             }
             cell.showsReorderControl = true
 
-        }
-        
-        if indexPath.section == 1 {
-            // tableview 모든 cell을 업데이트 중, 단 빈 cell 이전의 cell로 업데이트
-            // 빈값은 cell init으로 업데이트/안 빈셀은 채워져있는걸로 업데이트
-            // row 값까지 함수 호출됨 / selectedForeignlanguages 없는 row 접근 하면 안됨
-            
-            // 1. 옵셔널때문에 append 구조체 배열 추가 안됨 > []
-            // 2. 빈 테이블 뷰 > 값없는 구조체 값에 해당하는 테이블 뷰 업데이트시 오류 > []
+        } else { // section == 1
     
-            print("Section in 1")
-            print(selectedForeignLanguages)
-            print("indexPath.row = \(indexPath.row)")
-                
+            // print("Section in 1")
+            // print(selectedForeignLanguages)
+            
+            
+            
             if selectedForeignLanguages.isEmpty == false && indexPath.row < selectedForeignLanguages.count {
-                print(" 외국어 개수\(selectedForeignLanguages.count)")
-                let foreignLanguageInfo = selectedForeignLanguages[indexPath.row]
+               //  print("Input indexForeign = \(indexPath.row)")
+                // print(" 외국어 개수\(selectedForeignLanguages.count)")
+                let foreignLanguageInfo = selectedForeignLanguages[indexPath.row] // 0 1 2
                 cell.updateCell(with: foreignLanguageInfo)
             } else {
                 cell.updateCellInit()

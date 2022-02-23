@@ -8,10 +8,10 @@
 import UIKit
 
 class LevelLanguageViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
-    var section: Int = -1
     
     var selectedForeignLanguage: Language? = nil
+    
+    var indexForegin = 0
     
     let levels: [Level] = [.fluent, .good, .soso, .little]
 
@@ -26,9 +26,14 @@ class LevelLanguageViewController: UIViewController, UITableViewDelegate, UITabl
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let indexPath = self.levelTableView.indexPathForSelectedRow, let L = segue.destination as? languageViewController {
             let selectedLevel = levels[indexPath.row]
-            L.selectedForeignLanguages.append(LanguageInfo(language: selectedForeignLanguage!, level: selectedLevel))
+            print("Level index \(indexForegin)")
+            
+            if indexForegin < L.selectedForeignLanguages.count {
+                L.selectedForeignLanguages[indexForegin] = LanguageInfo(language: selectedForeignLanguage!, level: selectedLevel)
+            } else {
+                L.selectedForeignLanguages.insert(LanguageInfo(language: selectedForeignLanguage!, level: selectedLevel), at: indexForegin)
+            }
         }
-        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
