@@ -31,17 +31,49 @@ class languageViewController: UIViewController, UITableViewDelegate, UITableView
         
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        continueButton.isEnabled = false
+        
         languagesTableView.delegate = self
         languagesTableView.dataSource = self
         
-        // SetLocalized()
+        SetLocalized()
+        
+        selectedNativeLanguage = changedNativeFromDB()!
+        
+        selectedForeignLanguages = changedForeignFromDB()
+        
         
         // SetLanguageMenu()
     }
     
+    func changedNativeFromDB() -> LanguageInfo? {
+        
+        let decoder = JSONDecoder()
+        
+        guard let savedNativeData = myUserDefaults.object(forKey: UserDefault.NativeLanguageInfo.toString()) as? Data else { return nil }
+        
+        guard let savedObject = try? decoder.decode(LanguageInfo.self, from: savedNativeData) else { return nil }
+        
+        return savedObject
+    }
+    
+    func changedForeignFromDB() -> [LanguageInfo] {
+        
+        let decoder = JSONDecoder()
+        
+        guard let savedNativeData = myUserDefaults.object(forKey: UserDefault.ForeignLanguageInfo.toString()) as? Data else { return [] }
+        
+        guard let savedObject = try? decoder.decode([LanguageInfo].self, from: savedNativeData) else { return [] }
+        
+        return savedObject
+    }
+    
+    
     override func viewWillAppear(_ animated: Bool) {
+        checkValues()
         languagesTableView.reloadData()
+        
+        // 데이터 불러오기
+        
         print(selectedForeignLanguages)
     }
     
@@ -95,6 +127,7 @@ class languageViewController: UIViewController, UITableViewDelegate, UITableView
         self.navigationItem.title = "Select Language".localized()
     }
     
+    // swipe delete
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
             
             if editingStyle == .delete {
@@ -115,7 +148,7 @@ class languageViewController: UIViewController, UITableViewDelegate, UITableView
         // 빈값은 cell init으로 업데이트/안 빈셀은 채워져있는걸로 업데이트
         // row 값까지 함수 호출됨 / selectedForeignlanguages 없는 row 접근 하면 안됨
         
-        // 1. 옵셔널때문에 append 구조체 배열 추가 안됨 > []
+        // 1. 옵셔널때문에 append 구조체 배열 추가 안됨 ( ?.append() nildl이기 때문 ) > []
         // 2. 빈 테이블 뷰 > 값없는 구조체 값에 해당하는 테이블 뷰 업데이트시 오류 > []
         
         let cell = tableView.dequeueReusableCell(withIdentifier:"userLanguageCell") as! LanguageTableViewCell
@@ -129,15 +162,7 @@ class languageViewController: UIViewController, UITableViewDelegate, UITableView
             cell.showsReorderControl = true
 
         } else { // section == 1
-    
-            // print("Section in 1")
-            // print(selectedForeignLanguages)
-            
-            
-            
             if selectedForeignLanguages.isEmpty == false && indexPath.row < selectedForeignLanguages.count {
-               //  print("Input indexForeign = \(indexPath.row)")
-                // print(" 외국어 개수\(selectedForeignLanguages.count)")
                 let foreignLanguageInfo = selectedForeignLanguages[indexPath.row] // 0 1 2
                 cell.updateCell(with: foreignLanguageInfo)
             } else {
@@ -164,6 +189,14 @@ class languageViewController: UIViewController, UITableViewDelegate, UITableView
         }
     }
     
+    func checkValues() {
+        if selectedNativeLanguage != nil && selectedForeignLanguages.count != 0 {
+            continueButton.isEnabled = true
+        } else {
+            continueButton.isEnabled = false
+        }
+    }
+    
     func languageChangedToDB(nativeLanguageInfo: LanguageInfo, foreignLanguagesInfo: [LanguageInfo]) {
         
         let encoder = JSONEncoder()
@@ -178,29 +211,36 @@ class languageViewController: UIViewController, UITableViewDelegate, UITableView
         
     }
     
+    @IBAction func continueButtonTapped(_ sender: Any) {
+        languageChangedToDB(nativeLanguageInfo: selectedNativeLanguage!, foreignLanguagesInfo: selectedForeignLanguages)
+    }
     
     @IBAction func unwindToLanguage(_ unwindSegue: UIStoryboardSegue) {
         let sourceViewController = unwindSegue.source
         // Use data from the view controller which initiated the unwind segue
     }
     
-//    func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
-//        print("dfd")
-//        if indexPath.section == 0 {
-//            print("o")
-//        } else {
-//            print("0 초과")
+
+//    GetUserDefaultFromDB(key: "GetUserLanguageInfo") {
+//        userData in
+//
+//        let decoder = JSONDecoder()
+//
+//        if let savedNativeData = myUserDefaults.object(forKey: UserDefault.NativeLanguage.toString()) as? Data {
+//            if let savedNativeLangInfo = try? decoder.decode(LanguageInfo.self, from: savedNativeData) {
+//                print(savedNativeLangInfo.language, savedNativeLangInfo.level))
+//            }
+//        }
+//
+//        if let savedForeignData = myUserDefaults.object(forKey: UserDefault.ForeignLanguage.toString()) as? Data {
+//            if let savedForeignLangInfo = try? decoder.decode([LanguageInfo].self, from: savedForeignData) {
+//                for foreignLangInfo in savedForeignLangInfo {
+//                    print(foreignLangInfo.language, foreignLangInfo.level)
+//                }
+//            }
 //        }
 //    }
-    
 
-    // tap accerssory
-//    
-//
-    // user select cell
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        <#code#>
-//    }
     
     
 //    func SetLocalized() {

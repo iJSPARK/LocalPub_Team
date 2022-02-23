@@ -53,7 +53,11 @@ class SelectLanguageViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     func SetLocalized() {
-        self.navigationItem.title = "Select Language".localized()
+        if section == 0 {
+            self.navigationItem.title = "Native Language".localized()
+        } else {
+            self.navigationItem.title = "Foreign Language".localized()
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

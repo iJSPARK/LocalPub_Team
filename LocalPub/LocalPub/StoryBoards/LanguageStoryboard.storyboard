@@ -190,6 +190,9 @@
                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="18"/>
                                     <color key="baseBackgroundColor" red="0.74117647060000003" green="0.2470588235" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="continueButtonTapped:" destination="9f7-Nc-PvP" eventType="touchUpInside" id="J6e-im-MSc"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Epl-zj-hWv"/>

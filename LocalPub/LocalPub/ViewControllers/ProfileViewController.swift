@@ -60,13 +60,13 @@ class profileViewController: UIViewController, UITextFieldDelegate {
         
         scGender.selectedSegmentIndex = myUserDefaults.integer(forKey: UserDefault.Gender.toString() )
         
-        createDatePicker() // SetBirth()
+        createDatePicker()
         
         txtResidence.text = myUserDefaults.string(forKey: UserDefault.Residence.toString() )
 
         nationalityButton.setTitle(myUserDefaults.string(forKey: UserDefault.Nationality.toString()), for: .normal)
         
-        observeValues()
+        checkValues()
         
         registerForKeyboardNotification()
     }
@@ -153,7 +153,7 @@ class profileViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    func observeValues() {
+    func checkValues() {
         txtName.addTarget(self, action: #selector(textFieldDidChanged(textField:)), for: .editingDidEnd)
         
         txtResidence.addTarget(self, action: #selector(textFieldDidChanged(textField:)), for: .editingDidEnd)
