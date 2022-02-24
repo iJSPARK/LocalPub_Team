@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Foundation
 
 class profileViewController: UIViewController, UITextFieldDelegate {
 
@@ -35,13 +36,15 @@ class profileViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var nationalityButton: UIButton!
     
     override func viewWillAppear(_ animated: Bool) {
+        
+        // update nationality title
         guard let nationality = selectedNationality else {
             return
         }
         
-        let text = NSAttributedString(string: nationality.countryEmoji + " " + nationality.countryName, attributes: [.font: UIFont.systemFont(ofSize: 15), .foregroundColor: UIColor.black])
+        nationalityButton.setTitle(nationality.countryEmoji + " " + nationality.countryName, for: .normal)
         
-        nationalityButton.setAttributedTitle(text, for: .normal)
+        nationalityButton.setTitleColor(.black, for: .normal)
     }
 
     override func viewDidLoad() {
@@ -63,8 +66,16 @@ class profileViewController: UIViewController, UITextFieldDelegate {
         createDatePicker()
         
         txtResidence.text = myUserDefaults.string(forKey: UserDefault.Residence.toString() )
-
-        nationalityButton.setTitle(myUserDefaults.string(forKey: UserDefault.Nationality.toString()), for: .normal)
+        
+        birthDateTextField.text = myUserDefaults.string(forKey: UserDefault.Birth.toString() )
+        
+        if let text1 = myUserDefaults.string(forKey: UserDefault.NationalityEmoji.toString() ) {
+            if let text2 = myUserDefaults.string(forKey: UserDefault.Nationality.toString() ) {
+                nationalityButton.setTitle(text1 + " " + text2, for: .normal)
+            }
+        }
+        
+        nationalityButton.setTitleColor(.black, for: .normal)
         
         checkValues()
         
@@ -79,9 +90,12 @@ class profileViewController: UIViewController, UITextFieldDelegate {
         
         txtName.placeholder = "InputName".localized()
         
-        // localize 하고나서 font 크기 바껴서 조정
-        let text = NSAttributedString(string: "Nationality".localized(), attributes: [.font: UIFont.systemFont(ofSize: 15)])
-        nationalityButton.setAttributedTitle(text, for: .normal)
+//        // localize 하고나서 font 크기 바껴서 조정
+//        let text = NSAttributedString(string: "Nationality".localized(), attributes: [.font: UIFont.systemFont(ofSize: 15)])
+//        nationalityButton.setAttributedTitle(text, for: .normal)
+        
+        nationalityButton.setTitle("Nationality".localized(), for: .normal)
+        nationalityButton.setTitleColor(.opaqueSeparator, for: .normal)
         
         txtResidence.placeholder = "Residence".localized()
         
@@ -223,7 +237,11 @@ class profileViewController: UIViewController, UITextFieldDelegate {
         
         SaveUserDefault( key: UserDefault.Birth.toString(), value: birthDateTextField.text! )
         
+        SaveUserDefault(key: UserDefault.NationalityEmoji.toString(), value: selectedNationality!.countryEmoji)
+        
         SaveUserDefault( key: UserDefault.Nationality.toString(), value: selectedNationality!.countryName )
+        
+        print("seletedNationality \(selectedNationality!.countryEmoji)")
         
         SaveUserDefault( key: UserDefault.Gender.toString(), value: scGender.selectedSegmentIndex )
         

@@ -37,7 +37,7 @@ class languageViewController: UIViewController, UITableViewDelegate, UITableView
         
         SetLocalized()
         
-        selectedNativeLanguage = changedNativeFromDB()!
+        selectedNativeLanguage = changedNativeFromDB()
         
         selectedForeignLanguages = changedForeignFromDB()
         

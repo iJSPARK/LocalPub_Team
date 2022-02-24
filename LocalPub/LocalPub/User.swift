@@ -18,7 +18,8 @@ enum UserDefault: String {
     case Gender = "Gender"
     case Birth = "Birth"
     case Residence = "Residence"
-    case Nationality = "Nationality" // ForeignLanguage
+    case Nationality = "Nationality"
+    case NationalityEmoji = "NationalityEmoji"
     case NativeLanguageInfo = "NativeLanguageInfo"
     case ForeignLanguageInfo = "ForeignLanguageInfo"
     case Experience = "Experience"
@@ -46,6 +47,7 @@ func initUserDefaultValue() -> [ UserDefault : Any ] {
         .Gender: -1,
         .Birth: "",
         .Nationality: "",
+        .NationalityEmoji: "",
         .Residence: "",
         .NativeLanguageInfo: 0,
         .ForeignLanguageInfo: 0,
