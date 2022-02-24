@@ -45,6 +45,15 @@
                                     <action selector="tabLogOut:" destination="FHG-28-cTh" eventType="touchUpInside" id="OhG-Xa-6vT"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="drO-gj-gf6">
+                                <rect key="frame" x="287" y="132" width="84" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Picture"/>
+                                <connections>
+                                    <segue destination="HJ9-OJ-gU3" kind="show" id="t1K-xQ-LHb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="oFw-eK-bGG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -59,6 +68,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5YE-OB-MMY" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1833.3333333333335" y="822.99107142857144"/>
+        </scene>
+        <!--pictureController-->
+        <scene sceneID="0fI-d6-fcr">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PictureStoryboard" referencedIdentifier="pictureController" id="HJ9-OJ-gU3" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="COV-ia-DWf"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="anA-f5-VNb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1258" y="623"/>
         </scene>
     </scenes>
     <resources>

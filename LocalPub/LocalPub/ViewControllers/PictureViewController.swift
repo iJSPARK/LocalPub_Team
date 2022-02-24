@@ -27,8 +27,9 @@ class pictureViewController: UIViewController {
     @IBOutlet var lblUploadPictureDescription: UILabel!
     @IBOutlet var lblSecurityCalls: UILabel!
     @IBOutlet var lblSecurityDescription: UILabel!
-    @IBOutlet var btnMainPicture: UIButton!
-    @IBOutlet var btnSecondaryPicture: UIButton!
+    
+    @IBOutlet var lblMainPicture: UILabel!
+    @IBOutlet var lblSecondaryPicture: UILabel!
     
     @IBOutlet var btnNext: UIButton!
     
@@ -49,11 +50,13 @@ class pictureViewController: UIViewController {
         imageMainView.layer.borderWidth = 1
         imageMainView.clipsToBounds = true
         imageMainView.layer.borderColor = UIColor.gray.cgColor
+        imageMainView.isUserInteractionEnabled = true
         
         imageSecondaryView.layer.cornerRadius = imageSecondaryView.frame.height/3
         imageSecondaryView.layer.borderWidth = 1
         imageSecondaryView.clipsToBounds = true
         imageSecondaryView.layer.borderColor = UIColor.gray.cgColor
+        imageSecondaryView.isUserInteractionEnabled = true
         
         GetUserData() { userData in
          
@@ -76,7 +79,7 @@ class pictureViewController: UIViewController {
             if let img = ImageFileManager.shared.getSavedImage( named: fileName ) {
                 
                 imageMainView.image = img
-                
+
             } else {
 
                 downloadUserImage( fileName ) { completion in
@@ -127,11 +130,16 @@ class pictureViewController: UIViewController {
         lblUploadPictureDescription.text = "UploadPictureDescription".localized()
         lblSecurityCalls.text = "SecurityCalls".localized()
         lblSecurityDescription.text = "SecurityDescription".localized()
-        btnMainPicture.setTitle( "MainPicture".localized(), for: .normal )
-        btnSecondaryPicture.setTitle( "SecondaryPicture".localized(), for: .normal )
+        
+        lblMainPicture.text = "MainPicture".localized()
+        lblSecondaryPicture.text = "SecondaryPicture".localized()
         
         btnNext.setTitle( "Continue".localized(), for: .normal )
 
+    }
+    
+    @objc func mainImagePressed() {
+        print( "click Main Image")
     }
     
     private func GetUserImage() {
@@ -210,20 +218,18 @@ class pictureViewController: UIViewController {
 
     }
     
-    @IBAction func GetMainImage(_ sender: UIButton) {
-        
+    @IBAction func didTapMainImageView(_ sender: UITapGestureRecognizer) {
+        print("did tap Main image view", sender)
         isMainImage = true
         GetUserImage()
         checkNextEnable()
-    
     }
     
-    @IBAction func GetSecondaryImage(_ sender: UIButton) {
+    @IBAction func didTapSecondaryImageView(_ sender: UITapGestureRecognizer) {
+        print("did tap Secondary image view", sender)
         isMainImage = false
-        
         GetUserImage()
         checkNextEnable()
-    
     }
     
     @IBAction func Next(_ sender: UIButton) {
