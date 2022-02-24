@@ -149,7 +149,15 @@ class loginViewController: UIViewController {
                     
                 } else {
                     
-                    self.performSegue( withIdentifier: "Agreement", sender: self )
+                    // Segue 사용시
+                    //self.performSegue( withIdentifier: "Agreement", sender: self )
+                    
+                    // Navigation Controller 사용시 - Push
+                    let storyboard = UIStoryboard( name: "AgreementStoryboard", bundle: nil )
+                    if let vc = storyboard.instantiateViewController( identifier: "AgreementController" ) as? agreementViewController {
+                        self.navigationController?.pushViewController( vc, animated: true )
+                    }
+                    
                 }
 
                     

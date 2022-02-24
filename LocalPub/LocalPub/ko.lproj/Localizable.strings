@@ -47,8 +47,8 @@
 "Incheon" = "인천";
 
 "SelectLanguage" = "언어 선택";
-"NativeLanguage" = "유창한 언어";
-"PracticeLanguage" = "연습할 언어";
+"NativeLanguage" = "모국어";
+"ForeignLanguage" = "외국어";
 
 "Korean" = "한국어";
 "English" = "영어";
@@ -89,6 +89,7 @@
 "Continue" = "다음";
 "CountryCode" = "국가 코드";
 "Nationality" = "국적";
+"SelectLanguage" = "언어 선택";
 
 "UploadPicture" = "사진을 업로드해 주세요";
 "UploadPictureDescription" = "당신의 사진은 지정하지 않은 다른 사용자에게 절대 보여지지 않습니다.";

@@ -135,7 +135,6 @@ Services (optional)</string>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="Next:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bBO-G5-ECz"/>
-                                    <segue destination="xbv-If-NEZ" kind="unwind" unwindAction="unwindToHome:" id="HbS-da-tWA"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -160,11 +159,10 @@ Services (optional)</string>
                         <outletCollection property="btns" destination="yMM-bp-mKM" collectionClass="NSMutableArray" id="u4H-Vv-5dv"/>
                         <outletCollection property="btns" destination="4bw-lA-shv" collectionClass="NSMutableArray" id="5FY-Eq-zxQ"/>
                         <outletCollection property="btns" destination="I5B-z8-PjR" collectionClass="NSMutableArray" id="cWb-Kc-HIk"/>
-                        <segue destination="wTx-Hs-cTg" kind="presentation" identifier="Picture" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="Jz4-Ka-4p3"/>
+                        <segue destination="Mnb-hR-Hjg" kind="show" identifier="Profile" id="Zkb-ub-t6M"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <exit id="xbv-If-NEZ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1566" y="79"/>
         </scene>
@@ -278,15 +276,15 @@ Services (optional)</string>
             </objects>
             <point key="canvasLocation" x="1209" y="894"/>
         </scene>
-        <!--pictureController-->
-        <scene sceneID="bhV-h1-TpX">
+        <!--profileController-->
+        <scene sceneID="6n6-1a-7ko">
             <objects>
-                <viewControllerPlaceholder storyboardName="PictureStoryboard" referencedIdentifier="pictureController" id="wTx-Hs-cTg" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="DOx-LX-fSH"/>
+                <viewControllerPlaceholder storyboardName="ProfileStoryboard" referencedIdentifier="profileController" id="Mnb-hR-Hjg" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Uui-LR-p4s"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RX3-sc-NBs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pn3-Yb-rYQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2248" y="79"/>
+            <point key="canvasLocation" x="2245" y="79"/>
         </scene>
     </scenes>
     <resources>

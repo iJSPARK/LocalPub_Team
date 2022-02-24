@@ -34,12 +34,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
              window.rootViewController = VC
              
-             // adding animation
-//           UIView.transition( with: window,
-//                               duration: 0.8,
-//                               options: .transitionCurlDown,
-//                               animations: nil)
-             UIView.transition(with: window, duration: 0.3, options: [.transitionCrossDissolve], animations: nil, completion: nil)
+             // adding animation123456
+             UIView.transition( with: window,
+                                duration: 0.8,
+                                options: .transitionCurlUp,
+                                animations: nil )
+             
+//             UIView.transition( with: window,
+//                                duration: 0.3,
+//                                options: [.transitionCrossDissolve],
+//                                animations: nil,
+//                                completion: nil )
          }
     }
 
