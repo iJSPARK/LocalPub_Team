@@ -19,8 +19,9 @@ enum UserDefault: String {
     case Birth = "Birth"
     case Residence = "Residence"
     case Nationality = "Nationality"
-    case NativeLanguage = "NativeLanguage"
-    case PracticeLanguage = "PracticeLanguage"
+    case NationalityEmoji = "NationalityEmoji"
+    case NativeLanguageInfo = "NativeLanguageInfo"
+    case ForeignLanguageInfo = "ForeignLanguageInfo"
     case Experience = "Experience"
     case AboutMe = "AboutMe"
     case UID = "UID"
@@ -48,10 +49,10 @@ func initUserDefaultValue() -> [ UserDefault : Any ] {
         .Gender: -1,
         .Birth: "",
         .Nationality: "",
+        .NationalityEmoji: "",
         .Residence: "",
-        .NativeLanguage: 0,
-        .PracticeLanguage: 0,
-        .Experience: "",
+        .NativeLanguageInfo: 0,
+        .ForeignLanguageInfo: 0,
         .AboutMe: "",
         .UID: "",  //RofzE9N1mRZp97aTzy0Au1U66mG2
         .Login: 0,
@@ -137,7 +138,6 @@ func SaveUserDefaultInit( user: Firebase.User, eMailPW: String ) {
     }
         
 }
-
 
 func GetUserDefault( user: Firebase.User, eMailPW: String  ) {
     

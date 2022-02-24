@@ -34,7 +34,7 @@ class loginPhoneViewController: UIViewController {
         // Target: txtPhoneCode 눌렀을때 실행할 함수가 있는 object (self)
         // #selector: 실행할 함수 선택
         // text 값 바뀔때마다 글자수 감시
-        txtPhoneCode.addTarget(self, action: #selector(textFieldDidChanged(textField:)), for: .editingChanged)
+        txtPhoneCode.addTarget(self, action: #selector(textFieldDidChanged(textField:)), for: .editingDidEnd)
         
         SetLocalized()
         btnPhoneVerification.isEnabled = false
@@ -48,8 +48,11 @@ class loginPhoneViewController: UIViewController {
     
     // 6 자리면 승인 버튼 ON
     @objc func textFieldDidChanged(textField: UITextField) {
-        guard textField.text?.count == 6 else { return }
-        btnPhoneVerification.isEnabled = true
+        if textField.text?.count == 6 {
+            btnPhoneVerification.isEnabled = true
+        } else {
+            btnPhoneVerification.isEnabled = false
+        }
     }
         
     // 화면 터치시 키보드 내림

@@ -178,7 +178,7 @@
                         <outlet property="navLoginPhone" destination="yRp-ru-3pq" id="SAL-vj-H56"/>
                         <outlet property="txtPhoneCode" destination="Ly0-5k-mzG" id="KCc-N4-w5f"/>
                         <outlet property="txtPhoneNo" destination="2Yb-ie-l7B" id="TaA-vM-Y0L"/>
-                        <segue destination="0tQ-0n-Qnc" kind="presentation" identifier="Agreement" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="BoH-YY-wBo"/>
+                        <segue destination="0tQ-0n-Qnc" kind="show" identifier="Agreement" id="BoH-YY-wBo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DEf-2N-y4J" sceneMemberID="firstResponder"/>

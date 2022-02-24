@@ -48,7 +48,7 @@
 
 "SelectLanguage" = "Select Language";
 "NativeLanguage" = "Native Language";
-"PracticeLanguage" = "Practice Language";
+"ForeignLanguage" = "Foreign Language"; // ForeginLanguage
 
 "Korean" = "Korean";
 "English" = "English";
@@ -106,6 +106,7 @@
 "CameraError" = "Camera Error!";
 "CameraRunError" = "Can't run Camera";
 "CountryCode" = "Country Code";
+"SelectLanguage" = "Select Language";
 
 "AA" = "Accept all";
 "TC" = "Terms and conditions (required)";
