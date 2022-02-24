@@ -80,7 +80,6 @@ class SelectLanguageViewController: UIViewController, UITableViewDelegate, UITab
             
             return cell!
         }
-    
     }
 
 }

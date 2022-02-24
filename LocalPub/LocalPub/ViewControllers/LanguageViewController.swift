@@ -13,7 +13,6 @@ class languageViewController: UIViewController, UITableViewDelegate, UITableView
      
     var selectedNativeLanguage: LanguageInfo? = nil
     var selectedForeignLanguages: [LanguageInfo] = []
-    // var indexForegin = 0
     
     @IBOutlet weak var languagesTableView: UITableView!
     
@@ -21,11 +20,7 @@ class languageViewController: UIViewController, UITableViewDelegate, UITableView
     
     @IBOutlet weak var continueButton: UIButton!
     
-    //    @IBOutlet var lblNati veLanguage: UILabel!
-//    @IBOutlet var btnNativeLanguage: UIButton!
-//
-//    @IBOutlet var lblPracticeLanguage: UILabel!
-//    @IBOutlet var btnPracticeLanguage: UIButton!
+   
     
     override func viewDidLoad() {
         
@@ -35,14 +30,17 @@ class languageViewController: UIViewController, UITableViewDelegate, UITableView
         languagesTableView.delegate = self
         languagesTableView.dataSource = self
         
-        SetLocalized()
-        
-        selectedNativeLanguage = changedNativeFromDB()
-        
+        // User default data load
+        selectedNativeLanguage = changedNativeFromDB()!
         selectedForeignLanguages = changedForeignFromDB()
         
+        SetLocalized()
         
-        // SetLanguageMenu()
+//        selectedNativeLanguage = changedNativeFromDB()!
+//
+//        selectedForeignLanguages = changedForeignFromDB()
+        print("선택된 외국어들 \(selectedForeignLanguages)")
+        
     }
     
     func changedNativeFromDB() -> LanguageInfo? {
@@ -72,8 +70,6 @@ class languageViewController: UIViewController, UITableViewDelegate, UITableView
         checkValues()
         languagesTableView.reloadData()
         
-        // 데이터 불러오기
-        
         print(selectedForeignLanguages)
     }
     
@@ -102,17 +98,17 @@ class languageViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // print("Update Tableview")
+        print("Update Section")
         
         var foreginCount: Int = 0
-        
+
         if selectedForeignLanguages.count < 3 {
             foreginCount = selectedForeignLanguages.count + 1
         } else {
             foreginCount = 3
         }
-        
-        // print("foregin count \(foreginCount)")
+
+         print("foregin count \(foreginCount)")
         switch section {
         case 0:
             return 1
@@ -129,21 +125,25 @@ class languageViewController: UIViewController, UITableViewDelegate, UITableView
     
     // swipe delete
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-            
+        if indexPath.section == 1 && indexPath.row < selectedForeignLanguages.count {
             if editingStyle == .delete {
-                
+                print("삭제할 언어 인덱스 \(indexPath.row)")
                 selectedForeignLanguages.remove(at: indexPath.row)
-                tableView.deleteRows(at: [indexPath], with: .fade)
-                
-            } else if editingStyle == .insert {
-                
+                tableView.reloadData()
+                // tableView.deleteRows(at: [indexPath], with: .fade)
+                print("삭제된 언어 인덱스\(indexPath.row)")
+                print("삭젠된 후 외국어 개수 \(selectedForeignLanguages.count)")
             }
+        }
+//        else if editingStyle == .insert {
+//            tableView.insertRows(at: [IndexPath], with: .none)
+//        }
     }
     
     // prototype cell 2 > 각각 구별 > 어디서 온앤지 알음 > indifier로 코드 작성 > 간펴
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
+        print("셸 업데이트")
         // tableview 모든 cell을 업데이트 중, 단 빈 cell 이전의 cell로 업데이트
         // 빈값은 cell init으로 업데이트/안 빈셀은 채워져있는걸로 업데이트
         // row 값까지 함수 호출됨 / selectedForeignlanguages 없는 row 접근 하면 안됨
@@ -164,6 +164,7 @@ class languageViewController: UIViewController, UITableViewDelegate, UITableView
         } else { // section == 1
             if selectedForeignLanguages.isEmpty == false && indexPath.row < selectedForeignLanguages.count {
                 let foreignLanguageInfo = selectedForeignLanguages[indexPath.row] // 0 1 2
+                print("삽입된 외국어 셀 인덱스 \(indexPath.row)")
                 cell.updateCell(with: foreignLanguageInfo)
             } else {
                 cell.updateCellInit()
