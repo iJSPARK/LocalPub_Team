@@ -51,7 +51,6 @@ func initUserDefaultValue() -> [ UserDefault : Any ] {
         .Residence: "",
         .NativeLanguageInfo: 0,
         .ForeignLanguageInfo: 0,
-        .Experience: "",
         .AboutMe: "",
         .UID: "",  //RofzE9N1mRZp97aTzy0Au1U66mG2
         .Login: 0,

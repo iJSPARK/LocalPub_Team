@@ -7,18 +7,17 @@
 
 import UIKit
 
-class intorduceViewController: UIViewController {
+class intorduceViewController: UIViewController, UITextViewDelegate {
 
     let myUserDefaults = UserDefaults.standard
     
     @IBOutlet var navIntroduce: UINavigationItem!
 
-    @IBOutlet var btnSaveExperience: UIButton!
-    
-    @IBOutlet var lblExperience: UILabel!
-    @IBOutlet var txtExperience: UITextView!
+
+    @IBOutlet weak var btnSaveAboutMe: UIButton!
     
     @IBOutlet var lblAboutMe: UILabel!
+    
     @IBOutlet var txtAboutMe: UITextView!
     
     override func viewDidLoad() {
@@ -26,26 +25,24 @@ class intorduceViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        txtAboutMe.addDoneButtonOnKeyboard()
+        
+        placeholderSet(txtAboutMe)
+        
+        btnSaveAboutMe.isEnabled = false
+       
         SetLocalized()
-        
-        txtExperience.text = myUserDefaults.string( forKey: UserDefault.Experience.toString() )
-        
+       
         txtAboutMe.text = myUserDefaults.string( forKey: UserDefault.AboutMe.toString() )
-        
     }
-    
-    func SetLocalized() {
 
+    func SetLocalized() {
+        
+        lblAboutMe.text = "📝" + "About Me".localized()
+        
         navIntroduce.title = "SelfIntroduce".localized()
         
-        btnSaveExperience.setTitle( "Save".localized(), for: .normal )
-   
-        lblExperience.text = "Experience".localized()
-        lblAboutMe.text = "AboutMe".localized()
-        
-        txtExperience.layer.borderWidth = 1.0
-        txtExperience.layer.borderColor = UIColor.gray.cgColor
-        txtExperience.layer.cornerRadius = 10
+        btnSaveAboutMe.setTitle( "Continue".localized(), for: .normal )
         
         txtAboutMe.layer.borderWidth = 1.0
         txtAboutMe.layer.borderColor = UIColor.gray.cgColor
@@ -53,14 +50,54 @@ class intorduceViewController: UIViewController {
         
     }
     
-    @IBAction func saveExperience(_ sender: UIButton) {
-        
-        SaveUserDefault( key: UserDefault.Experience.toString(), value: txtExperience.text! )
+    func placeholderSet(_ textView: UITextView) {
+        textView.delegate = self
+        if textView.text.isEmpty {
+            textView.text = "Tell your friends about yourself and your foreign language experience"
+            textView.textColor = UIColor.opaqueSeparator
+        }
+    }
+
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.textColor == UIColor.opaqueSeparator {
+               textView.text = nil
+               textView.textColor = UIColor.black
+        }
+    }
+    
+    func textViewDidChange(_ textView: UITextView) {
+        if txtAboutMe.text.count > 30 {
+            btnSaveAboutMe.isEnabled = true
+        }
+    }
+
+    @IBAction func btnSaveAboutMeTapped(_ sender: UIButton) {
         
         SaveUserDefault( key: UserDefault.AboutMe.toString(), value: txtAboutMe.text! )
+    }
+}
+
+extension UITextView {
+    func addDoneButtonOnKeyboard() {
+        let doneToolbar = UIToolbar(frame: CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 50))
+        
+        let flexSapce = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let done = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(self.doneButtonPressed)
+        )
+        
+        done.tintColor = UIColor.systemPurple
+        
+        let item = [flexSapce, done]
+        
+        doneToolbar.items = item
+        doneToolbar.sizeToFit()
+        
+        self.inputAccessoryView = doneToolbar
         
     }
     
+    @objc func doneButtonPressed() {
+        self.resignFirstResponder()
+    }
 }
-
 

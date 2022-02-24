@@ -10,7 +10,8 @@ import UIKit
 class languageViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     let myUserDefaults = UserDefaults.standard
-     
+    
+    // nil로 일관 되게 바꿀예정
     var selectedNativeLanguage: LanguageInfo? = nil
     var selectedForeignLanguages: [LanguageInfo] = []
     
@@ -135,9 +136,6 @@ class languageViewController: UIViewController, UITableViewDelegate, UITableView
                 print("삭젠된 후 외국어 개수 \(selectedForeignLanguages.count)")
             }
         }
-//        else if editingStyle == .insert {
-//            tableView.insertRows(at: [IndexPath], with: .none)
-//        }
     }
     
     // prototype cell 2 > 각각 구별 > 어디서 온앤지 알음 > indifier로 코드 작성 > 간펴
