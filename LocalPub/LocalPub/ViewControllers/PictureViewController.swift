@@ -193,7 +193,7 @@ class pictureViewController: UIViewController {
             print( "saveImage onSuccess: \(fileName) : \(onSuccess)" )
             
             if onSuccess {
-                if self.isMainImage {
+                if isMainImage {
                     self.imageMainView.image = ImageFileManager.shared.getSavedImage( named: fileName )
                 } else {
                     self.imageSecondaryView.image = ImageFileManager.shared.getSavedImage( named: fileName )
@@ -233,11 +233,15 @@ class pictureViewController: UIViewController {
         
         if Joined() {
             
-            GoHome()
+            // Navigation Controller 사용시 - Pop
+            //self.navigationController?.popViewController( animated: true )
+            
+            // Present 사용시
+            dismiss( animated: true )
             
         } else {
 
-            //Joined(true)
+            //Joined( true )
             GoHome()
             
         }
@@ -245,7 +249,6 @@ class pictureViewController: UIViewController {
     }
     
 }
-
 
 extension pictureViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate{
         

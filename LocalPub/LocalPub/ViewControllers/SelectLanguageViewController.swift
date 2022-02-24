@@ -7,23 +7,79 @@
 
 import UIKit
 
-class SelectLanguageViewController: UIViewController {
+class SelectLanguageViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    var section: Int = -1
+    
+    var indexForeign = 0
+    
+    let languages: [Language] = [.english, .korean, .japanese, .russian, .ukraine, .chinese, .french, .german, .italian]
 
+    @IBOutlet weak var selectLanguageTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        selectLanguageTableView.delegate = self
+        selectLanguageTableView.dataSource = self
+        SetLocalized()
+    
+        print("print section = \(section)")
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if let indexPath = self.selectLanguageTableView.indexPathForSelectedRow {
+            let selectedLanguage = languages[indexPath.row]
+            if section == 0 { // native langugage 전달 > LanguageTableViewController
+                if let L = segue.destination as? languageViewController {
+                    
+                   //  print("선택된 데이터 before section 0\(selectedLanguage)")
+                    
+                    // print("input native")
+                    L.selectedNativeLanguage = LanguageInfo(language: selectedLanguage, level: .native)
+                    // print("L.selectedNativeLanguage \(L.selectedNativeLanguage)")
+                }
+            }
+            else {  // foreign language 전달 > LevelLanguageViewController
+                if let LL = segue.destination as? LevelLanguageViewController {
+                    // print("선택된 데이터 before section 1 \(selectedLanguage)")
+                    //print("input foreign")
+                    LL.selectedForeignLanguage = selectedLanguage
+                    LL.indexForegin = indexForeign
+                    print("Language 선택 인덱스 \(indexForeign)")
+                }
+            }
+        }
     }
-    */
+    
+    func SetLocalized() {
+        if section == 0 {
+            self.navigationItem.title = "Native Language".localized()
+        } else {
+            self.navigationItem.title = "Foreign Language".localized()
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return languages.count
+    }
+  
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if section == 0 {
+            let cell = selectLanguageTableView.dequeueReusableCell(withIdentifier: "nativeCell")
+            let language = languages[indexPath.row].toString()
+            
+            cell?.textLabel?.text = language
+            
+            return cell!
+        } else {
+            let cell = selectLanguageTableView.dequeueReusableCell(withIdentifier: "foreignCell")
+            let language = languages[indexPath.row].toString()
+            
+            cell?.textLabel?.text = language
+            
+            return cell!
+        }
+    }
 
 }

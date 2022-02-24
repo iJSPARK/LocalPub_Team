@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		796A8FD627BE0D390051B543 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796A8FD527BE0D390051B543 /* Language.swift */; };
 		7980EDB027AF82B4000578A5 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7980EDAF27AF82B4000578A5 /* Country.swift */; };
 		7980EDB627AF9F68000578A5 /* CountryCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7980EDB527AF9F68000578A5 /* CountryCodeViewController.swift */; };
 		7980EDB827AFA5E7000578A5 /* CountryCode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7980EDB727AFA5E6000578A5 /* CountryCode.storyboard */; };
@@ -15,6 +16,8 @@
 		79A6F70727B8E08100D0872C /* SelectLanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A6F70627B8E08000D0872C /* SelectLanguageViewController.swift */; };
 		79A6F70927B8E09600D0872C /* SelectLanguage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79A6F70827B8E09600D0872C /* SelectLanguage.storyboard */; };
 		79A6F70B27B8F1FF00D0872C /* LanguageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A6F70A27B8F1FF00D0872C /* LanguageTableViewCell.swift */; };
+		79B6276427C51E080012C396 /* LevelLanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B6276327C51E080012C396 /* LevelLanguageViewController.swift */; };
+		79B6276627C51E980012C396 /* LevelLanguage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79B6276527C51E980012C396 /* LevelLanguage.storyboard */; };
 		84168B1327C3BE4300EF0A22 /* LoginNavStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84168B1227C3BE4300EF0A22 /* LoginNavStoryboard.storyboard */; };
 		84168B1527C3BE4E00EF0A22 /* LoginViewConrtoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84168B1427C3BE4E00EF0A22 /* LoginViewConrtoller.swift */; };
 		84168B1727C3D31500EF0A22 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84168B1627C3D31500EF0A22 /* Login.swift */; };
@@ -72,6 +75,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		796A8FD527BE0D390051B543 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		7980EDAF27AF82B4000578A5 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		7980EDB527AF9F68000578A5 /* CountryCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCodeViewController.swift; sourceTree = "<group>"; };
 		7980EDB727AFA5E6000578A5 /* CountryCode.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CountryCode.storyboard; sourceTree = "<group>"; };
@@ -80,6 +84,8 @@
 		79A6F70627B8E08000D0872C /* SelectLanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLanguageViewController.swift; sourceTree = "<group>"; };
 		79A6F70827B8E09600D0872C /* SelectLanguage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectLanguage.storyboard; sourceTree = "<group>"; };
 		79A6F70A27B8F1FF00D0872C /* LanguageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageTableViewCell.swift; sourceTree = "<group>"; };
+		79B6276327C51E080012C396 /* LevelLanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelLanguageViewController.swift; sourceTree = "<group>"; };
+		79B6276527C51E980012C396 /* LevelLanguage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LevelLanguage.storyboard; sourceTree = "<group>"; };
 		84168B1227C3BE4300EF0A22 /* LoginNavStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginNavStoryboard.storyboard; sourceTree = "<group>"; };
 		84168B1427C3BE4E00EF0A22 /* LoginViewConrtoller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewConrtoller.swift; sourceTree = "<group>"; };
 		84168B1627C3D31500EF0A22 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
@@ -223,6 +229,7 @@
 				84A1D51F2797DC4E00CF7104 /* SceneDelegate.swift */,
 				84168B1627C3D31500EF0A22 /* Login.swift */,
 				84E2267E27A3F16800097CF5 /* User.swift */,
+				796A8FD527BE0D390051B543 /* Language.swift */,
 				8470BD9827B2FA3E00D1A7C6 /* Call.swift */,
 				8470BD8127B2F25B00D1A7C6 /* Image.swift */,
 				8470C06627B8388200D1A7C6 /* ImageManager.swift */,
@@ -255,6 +262,7 @@
 				84A1D5B8279C632200CF7104 /* LanguageViewController.swift */,
 				79A6F70A27B8F1FF00D0872C /* LanguageTableViewCell.swift */,
 				79A6F70627B8E08000D0872C /* SelectLanguageViewController.swift */,
+				79B6276327C51E080012C396 /* LevelLanguageViewController.swift */,
 				84A1D5BA279C635000CF7104 /* IntroduceViewController.swift */,
 				8470C06227B835CE00D1A7C6 /* PictureViewController.swift */,
 			);
@@ -272,6 +280,7 @@
 				8470BDDA27B5A16000D1A7C6 /* AgreementStoryboard.storyboard */,
 				84E2268027A41D3900097CF5 /* ProfileStoryboard.storyboard */,
 				84E2268227A41D4700097CF5 /* LanguageStoryboard.storyboard */,
+				79B6276527C51E980012C396 /* LevelLanguage.storyboard */,
 				79A6F70827B8E09600D0872C /* SelectLanguage.storyboard */,
 				84E2268427A41D5500097CF5 /* IntroduceStoryboard.storyboard */,
 				8470C06427B8362200D1A7C6 /* PictureStoryboard.storyboard */,
@@ -371,6 +380,7 @@
 				8470BDC127B2FDAF00D1A7C6 /* HomeTabStoryboard.storyboard in Resources */,
 				8470BDCD27B44AA500D1A7C6 /* CallListStoryboard.storyboard in Resources */,
 				7980EDB827AFA5E7000578A5 /* CountryCode.storyboard in Resources */,
+				79B6276627C51E980012C396 /* LevelLanguage.storyboard in Resources */,
 				84E2268527A41D5500097CF5 /* IntroduceStoryboard.storyboard in Resources */,
 				84E2268127A41D3900097CF5 /* ProfileStoryboard.storyboard in Resources */,
 				84A1D53627980EB000CF7104 /* Localizable.strings in Resources */,
@@ -448,11 +458,13 @@
 				84E2267F27A3F16800097CF5 /* User.swift in Sources */,
 				84168B1527C3BE4E00EF0A22 /* LoginViewConrtoller.swift in Sources */,
 				84A1D5202797DC4E00CF7104 /* SceneDelegate.swift in Sources */,
+				79B6276427C51E080012C396 /* LevelLanguageViewController.swift in Sources */,
 				84E2269927A6E7D200097CF5 /* LoginMailViewController.swift in Sources */,
 				8470BDC927B3915D00D1A7C6 /* CallViewController.swift in Sources */,
 				84168B1727C3D31500EF0A22 /* Login.swift in Sources */,
 				79A6F70B27B8F1FF00D0872C /* LanguageTableViewCell.swift in Sources */,
 				7980EDB627AF9F68000578A5 /* CountryCodeViewController.swift in Sources */,
+				796A8FD627BE0D390051B543 /* Language.swift in Sources */,
 				84E2269B27A6E81700097CF5 /* LoginPhoneViewController.swift in Sources */,
 				8470BDC427B2FDAF00D1A7C6 /* CallListViewController.swift in Sources */,
 				8470C06727B8388200D1A7C6 /* ImageManager.swift in Sources */,

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Foundation
 
 class profileViewController: UIViewController, UITextFieldDelegate {
 
@@ -24,8 +25,6 @@ class profileViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var birthDateTextField: UITextField!
     
-    @IBOutlet var btnSaveProfile: UIButton!
-    
     @IBOutlet var txtName: UITextField!
 
     @IBOutlet var scGender: UISegmentedControl!
@@ -34,14 +33,18 @@ class profileViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var nationalityButton: UIButton!
     
+    @IBOutlet var btnNext: UIButton!
+    
     override func viewWillAppear(_ animated: Bool) {
+        
+        // update nationality title
         guard let nationality = selectedNationality else {
             return
         }
         
-        let text = NSAttributedString(string: nationality.countryEmoji + " " + nationality.countryName, attributes: [.font: UIFont.systemFont(ofSize: 15), .foregroundColor: UIColor.black])
+        nationalityButton.setTitle(nationality.countryEmoji + " " + nationality.countryName, for: .normal)
         
-        nationalityButton.setAttributedTitle(text, for: .normal)
+        nationalityButton.setTitleColor(.black, for: .normal)
     }
 
     override func viewDidLoad() {
@@ -54,19 +57,27 @@ class profileViewController: UIViewController, UITextFieldDelegate {
         txtName.delegate = self
         txtResidence.delegate = self
         
-        btnSaveProfile.isEnabled = false
+        btnNext.isEnabled = false
         
         txtName.text = myUserDefaults.string(forKey: UserDefault.Name.toString() )
         
         scGender.selectedSegmentIndex = myUserDefaults.integer(forKey: UserDefault.Gender.toString() )
         
-        createDatePicker() // SetBirth()
+        createDatePicker()
         
         txtResidence.text = myUserDefaults.string(forKey: UserDefault.Residence.toString() )
-
-        nationalityButton.setTitle(myUserDefaults.string(forKey: UserDefault.Nationality.toString()), for: .normal)
         
-        observeValues()
+        birthDateTextField.text = myUserDefaults.string(forKey: UserDefault.Birth.toString() )
+        
+        if let text1 = myUserDefaults.string(forKey: UserDefault.NationalityEmoji.toString() ) {
+            if let text2 = myUserDefaults.string(forKey: UserDefault.Nationality.toString() ) {
+                nationalityButton.setTitle(text1 + " " + text2, for: .normal)
+            }
+        }
+        
+        nationalityButton.setTitleColor(.black, for: .normal)
+        
+        checkValues()
         
         registerForKeyboardNotification()
     }
@@ -75,13 +86,17 @@ class profileViewController: UIViewController, UITextFieldDelegate {
         
         navProfile.title = "ProfileInformation".localized()
         birthDateTextField.placeholder = "Birth".localized()
-        btnSaveProfile.setTitle( "Continue".localized(), for: .normal )
-        
+
         txtName.placeholder = "InputName".localized()
         
-        // localize 하고나서 font 크기 바껴서 조정
-        let text = NSAttributedString(string: "Nationality".localized(), attributes: [.font: UIFont.systemFont(ofSize: 15)])
-        nationalityButton.setAttributedTitle(text, for: .normal)
+        btnNext.setTitle( "Continue".localized(), for: .normal )
+        
+//        // localize 하고나서 font 크기 바껴서 조정
+//        let text = NSAttributedString(string: "Nationality".localized(), attributes: [.font: UIFont.systemFont(ofSize: 15)])
+//        nationalityButton.setAttributedTitle(text, for: .normal)
+        
+        nationalityButton.setTitle("Nationality".localized(), for: .normal)
+        nationalityButton.setTitleColor(.opaqueSeparator, for: .normal)
         
         txtResidence.placeholder = "Residence".localized()
         
@@ -99,28 +114,29 @@ class profileViewController: UIViewController, UITextFieldDelegate {
 
         guard let info = notification.userInfo, let keyboardFrameValue = info[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue else { return
         }
-        
+
         let keyboardSize = keyboardFrameValue.cgRectValue.size
 
         var shouldMoveViewUp = false
 
-      // if active text field is not nil
+        // if active text field is not nil
+        // safe area 
         if let activeTextField = activeTextField {
             let bottomOfTextField = activeTextField.convert(activeTextField.bounds, to: self.view).maxY;
-            
+
             let topOfKeyboard = self.view.frame.height - keyboardSize.height
 
             // if the bottom of Textfield is below the top of keyboard, move up
             if bottomOfTextField > topOfKeyboard {
               shouldMoveViewUp = true
             }
-      }
+        }
 
-      if(shouldMoveViewUp) {
-        self.view.frame.origin.y = 0 - keyboardSize.height
-      }
+        if (shouldMoveViewUp) {
+            self.view.frame.origin.y = 0 - keyboardSize.height
+        }
     }
-    
+
     @objc func keyboardWillHide(notification: NSNotification) {
         self.view.frame.origin.y = 0
     }
@@ -130,12 +146,13 @@ class profileViewController: UIViewController, UITextFieldDelegate {
         // set the activeTextField to the selected textfield
         self.activeTextField = textField
     }
-        
+    
     // when user click 'done' or dismiss the keyboard
-    func textFieldDidEndEditing(_ textField: UITextField) {
+    func textFieldDidChanged(_ textField: UITextField) {
         self.activeTextField = nil
     }
-    
+
+   
     // when user 'return' key dismiss the keyboard
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.txtName.resignFirstResponder()
@@ -143,44 +160,36 @@ class profileViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
-    func observeValues() {
-        txtName.addTarget(self, action: #selector(textFieldDidChanged(textField:)), for: .editingChanged)
+    func checkText() {
+        if txtName.text != "" && txtResidence.text != "" &&  birthDateTextField.text != "" && (scGender.selectedSegmentIndex == 0 || scGender.selectedSegmentIndex == 1) && selectedNationality != nil {
+            btnNext.isEnabled = true
+        } else {
+            btnNext.isEnabled = false
+        }
+    }
+    
+    func checkValues() {
+        txtName.addTarget(self, action: #selector(textFieldDidChanged(textField:)), for: .editingDidEnd)
         
-        txtResidence.addTarget(self, action: #selector(textFieldDidChanged(textField:)), for: .editingChanged)
+        txtResidence.addTarget(self, action: #selector(textFieldDidChanged(textField:)), for: .editingDidEnd)
         
-        birthDateTextField.addTarget(self, action: #selector(textFieldDidChanged(textField:)), for: .editingChanged)
+        birthDateTextField.addTarget(self, action: #selector(textFieldDidChanged(textField:)), for: .editingDidEnd)
         
-        nationalityButton.addTarget(self, action: #selector(nationalitySelected(button:)), for: .editingChanged)
+        nationalityButton.addTarget(self, action: #selector(nationalitySelected(button:)), for: .touchUpInside)
         
-        scGender.addTarget(self, action: #selector(genderSelected(segmentedControl:)), for: .editingChanged)
+        scGender.addTarget(self, action: #selector(genderSelected(segmentedControl:)), for: .valueChanged)
     }
     
     @objc func textFieldDidChanged(textField: UITextField) {
-        btnSaveProfile.isEnabled = false
-        guard txtName.text != "" && txtResidence.text != "" &&  birthDateTextField.text != "" else { return }
-        guard selectedNationality != nil else { return }
-        
-        guard scGender.selectedSegmentIndex == 0 || scGender.selectedSegmentIndex == 1 else { return }
-        
-        btnSaveProfile.isEnabled = true
+        checkText()
     }
     
     @objc func nationalitySelected(button: UIButton) {
-        btnSaveProfile.isEnabled = false
-        guard txtName.text != nil && txtResidence.text != nil &&  birthDateTextField.text != nil else { return }
-        
-        guard scGender.selectedSegmentIndex == 0 || scGender.selectedSegmentIndex == 1 else { return }
-        
-        btnSaveProfile.isEnabled = true
+        checkText()
     }
     
     @objc func genderSelected(segmentedControl: UISegmentedControl) {
-        btnSaveProfile.isEnabled = false
-        guard txtName.text != nil && txtResidence.text != nil &&  birthDateTextField.text != nil else { return }
-        
-        guard selectedNationality != nil else { return }
-        
-        btnSaveProfile.isEnabled = true
+        checkText()
     }
     
     func createDatePicker() {
@@ -221,7 +230,7 @@ class profileViewController: UIViewController, UITextFieldDelegate {
         self.view.endEditing(true)
     }
     
-    @IBAction func saveProfile(_ sender: UIButton) {
+    @IBAction func Next(_ sender: UIButton) {
 
         SaveUserDefault( key: UserDefault.Name.toString(), value: txtName.text! )
         
@@ -229,15 +238,28 @@ class profileViewController: UIViewController, UITextFieldDelegate {
         
         SaveUserDefault( key: UserDefault.Birth.toString(), value: birthDateTextField.text! )
         
+        SaveUserDefault(key: UserDefault.NationalityEmoji.toString(), value: selectedNationality!.countryEmoji)
+        
         SaveUserDefault( key: UserDefault.Nationality.toString(), value: selectedNationality!.countryName )
+        
+        print("seletedNationality \(selectedNationality!.countryEmoji)")
         
         SaveUserDefault( key: UserDefault.Gender.toString(), value: scGender.selectedSegmentIndex )
         
-//        // 회원가입 완료시 False
-//        scGender.isEnabled = false
-//        birthDateTextField.isEnabled = false
-//        nationalityButton.isEnabled =  false
+        if Joined() {
+            
+            dismiss(animated: true)
+            
+        } else {
+
+            self.performSegue( withIdentifier: "Language", sender: self )
+            
+        }
+        
+        
+        
     }
+    
     
     @IBAction func unwindToNationality(_ unwindSegue: UIStoryboardSegue) {
         //let sourceViewController = unwindSegue.source
