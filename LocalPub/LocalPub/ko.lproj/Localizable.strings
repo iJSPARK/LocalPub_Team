@@ -107,9 +107,8 @@
 "CameraError" = "카메라 실행 오류!";
 "CameraRunError" = "카메라를 실행할 수 없습니다.";
 
-"AA" = "모두 Accept all";
-"TC" = "약관1 Terms and conditions (required)";
-"PTC" = "약관2 Privacy terms and conditions(required)";
-"TL" = "약관3 Terms and Conditions of Location-Based
-Services (optional)";
-"MA" = "약관4 Marketing Agreement (optional)";
+"AA" = "전체동의";
+"TC" = "약관1 이용약관(필수사항)";
+"PTC" = "약관2 개인정보취급방침(필수사항)";
+"TL" = "약관3 위치기반 이용약관(선택사항)";
+"MA" = "약관4 마케팅 동의(선택사항)";
