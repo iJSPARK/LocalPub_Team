@@ -23,7 +23,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="checkmark.circle" catalog="system" title=""/>
                                 <connections>
-                                    <action selector="pressBtnAA:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aol-Nv-OaL"/>
+                                    <action selector="touchAll:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ary-A3-Fc7"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UTE-ez-yqh" customClass="MyCheckBtn" customModule="LocalPub" customModuleProvider="target">
@@ -32,6 +32,9 @@
                                 <color key="tintColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="checkmark.circle" catalog="system" title=""/>
+                                <connections>
+                                    <action selector="Btns:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4uj-Xb-aZl"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yMM-bp-mKM" customClass="MyCheckBtn" customModule="LocalPub" customModuleProvider="target">
                                 <rect key="frame" x="9" y="349" width="43" height="31"/>
@@ -39,6 +42,9 @@
                                 <color key="tintColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="checkmark.circle" catalog="system" title=""/>
+                                <connections>
+                                    <action selector="Btns:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pwo-Dt-5Lu"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4bw-lA-shv" customClass="MyCheckBtn" customModule="LocalPub" customModuleProvider="target">
                                 <rect key="frame" x="9" y="407" width="43" height="31"/>
@@ -46,6 +52,9 @@
                                 <color key="tintColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="checkmark.circle" catalog="system" title=""/>
+                                <connections>
+                                    <action selector="Btns:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gmp-M4-FXE"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I5B-z8-PjR" customClass="MyCheckBtn" customModule="LocalPub" customModuleProvider="target">
                                 <rect key="frame" x="9" y="462" width="43" height="31"/>
@@ -53,6 +62,9 @@
                                 <color key="tintColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="checkmark.circle" catalog="system" title=""/>
+                                <connections>
+                                    <action selector="Btns:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ehb-Pl-KGV"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hYh-G3-YXW">
                                 <rect key="frame" x="57" y="244" width="305" height="32"/>
@@ -66,14 +78,24 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Terms and conditions (required)"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Terms and conditions (required)">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="OZS-aE-yyl" kind="show" id="yhf-tF-JMg"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="07O-gE-GDa">
                                 <rect key="frame" x="57" y="349" width="305" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Privacy terms and conditions(required)"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Privacy terms and conditions(required)">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="8Bf-9S-xfZ" kind="show" id="stT-Tj-bQs"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AWR-mh-AZr">
                                 <rect key="frame" x="57" y="399" width="305" height="48"/>
@@ -83,23 +105,37 @@
                                 <buttonConfiguration key="configuration" style="plain">
                                     <string key="title">Terms and Conditions of Location-Based
 Services (optional)</string>
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="Gzg-7f-JFH" kind="show" id="oT0-u3-KOv"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0mN-A9-iiA">
                                 <rect key="frame" x="57" y="462" width="305" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Marketing Agreement (optional)"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Marketing Agreement (optional)">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="Axb-Wz-tqn" kind="show" id="KVJ-qN-CQm"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wTS-bL-noD">
-                                <rect key="frame" x="93" y="742" width="204" height="37"/>
+                                <rect key="frame" x="16" y="732" width="358" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Continue"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Continue">
+                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="18"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" red="0.68627452850000004" green="0.2823529541" blue="0.83137255909999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
                                 <connections>
-                                    <action selector="clickNext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pzZ-Zz-kwf"/>
+                                    <action selector="Next:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bBO-G5-ECz"/>
+                                    <segue destination="xbv-If-NEZ" kind="unwind" unwindAction="unwindToHome:" id="HbS-da-tWA"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -108,26 +144,149 @@ Services (optional)</string>
                     </view>
                     <navigationItem key="navigationItem" title="Agreement" id="BvV-xM-VMG"/>
                     <connections>
-                        <outlet property="CheckBtnAA" destination="sXg-4Q-DFj" id="JuC-XE-jWS"/>
-                        <outlet property="CheckBtnMA" destination="I5B-z8-PjR" id="gIk-Y0-UtS"/>
-                        <outlet property="CheckBtnPTC" destination="yMM-bp-mKM" id="GOv-wf-RuS"/>
-                        <outlet property="CheckBtnTC" destination="UTE-ez-yqh" id="KZv-wX-Vzy"/>
-                        <outlet property="CheckBtnTL" destination="4bw-lA-shv" id="nnY-UP-urF"/>
+                        <outlet property="CheckBtnAA" destination="sXg-4Q-DFj" id="MkJ-cg-jIw"/>
+                        <outlet property="CheckBtnMA" destination="I5B-z8-PjR" id="eAS-9j-7BA"/>
+                        <outlet property="CheckBtnPTC" destination="yMM-bp-mKM" id="q3Q-Ss-hIe"/>
+                        <outlet property="CheckBtnTC" destination="UTE-ez-yqh" id="zzs-qi-gA6"/>
+                        <outlet property="CheckBtnTL" destination="4bw-lA-shv" id="EPg-GE-ZG0"/>
                         <outlet property="ClickAA" destination="hYh-G3-YXW" id="42g-qU-RhV"/>
                         <outlet property="ClickMA" destination="0mN-A9-iiA" id="QSZ-CR-pan"/>
                         <outlet property="ClickPTC" destination="07O-gE-GDa" id="WN0-xP-rql"/>
                         <outlet property="ClickTC" destination="pJ6-lC-eTv" id="qOW-z0-7sD"/>
                         <outlet property="ClickTL" destination="AWR-mh-AZr" id="J1t-ch-CnH"/>
+                        <outlet property="btnNext" destination="wTS-bL-noD" id="sKA-lV-ngm"/>
                         <outlet property="navAgreement" destination="BvV-xM-VMG" id="Lky-yd-R2r"/>
                         <outletCollection property="btns" destination="UTE-ez-yqh" collectionClass="NSMutableArray" id="KXA-nT-KO2"/>
                         <outletCollection property="btns" destination="yMM-bp-mKM" collectionClass="NSMutableArray" id="u4H-Vv-5dv"/>
                         <outletCollection property="btns" destination="4bw-lA-shv" collectionClass="NSMutableArray" id="5FY-Eq-zxQ"/>
                         <outletCollection property="btns" destination="I5B-z8-PjR" collectionClass="NSMutableArray" id="cWb-Kc-HIk"/>
+                        <segue destination="wTx-Hs-cTg" kind="presentation" identifier="Picture" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="Jz4-Ka-4p3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="xbv-If-NEZ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1838.4615384615383" y="79.620853080568722"/>
+            <point key="canvasLocation" x="1566" y="79"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="8Ic-pp-8de">
+            <objects>
+                <viewController id="Gzg-7f-JFH" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="45s-JL-0SU">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y2j-bB-eeH">
+                                <rect key="frame" x="20" y="100" width="350" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <string key="title">Terms and Conditions of Location-Based
+Services (optional)</string>
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="slX-ye-X4N"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="cPU-As-95w"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pzI-FQ-8ZR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1898" y="894"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="h0h-Ko-MZB">
+            <objects>
+                <viewController id="Axb-Wz-tqn" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jrQ-S0-uET">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AM8-2Y-lf4">
+                                <rect key="frame" x="50" y="100" width="300" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Marketing Agreement (optional)">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="x0o-Qf-no7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="HGS-cX-Y4x"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ey4-jX-GZC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2595" y="894"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="7xh-Dw-nyX">
+            <objects>
+                <viewController id="OZS-aE-yyl" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oJV-YR-EWE">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Trl-lb-csy">
+                                <rect key="frame" x="50" y="100" width="300" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Terms and conditions (required)">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="865-9i-l3D"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="YAI-fa-We6"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bdu-7Q-Owh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="525" y="894"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="pze-T6-Bne">
+            <objects>
+                <viewController id="8Bf-9S-xfZ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BTP-jI-Sbe">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HeA-LL-hYz">
+                                <rect key="frame" x="50" y="100" width="300" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Privacy terms and conditions(required)">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Cgp-FM-ymP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="N1L-2q-9l4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7nA-JN-9jL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1209" y="894"/>
+        </scene>
+        <!--pictureController-->
+        <scene sceneID="bhV-h1-TpX">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PictureStoryboard" referencedIdentifier="pictureController" id="wTx-Hs-cTg" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="DOx-LX-fSH"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RX3-sc-NBs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2248" y="79"/>
         </scene>
     </scenes>
     <resources>

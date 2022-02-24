@@ -18,6 +18,9 @@
 		79A6F70B27B8F1FF00D0872C /* LanguageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A6F70A27B8F1FF00D0872C /* LanguageTableViewCell.swift */; };
 		79B6276427C51E080012C396 /* LevelLanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B6276327C51E080012C396 /* LevelLanguageViewController.swift */; };
 		79B6276627C51E980012C396 /* LevelLanguage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79B6276527C51E980012C396 /* LevelLanguage.storyboard */; };
+		84168B1327C3BE4300EF0A22 /* LoginNavStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84168B1227C3BE4300EF0A22 /* LoginNavStoryboard.storyboard */; };
+		84168B1527C3BE4E00EF0A22 /* LoginViewConrtoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84168B1427C3BE4E00EF0A22 /* LoginViewConrtoller.swift */; };
+		84168B1727C3D31500EF0A22 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84168B1627C3D31500EF0A22 /* Login.swift */; };
 		8470BD6927B2CD1800D1A7C6 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 8470BD6827B2CD1800D1A7C6 /* FirebaseAuth */; };
 		8470BD6B27B2CD1800D1A7C6 /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 8470BD6A27B2CD1800D1A7C6 /* FirebaseAuthCombine-Community */; };
 		8470BD6D27B2CD1800D1A7C6 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 8470BD6C27B2CD1800D1A7C6 /* FirebaseCrashlytics */; };
@@ -34,7 +37,7 @@
 		8470BD8427B2F44C00D1A7C6 /* Misc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470BD8327B2F44C00D1A7C6 /* Misc.swift */; };
 		8470BD8A27B2F8FE00D1A7C6 /* LocalPub.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8470BD8827B2F8FE00D1A7C6 /* LocalPub.xcdatamodeld */; };
 		8470BD9927B2FA3E00D1A7C6 /* Call.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470BD9827B2FA3E00D1A7C6 /* Call.swift */; };
-		8470BDC127B2FDAF00D1A7C6 /* HomeStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8470BDB927B2FDAF00D1A7C6 /* HomeStoryBoard.storyboard */; };
+		8470BDC127B2FDAF00D1A7C6 /* HomeTabStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8470BDB927B2FDAF00D1A7C6 /* HomeTabStoryboard.storyboard */; };
 		8470BDC227B2FDAF00D1A7C6 /* CallList+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470BDBA27B2FDAF00D1A7C6 /* CallList+CoreDataClass.swift */; };
 		8470BDC427B2FDAF00D1A7C6 /* CallListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470BDBD27B2FDAF00D1A7C6 /* CallListViewController.swift */; };
 		8470BDC527B2FDAF00D1A7C6 /* FindFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470BDBE27B2FDAF00D1A7C6 /* FindFriendViewController.swift */; };
@@ -47,6 +50,9 @@
 		8470BDD927B5A13200D1A7C6 /* AgreementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470BDD827B5A13200D1A7C6 /* AgreementViewController.swift */; };
 		8470BDDB27B5A16000D1A7C6 /* AgreementStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8470BDDA27B5A16000D1A7C6 /* AgreementStoryboard.storyboard */; };
 		8470C00227B5A1B100D1A7C6 /* MyCheckBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470C00127B5A1B100D1A7C6 /* MyCheckBtn.swift */; };
+		8470C06327B835CE00D1A7C6 /* PictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470C06227B835CE00D1A7C6 /* PictureViewController.swift */; };
+		8470C06527B8362200D1A7C6 /* PictureStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8470C06427B8362200D1A7C6 /* PictureStoryboard.storyboard */; };
+		8470C06727B8388200D1A7C6 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470C06627B8388200D1A7C6 /* ImageManager.swift */; };
 		84A1D51E2797DC4E00CF7104 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A1D51D2797DC4E00CF7104 /* AppDelegate.swift */; };
 		84A1D5202797DC4E00CF7104 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A1D51F2797DC4E00CF7104 /* SceneDelegate.swift */; };
 		84A1D5222797DC4E00CF7104 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A1D5212797DC4E00CF7104 /* MainViewController.swift */; };
@@ -80,11 +86,14 @@
 		79A6F70A27B8F1FF00D0872C /* LanguageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageTableViewCell.swift; sourceTree = "<group>"; };
 		79B6276327C51E080012C396 /* LevelLanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelLanguageViewController.swift; sourceTree = "<group>"; };
 		79B6276527C51E980012C396 /* LevelLanguage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LevelLanguage.storyboard; sourceTree = "<group>"; };
+		84168B1227C3BE4300EF0A22 /* LoginNavStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginNavStoryboard.storyboard; sourceTree = "<group>"; };
+		84168B1427C3BE4E00EF0A22 /* LoginViewConrtoller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewConrtoller.swift; sourceTree = "<group>"; };
+		84168B1627C3D31500EF0A22 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		8470BD8127B2F25B00D1A7C6 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		8470BD8327B2F44C00D1A7C6 /* Misc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Misc.swift; sourceTree = "<group>"; };
 		8470BD8927B2F8FE00D1A7C6 /* LocalPubHome.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LocalPubHome.xcdatamodel; sourceTree = "<group>"; };
 		8470BD9827B2FA3E00D1A7C6 /* Call.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Call.swift; sourceTree = "<group>"; };
-		8470BDB927B2FDAF00D1A7C6 /* HomeStoryBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HomeStoryBoard.storyboard; sourceTree = "<group>"; };
+		8470BDB927B2FDAF00D1A7C6 /* HomeTabStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HomeTabStoryboard.storyboard; sourceTree = "<group>"; };
 		8470BDBA27B2FDAF00D1A7C6 /* CallList+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CallList+CoreDataClass.swift"; sourceTree = "<group>"; };
 		8470BDBD27B2FDAF00D1A7C6 /* CallListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallListViewController.swift; sourceTree = "<group>"; };
 		8470BDBE27B2FDAF00D1A7C6 /* FindFriendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindFriendViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +106,9 @@
 		8470BDD827B5A13200D1A7C6 /* AgreementViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgreementViewController.swift; sourceTree = "<group>"; };
 		8470BDDA27B5A16000D1A7C6 /* AgreementStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AgreementStoryboard.storyboard; sourceTree = "<group>"; };
 		8470C00127B5A1B100D1A7C6 /* MyCheckBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCheckBtn.swift; sourceTree = "<group>"; };
+		8470C06227B835CE00D1A7C6 /* PictureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureViewController.swift; sourceTree = "<group>"; };
+		8470C06427B8362200D1A7C6 /* PictureStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PictureStoryboard.storyboard; sourceTree = "<group>"; };
+		8470C06627B8388200D1A7C6 /* ImageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 		84A1D51A2797DC4E00CF7104 /* LocalPub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocalPub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A1D51D2797DC4E00CF7104 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84A1D51F2797DC4E00CF7104 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -151,6 +163,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		84168B1127C3BDEC00EF0A22 /* LoginNav */ = {
+			isa = PBXGroup;
+			children = (
+				84168B1227C3BE4300EF0A22 /* LoginNavStoryboard.storyboard */,
+				84168B1427C3BE4E00EF0A22 /* LoginViewConrtoller.swift */,
+			);
+			path = LoginNav;
+			sourceTree = "<group>";
+		};
 		8470BDB727B2FDAF00D1A7C6 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -165,7 +186,7 @@
 		8470BDB827B2FDAF00D1A7C6 /* StoryBoards */ = {
 			isa = PBXGroup;
 			children = (
-				8470BDB927B2FDAF00D1A7C6 /* HomeStoryBoard.storyboard */,
+				8470BDB927B2FDAF00D1A7C6 /* HomeTabStoryboard.storyboard */,
 				8470BDCA27B44A8B00D1A7C6 /* FindFriendStoryboard.storyboard */,
 				8470BDCC27B44AA500D1A7C6 /* CallListStoryboard.storyboard */,
 				8470BDCE27B44AB700D1A7C6 /* UserStoryboard.storyboard */,
@@ -206,15 +227,18 @@
 			children = (
 				84A1D51D2797DC4E00CF7104 /* AppDelegate.swift */,
 				84A1D51F2797DC4E00CF7104 /* SceneDelegate.swift */,
+				84168B1627C3D31500EF0A22 /* Login.swift */,
 				84E2267E27A3F16800097CF5 /* User.swift */,
 				796A8FD527BE0D390051B543 /* Language.swift */,
 				8470BD9827B2FA3E00D1A7C6 /* Call.swift */,
 				8470BD8127B2F25B00D1A7C6 /* Image.swift */,
+				8470C06627B8388200D1A7C6 /* ImageManager.swift */,
 				8470BD8327B2F44C00D1A7C6 /* Misc.swift */,
 				7980EDAF27AF82B4000578A5 /* Country.swift */,
 				8470C00127B5A1B100D1A7C6 /* MyCheckBtn.swift */,
 				84A1D53C2799528200CF7104 /* ViewControllers */,
 				84E2268627A41D5A00097CF5 /* StoryBoards */,
+				84168B1127C3BDEC00EF0A22 /* LoginNav */,
 				8470BDB727B2FDAF00D1A7C6 /* Home */,
 				84A1D5292797DC5100CF7104 /* Assets.xcassets */,
 				84A1D52E2797DC5100CF7104 /* Info.plist */,
@@ -231,6 +255,7 @@
 				84A1D5212797DC4E00CF7104 /* MainViewController.swift */,
 				84E2269A27A6E81700097CF5 /* LoginPhoneViewController.swift */,
 				7980EDB527AF9F68000578A5 /* CountryCodeViewController.swift */,
+				79A6F70427B7DAF700D0872C /* NationalityViewController.swift */,
 				84E2269827A6E7D200097CF5 /* LoginMailViewController.swift */,
 				8470BDD827B5A13200D1A7C6 /* AgreementViewController.swift */,
 				84A1D53A2799526C00CF7104 /* ProfileViewController.swift */,
@@ -239,7 +264,7 @@
 				79A6F70627B8E08000D0872C /* SelectLanguageViewController.swift */,
 				79B6276327C51E080012C396 /* LevelLanguageViewController.swift */,
 				84A1D5BA279C635000CF7104 /* IntroduceViewController.swift */,
-				79A6F70427B7DAF700D0872C /* NationalityViewController.swift */,
+				8470C06227B835CE00D1A7C6 /* PictureViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -258,6 +283,7 @@
 				79B6276527C51E980012C396 /* LevelLanguage.storyboard */,
 				79A6F70827B8E09600D0872C /* SelectLanguage.storyboard */,
 				84E2268427A41D5500097CF5 /* IntroduceStoryboard.storyboard */,
+				8470C06427B8362200D1A7C6 /* PictureStoryboard.storyboard */,
 				84A1D5D5279C790A00CF7104 /* LaunchScreen.storyboard */,
 			);
 			path = StoryBoards;
@@ -351,15 +377,17 @@
 				79A6F70927B8E09600D0872C /* SelectLanguage.storyboard in Resources */,
 				79A6F70327B7DAC600D0872C /* Nationality.storyboard in Resources */,
 				8470BDDB27B5A16000D1A7C6 /* AgreementStoryboard.storyboard in Resources */,
-				8470BDC127B2FDAF00D1A7C6 /* HomeStoryBoard.storyboard in Resources */,
+				8470BDC127B2FDAF00D1A7C6 /* HomeTabStoryboard.storyboard in Resources */,
 				8470BDCD27B44AA500D1A7C6 /* CallListStoryboard.storyboard in Resources */,
 				7980EDB827AFA5E7000578A5 /* CountryCode.storyboard in Resources */,
 				79B6276627C51E980012C396 /* LevelLanguage.storyboard in Resources */,
 				84E2268527A41D5500097CF5 /* IntroduceStoryboard.storyboard in Resources */,
 				84E2268127A41D3900097CF5 /* ProfileStoryboard.storyboard in Resources */,
 				84A1D53627980EB000CF7104 /* Localizable.strings in Resources */,
+				84168B1327C3BE4300EF0A22 /* LoginNavStoryboard.storyboard in Resources */,
 				84E2268327A41D4700097CF5 /* LanguageStoryboard.storyboard in Resources */,
 				8470BDCB27B44A8B00D1A7C6 /* FindFriendStoryboard.storyboard in Resources */,
+				8470C06527B8362200D1A7C6 /* PictureStoryboard.storyboard in Resources */,
 				84A1D52A2797DC5100CF7104 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,6 +440,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8470BD9927B2FA3E00D1A7C6 /* Call.swift in Sources */,
+				8470C06327B835CE00D1A7C6 /* PictureViewController.swift in Sources */,
 				8470BDC727B2FDAF00D1A7C6 /* CallList+CoreDataProperties.swift in Sources */,
 				84A1D5222797DC4E00CF7104 /* MainViewController.swift in Sources */,
 				8470BDD927B5A13200D1A7C6 /* AgreementViewController.swift in Sources */,
@@ -427,15 +456,18 @@
 				84A1D5BB279C635000CF7104 /* IntroduceViewController.swift in Sources */,
 				79A6F70527B7DAF700D0872C /* NationalityViewController.swift in Sources */,
 				84E2267F27A3F16800097CF5 /* User.swift in Sources */,
+				84168B1527C3BE4E00EF0A22 /* LoginViewConrtoller.swift in Sources */,
 				84A1D5202797DC4E00CF7104 /* SceneDelegate.swift in Sources */,
 				79B6276427C51E080012C396 /* LevelLanguageViewController.swift in Sources */,
 				84E2269927A6E7D200097CF5 /* LoginMailViewController.swift in Sources */,
 				8470BDC927B3915D00D1A7C6 /* CallViewController.swift in Sources */,
+				84168B1727C3D31500EF0A22 /* Login.swift in Sources */,
 				79A6F70B27B8F1FF00D0872C /* LanguageTableViewCell.swift in Sources */,
 				7980EDB627AF9F68000578A5 /* CountryCodeViewController.swift in Sources */,
 				796A8FD627BE0D390051B543 /* Language.swift in Sources */,
 				84E2269B27A6E81700097CF5 /* LoginPhoneViewController.swift in Sources */,
 				8470BDC427B2FDAF00D1A7C6 /* CallListViewController.swift in Sources */,
+				8470C06727B8388200D1A7C6 /* ImageManager.swift in Sources */,
 				84A1D53B2799526C00CF7104 /* ProfileViewController.swift in Sources */,
 				8470BD8A27B2F8FE00D1A7C6 /* LocalPub.xcdatamodeld in Sources */,
 				8470BDC627B2FDAF00D1A7C6 /* UserViewController.swift in Sources */,

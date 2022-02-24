@@ -23,33 +23,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JWj-WK-mtn">
-                                <rect key="frame" x="31.000000000000227" y="398" width="330" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Profile Information"/>
-                                <connections>
-                                    <segue destination="fbo-qF-GVE" kind="show" id="k2d-3F-sS7"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aVr-t2-J0V">
-                                <rect key="frame" x="31.000000000000227" y="457" width="330" height="31.000000000000114"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Select Language"/>
-                                <connections>
-                                    <segue destination="U1N-dQ-mXw" kind="show" id="xPm-jo-wM5"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WGL-QU-t1q">
-                                <rect key="frame" x="31.000000000000227" y="513" width="330" height="31.000000000000114"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Self Introduce"/>
-                                <connections>
-                                    <segue destination="nda-Am-NyC" kind="show" id="m5z-Oq-q2J"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mYF-xb-xBY">
                                 <rect key="frame" x="277" y="98" width="84" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -60,7 +33,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fIx-p6-e7f">
-                                <rect key="frame" x="31.000000000000227" y="296" width="330" height="31"/>
+                                <rect key="frame" x="31" y="296" width="330" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="LogIn"/>
@@ -69,7 +42,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cwR-QC-oDP">
-                                <rect key="frame" x="31.000000000000227" y="345" width="330" height="31"/>
+                                <rect key="frame" x="31" y="345" width="330" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Agreement"/>
@@ -77,8 +50,44 @@
                                     <segue destination="qOY-B9-PzH" kind="show" id="6Nj-Ot-SV9"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JWj-WK-mtn">
+                                <rect key="frame" x="31.000000000000227" y="398" width="330" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Profile Information"/>
+                                <connections>
+                                    <segue destination="fbo-qF-GVE" kind="show" id="k2d-3F-sS7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aVr-t2-J0V">
+                                <rect key="frame" x="31" y="451" width="330" height="31.000000000000114"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Select Language"/>
+                                <connections>
+                                    <segue destination="U1N-dQ-mXw" kind="show" id="xPm-jo-wM5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WGL-QU-t1q">
+                                <rect key="frame" x="31" y="510" width="330" height="31.000000000000114"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Self Introduce"/>
+                                <connections>
+                                    <segue destination="nda-Am-NyC" kind="show" id="m5z-Oq-q2J"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HUg-2H-Okt">
+                                <rect key="frame" x="31" y="563" width="330" height="31.000000000000114"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Get Picture"/>
+                                <connections>
+                                    <segue destination="u73-Ij-DlM" kind="show" id="W6D-4d-a2J"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wd5-Wf-EWM">
-                                <rect key="frame" x="31" y="566" width="330" height="31.000000000000114"/>
+                                <rect key="frame" x="31" y="614" width="330" height="31.000000000000114"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Home"/>
@@ -98,6 +107,7 @@
                         <outlet property="btnLanguage" destination="aVr-t2-J0V" id="1s4-vG-Fgz"/>
                         <outlet property="btnLogOut" destination="mYF-xb-xBY" id="gUJ-2p-cUX"/>
                         <outlet property="btnLoginPhone" destination="fIx-p6-e7f" id="5LA-kH-uUd"/>
+                        <outlet property="btnPicture" destination="HUg-2H-Okt" id="bVV-ho-lPh"/>
                         <outlet property="btnProfile" destination="JWj-WK-mtn" id="IzP-3S-YyQ"/>
                         <outlet property="lblCurrentLanguage" destination="Lkn-23-4Tb" id="XCa-Qq-ooi"/>
                     </connections>
@@ -114,7 +124,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wgo-dL-l7E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2475" y="563"/>
+            <point key="canvasLocation" x="2460" y="523"/>
         </scene>
         <!--languageController-->
         <scene sceneID="oR6-Aj-mxA">
@@ -124,7 +134,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fkN-nP-UxQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2495" y="642"/>
+            <point key="canvasLocation" x="2485" y="590"/>
         </scene>
         <!--loginPhoneController-->
         <scene sceneID="ZCD-CI-x4V">
@@ -134,7 +144,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yhF-MB-x41" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2495" y="405"/>
+            <point key="canvasLocation" x="2482" y="371"/>
         </scene>
         <!--AgreementStoryboard-->
         <scene sceneID="7WR-jp-aWE">
@@ -144,7 +154,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AVM-lF-zeG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2495" y="489"/>
+            <point key="canvasLocation" x="2495" y="449"/>
         </scene>
         <!--introduceController-->
         <scene sceneID="Pn5-2f-3dQ">
@@ -154,17 +164,27 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CEb-ZZ-2jb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2496" y="727"/>
+            <point key="canvasLocation" x="2495" y="664"/>
         </scene>
-        <!--homeController-->
+        <!--homeTabController-->
         <scene sceneID="5g8-cZ-ls9">
             <objects>
-                <viewControllerPlaceholder storyboardName="HomeStoryBoard" referencedIdentifier="homeController" id="UAj-xe-XVB" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="HomeTabStoryBoard" referencedIdentifier="homeTabController" id="UAj-xe-XVB" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="Jyw-pn-RI3"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Tn-R7-Hij" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2479" y="816"/>
+        </scene>
+        <!--pictureController-->
+        <scene sceneID="Nr3-IP-AkW">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PictureStoryboard" referencedIdentifier="pictureController" id="u73-Ij-DlM" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="0HI-Au-v4u"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1ub-dw-ByK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2496" y="730"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rig-Ga-awP">

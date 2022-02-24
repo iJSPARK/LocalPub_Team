@@ -26,10 +26,12 @@ enum UserDefault: String {
     case AboutMe = "AboutMe"
     case UID = "UID"
     case Login = "Login"
+    case Joined = "Joined"
+    case AuthState = "AuthState"
     case CreationDate = "CreationDate"
     case SignedInDate = "SignedInDate"
+    case LastUpdate = "LastUpdate"
     case LogDate = "LogDate"
-    case AuthState = "AuthState"
     
     func toString() -> String {
         return self.rawValue
@@ -54,10 +56,12 @@ func initUserDefaultValue() -> [ UserDefault : Any ] {
         .AboutMe: "",
         .UID: "",  //RofzE9N1mRZp97aTzy0Au1U66mG2
         .Login: 0,
+        .Joined: 0,
+        .AuthState: 0,
         .CreationDate: -1,
         .SignedInDate: -1,
-        .LogDate: -1,
-        .AuthState: 0
+        .LastUpdate: -1,
+        .LogDate: -1
     ]
     
     return userDefault
@@ -76,7 +80,7 @@ func SaveUserDefault( key: String, value: Any ) {
     if let userUID = myUserDefaults.string( forKey: UserDefault.UID.toString() ) {
         
         let docRef = db.collection("User").document( userUID )
-
+        
         docRef.updateData( [
             UserDefault.LogDate.toString(): logDate,
             key: value ] ) { err in
@@ -210,11 +214,11 @@ func GetUserDefault( user: Firebase.User, eMailPW: String  ) {
             
         if let err = err {
             
-            print("Error getting documents: \(err)")
+            print( "Error getting documents: \(err)" )
             
         } else {
             
-            print("Total Documents: \(querySnapshot!.documents.count)")
+            print( "Total Documents: \(querySnapshot!.documents.count)" )
             
             if querySnapshot!.documents.count == 0 {
                 
@@ -222,11 +226,11 @@ func GetUserDefault( user: Firebase.User, eMailPW: String  ) {
                 
             } else {
                 
-                print("User is aleady joined!")
+                print( "User is aleady joined!" )
             
                 for document in querySnapshot!.documents {
                     
-                    print("\(document.documentID) => \(type(of:document.data())) : count \(document.data().count)")
+                    print( "\(document.documentID) => \(type(of:document.data())) : count \(document.data().count)" )
                     
                     for userData in document.data(){
                         
@@ -236,7 +240,6 @@ func GetUserDefault( user: Firebase.User, eMailPW: String  ) {
                             //print("TimeStamp!")
                             myUserDefaults.set( userData.value, forKey: userData.key )
                         }
-
 
                     }
                 }
@@ -251,6 +254,86 @@ func GetUserDefault( user: Firebase.User, eMailPW: String  ) {
     
 }
 
+func GetUserDefaultFromDB( key: String, completion: @escaping (Any?) -> Void ) {
+        
+    let db: Firestore = Firestore.firestore()
+    let myUserDefaults = UserDefaults.standard
+    
+    if let userUID = myUserDefaults.string( forKey: UserDefault.UID.toString() ) {
+    
+        db.collection("User").whereField( "UID", isEqualTo: userUID ).getDocuments() { ( querySnapshot, err ) in
+            
+            if let err = err {
+                
+                print( "Error getting documents: \(err)" )
+                
+                completion(nil)
+                
+            } else {
+                
+                for document in querySnapshot!.documents {
+                    
+                    print( "\(document.documentID) => \(type(of:document.data())) : count \(document.data().count)" )
+                    
+                    for userData in document.data(){
+                        
+                        if userData.key == key {
+                            
+                            print( "User Data: \(userData.key) -> \(userData.value)" )
+                            
+                            myUserDefaults.set( userData.value, forKey: userData.key )
+                        
+                            completion( userData.value )
+                        }
+
+                    }
+                }
+                
+            }
+            
+        }
+            
+    }
+    
+}
+
+func GetUserData( completion: @escaping ([String:Any]?) -> Void ) {
+    
+    let db: Firestore = Firestore.firestore()
+    let userUID = UserDefaults.standard.string( forKey: UserDefault.UID.toString() )
+    
+    db.collection("User").whereField( "UID", isEqualTo: userUID! ).getDocuments() { ( querySnapshot, err ) in
+            
+        if let err = err {
+            
+            print( "Error getting documents: \(err)" )
+            completion( nil )
+            
+        } else {
+            
+            var user = [String:Any]()
+            _ = querySnapshot!.documents[0].data().map{ (key,value) in
+                
+                if type(of: value) == Timestamp.self {
+                    
+                    let dateValue = value as! Timestamp
+                    user.updateValue( dateValue.dateValue(), forKey: key )
+                    
+                } else {
+                    
+                    user.updateValue( value, forKey: key )
+                }
+                
+            }
+            
+            //print( user )
+            completion( user )
+
+        }
+    }
+    
+}
+                    
 
 extension String{
 

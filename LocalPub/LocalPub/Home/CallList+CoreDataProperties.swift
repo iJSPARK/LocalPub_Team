@@ -17,11 +17,12 @@ extension CallList {
     }
 
     @NSManaged public var callDate: Date?
-    @NSManaged public var callGender: Bool
-    @NSManaged public var callName: String?
-    @NSManaged public var callTime: Int64
+    @NSManaged public var callGender: Int16
+    @NSManaged public var callLanguage: Int16
     @NSManaged public var callUID: String?
-    @NSManaged public var callImage: String?
+    @NSManaged public var callName: String?
+    @NSManaged public var callTime: Int16
+    @NSManaged public var callArea: [Double]?
 
 }
 

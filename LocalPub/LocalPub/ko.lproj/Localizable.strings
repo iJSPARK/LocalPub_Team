@@ -12,12 +12,14 @@
 "ProfileInformation" = "개인 정보 (Profile Information)";
 "SelectLanguages" = "언어 선택 (Select Language)";
 "SelfIntroduce" = "자기 소개 (Self Introduce)";
+"GetPicture" = "사진 가져오기 (Get Picture)";
 
 "Verification" = "승인";
 "Join" = "가입";
 "Login" = "로그인";
 "Logout" = "로그아웃";
 "Save" = "저장";
+"Cancel" = "취소";
 
 "InputEmail" = "이메일 입력";
 "InputPW" = "암호 입력";
@@ -88,3 +90,27 @@
 "CountryCode" = "국가 코드";
 "Nationality" = "국적";
 "SelectLanguage" = "언어 선택";
+
+"UploadPicture" = "사진을 업로드해 주세요";
+"UploadPictureDescription" = "당신의 사진은 지정하지 않은 다른 사용자에게 절대 보여지지 않습니다.";
+"SecurityCalls" = "사진은 안전한 통화를 위한 것입니다.";
+"SecurityDescription" = "악의적인 사용자를 방지하기 위해 사진이 필요합니다. 얼굴이 잘 보이는 사진을 1장 이상 업로드해주세요.";
+"MainPicture" = "얼굴사진
+(얼굴용)";
+"SecondaryPicture" = "보조사진
+(표현용)";
+
+"TakePictureTitle" = "사진을 가져올 방식을 선택하세요";
+"TakePictureDescription" = "사진 앨범 또는 사진찍기(카메라) 선택";
+"TakePictureAlbum" = "사진 앨범";
+"TakePictureCamera" = "사진 찍기(카메라)";
+
+"CameraError" = "카메라 실행 오류!";
+"CameraRunError" = "카메라를 실행할 수 없습니다.";
+
+"AA" = "모두 Accept all";
+"TC" = "약관1 Terms and conditions (required)";
+"PTC" = "약관2 Privacy terms and conditions(required)";
+"TL" = "약관3 Terms and Conditions of Location-Based
+Services (optional)";
+"MA" = "약관4 Marketing Agreement (optional)";

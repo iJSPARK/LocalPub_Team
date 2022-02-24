@@ -12,12 +12,14 @@
 "ProfileInformation" = "Profile Information";
 "SelectLanguages" = "Select Language";
 "SelfIntroduce" = "Self Introduce";
+"GetPicture" = "Get Picture";
 
 "Verification" = "Verification";
 "Join" = "Join";
 "Login" = "LogIn";
 "Logout" = "Logout";
 "Save" = "Save";
+"Cancel" = "Cancel";
 
 "InputEmail" = "Input eMail";
 "InputPW" = "Input PassWord";
@@ -86,5 +88,29 @@
 
 "Continue" = "Continue";
 "Nationality" = "Nationality";
+
+"UploadPicture" = "Please upload your photos";
+"UploadPictureDescription" = "Your photos will never be shown to unspecified random users";
+"SecurityCalls" = "Picture for safe calls";
+"SecurityDescription" = "Pictures are needed to prevent malicious users. Please upload 1+ photo that clearly shows your face.";
+"MainPicture" = " Main
+(Face)";
+"SecondaryPicture" = "Secondary
+(Express yourself)";
+
+"TakePictureTitle" = "Choose how to get your photo";
+"TakePictureDescription" = "Picture Album or Camera";
+"TakePictureAlbum" = "Album";
+"TakePictureCamera" = "Camera";
+
+"CameraError" = "Camera Error!";
+"CameraRunError" = "Can't run Camera";
 "CountryCode" = "Country Code";
 "SelectLanguage" = "Select Language";
+
+"AA" = "Accept all";
+"TC" = "Terms and conditions (required)";
+"PTC" = "Privacy terms and conditions(required)";
+"TL" = "Terms and Conditions of Location-Based
+Services (optional)";
+"MA" = "Marketing Agreement (optional)";

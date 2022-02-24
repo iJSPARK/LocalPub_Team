@@ -65,8 +65,8 @@ class CallListViewController: UIViewController {
         
         super.viewWillAppear(animated)
         
-        print( "Tab: \(self.tabBarController!.selectedIndex)" )
-        print( "isCellView: \(isCellView)" )
+        //print( "Tab: \(self.tabBarController!.selectedIndex)" )
+        //print( "isCellView: \(isCellView)" )
 
         if !isCellView {
             fetchCallList()
@@ -140,12 +140,8 @@ class CallListViewController: UIViewController {
 
         if let indexPath = self.callListTable.indexPathForSelectedRow,
             let RVC = segue.destination as? CallViewController {
-
-            RVC.callUID =  callList[indexPath.row].callUID
-            RVC.callName = callList[indexPath.row].callName
-            RVC.callGender = callList[indexPath.row].callGender
-            RVC.callDate = callList[indexPath.row].callDate
-            RVC.callTime = callList[indexPath.row].callTime
+            
+            RVC.call = callList[indexPath.row]
             
             isCellView = true
 
@@ -220,9 +216,10 @@ extension CallListViewController: UITableViewDataSource {
 
             cell.imageView?.image = UIImage(named: "placeholder.png")
             
-            downloadUserImageURL( call.callUID!, userGender: call.callGender) { url in
+            let filePath = "/all_90/\(call.callUID!)_90.jpg"
+            downloadUserImageURL( filePath ) { url in
                     
-                let data = NSData( contentsOf: url )
+                let data = NSData( contentsOf: url! )
                 let image = UIImage( data: data! as Data )
                 
 //                self.cache.setObject( image!, forKey: (indexPath as NSIndexPath).row as AnyObject )

@@ -7,32 +7,35 @@
 
 import Foundation
 import UIKit
-import CoreData
 import Alamofire
-import CloudKit
+import CoreData
+import Firebase
 
 struct Call: Codable {
        
     var callUID: String?
-    var callDate: String?
+    var callDate: Date?
+    var callGender: Int16
+    var callLanguage: Int16
     var callName: String?
-    var callGender: Bool
-    var callTime: Int64
-    var callImage: String?
+    var callTime: Int16
+    var callArea: [Double]?
     
     init( callUID: String,
-          callDate: String,
+          callDate: Date,
+          callGender: Int16,
+          callLanguage: Int16,
           callName: String,
-          callGender: Bool,
-          callTime: Int64,
-          callImage: String ) {
+          callTime: Int16,
+          callArea: [Double] ) {
         
         self.callUID = callUID
         self.callDate = callDate
-        self.callName = callName
         self.callGender = callGender
+        self.callLanguage = callLanguage
+        self.callName = callName
         self.callTime = callTime
-        self.callImage = callImage
+        self.callArea = callArea
         
     }
 }
@@ -42,16 +45,18 @@ func MakeCall() async throws -> Call {
     
     try await withUnsafeThrowingContinuation { continuation in
         
-        let id = String( Int.random(in: 1..<100) )
-        let url = "https://61795804aa7f3400174049d7.mockapi.io/users/" + id
-
-        let decoder = JSONDecoder()
-        decoder.dateDecodingStrategy = .iso8601
+        //let id = String( Int.random(in: 1..<100) )
+        //let url = "https://61795804aa7f3400174049d7.mockapi.io/users/" + id
+        let url = "http://52.79.148.164/callmockdata"
         
-        AF.request(url).validate().responseDecodable(of: Call.self, decoder: decoder) {
-        //AF.request(url).validate().responseDecodable(of: Call.self, decoder: CustomDecoder() ) {
-
-            response in
+        let decoder = JSONDecoder()
+        //decoder.dateDecodingStrategy = .iso8601
+    
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZZZZZ"
+        decoder.dateDecodingStrategy = .formatted(dateFormatter)
+        
+        AF.request(url).validate().responseDecodable(of: Call.self, decoder: decoder) { response in
 
             //print( response )
             
@@ -78,25 +83,26 @@ func MakeCall() async throws -> Call {
 }
 
 class CustomDecoder: JSONDecoder {
+    
     let dateFormatter = DateFormatter()
 
     override init() {
         super.init()
-        dateDecodingStrategy = .iso8601
+        //dateDecodingStrategy = .iso8601
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZZZZZ"
+        
+        dateDecodingStrategy = .formatted( dateFormatter )
     }
 }
 
 
 func MakeUserCall() {
     
-    let id = String( Int.random(in: 1..<100) )
-    let url = "https://61795804aa7f3400174049d7.mockapi.io/users/" + id
+    //let id = String( Int.random(in: 1..<100) )
+    //let url = "https://61795804aa7f3400174049d7.mockapi.io/users/" + id
+    let url = "http://52.79.148.164/callmockdata"
 
-    let decoder = JSONDecoder()
-    decoder.dateDecodingStrategy = .iso8601
-    
-    AF.request(url).validate().responseDecodable(of: Call.self, decoder: decoder) {
-    //AF.request(url).validate().responseDecodable(of: Call.self, decoder: CustomDecoder() ) {
+    AF.request(url).validate().responseDecodable( of: Call.self, decoder: CustomDecoder() ) {
 
         response in
 
@@ -118,29 +124,33 @@ func MakeUserCall() {
                 
                 if let call = NSManagedObject( entity: entity, insertInto: context) as? CallList {
                     
-                    let iso8601DateFormatter = ISO8601DateFormatter()
-                    iso8601DateFormatter.formatOptions = [.withInternetDateTime, .withFractionalSeconds] // option형태의 포맷
-                    iso8601DateFormatter.timeZone = TimeZone(abbreviation: "KST")
-                    //let callDate = iso8601DateFormatter.date( from: callMaked.callDate! )!
-                    let callDate = Date()
-                    
-                    //let dateString: String = "2022-02-22 22:22:22"
-                    //let dateFormatter = DateFormatter()
-                    //dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-                    //dateFormatter.timeZone = NSTimeZone( name: "Asia/Seoul") as TimeZone?
-                    //dateFormatter.locale = Locale(identifier: "ko_kr") // 한국 시간 지정
-                    //dateFormatter.timeZone = TimeZone(abbreviation: "KST") // 한국 시간대 지정
-                    //let callDate: Date = dateFormatter.date(from: call.callDate! )
+//                    let iso8601DateFormatter = ISO8601DateFormatter()
+//                    iso8601DateFormatter.formatOptions = [.withInternetDateTime, .withFractionalSeconds, .withTimeZone ] // option형태의 포맷
+//                    //iso8601DateFormatter.timeZone = TimeZone( abbreviation: "KST" )
+//                    let callDate = iso8601DateFormatter.date( from: callMaked.callDate! )
+//                    //print( callDate ?? "NIL" )
 
-                    //print( callDate )
+//                    let dateFormatter = DateFormatter()
+//                    //let dateString: String = "2022-02-22T22:22:22.222222+09:00"
+//                    dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZZZZZ"
+//
+//                    //dateFormatter.locale = Locale( identifier: "ko_kr" ) // 한국 시간 지정
+//                    //dateFormatter.timeZone = NSTimeZone( name: "Asia/Seoul" ) as TimeZone?
+//                    //dateFormatter.timeZone = TimeZone( abbreviation: "KST" ) // 한국 시간대 지정
+//                    let callDate = dateFormatter.date( from: callMaked.callDate! )
+//                    //let callDate = Date()
+//                    //print( callDate ?? "NIL" )
+
+                    print( callMaked.callDate! )
                     
                     call.callUID = callMaked.callUID!
-                    //call.callDate = callMaked.callDate!
-                    call.callDate = callDate
-                    call.callName = callMaked.callName!
+                    call.callDate = callMaked.callDate!
+                    //call.callDate = callDate
                     call.callGender = callMaked.callGender
+                    call.callLanguage = callMaked.callLanguage
+                    call.callName = callMaked.callName!
                     call.callTime = callMaked.callTime
-                    call.callImage = callMaked.callImage!
+                    call.callArea = callMaked.callArea!
 
                     do {
                         try context.save()
@@ -149,6 +159,8 @@ func MakeUserCall() {
                     } catch {
                         print( error.localizedDescription )
                     }
+                    
+                    SaveCallData( call: call )
 
                 }
             
@@ -164,3 +176,53 @@ func MakeUserCall() {
     
 }
 
+func SaveCallData( call: CallList ) {
+    
+    if let userUID = Auth.auth().currentUser?.uid {
+        
+        //let db = Database.database().reference()
+        let ref = Database.database(url: "https://localpub-99413-default-rtdb.asia-southeast1.firebasedatabase.app/").reference()
+        
+        let callData: [String:Any] = [ "callGender": call.callGender,
+                                       "callLanguage": call.callLanguage,
+                                       "callUID": call.callUID!,
+                                       "callName": call.callName!,
+                                       "callTime": call.callTime,
+                                       "callArea": call.callArea! ]
+        
+        let dateform = DateFormatter()
+        dateform.dateFormat = "yyyy-MM-dd HH:mm:ss"
+
+        let callDate = dateform.string( from: call.callDate! )
+        
+        let child = "/CallList/\(userUID)/\(callDate)/"
+        
+        let childUpdates = [ child: callData ]
+        
+        ref.updateChildValues( childUpdates ) { (error, retRef) in
+        //ref.child( child ).setValue( callData ) { (error, retRef) in
+            if let error = error {
+                print( "Firebase Realtime DB: Data cound not be saved: \(error)")
+            } else {
+                print( "Save Call Data to Firebase Realtime DB : OK!")
+                
+            }
+
+        }
+        
+        ref.child( child ).getData( completion: { (error, snapshot) in
+            
+            if let error = error {
+                print( "Load error: \(error) \(error.localizedDescription)" )
+                return
+            }
+            
+            print( "Load Call Data from Firebase Realtime DB : OK!" )
+            print( snapshot.value! )
+            
+        })
+        
+
+    }
+    
+}
