@@ -87,17 +87,11 @@ class agreementViewController: UIViewController {
     @IBAction func Next(_ sender: UIButton) {
         
         if Joined() {
-            
-//            guard let presentingVC = self.presentingViewController as? UINavigationController else { return }
-//            self.dismiss(animated: true) {
-//                presentingVC.popViewController(animated: true)
-//            }
-            
-            GoHome()
+        
             
         } else {
 
-            self.performSegue( withIdentifier: "Picture", sender: self )
+            self.performSegue( withIdentifier: "Profile", sender: self )
             
         }
     }

@@ -28,7 +28,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="fuA-UH-5aS" kind="unwind" unwindAction="unwindToLanguage:" id="cMw-e5-eJZ"/>
+                                            <segue destination="fuA-UH-5aS" kind="unwind" unwindAction="unwindToLanguage:" id="JyQ-kI-P4N"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

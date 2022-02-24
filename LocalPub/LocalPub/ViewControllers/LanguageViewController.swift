@@ -19,9 +19,7 @@ class languageViewController: UIViewController, UITableViewDelegate, UITableView
     
     @IBOutlet var navLanguage: UINavigationItem!
     
-    @IBOutlet weak var continueButton: UIButton!
-    
-   
+    @IBOutlet weak var btnNext: UIButton!
     
     override func viewDidLoad() {
         
@@ -32,7 +30,10 @@ class languageViewController: UIViewController, UITableViewDelegate, UITableView
         languagesTableView.dataSource = self
         
         // User default data load
-        selectedNativeLanguage = changedNativeFromDB()!
+        if let selectedNativeLanguage = changedNativeFromDB() {
+            
+        }
+        
         selectedForeignLanguages = changedForeignFromDB()
         
         SetLocalized()
@@ -190,9 +191,9 @@ class languageViewController: UIViewController, UITableViewDelegate, UITableView
     
     func checkValues() {
         if selectedNativeLanguage != nil && selectedForeignLanguages.count != 0 {
-            continueButton.isEnabled = true
+            btnNext.isEnabled = true
         } else {
-            continueButton.isEnabled = false
+           btnNext.isEnabled = false
         }
     }
     
@@ -210,8 +211,18 @@ class languageViewController: UIViewController, UITableViewDelegate, UITableView
         
     }
     
-    @IBAction func continueButtonTapped(_ sender: Any) {
+    @IBAction func Next(_ sender: Any) {
         languageChangedToDB(nativeLanguageInfo: selectedNativeLanguage!, foreignLanguagesInfo: selectedForeignLanguages)
+        
+        if Joined() {
+            
+            dismiss(animated: true)
+            
+        } else {
+
+            self.performSegue( withIdentifier: "Introduce", sender: self )
+            
+        }
     }
     
     @IBAction func unwindToLanguage(_ unwindSegue: UIStoryboardSegue) {

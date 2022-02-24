@@ -13,12 +13,11 @@ class intorduceViewController: UIViewController, UITextViewDelegate {
     
     @IBOutlet var navIntroduce: UINavigationItem!
 
-
-    @IBOutlet weak var btnSaveAboutMe: UIButton!
-    
     @IBOutlet var lblAboutMe: UILabel!
     
     @IBOutlet var txtAboutMe: UITextView!
+
+    @IBOutlet weak var btnNext: UIButton!
     
     override func viewDidLoad() {
         
@@ -29,7 +28,7 @@ class intorduceViewController: UIViewController, UITextViewDelegate {
         
         placeholderSet(txtAboutMe)
         
-        btnSaveAboutMe.isEnabled = false
+        btnNext.isEnabled = false
        
         SetLocalized()
        
@@ -42,7 +41,7 @@ class intorduceViewController: UIViewController, UITextViewDelegate {
         
         navIntroduce.title = "SelfIntroduce".localized()
         
-        btnSaveAboutMe.setTitle( "Continue".localized(), for: .normal )
+        btnNext.setTitle( "Continue".localized(), for: .normal )
         
         txtAboutMe.layer.borderWidth = 1.0
         txtAboutMe.layer.borderColor = UIColor.gray.cgColor
@@ -67,13 +66,23 @@ class intorduceViewController: UIViewController, UITextViewDelegate {
     
     func textViewDidChange(_ textView: UITextView) {
         if txtAboutMe.text.count > 30 {
-            btnSaveAboutMe.isEnabled = true
+            btnNext.isEnabled = true
         }
     }
 
-    @IBAction func btnSaveAboutMeTapped(_ sender: UIButton) {
+    @IBAction func Next(_ sender: UIButton) {
         
         SaveUserDefault( key: UserDefault.AboutMe.toString(), value: txtAboutMe.text! )
+        
+        if Joined() {
+            
+            dismiss(animated: true)
+            
+        } else {
+
+            self.performSegue( withIdentifier: "Picture", sender: self )
+            
+        }
     }
 }
 
@@ -98,6 +107,7 @@ extension UITextView {
     
     @objc func doneButtonPressed() {
         self.resignFirstResponder()
+        
     }
 }
 

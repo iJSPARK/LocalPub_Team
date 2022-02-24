@@ -25,8 +25,6 @@ class profileViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var birthDateTextField: UITextField!
     
-    @IBOutlet var btnSaveProfile: UIButton!
-    
     @IBOutlet var txtName: UITextField!
 
     @IBOutlet var scGender: UISegmentedControl!
@@ -34,6 +32,8 @@ class profileViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var txtResidence: UITextField!
     
     @IBOutlet weak var nationalityButton: UIButton!
+    
+    @IBOutlet var btnNext: UIButton!
     
     override func viewWillAppear(_ animated: Bool) {
         
@@ -57,7 +57,7 @@ class profileViewController: UIViewController, UITextFieldDelegate {
         txtName.delegate = self
         txtResidence.delegate = self
         
-        btnSaveProfile.isEnabled = false
+        btnNext.isEnabled = false
         
         txtName.text = myUserDefaults.string(forKey: UserDefault.Name.toString() )
         
@@ -86,9 +86,10 @@ class profileViewController: UIViewController, UITextFieldDelegate {
         
         navProfile.title = "ProfileInformation".localized()
         birthDateTextField.placeholder = "Birth".localized()
-        btnSaveProfile.setTitle( "Continue".localized(), for: .normal )
-        
+
         txtName.placeholder = "InputName".localized()
+        
+        btnNext.setTitle( "Continue".localized(), for: .normal )
         
 //        // localize 하고나서 font 크기 바껴서 조정
 //        let text = NSAttributedString(string: "Nationality".localized(), attributes: [.font: UIFont.systemFont(ofSize: 15)])
@@ -161,9 +162,9 @@ class profileViewController: UIViewController, UITextFieldDelegate {
     
     func checkText() {
         if txtName.text != "" && txtResidence.text != "" &&  birthDateTextField.text != "" && (scGender.selectedSegmentIndex == 0 || scGender.selectedSegmentIndex == 1) && selectedNationality != nil {
-            btnSaveProfile.isEnabled = true
+            btnNext.isEnabled = true
         } else {
-            btnSaveProfile.isEnabled = false
+            btnNext.isEnabled = false
         }
     }
     
@@ -229,7 +230,7 @@ class profileViewController: UIViewController, UITextFieldDelegate {
         self.view.endEditing(true)
     }
     
-    @IBAction func saveProfile(_ sender: UIButton) {
+    @IBAction func Next(_ sender: UIButton) {
 
         SaveUserDefault( key: UserDefault.Name.toString(), value: txtName.text! )
         
@@ -245,10 +246,18 @@ class profileViewController: UIViewController, UITextFieldDelegate {
         
         SaveUserDefault( key: UserDefault.Gender.toString(), value: scGender.selectedSegmentIndex )
         
-//        // 회원가입 완료시 False
-//        scGender.isEnabled = false
-//        birthDateTextField.isEnabled = false
-//        nationalityButton.isEnabled =  false
+        if Joined() {
+            
+            dismiss(animated: true)
+            
+        } else {
+
+            self.performSegue( withIdentifier: "Language", sender: self )
+            
+        }
+        
+        
+        
     }
     
     
