@@ -139,7 +139,7 @@
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <segue destination="2kB-Hz-jWn" kind="presentation" modalPresentationStyle="fullScreen" id="t9L-Cf-qmX"/>
+                                                    <segue destination="2kB-Hz-jWn" kind="presentation" modalPresentationStyle="pageSheet" id="t9L-Cf-qmX"/>
                                                 </connections>
                                             </button>
                                         </subviews>

@@ -28,7 +28,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="38N-DJ-3YR" kind="unwind" unwindAction="unwindToNationality:" id="aIO-x9-NAt"/>
+                                            <segue destination="38N-DJ-3YR" kind="unwind" unwindAction="unwindToProfile:" id="fNV-cA-gc8"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -43,7 +43,14 @@
                             <constraint firstItem="j9r-E1-MVm" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="ofi-YD-4xs"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="PLy-y2-0PQ"/>
+                    <navigationItem key="navigationItem" id="PLy-y2-0PQ">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="jp4-Nl-qMa">
+                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="38N-DJ-3YR" kind="unwind" unwindAction="unwindToProfile:" id="juR-Jd-7Od"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="nationalityTableView" destination="j9r-E1-MVm" id="bjJ-gG-IHi"/>
                     </connections>

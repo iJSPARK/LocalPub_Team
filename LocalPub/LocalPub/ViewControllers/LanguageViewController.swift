@@ -208,7 +208,6 @@ class languageViewController: UIViewController, UITableViewDelegate, UITableView
         if let encodedData = try? encoder.encode(foreignLanguagesInfo) {
             SaveUserDefault( key: UserDefault.ForeignLanguageInfo.toString(), value: encodedData )
         }
-        
     }
     
     @IBAction func Next(_ sender: Any) {
