@@ -61,46 +61,26 @@
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c8e-Nn-I6k">
                                 <rect key="frame" x="30" y="317.66666666666669" width="150" height="150"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="hTs-9v-CHZ"/>
                                     <constraint firstAttribute="width" constant="150" id="jOV-0l-T1c"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="3GB-A8-H3m" appends="YES" id="i3Y-zO-P1i"/>
+                                </connections>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ewI-tc-Vuc">
                                 <rect key="frame" x="195" y="317.66666666666669" width="150" height="150"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="FRB-XD-cZG"/>
                                     <constraint firstAttribute="width" constant="150" id="l4t-t3-OgN"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="B8s-Di-7Hr" appends="YES" id="uRS-pU-ji1"/>
+                                </connections>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KoP-yM-u3S">
-                                <rect key="frame" x="30" y="482.66666666666669" width="150" height="47.666666666666686"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="Vnx-c6-X73"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Main (Face required)" titleAlignment="center">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="GetMainImage:" destination="MvX-uI-U7b" eventType="touchUpInside" id="vfx-lG-QHc"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AG4-1j-F8Q">
-                                <rect key="frame" x="195" y="482.66666666666669" width="150" height="47.666666666666686"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="c7V-rS-Z3I"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" titleAlignment="center">
-                                    <string key="title">      Secondary
-(Express yourself)</string>
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="GetSecondaryImage:" destination="MvX-uI-U7b" eventType="touchUpInside" id="gi8-7D-00T"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="daI-cO-9sD">
                                 <rect key="frame" x="17" y="691" width="358" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -113,36 +93,56 @@
                                     <action selector="Next:" destination="MvX-uI-U7b" eventType="touchUpInside" id="E7l-cm-mWX"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Main (Face required)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cJD-Nd-790">
+                                <rect key="frame" x="30" y="482.66666666666674" width="150" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="8Pp-s8-w3Z"/>
+                                    <constraint firstAttribute="width" constant="150" id="Apo-R1-zBh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" systemColor="tintColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N5r-DG-wPq">
+                                <rect key="frame" x="195" y="482.66666666666674" width="150" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="1Fa-RT-uc5"/>
+                                    <constraint firstAttribute="width" constant="150" id="5lQ-gh-ZTA"/>
+                                </constraints>
+                                <string key="text">Secondary
+(Express yourself)</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" systemColor="tintColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ajr-cp-dkq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="KoP-yM-u3S" firstAttribute="top" secondItem="c8e-Nn-I6k" secondAttribute="bottom" constant="15" id="5Gt-T4-c4J"/>
                             <constraint firstItem="obw-wF-AjN" firstAttribute="top" secondItem="GWI-8D-p1L" secondAttribute="bottom" constant="15" id="9A8-0C-UZK"/>
                             <constraint firstItem="GWI-8D-p1L" firstAttribute="top" secondItem="usC-GF-m8M" secondAttribute="bottom" constant="30" id="9Gv-sI-HUf"/>
-                            <constraint firstItem="AG4-1j-F8Q" firstAttribute="top" secondItem="ewI-tc-Vuc" secondAttribute="bottom" constant="15" id="ASO-ay-D6K"/>
+                            <constraint firstItem="N5r-DG-wPq" firstAttribute="leading" secondItem="cJD-Nd-790" secondAttribute="trailing" constant="15" id="BGd-GI-pEZ"/>
+                            <constraint firstItem="cJD-Nd-790" firstAttribute="top" secondItem="c8e-Nn-I6k" secondAttribute="bottom" constant="15" id="DJH-vX-SNo"/>
                             <constraint firstItem="ewI-tc-Vuc" firstAttribute="leading" secondItem="c8e-Nn-I6k" secondAttribute="trailing" constant="15" id="IMz-VY-K8v"/>
                             <constraint firstItem="obw-wF-AjN" firstAttribute="leading" secondItem="ajr-cp-dkq" secondAttribute="leading" constant="16" id="Wuf-Z8-Dmw"/>
                             <constraint firstItem="usC-GF-m8M" firstAttribute="leading" secondItem="ajr-cp-dkq" secondAttribute="leading" constant="16" id="YR9-W1-lrV"/>
                             <constraint firstAttribute="trailing" secondItem="usC-GF-m8M" secondAttribute="trailing" constant="30" id="a73-Wz-tUN"/>
                             <constraint firstItem="usC-GF-m8M" firstAttribute="top" secondItem="ajr-cp-dkq" secondAttribute="top" constant="30" id="a9q-Ds-ChM"/>
                             <constraint firstItem="ewI-tc-Vuc" firstAttribute="top" secondItem="obw-wF-AjN" secondAttribute="bottom" constant="30" id="cEP-Hv-T3b"/>
-                            <constraint firstItem="KoP-yM-u3S" firstAttribute="leading" secondItem="ajr-cp-dkq" secondAttribute="leading" constant="30" id="dbW-Lv-YSu"/>
                             <constraint firstItem="GWI-8D-p1L" firstAttribute="leading" secondItem="ajr-cp-dkq" secondAttribute="leading" constant="16" id="hLZ-GW-Pfg"/>
+                            <constraint firstItem="cJD-Nd-790" firstAttribute="leading" secondItem="ajr-cp-dkq" secondAttribute="leading" constant="30" id="hle-ze-XV2"/>
                             <constraint firstItem="c8e-Nn-I6k" firstAttribute="top" secondItem="obw-wF-AjN" secondAttribute="bottom" constant="30" id="ie4-kr-Ie3"/>
-                            <constraint firstItem="AG4-1j-F8Q" firstAttribute="leading" secondItem="KoP-yM-u3S" secondAttribute="trailing" constant="15" id="pTQ-eK-59J"/>
-                            <constraint firstItem="AG4-1j-F8Q" firstAttribute="top" secondItem="ewI-tc-Vuc" secondAttribute="bottom" constant="15" id="s4o-Wt-CPJ"/>
                             <constraint firstItem="c8e-Nn-I6k" firstAttribute="leading" secondItem="ajr-cp-dkq" secondAttribute="leading" constant="30" id="wC2-2B-nFe"/>
                             <constraint firstItem="ajr-cp-dkq" firstAttribute="trailing" secondItem="obw-wF-AjN" secondAttribute="trailing" constant="30" id="xY3-94-Wh7"/>
-                            <constraint firstItem="AG4-1j-F8Q" firstAttribute="leading" secondItem="KoP-yM-u3S" secondAttribute="trailing" constant="15" id="yda-U0-OQu"/>
+                            <constraint firstItem="N5r-DG-wPq" firstAttribute="top" secondItem="ewI-tc-Vuc" secondAttribute="bottom" constant="15" id="zwB-0z-BYT"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="btnMainPicture" destination="KoP-yM-u3S" id="tAG-N1-jQa"/>
                         <outlet property="btnNext" destination="daI-cO-9sD" id="xmD-df-zpi"/>
-                        <outlet property="btnSecondaryPicture" destination="AG4-1j-F8Q" id="8X0-iU-8ZW"/>
                         <outlet property="imageMainView" destination="c8e-Nn-I6k" id="Ldj-0z-P44"/>
                         <outlet property="imageSecondaryView" destination="ewI-tc-Vuc" id="jMn-4b-PyR"/>
+                        <outlet property="lblMainPicture" destination="cJD-Nd-790" id="2kE-UO-jwN"/>
+                        <outlet property="lblSecondaryPicture" destination="N5r-DG-wPq" id="cOP-Fm-UOu"/>
                         <outlet property="lblSecurityCalls" destination="GWI-8D-p1L" id="t7s-s9-yne"/>
                         <outlet property="lblSecurityDescription" destination="5qC-3B-uPP" id="PrY-ar-7rn"/>
                         <outlet property="lblUploadPicture" destination="EZo-DH-qFr" id="AdO-qK-beW"/>
@@ -151,8 +151,18 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KGg-lo-ObG" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="3GB-A8-H3m">
+                    <connections>
+                        <action selector="didTapMainImageView:" destination="MvX-uI-U7b" id="3a6-EM-5tb"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="B8s-Di-7Hr">
+                    <connections>
+                        <action selector="didTapSecondaryImageView:" destination="MvX-uI-U7b" id="Kx1-J4-kYK"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="130.43478260869566" y="114.50892857142857"/>
+            <point key="canvasLocation" x="129.23076923076923" y="114.45497630331754"/>
         </scene>
     </scenes>
     <resources>
