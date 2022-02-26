@@ -16,9 +16,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sXg-4Q-DFj" customClass="MyCheckBtn" customModule="LocalPub" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sXg-4Q-DFj" customClass="MyCheckBtn" customModule="LocalPub" customModuleProvider="target">
                                 <rect key="frame" x="9" y="244" width="43" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="43" id="SCa-Zd-EJO"/>
+                                    <constraint firstAttribute="height" constant="31" id="g44-Rd-rKZ"/>
+                                </constraints>
                                 <color key="tintColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="checkmark.circle" catalog="system" title=""/>
@@ -26,9 +29,12 @@
                                     <action selector="touchAll:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ary-A3-Fc7"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UTE-ez-yqh" customClass="MyCheckBtn" customModule="LocalPub" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UTE-ez-yqh" customClass="MyCheckBtn" customModule="LocalPub" customModuleProvider="target">
                                 <rect key="frame" x="9" y="298" width="43" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="iDT-8c-faB"/>
+                                    <constraint firstAttribute="width" constant="43" id="jIq-zG-POC"/>
+                                </constraints>
                                 <color key="tintColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="checkmark.circle" catalog="system" title=""/>
@@ -36,9 +42,12 @@
                                     <action selector="Btns:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4uj-Xb-aZl"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yMM-bp-mKM" customClass="MyCheckBtn" customModule="LocalPub" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yMM-bp-mKM" customClass="MyCheckBtn" customModule="LocalPub" customModuleProvider="target">
                                 <rect key="frame" x="9" y="349" width="43" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="43" id="XU8-iq-LSH"/>
+                                    <constraint firstAttribute="height" constant="31" id="gaL-o8-tbd"/>
+                                </constraints>
                                 <color key="tintColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="checkmark.circle" catalog="system" title=""/>
@@ -46,9 +55,12 @@
                                     <action selector="Btns:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pwo-Dt-5Lu"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4bw-lA-shv" customClass="MyCheckBtn" customModule="LocalPub" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4bw-lA-shv" customClass="MyCheckBtn" customModule="LocalPub" customModuleProvider="target">
                                 <rect key="frame" x="9" y="407" width="43" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="43" id="OUc-gE-6vX"/>
+                                    <constraint firstAttribute="height" constant="31" id="hFh-uh-DCW"/>
+                                </constraints>
                                 <color key="tintColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="checkmark.circle" catalog="system" title=""/>
@@ -56,9 +68,12 @@
                                     <action selector="Btns:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gmp-M4-FXE"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I5B-z8-PjR" customClass="MyCheckBtn" customModule="LocalPub" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I5B-z8-PjR" customClass="MyCheckBtn" customModule="LocalPub" customModuleProvider="target">
                                 <rect key="frame" x="9" y="462" width="43" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="43" id="AaI-VO-uOL"/>
+                                    <constraint firstAttribute="height" constant="31" id="QGF-j8-KYW"/>
+                                </constraints>
                                 <color key="tintColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="checkmark.circle" catalog="system" title=""/>
@@ -66,16 +81,22 @@
                                     <action selector="Btns:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ehb-Pl-KGV"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hYh-G3-YXW">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hYh-G3-YXW">
                                 <rect key="frame" x="57" y="244" width="305" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="FGI-Xq-qIB"/>
+                                    <constraint firstAttribute="width" constant="305" id="nNW-FY-XjG"/>
+                                </constraints>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Accept all"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pJ6-lC-eTv">
-                                <rect key="frame" x="57" y="298" width="305" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pJ6-lC-eTv">
+                                <rect key="frame" x="57" y="298" width="300" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="SNj-9U-jh6"/>
+                                    <constraint firstAttribute="height" constant="32" id="q9J-dR-H90"/>
+                                </constraints>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Terms and conditions (required)">
@@ -85,9 +106,12 @@
                                     <segue destination="OZS-aE-yyl" kind="show" id="yhf-tF-JMg"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="07O-gE-GDa">
-                                <rect key="frame" x="57" y="349" width="305" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="07O-gE-GDa">
+                                <rect key="frame" x="57" y="349" width="300" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="CRZ-MC-U6X"/>
+                                    <constraint firstAttribute="width" constant="300" id="Th0-FD-yWa"/>
+                                </constraints>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Privacy terms and conditions(required)">
@@ -97,9 +121,12 @@
                                     <segue destination="8Bf-9S-xfZ" kind="show" id="stT-Tj-bQs"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AWR-mh-AZr">
-                                <rect key="frame" x="57" y="399" width="305" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AWR-mh-AZr">
+                                <rect key="frame" x="57" y="399" width="300" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="MIv-az-AD1"/>
+                                    <constraint firstAttribute="width" constant="300" id="Npw-sX-YdH"/>
+                                </constraints>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
@@ -111,9 +138,12 @@ Services (optional)</string>
                                     <segue destination="Gzg-7f-JFH" kind="show" id="oT0-u3-KOv"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0mN-A9-iiA">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0mN-A9-iiA">
                                 <rect key="frame" x="57" y="462" width="305" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="S10-an-cA3"/>
+                                    <constraint firstAttribute="width" constant="305" id="alO-lt-Tvo"/>
+                                </constraints>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Marketing Agreement (optional)">
@@ -123,9 +153,12 @@ Services (optional)</string>
                                     <segue destination="Axb-Wz-tqn" kind="show" id="KVJ-qN-CQm"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wTS-bL-noD">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wTS-bL-noD">
                                 <rect key="frame" x="16" y="732" width="358" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="358" id="DzX-xB-a9x"/>
+                                    <constraint firstAttribute="height" constant="50" id="w9l-4R-895"/>
+                                </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Continue">
@@ -140,6 +173,31 @@ Services (optional)</string>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="07O-gE-GDa" firstAttribute="leading" secondItem="yMM-bp-mKM" secondAttribute="trailing" constant="5" id="3St-I4-tX4"/>
+                            <constraint firstItem="UTE-ez-yqh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="9" id="3e3-TQ-Phg"/>
+                            <constraint firstItem="yMM-bp-mKM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="9" id="4cc-dQ-dlH"/>
+                            <constraint firstItem="4bw-lA-shv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="9" id="6xC-9T-Diz"/>
+                            <constraint firstItem="I5B-z8-PjR" firstAttribute="top" secondItem="4bw-lA-shv" secondAttribute="bottom" constant="24" id="7hb-gI-Vu8"/>
+                            <constraint firstItem="4bw-lA-shv" firstAttribute="top" secondItem="yMM-bp-mKM" secondAttribute="bottom" constant="27" id="B3C-ny-oAc"/>
+                            <constraint firstItem="pJ6-lC-eTv" firstAttribute="leading" secondItem="UTE-ez-yqh" secondAttribute="trailing" constant="5" id="L5I-Nj-d03"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wTS-bL-noD" secondAttribute="trailing" constant="16" id="O8s-tr-m0q"/>
+                            <constraint firstItem="sXg-4Q-DFj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="U3m-ht-DIM"/>
+                            <constraint firstItem="AWR-mh-AZr" firstAttribute="top" secondItem="07O-gE-GDa" secondAttribute="bottom" constant="18" id="VBn-l2-tR2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wTS-bL-noD" secondAttribute="bottom" constant="28" id="Vjj-bV-cRg"/>
+                            <constraint firstItem="hYh-G3-YXW" firstAttribute="leading" secondItem="sXg-4Q-DFj" secondAttribute="trailing" constant="5" id="Zsf-tg-IYq"/>
+                            <constraint firstItem="pJ6-lC-eTv" firstAttribute="top" secondItem="hYh-G3-YXW" secondAttribute="bottom" constant="22" id="ajx-NE-W1N"/>
+                            <constraint firstItem="0mN-A9-iiA" firstAttribute="leading" secondItem="I5B-z8-PjR" secondAttribute="trailing" constant="5" id="epP-pq-d7X"/>
+                            <constraint firstItem="0mN-A9-iiA" firstAttribute="top" secondItem="AWR-mh-AZr" secondAttribute="bottom" constant="15" id="ert-Zb-rrZ"/>
+                            <constraint firstItem="wTS-bL-noD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="fPY-xh-D3x"/>
+                            <constraint firstItem="I5B-z8-PjR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="9" id="h7P-5t-D5I"/>
+                            <constraint firstItem="sXg-4Q-DFj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="9" id="i0j-2X-gxk"/>
+                            <constraint firstItem="hYh-G3-YXW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="ptA-2K-qNj"/>
+                            <constraint firstItem="UTE-ez-yqh" firstAttribute="top" secondItem="sXg-4Q-DFj" secondAttribute="bottom" constant="23" id="seE-mm-sgO"/>
+                            <constraint firstItem="yMM-bp-mKM" firstAttribute="top" secondItem="UTE-ez-yqh" secondAttribute="bottom" constant="20" id="tPc-g2-zk2"/>
+                            <constraint firstItem="07O-gE-GDa" firstAttribute="top" secondItem="pJ6-lC-eTv" secondAttribute="bottom" constant="19" id="xFM-XY-OjH"/>
+                            <constraint firstItem="AWR-mh-AZr" firstAttribute="leading" secondItem="4bw-lA-shv" secondAttribute="trailing" constant="5" id="xo6-4S-qeQ"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Agreement" id="BvV-xM-VMG"/>
                     <connections>
