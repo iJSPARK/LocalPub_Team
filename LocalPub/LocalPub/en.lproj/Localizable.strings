@@ -127,3 +127,10 @@ Services (optional)";
 "LanguagesEditFail" = "Languages edit failed";
 "FailLanguagesEdit" = "Input native language and foreign language";
 
+"IntroduceEditSuccessed" = "Self introduce edit successed";
+"SuccessIntroduceEdit" = "Self introduce edit completed";
+
+"IntroduceEditFailed" = "Self introduce edit failed";
+"FailLanguagesEdit" = "Write at least 30 characters";
+
+

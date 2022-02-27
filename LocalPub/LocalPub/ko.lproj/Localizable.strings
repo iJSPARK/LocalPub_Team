@@ -128,3 +128,8 @@ Services (optional)";
 "LanguagesEditFail" = "언어 편집 실패";
 "FailLanguagesEdit" = "모국어와 외국어를 입력해주세요.";
 
+"IntroduceEditSuccessed" = "자기소개 편집 성공";
+"SuccessIntroduceEdit" = "자기소개 편집이 완료되었습니다.";
+
+"IntroduceEditFailed" = "자기소개 편집 실ㅠㅐ";
+"FailLanguagesEdit" = "최소 30자 이상 입력하세요";
