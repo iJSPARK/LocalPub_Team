@@ -102,15 +102,15 @@ class intorduceViewController: UIViewController, UITextViewDelegate {
         
         self.performSegue( withIdentifier: "Picture", sender: self )
         
-//        if Joined() {
-//
-//            dismiss(animated: true)
-//
-//        } else {
-//
-//            self.performSegue( withIdentifier: "Picture", sender: self )
-//
-//        }
+        if Joined() {
+
+            dismiss(animated: true)
+
+        } else {
+
+            self.performSegue( withIdentifier: "Picture", sender: self )
+
+        }
     }
     
     @IBAction func saveDataAferJoined(_ sender: Any) {

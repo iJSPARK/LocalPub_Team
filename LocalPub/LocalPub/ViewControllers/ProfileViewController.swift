@@ -81,7 +81,6 @@ class profileViewController: UIViewController, UITextFieldDelegate {
     }
     
     func SetLocalized() {
-        
         navProfile.title = "ProfileInformation".localized()
         birthDateTextField.placeholder = "Birth".localized()
 
@@ -264,15 +263,16 @@ class profileViewController: UIViewController, UITextFieldDelegate {
 
         saveData()
         self.performSegue( withIdentifier: "Language", sender: self )
-//        if Joined() {
-//
-//            dismiss(animated: true)
-//
-//        } else {
-//
-//            self.performSegue( withIdentifier: "Language", sender: self )
-//
-//        }
+        
+        if Joined() {
+            
+            dismiss(animated: true)
+
+        } else {
+
+            self.performSegue( withIdentifier: "Language", sender: self )
+
+        }
         
     }
     
@@ -284,8 +284,7 @@ class profileViewController: UIViewController, UITextFieldDelegate {
         } else {
             AlertOK( title: "ProfileEditFail".localized(), message: "FailProfileEdit".localized(), viewController: self )
         }
-        
-        // self.navigationController?.popViewController(animated: true)
+
     }
     
     func btnCheckJoined() {

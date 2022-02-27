@@ -118,7 +118,7 @@ class languageViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func SetLocalized() {
-        self.navigationItem.title = "Select Language".localized()
+        self.navigationItem.title = "SelectLanguage".localized()
         selectLanguagesLabel.text = "SelectLanguages".localized()
         selectLanguagesDescriptionLabel.text = "SelectLangagesDescription".localized()
     }
@@ -221,15 +221,15 @@ class languageViewController: UIViewController, UITableViewDelegate, UITableView
         
         self.performSegue( withIdentifier: "Introduce", sender: self )
         
-//        if Joined() {
-//
-//            dismiss(animated: true)
-//
-//        } else {
-//
-//            self.performSegue( withIdentifier: "Introduce", sender: self )
-//
-//        }
+        if Joined() {
+
+            dismiss(animated: true)
+
+        } else {
+
+            self.performSegue( withIdentifier: "Introduce", sender: self )
+
+        }
     }
     
     @IBAction func saveDataAferJoined(_ sender: Any) {
