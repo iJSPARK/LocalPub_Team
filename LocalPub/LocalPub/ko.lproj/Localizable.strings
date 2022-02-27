@@ -122,3 +122,9 @@ Services (optional)";
 "FailProfileEdit" = "프로필 정보를 모두 기입하세요";
 
 
+"LanguagesEditSuccess" = "언어 편집 성공";
+"SueccesLanguagesEdit" = "언어 편집이 완료되었습니다.";
+
+"LanguagesEditFail" = "언어 편집 실패";
+"FailLanguagesEdit" = "모국어와 외국어를 입력해주세요.";
+

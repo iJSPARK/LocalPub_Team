@@ -148,7 +148,13 @@
                             <constraint firstItem="5Bn-ac-YKT" firstAttribute="top" secondItem="oL6-lw-aPw" secondAttribute="bottom" constant="20" id="qpw-8P-qw4"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="owC-DU-PFT"/>
+                    <navigationItem key="navigationItem" title="Title" id="owC-DU-PFT">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="5EF-Ar-YMI">
+                            <connections>
+                                <action selector="saveDataAferJoined:" destination="9f7-Nc-PvP" id="YMd-vP-y68"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="btnNext" destination="Zmp-aj-3qS" id="rfM-Uf-KzR"/>
                         <outlet property="languagesTableView" destination="5Bn-ac-YKT" id="xWs-lg-IL4"/>

@@ -253,7 +253,7 @@ class profileViewController: UIViewController, UITextFieldDelegate {
     @IBAction func Next(_ sender: UIButton) {
 
         saveData()
-        
+        self.performSegue( withIdentifier: "Language", sender: self )
 //        if Joined() {
 //
 //            dismiss(animated: true)
