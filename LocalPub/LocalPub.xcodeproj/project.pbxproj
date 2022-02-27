@@ -18,6 +18,7 @@
 		79A6F70B27B8F1FF00D0872C /* LanguageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A6F70A27B8F1FF00D0872C /* LanguageTableViewCell.swift */; };
 		79B6276427C51E080012C396 /* LevelLanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B6276327C51E080012C396 /* LevelLanguageViewController.swift */; };
 		79B6276627C51E980012C396 /* LevelLanguage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79B6276527C51E980012C396 /* LevelLanguage.storyboard */; };
+		79C5421A27CBC8840092200B /* UserStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79C5421927CBC8840092200B /* UserStoryboard.storyboard */; };
 		84168B1327C3BE4300EF0A22 /* LoginNavStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84168B1227C3BE4300EF0A22 /* LoginNavStoryboard.storyboard */; };
 		84168B1527C3BE4E00EF0A22 /* LoginViewConrtoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84168B1427C3BE4E00EF0A22 /* LoginViewConrtoller.swift */; };
 		84168B1727C3D31500EF0A22 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84168B1627C3D31500EF0A22 /* Login.swift */; };
@@ -85,6 +86,7 @@
 		79A6F70A27B8F1FF00D0872C /* LanguageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageTableViewCell.swift; sourceTree = "<group>"; };
 		79B6276327C51E080012C396 /* LevelLanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelLanguageViewController.swift; sourceTree = "<group>"; };
 		79B6276527C51E980012C396 /* LevelLanguage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LevelLanguage.storyboard; sourceTree = "<group>"; };
+		79C5421927CBC8840092200B /* UserStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UserStoryboard.storyboard; sourceTree = "<group>"; };
 		84168B1227C3BE4300EF0A22 /* LoginNavStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginNavStoryboard.storyboard; sourceTree = "<group>"; };
 		84168B1427C3BE4E00EF0A22 /* LoginViewConrtoller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewConrtoller.swift; sourceTree = "<group>"; };
 		84168B1627C3D31500EF0A22 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 		8470BDB827B2FDAF00D1A7C6 /* StoryBoards */ = {
 			isa = PBXGroup;
 			children = (
+				79C5421927CBC8840092200B /* UserStoryboard.storyboard */,
 				8470BDB927B2FDAF00D1A7C6 /* HomeTabStoryboard.storyboard */,
 				8470BDCA27B44A8B00D1A7C6 /* FindFriendStoryboard.storyboard */,
 				8470BDCC27B44AA500D1A7C6 /* CallListStoryboard.storyboard */,
@@ -368,6 +371,7 @@
 				84A1D5C2279C65AD00CF7104 /* Main.storyboard in Resources */,
 				84E2269527A6E5C700097CF5 /* LoginPhoneStoryboard.storyboard in Resources */,
 				84A1D5D6279C790A00CF7104 /* LaunchScreen.storyboard in Resources */,
+				79C5421A27CBC8840092200B /* UserStoryboard.storyboard in Resources */,
 				84E2269727A6E6C100097CF5 /* LoginEmailStoryboard.storyboard in Resources */,
 				84A1D5DD279C825000CF7104 /* GoogleService-Info.plist in Resources */,
 				79A6F70927B8E09600D0872C /* SelectLanguage.storyboard in Resources */,

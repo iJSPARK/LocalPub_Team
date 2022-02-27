@@ -216,20 +216,31 @@ class languageViewController: UIViewController, UITableViewDelegate, UITableView
         languageChangedToDB(nativeLanguageInfo: selectedNativeLanguage, foreignLanguagesInfo: selectedForeignLanguages)
     }
     
+    func btnCheckJoined() {
+        if Joined() {
+            btnNext.isHidden = true
+            self.navigationItem.rightBarButtonItem = self.navLanguage.rightBarButtonItem
+        } else {
+            btnNext.isHidden = false
+            self.navLanguage.rightBarButtonItem = nil
+        }
+        
+    }
+    
     @IBAction func Next(_ sender: Any) {
         languageChangedToDB(nativeLanguageInfo: selectedNativeLanguage!, foreignLanguagesInfo: selectedForeignLanguages)
         
         self.performSegue( withIdentifier: "Introduce", sender: self )
         
-        if Joined() {
-
-            dismiss(animated: true)
-
-        } else {
-
-            self.performSegue( withIdentifier: "Introduce", sender: self )
-
-        }
+//        if Joined() {
+//
+//            dismiss(animated: true)
+//
+//        } else {
+//
+//            self.performSegue( withIdentifier: "Introduce", sender: self )
+//
+//        }
     }
     
     @IBAction func saveDataAferJoined(_ sender: Any) {
@@ -240,27 +251,13 @@ class languageViewController: UIViewController, UITableViewDelegate, UITableView
         } else {
             AlertOK( title: "LanguagesEditFail".localized(), message: "FailLanguagesEdit".localized(), viewController: self )
         }
+    }
+    
     @IBAction func unwindToLanguage(_ unwindSegue: UIStoryboardSegue) {
         //let sourceViewController = unwindSegue.source
         // Use data from the view controller which initiated the unwind segue
     }
     
-    func btnCheckJoined() {
-        if Joined()
-        {
-            btnNext.isHidden = true
-            self.navLanguage.rightBarButtonItem = self.navLanguage.rightBarButtonItem
-        }
-        else
-        {
-            btnNext.isHidden = false
-            self.navLanguage.rightBarButtonItem = nil
-        }
-        
-    }
-    
-    
-    }
 }
 
 

@@ -58,8 +58,7 @@ class profileViewController: UIViewController, UITextFieldDelegate {
         
         nationalityButton.setTitle(nationalityExpression(), for: .normal)
         nationalityButton.setTitleColor(.black, for: .normal)
-        
-        
+
         createDatePicker()
         
         btnNextEnable()
@@ -264,15 +263,15 @@ class profileViewController: UIViewController, UITextFieldDelegate {
         saveData()
         self.performSegue( withIdentifier: "Language", sender: self )
         
-        if Joined() {
-            
-            dismiss(animated: true)
-
-        } else {
-
-            self.performSegue( withIdentifier: "Language", sender: self )
-
-        }
+//        if Joined() {
+//            
+//            dismiss(animated: true)
+//
+//        } else {
+//
+//            self.performSegue( withIdentifier: "Language", sender: self )
+//
+//        }
         
     }
     
