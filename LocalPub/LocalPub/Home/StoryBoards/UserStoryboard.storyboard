@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JQn-S4-Deo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -11,7 +11,7 @@
         <!--User View Controller-->
         <scene sceneID="ZT7-eh-zV1">
             <objects>
-                <viewController id="ydx-ru-Cwl" customClass="userViewController" customModule="LocalPub" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="userController" id="ydx-ru-Cwl" customClass="userViewController" customModule="LocalPub" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qfC-N1-yxz">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -104,29 +104,9 @@
             </objects>
             <point key="canvasLocation" x="1170" y="1040.7582938388625"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="O46-c9-yHi">
-            <objects>
-                <navigationController storyboardIdentifier="userController" automaticallyAdjustsScrollViewInsets="NO" id="JQn-S4-Deo" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="person" catalog="system" id="PcA-UR-K1V"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="41T-Ax-VCW">
-                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="ydx-ru-Cwl" kind="relationship" relationship="rootViewController" id="mbb-rE-0eK"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jVC-J7-AMS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-333.84615384615381" y="822.51184834123217"/>
-        </scene>
     </scenes>
     <resources>
         <image name="b&gt;" width="11" height="19"/>
-        <image name="person" catalog="system" width="128" height="117"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
