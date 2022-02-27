@@ -11,7 +11,7 @@
         <!--Title-->
         <scene sceneID="war-fr-aCH">
             <objects>
-                <viewController storyboardIdentifier="languageController" id="9f7-Nc-PvP" customClass="languageViewController" customModule="LocalPub" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="languageController" hidesBottomBarWhenPushed="YES" id="9f7-Nc-PvP" customClass="languageViewController" customModule="LocalPub" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kGa-Eb-G8m">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -148,11 +148,19 @@
                             <constraint firstItem="5Bn-ac-YKT" firstAttribute="top" secondItem="oL6-lw-aPw" secondAttribute="bottom" constant="20" id="qpw-8P-qw4"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="owC-DU-PFT"/>
+                    <navigationItem key="navigationItem" title="Title" id="owC-DU-PFT">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="5EF-Ar-YMI">
+                            <connections>
+                                <action selector="saveDataAferJoined:" destination="9f7-Nc-PvP" id="YMd-vP-y68"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="btnNext" destination="Zmp-aj-3qS" id="rfM-Uf-KzR"/>
                         <outlet property="languagesTableView" destination="5Bn-ac-YKT" id="xWs-lg-IL4"/>
                         <outlet property="navLanguage" destination="owC-DU-PFT" id="hbp-hu-KOu"/>
+                        <outlet property="selectLanguagesDescriptionLabel" destination="caG-x3-9D6" id="EKb-B3-dW4"/>
+                        <outlet property="selectLanguagesLabel" destination="eFq-Jx-Mr4" id="LKU-dh-TO5"/>
                         <segue destination="xNh-HM-hzk" kind="show" identifier="Introduce" id="62E-lu-ydl"/>
                     </connections>
                 </viewController>

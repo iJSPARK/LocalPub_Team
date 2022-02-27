@@ -156,6 +156,7 @@ Services (optional)</string>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wTS-bL-noD">
                                 <rect key="frame" x="16" y="732" width="358" height="50"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="pG6-U8-p8E"/>
                                     <constraint firstAttribute="width" constant="358" id="DzX-xB-a9x"/>
                                     <constraint firstAttribute="height" constant="50" id="w9l-4R-895"/>
                                 </constraints>
@@ -174,6 +175,9 @@ Services (optional)</string>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wTS-bL-noD" secondAttribute="trailing" constant="16" id="Qhl-q1-Pxg"/>
+                            <constraint firstItem="wTS-bL-noD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="VpJ-5S-VbL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wTS-bL-noD" secondAttribute="bottom" constant="20" id="gD7-i5-kGY"/>
                             <constraint firstItem="07O-gE-GDa" firstAttribute="leading" secondItem="yMM-bp-mKM" secondAttribute="trailing" constant="5" id="3St-I4-tX4"/>
                             <constraint firstItem="UTE-ez-yqh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="9" id="3e3-TQ-Phg"/>
                             <constraint firstItem="yMM-bp-mKM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="9" id="4cc-dQ-dlH"/>
