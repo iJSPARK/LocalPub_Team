@@ -38,7 +38,7 @@ class userViewController: UIViewController {
 
     func SetLocalized() {
         
-
+ 
     }
     
     @IBAction func didTapUserImageView(_ sender: UITapGestureRecognizer) {
