@@ -213,6 +213,8 @@
                         <outlet property="btnNext" destination="dzM-JG-TQv" id="z8j-dR-BXG"/>
                         <outlet property="nationalityButton" destination="hB0-ju-Ec2" id="C0j-Xm-uiF"/>
                         <outlet property="navProfile" destination="h4R-2C-LKO" id="Jqj-sQ-StF"/>
+                        <outlet property="profileInfomationDescriptionLabel" destination="hHQ-S9-zV1" id="f9f-kj-9d5"/>
+                        <outlet property="profileInformationLabel" destination="4Xk-9M-C4Q" id="Gf7-ff-hT6"/>
                         <outlet property="scGender" destination="lOp-K3-6Hj" id="40N-dt-kII"/>
                         <outlet property="txtName" destination="VpP-Hg-9dm" id="rPE-al-5HO"/>
                         <outlet property="txtResidence" destination="Fz1-5z-3iB" id="C8i-fT-boh"/>

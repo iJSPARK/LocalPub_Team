@@ -159,6 +159,8 @@
                         <outlet property="btnNext" destination="Zmp-aj-3qS" id="rfM-Uf-KzR"/>
                         <outlet property="languagesTableView" destination="5Bn-ac-YKT" id="xWs-lg-IL4"/>
                         <outlet property="navLanguage" destination="owC-DU-PFT" id="hbp-hu-KOu"/>
+                        <outlet property="selectLanguagesDescriptionLabel" destination="caG-x3-9D6" id="EKb-B3-dW4"/>
+                        <outlet property="selectLanguagesLabel" destination="eFq-Jx-Mr4" id="LKU-dh-TO5"/>
                         <segue destination="xNh-HM-hzk" kind="show" identifier="Introduce" id="62E-lu-ydl"/>
                     </connections>
                 </viewController>

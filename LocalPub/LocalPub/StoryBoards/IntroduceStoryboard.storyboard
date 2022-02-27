@@ -73,8 +73,11 @@
                                 </subviews>
                             </stackView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0d8-yB-cpC">
-                                <rect key="frame" x="20" y="176.33333333333334" width="350" height="363.66666666666663"/>
+                                <rect key="frame" x="20" y="176.33333333333337" width="350" height="220"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="220" id="Rbc-p3-vgV"/>
+                                </constraints>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -84,7 +87,6 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="UrB-YX-N3l" firstAttribute="top" secondItem="qct-8B-x0A" secondAttribute="top" constant="20" id="5ij-sV-ELD"/>
-                            <constraint firstItem="6S3-04-mBh" firstAttribute="top" secondItem="0d8-yB-cpC" secondAttribute="bottom" constant="200" id="C2I-nM-w7J"/>
                             <constraint firstItem="An5-Xb-VQV" firstAttribute="leading" secondItem="qct-8B-x0A" secondAttribute="leading" constant="20" id="CQt-A2-eV5"/>
                             <constraint firstItem="qct-8B-x0A" firstAttribute="bottom" secondItem="6S3-04-mBh" secondAttribute="bottom" constant="20" id="GoG-ha-td0"/>
                             <constraint firstItem="qct-8B-x0A" firstAttribute="trailing" secondItem="0d8-yB-cpC" secondAttribute="trailing" constant="20" id="X3d-xs-S2y"/>
@@ -102,6 +104,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="btnNext" destination="6S3-04-mBh" id="5lm-uo-q0Y"/>
+                        <outlet property="introduceDescriptionLabel" destination="ZNf-a0-ylb" id="V2J-PW-emv"/>
+                        <outlet property="introduceLabel" destination="Ucf-GE-sUb" id="dP9-Sw-yV1"/>
                         <outlet property="lblAboutMe" destination="6Nj-WG-HMm" id="Org-X3-RGu"/>
                         <outlet property="leastCharacters" destination="F45-1m-DoW" id="FLh-nh-pOZ"/>
                         <outlet property="navIntroduce" destination="0jf-9J-XQx" id="JvI-Ir-9qh"/>

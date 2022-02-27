@@ -133,3 +133,15 @@ Services (optional)";
 
 "IntroduceEditFailed" = "자기소개 편집 실ㅠㅐ";
 "FailLanguagesEdit" = "최소 30자 이상 입력하세요";
+
+"PhoneVerification" = "전화번호 인증";
+"PhoneVerificationDescription" = "걱정마세요! 전화번호는 안전하게 보관되고 절대 공유 되지 않습니다.";
+
+"ProfileInformation" = "프로필 정보";
+"ProfileInformationDescription" = "이것은 당신의 친구들에게 자신을 알릴 중요한 내용입니다.";
+
+"SelectLanguages" = "언어 선택";
+"SelectLangagesDescription" = "당신이 할수 있는 언어로 상대방과 매칭할 수 있습니다.";
+
+"Introduce" = "친구들에게 나에 대해서 더 말해볼까요?";
+"IntroduceDescription" = "친구에게 신뢰를 주기 위해 누구인지, 무엇을 하고 있는지 등등 설명해주세요!.";

@@ -19,6 +19,10 @@ class profileViewController: UIViewController, UITextFieldDelegate {
     
     var selectedNationality: Country? = nil
 
+    @IBOutlet weak var profileInformationLabel: UILabel!
+    
+    @IBOutlet weak var profileInfomationDescriptionLabel: UILabel!
+    
     @IBOutlet var navProfile: UINavigationItem!
     
     @IBOutlet weak var birthDateTextField: UITextField!
@@ -32,19 +36,6 @@ class profileViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var nationalityButton: UIButton!
     
     @IBOutlet var btnNext: UIButton!
-    
-    override func viewWillAppear(_ animated: Bool) {
-        // update nationality title
-        updateNationalityTitle()
-    }
-    
-    func updateNationalityTitle() {
-        if let nationality = selectedNationality {
-            nationalityButton.setTitle(nationality.countryEmoji + " " + nationality.countryName, for: .normal)
-            
-            nationalityButton.setTitleColor(.black, for: .normal)
-        }
-    }
 
     override func viewDidLoad() {
         
@@ -76,6 +67,19 @@ class profileViewController: UIViewController, UITextFieldDelegate {
         registerForKeyboardNotification()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        // update nationality title
+        updateNationalityTitle()
+    }
+    
+    func updateNationalityTitle() {
+        if let nationality = selectedNationality {
+            nationalityButton.setTitle(nationality.countryEmoji + " " + nationality.countryName, for: .normal)
+            
+            nationalityButton.setTitleColor(.black, for: .normal)
+        }
+    }
+    
     func SetLocalized() {
         
         navProfile.title = "ProfileInformation".localized()
@@ -93,6 +97,10 @@ class profileViewController: UIViewController, UITextFieldDelegate {
         scGender.setTitle( "Male".localized(), forSegmentAt: 0 )
         
         scGender.setTitle( "Female".localized(), forSegmentAt: 1 )
+        
+        profileInformationLabel.text = "ProfileInformation".localized()
+        
+        profileInfomationDescriptionLabel.text = "ProfileInformationDescription".localized()
     }
     
     func nationalityExpression() -> String {
@@ -210,6 +218,8 @@ class profileViewController: UIViewController, UITextFieldDelegate {
         let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(donePressed))
         toolBar.setItems([flexSpace, doneButton], animated: true)
+        
+        doneButton.tintColor = UIColor.systemPurple
 
         // assign tool bar
         birthDateTextField.inputAccessoryView = toolBar

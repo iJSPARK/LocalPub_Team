@@ -11,6 +11,11 @@ class intorduceViewController: UIViewController, UITextViewDelegate {
 
     let myUserDefaults = UserDefaults.standard
     
+
+    @IBOutlet weak var introduceLabel: UILabel!
+    
+    @IBOutlet weak var introduceDescriptionLabel: UILabel!
+    
     @IBOutlet var navIntroduce: UINavigationItem!
 
     @IBOutlet var lblAboutMe: UILabel!
@@ -50,10 +55,12 @@ class intorduceViewController: UIViewController, UITextViewDelegate {
         
         leastCharacters.text = "FailLanguagesEdit".localized()
         
+        introduceLabel.text = "Introduce".localized()
+        introduceDescriptionLabel.text = "IntroduceDescription".localized()
+        
         txtAboutMe.layer.borderWidth = 1.0
         txtAboutMe.layer.borderColor = UIColor.gray.cgColor
         txtAboutMe.layer.cornerRadius = 10
-        
     }
     
     func placeholderSet(_ textView: UITextView) {

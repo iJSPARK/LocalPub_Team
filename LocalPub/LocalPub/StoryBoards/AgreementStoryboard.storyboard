@@ -123,9 +123,11 @@ Services (optional)</string>
                                     <segue destination="Axb-Wz-tqn" kind="show" id="KVJ-qN-CQm"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wTS-bL-noD">
-                                <rect key="frame" x="16" y="732" width="358" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wTS-bL-noD">
+                                <rect key="frame" x="16" y="740" width="358" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="pG6-U8-p8E"/>
+                                </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Continue">
@@ -140,6 +142,11 @@ Services (optional)</string>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wTS-bL-noD" secondAttribute="trailing" constant="16" id="Qhl-q1-Pxg"/>
+                            <constraint firstItem="wTS-bL-noD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="VpJ-5S-VbL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wTS-bL-noD" secondAttribute="bottom" constant="20" id="gD7-i5-kGY"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Agreement" id="BvV-xM-VMG"/>
                     <connections>

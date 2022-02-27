@@ -14,6 +14,10 @@ class languageViewController: UIViewController, UITableViewDelegate, UITableView
     var selectedNativeLanguage: LanguageInfo? = nil
     var selectedForeignLanguages: [LanguageInfo]? = nil
     
+    @IBOutlet weak var selectLanguagesLabel: UILabel!
+    
+    @IBOutlet weak var selectLanguagesDescriptionLabel: UILabel!
+    
     @IBOutlet weak var languagesTableView: UITableView!
     
     @IBOutlet var navLanguage: UINavigationItem!
@@ -31,7 +35,6 @@ class languageViewController: UIViewController, UITableViewDelegate, UITableView
         languagesTableView.dataSource = self
         
         selectedNativeLanguage = changedNativeFromDB()
-        
         selectedForeignLanguages = changedForeignFromDB()
         
         SetLocalized()
@@ -116,6 +119,8 @@ class languageViewController: UIViewController, UITableViewDelegate, UITableView
     
     func SetLocalized() {
         self.navigationItem.title = "Select Language".localized()
+        selectLanguagesLabel.text = "SelectLanguages".localized()
+        selectLanguagesDescriptionLabel.text = "SelectLangagesDescription".localized()
     }
     
     func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
