@@ -114,3 +114,11 @@
 "TL" = "약관3 Terms and Conditions of Location-Based
 Services (optional)";
 "MA" = "약관4 Marketing Agreement (optional)";
+
+"ProfileEditSuccess" = "프로필 편집 성공";
+"SuccessProfileEdit" = "프로필 편집이 완료되었습니다.";
+
+"ProfileEditFail" = "프로필 편집 실패";
+"FailProfileEdit" = "프로필 정보를 모두 기입하세요";
+
+

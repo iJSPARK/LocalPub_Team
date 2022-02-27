@@ -11,7 +11,7 @@
         <!--Title-->
         <scene sceneID="war-fr-aCH">
             <objects>
-                <viewController storyboardIdentifier="languageController" id="9f7-Nc-PvP" customClass="languageViewController" customModule="LocalPub" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="languageController" hidesBottomBarWhenPushed="YES" id="9f7-Nc-PvP" customClass="languageViewController" customModule="LocalPub" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kGa-Eb-G8m">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

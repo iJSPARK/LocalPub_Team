@@ -39,13 +39,11 @@ class profileViewController: UIViewController, UITextFieldDelegate {
     }
     
     func updateNationalityTitle() {
-        guard let nationality = selectedNationality else {
-            return
+        if let nationality = selectedNationality {
+            nationalityButton.setTitle(nationality.countryEmoji + " " + nationality.countryName, for: .normal)
+            
+            nationalityButton.setTitleColor(.black, for: .normal)
         }
-        
-        nationalityButton.setTitle(nationality.countryEmoji + " " + nationality.countryName, for: .normal)
-        
-        nationalityButton.setTitleColor(.black, for: .normal)
     }
 
     override func viewDidLoad() {
@@ -57,6 +55,8 @@ class profileViewController: UIViewController, UITextFieldDelegate {
         
         SetLocalized()
         
+        btnCheckJoined()
+        
         txtName.text = myUserDefaults.string(forKey: UserDefault.Name.toString() )
         
         scGender.selectedSegmentIndex = myUserDefaults.integer(forKey: UserDefault.Gender.toString() )
@@ -66,6 +66,8 @@ class profileViewController: UIViewController, UITextFieldDelegate {
         birthDateTextField.text = myUserDefaults.string(forKey: UserDefault.Birth.toString() )
         
         nationalityButton.setTitle(nationalityExpression(), for: .normal)
+        nationalityButton.setTitleColor(.black, for: .normal)
+        
         
         createDatePicker()
         
@@ -93,16 +95,14 @@ class profileViewController: UIViewController, UITextFieldDelegate {
         scGender.setTitle( "Female".localized(), forSegmentAt: 1 )
     }
     
-    func nationalityExpression() -> String? {
+    func nationalityExpression() -> String {
         
-        guard let nationalityEmoji = myUserDefaults.string(forKey: UserDefault.NationalityEmoji.toString() ) else { return nil }
+        let nationalityEmoji = myUserDefaults.string(forKey: UserDefault.NationalityEmoji.toString() ) ?? ""
         
-        guard let nationalityName = myUserDefaults.string(forKey: UserDefault.Nationality.toString() ) else { return nil }
-        
-        nationalityButton.setTitleColor(.black, for: .normal)
+        let nationalityName = myUserDefaults.string(forKey: UserDefault.Nationality.toString() ) ?? ""
         
         return nationalityEmoji + nationalityName
-
+        
     }
     
     func registerForKeyboardNotification() {
@@ -160,21 +160,21 @@ class profileViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
-    func checkAllValues() {
+    func checkAllValues() -> Bool {
         if txtName.text != "" && txtResidence.text != "" &&  birthDateTextField.text != "" && (scGender.selectedSegmentIndex == 0 || scGender.selectedSegmentIndex == 1) && nationalityButton.titleLabel != nil {
             print("Have all value")
             
-            btnNext.isEnabled = true
+            return true
         } else {
-            btnNext.isEnabled = false
+            return false
         }
     }
     
     func btnNextEnable() {
         
-        checkAllValues() // veiwdidload
+        btnNext.isEnabled = checkAllValues()
 
-        // IBA
+        // IBA 이벤트시 확인
         txtName.addTarget(self, action: #selector(textFieldDidChanged(textField:)), for: .editingDidEnd)
         
         txtResidence.addTarget(self, action: #selector(textFieldDidChanged(textField:)), for: .editingDidEnd)
@@ -187,15 +187,15 @@ class profileViewController: UIViewController, UITextFieldDelegate {
     }
     
     @objc func textFieldDidChanged(textField: UITextField) {
-        checkAllValues()
+        btnNext.isEnabled = checkAllValues()
     }
     
     @objc func nationalitySelected(button: UIButton) {
-        checkAllValues()
+        btnNext.isEnabled = checkAllValues()
     }
     
     @objc func genderSelected(segmentedControl: UISegmentedControl) {
-        checkAllValues()
+        btnNext.isEnabled = checkAllValues()
     }
     
     func createDatePicker() {
@@ -236,29 +236,57 @@ class profileViewController: UIViewController, UITextFieldDelegate {
         self.view.endEditing(true)
     }
     
-    @IBAction func Next(_ sender: UIButton) {
-
+    func saveData() {
         SaveUserDefault( key: UserDefault.Name.toString(), value: txtName.text! )
         
         SaveUserDefault( key: UserDefault.Residence.toString(), value: txtResidence.text! )
         
         SaveUserDefault( key: UserDefault.Birth.toString(), value: birthDateTextField.text! )
+    
+        SaveUserDefault(key: UserDefault.NationalityEmoji.toString(), value: selectedNationality?.countryEmoji ?? myUserDefaults.string(forKey: UserDefault.NationalityEmoji.toString() )! )
         
-        SaveUserDefault(key: UserDefault.NationalityEmoji.toString(), value: selectedNationality!.countryEmoji)
-        
-        SaveUserDefault( key: UserDefault.Nationality.toString(), value: selectedNationality!.countryName )
+        SaveUserDefault( key: UserDefault.Nationality.toString(), value: selectedNationality?.countryName ?? myUserDefaults.string(forKey: UserDefault.Nationality.toString() )! )
         
         SaveUserDefault( key: UserDefault.Gender.toString(), value: scGender.selectedSegmentIndex )
-        
-        if Joined() {
-            
-            dismiss(animated: true)
-            
-        } else {
+    }
+    
+    @IBAction func Next(_ sender: UIButton) {
 
-            self.performSegue( withIdentifier: "Language", sender: self )
-            
+        saveData()
+        
+//        if Joined() {
+//
+//            dismiss(animated: true)
+//
+//        } else {
+//
+//            self.performSegue( withIdentifier: "Language", sender: self )
+//
+//        }
+        
+    }
+    
+    @IBAction func saveDataAferJoined(_ sender: Any) {
+        
+        if checkAllValues() {
+        AlertOK( title: "ProfileEditSuccess".localized(), message: "SuccessProfileEdit".localized(), viewController: self )
+            saveData()
+        } else {
+            AlertOK( title: "ProfileEditFail".localized(), message: "FailProfileEdit".localized(), viewController: self )
         }
+        
+        // self.navigationController?.popViewController(animated: true)
+    }
+    
+    func btnCheckJoined() {
+        if Joined() {
+            btnNext.isHidden = true
+            self.navigationItem.rightBarButtonItem = self.navProfile.rightBarButtonItem
+        } else {
+            btnNext.isHidden = false
+            self.navProfile.rightBarButtonItem = nil
+        }
+        
     }
     
     

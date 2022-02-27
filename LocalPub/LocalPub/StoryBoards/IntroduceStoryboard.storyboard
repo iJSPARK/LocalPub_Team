@@ -11,7 +11,7 @@
         <!--Self Introduce-->
         <scene sceneID="gTL-kG-PIO">
             <objects>
-                <viewController storyboardIdentifier="introduceController" id="4GL-i9-6Mz" customClass="intorduceViewController" customModule="LocalPub" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="introduceController" hidesBottomBarWhenPushed="YES" id="4GL-i9-6Mz" customClass="intorduceViewController" customModule="LocalPub" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="daF-7b-lmm">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

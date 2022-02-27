@@ -114,3 +114,9 @@
 "TL" = "Terms and Conditions of Location-Based
 Services (optional)";
 "MA" = "Marketing Agreement (optional)";
+
+"ProfileEditSuccess" = "Profile edit successed";
+"SuccessProfileEdit" = "Profile edit completed";
+
+"ProfileEditFail" = "Profile edit failed";
+"FailProfileEdit" = "Input all profile Information";
