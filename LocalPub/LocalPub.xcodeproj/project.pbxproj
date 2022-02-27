@@ -46,7 +46,6 @@
 		8470BDC927B3915D00D1A7C6 /* CallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470BDC827B3915D00D1A7C6 /* CallViewController.swift */; };
 		8470BDCB27B44A8B00D1A7C6 /* FindFriendStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8470BDCA27B44A8B00D1A7C6 /* FindFriendStoryboard.storyboard */; };
 		8470BDCD27B44AA500D1A7C6 /* CallListStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8470BDCC27B44AA500D1A7C6 /* CallListStoryboard.storyboard */; };
-		8470BDCF27B44AB700D1A7C6 /* UserStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8470BDCE27B44AB700D1A7C6 /* UserStoryboard.storyboard */; };
 		8470BDD927B5A13200D1A7C6 /* AgreementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470BDD827B5A13200D1A7C6 /* AgreementViewController.swift */; };
 		8470BDDB27B5A16000D1A7C6 /* AgreementStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8470BDDA27B5A16000D1A7C6 /* AgreementStoryboard.storyboard */; };
 		8470C00227B5A1B100D1A7C6 /* MyCheckBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470C00127B5A1B100D1A7C6 /* MyCheckBtn.swift */; };
@@ -102,7 +101,6 @@
 		8470BDC827B3915D00D1A7C6 /* CallViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallViewController.swift; sourceTree = "<group>"; };
 		8470BDCA27B44A8B00D1A7C6 /* FindFriendStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FindFriendStoryboard.storyboard; sourceTree = "<group>"; };
 		8470BDCC27B44AA500D1A7C6 /* CallListStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CallListStoryboard.storyboard; sourceTree = "<group>"; };
-		8470BDCE27B44AB700D1A7C6 /* UserStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserStoryboard.storyboard; sourceTree = "<group>"; };
 		8470BDD827B5A13200D1A7C6 /* AgreementViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgreementViewController.swift; sourceTree = "<group>"; };
 		8470BDDA27B5A16000D1A7C6 /* AgreementStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AgreementStoryboard.storyboard; sourceTree = "<group>"; };
 		8470C00127B5A1B100D1A7C6 /* MyCheckBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCheckBtn.swift; sourceTree = "<group>"; };
@@ -189,7 +187,6 @@
 				8470BDB927B2FDAF00D1A7C6 /* HomeTabStoryboard.storyboard */,
 				8470BDCA27B44A8B00D1A7C6 /* FindFriendStoryboard.storyboard */,
 				8470BDCC27B44AA500D1A7C6 /* CallListStoryboard.storyboard */,
-				8470BDCE27B44AB700D1A7C6 /* UserStoryboard.storyboard */,
 			);
 			path = StoryBoards;
 			sourceTree = "<group>";
@@ -370,7 +367,6 @@
 			files = (
 				84A1D5C2279C65AD00CF7104 /* Main.storyboard in Resources */,
 				84E2269527A6E5C700097CF5 /* LoginPhoneStoryboard.storyboard in Resources */,
-				8470BDCF27B44AB700D1A7C6 /* UserStoryboard.storyboard in Resources */,
 				84A1D5D6279C790A00CF7104 /* LaunchScreen.storyboard in Resources */,
 				84E2269727A6E6C100097CF5 /* LoginEmailStoryboard.storyboard in Resources */,
 				84A1D5DD279C825000CF7104 /* GoogleService-Info.plist in Resources */,
