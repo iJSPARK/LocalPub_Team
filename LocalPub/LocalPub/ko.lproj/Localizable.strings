@@ -9,7 +9,6 @@
 "CurrentLanguage"= "현재 언어";
 
 "Agreement" = "약관 동의";
-"ProfileInformation" = "개인 정보";
 "SelectLanguages" = "언어 선택";
 "SelfIntroduce" = "자기 소개";
 "GetPicture" = "사진 가져오기";
@@ -117,13 +116,6 @@
 
 "User" = "사용자 정보";
 
-"AA" = "모두 Accept all";
-"TC" = "약관1 Terms and conditions (required)";
-"PTC" = "약관2 Privacy terms and conditions(required)";
-"TL" = "약관3 Terms and Conditions of Location-Based
-Services (optional)";
-"MA" = "약관4 Marketing Agreement (optional)";
-
 "ProfileEditSuccess" = "프로필 편집 성공";
 "SuccessProfileEdit" = "프로필 편집이 완료되었습니다.";
 
@@ -175,3 +167,5 @@ Services (optional)";
 "Good" = "잘함";
 "Soso" = "보통";
 "Little" = "초보";
+
+"IntroducePlaceHolder" = "친구들에게 나의 대해서 또 외국어 경험에 대해서 말해주세요.";

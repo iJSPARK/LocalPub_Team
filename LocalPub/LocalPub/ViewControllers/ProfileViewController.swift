@@ -51,11 +51,11 @@ class profileViewController: UIViewController, UITextFieldDelegate {
         txtName.text = myUserDefaults.string(forKey: UserDefault.Name.toString() )
         
         scGender.selectedSegmentIndex = myUserDefaults.integer(forKey: UserDefault.Gender.toString() )
-        
+
         txtResidence.text = myUserDefaults.string(forKey: UserDefault.Residence.toString() )
-        
+
         birthDateTextField.text = myUserDefaults.string(forKey: UserDefault.Birth.toString() )
-        
+
         nationalityButton.setTitle(nationalityExpression(), for: .normal)
         nationalityButton.setTitleColor(.black, for: .normal)
 
