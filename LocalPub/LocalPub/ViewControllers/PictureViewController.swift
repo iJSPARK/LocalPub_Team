@@ -121,7 +121,7 @@ class pictureViewController: UIViewController {
         
         SetLocalized()
         
-        checkNextEnable() 
+         checkNextEnable()
         
     }
     
@@ -189,7 +189,7 @@ class pictureViewController: UIViewController {
     }
     
     func checkNextEnable() {
-
+    
         btnNext.isEnabled = ( imageMainView.image != nil  && imageSecondaryView.image != nil )
         print( "checkNextEnable")
     }

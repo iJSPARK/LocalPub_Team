@@ -9,7 +9,6 @@
 "CurrentLanguage"= "Current Language";
 
 "Agreement" = "Agreement";
-"ProfileInformation" = "Profile Information";
 "SelectLanguages" = "Select Language";
 "SelfIntroduce" = "Self Introduce";
 "GetPicture" = "Get Picture";
@@ -173,3 +172,4 @@ Services (optional)";
 "Good" = "Good";
 "Soso" = "Soso";
 "Little" = "Little";
+"IntroducePlaceHolder" = "Tell your friends about yourself and your foreign language experience";"

@@ -38,9 +38,9 @@ class intorduceViewController: UIViewController, UITextViewDelegate {
         UICheckJoined()
        
         txtAboutMe.text = myUserDefaults.string( forKey: UserDefault.AboutMe.toString() )
-        
+
         txtAboutMe.textColor = .black
-        
+
         btnNext.isEnabled = checkAllValues()
         
         placeholderSet(txtAboutMe)
@@ -67,7 +67,7 @@ class intorduceViewController: UIViewController, UITextViewDelegate {
     func placeholderSet(_ textView: UITextView) {
         textView.delegate = self
         if textView.text.isEmpty {
-            textView.text = "Tell your friends about yourself and your foreign language experience"
+            textView.text = "IntroducePlaceHolder".localized()
             textView.textColor = UIColor.opaqueSeparator
         }
     }

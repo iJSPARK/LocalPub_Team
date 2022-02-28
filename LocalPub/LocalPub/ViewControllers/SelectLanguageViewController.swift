@@ -45,15 +45,11 @@ class SelectLanguageViewController: UIViewController, UITableViewDelegate, UITab
                     
                      print("선택된 데이터 before section 0\(selectedLanguage)")
                     
-                    // print("input native")
                     L.selectedNativeLanguage = LanguageInfo(language: selectedLanguage, level: .native)
-                    // print("L.selectedNativeLanguage \(L.selectedNativeLanguage)")
                 }
             }
             else {  // foreign language 전달 > LevelLanguageViewController
                 if let LL = segue.destination as? LevelLanguageViewController {
-                    // print("선택된 데이터 before section 1 \(selectedLanguage)")
-                    //print("input foreign")
                     LL.selectedForeignLanguage = selectedLanguage
                     LL.indexForegin = indexForeign
                     print("Language 선택 인덱스 \(indexForeign)")
