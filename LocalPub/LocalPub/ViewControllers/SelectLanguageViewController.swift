@@ -71,14 +71,14 @@ class SelectLanguageViewController: UIViewController, UITableViewDelegate, UITab
             let cell = selectLanguageTableView.dequeueReusableCell(withIdentifier: "nativeCell")
             let language = languages[indexPath.row].toString()
             
-            cell?.textLabel?.text = language
+            cell?.textLabel?.text = language + "   " + "(\(language.localized()))"
             
             return cell!
         } else {
             let cell = selectLanguageTableView.dequeueReusableCell(withIdentifier: "foreignCell")
             let language = languages[indexPath.row].toString()
             
-            cell?.textLabel?.text = language
+            cell?.textLabel?.text = language + "   " + "(\(language.localized()))"
             
             return cell!
         }

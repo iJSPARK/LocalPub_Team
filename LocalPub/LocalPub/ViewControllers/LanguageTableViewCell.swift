@@ -27,7 +27,7 @@ class LanguageTableViewCell: UITableViewCell {
     }
     
     func updateCell(with userLanguageInfo: LanguageInfo) {
-        languageLabel.text = userLanguageInfo.language.toString()
+        languageLabel.text = userLanguageInfo.language.toString().localized()
         languageLabel.textColor = UIColor.black
         languageCodeLabel.text = userLanguageInfo.language.toString().prefix(2).uppercased()
         languageCodeLabel.textColor = UIColor.purple
@@ -35,7 +35,7 @@ class LanguageTableViewCell: UITableViewCell {
     }
     
     func updateCellInit() {
-        languageLabel.text = "Add Language"
+        languageLabel.text = "AddLanguage".localized()
         languageLabel.textColor = UIColor.opaqueSeparator
         languageCodeLabel.text = ""
         languageLevelImage.image = nil

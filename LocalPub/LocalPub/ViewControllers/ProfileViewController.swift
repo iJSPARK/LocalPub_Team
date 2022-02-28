@@ -46,7 +46,7 @@ class profileViewController: UIViewController, UITextFieldDelegate {
         
         SetLocalized()
         
-        btnCheckJoined()
+        UICheckJoined()
         
         txtName.text = myUserDefaults.string(forKey: UserDefault.Name.toString() )
         
@@ -64,19 +64,6 @@ class profileViewController: UIViewController, UITextFieldDelegate {
         btnNextEnable()
         
         registerForKeyboardNotification()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        // update nationality title
-        updateNationalityTitle()
-    }
-    
-    func updateNationalityTitle() {
-        if let nationality = selectedNationality {
-            nationalityButton.setTitle(nationality.countryEmoji + " " + nationality.countryName, for: .normal)
-            
-            nationalityButton.setTitleColor(.black, for: .normal)
-        }
     }
     
     func SetLocalized() {
@@ -109,6 +96,14 @@ class profileViewController: UIViewController, UITextFieldDelegate {
         
         return nationalityEmoji + nationalityName
         
+    }
+    
+    func updateNationalityTitle() {
+        if let nationality = selectedNationality {
+            nationalityButton.setTitle(nationality.countryEmoji + " " + nationality.countryName, for: .normal)
+            
+            nationalityButton.setTitleColor(.black, for: .normal)
+        }
     }
     
     func registerForKeyboardNotification() {
@@ -286,7 +281,7 @@ class profileViewController: UIViewController, UITextFieldDelegate {
 
     }
     
-    func btnCheckJoined() {
+    func UICheckJoined() {
         if Joined() {
             btnNext.isHidden = true
             self.navigationItem.rightBarButtonItem = self.navProfile.rightBarButtonItem
@@ -294,13 +289,12 @@ class profileViewController: UIViewController, UITextFieldDelegate {
             btnNext.isHidden = false
             self.navProfile.rightBarButtonItem = nil
         }
-        
     }
     
     
     @IBAction func unwindToProfile(_ unwindSegue: UIStoryboardSegue) {
-        let sourceViewController = unwindSegue.source
-        // Use data from the view controller which initiated the unwind segue
+        _ = unwindSegue.source
+        updateNationalityTitle()
     }
 
 }

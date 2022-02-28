@@ -50,7 +50,7 @@ class LevelLanguageViewController: UIViewController, UITableViewDelegate, UITabl
         
         let level = levels[indexPath.row].toString()
         
-        cell?.textLabel?.text = level
+        cell?.textLabel?.text = level.localized()
         
         return cell!
     }

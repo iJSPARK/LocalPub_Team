@@ -115,8 +115,6 @@
 Services (optional)";
 "MA" = "Marketing Agreement (optional)";
 
-<<<<<<< HEAD
-=======
 "ProfileEditSuccess" = "Profile edit successed";
 "SuccessProfileEdit" = "Profile edit completed";
 
@@ -150,4 +148,23 @@ Services (optional)";
 ";
 
 
->>>>>>> jsp
+"ChooseNatvieLanguages" = "Choose your native languages";
+"ChooseForeignLanguages"= "Choose a foreign languages you can speak";
+
+"AddLanguage" = "Add Language";
+
+"English" = "English";
+"Korean" = "한국어";
+"Japanese" = "日本語";
+"Russian" = "Pусский";
+"Chinese" = "中国人";
+"Ukraine" = "українська мова";
+"French" = "français";
+"German" = "Destsch";
+"Italian" = "Italian";
+"Spanish" = "Español";
+
+"Fluent" = "Fluent";
+"Good" = "Good";
+"Soso" = "Soso";
+"Little" = "Little";

@@ -30,11 +30,12 @@ class intorduceViewController: UIViewController, UITextViewDelegate {
         
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        btnCheckJoined()
         
         txtAboutMe.addDoneButtonOnKeyboard()
        
         SetLocalized()
+        
+        UICheckJoined()
        
         txtAboutMe.text = myUserDefaults.string( forKey: UserDefault.AboutMe.toString() )
         
@@ -123,7 +124,7 @@ class intorduceViewController: UIViewController, UITextViewDelegate {
         }
     }
     
-    func btnCheckJoined() {
+    func UICheckJoined() {
         
         if Joined()
         {
@@ -159,7 +160,6 @@ extension UITextView {
     
     @objc func doneButtonPressed() {
         self.resignFirstResponder()
-        
     }
 }
 

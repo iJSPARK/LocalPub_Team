@@ -29,15 +29,15 @@ class languageViewController: UIViewController, UITableViewDelegate, UITableView
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        btnCheckJoined()
+        SetLocalized()
+        
+        UICheckJoined()
         
         languagesTableView.delegate = self
         languagesTableView.dataSource = self
         
         selectedNativeLanguage = changedNativeFromDB()
         selectedForeignLanguages = changedForeignFromDB()
-        
-        SetLocalized()
     }
     
     func changedNativeFromDB() -> LanguageInfo? {
@@ -71,20 +71,18 @@ class languageViewController: UIViewController, UITableViewDelegate, UITableView
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let section = self.languagesTableView.indexPathForSelectedRow?.section, let SL = segue.destination as? SelectLanguageViewController {
-            
-            print("Send Section \(section)")
+    
             SL.section = section
-            
-            if let selectedIndexPath = languagesTableView.indexPathForSelectedRow  { SL.indexForeign = selectedIndexPath.row
-                print("Send indexForeign \(selectedIndexPath.row)")
+        
+            if let selectedIndexPath = languagesTableView.indexPathForSelectedRow  {
+                SL.indexForeign = selectedIndexPath.row
             }
           
             
         }
     }
     
-    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int)
-    {
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         let header = view as! UITableViewHeaderFooterView
         header.textLabel?.font = UIFont.boldSystemFont(ofSize: 17)
     }
@@ -94,12 +92,11 @@ class languageViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("Update Section")
-        
+    
         var foreginCellCount: Int = 1
         
         if let selectedForeignLanguages = selectedForeignLanguages {
-            if selectedForeignLanguages.count < 3 { // 2
+            if selectedForeignLanguages.count < 3 {
                 foreginCellCount = selectedForeignLanguages.count + 1
             } else {
                 foreginCellCount = 3
@@ -152,30 +149,37 @@ class languageViewController: UIViewController, UITableViewDelegate, UITableView
         let cell = tableView.dequeueReusableCell(withIdentifier:"userLanguageCell") as! LanguageTableViewCell
         
         if indexPath.section == 0 {
-            print("Section in 0")
+            
             if let nativeLangInfo = selectedNativeLanguage {
-                print("nativeLangInfo \(nativeLangInfo)")
                 cell.updateCell(with: nativeLangInfo)
             }
+            
             if selectedNativeLanguage == nil {
                 cell.updateCellInit()
             }
+            
             cell.showsReorderControl = true
 
-        } else { // section == 1
+        } else {
+            
             if let foreignLangInfos = selectedForeignLanguages {
+                
                 if indexPath.row < foreignLangInfos.count {
                     let foreignLangInfo = foreignLangInfos[indexPath.row]
                     cell.updateCell(with: foreignLangInfo)
                 } else {
                     cell.updateCellInit()
                 }
+                
             }
+            
             if selectedForeignLanguages == nil {
                 cell.updateCellInit()
             }
+            
             cell.showsReorderControl = true
         }
+    
         return cell
      }
     
@@ -183,9 +187,9 @@ class languageViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
         case 0:
-            return "Choose your native languages"
+            return "ChooseNatvieLanguages".localized()
         case 1:
-            return "Choose a foreign languages you can speak"
+            return "ChooseForeignLanguages".localized()
         default:
             return ""
         }
@@ -216,7 +220,7 @@ class languageViewController: UIViewController, UITableViewDelegate, UITableView
         languageChangedToDB(nativeLanguageInfo: selectedNativeLanguage, foreignLanguagesInfo: selectedForeignLanguages)
     }
     
-    func btnCheckJoined() {
+    func UICheckJoined() {
         if Joined() {
             btnNext.isHidden = true
             self.navigationItem.rightBarButtonItem = self.navLanguage.rightBarButtonItem
@@ -224,11 +228,10 @@ class languageViewController: UIViewController, UITableViewDelegate, UITableView
             btnNext.isHidden = false
             self.navLanguage.rightBarButtonItem = nil
         }
-        
     }
     
     @IBAction func Next(_ sender: Any) {
-        languageChangedToDB(nativeLanguageInfo: selectedNativeLanguage!, foreignLanguagesInfo: selectedForeignLanguages)
+        saveData()
         
         self.performSegue( withIdentifier: "Introduce", sender: self )
         

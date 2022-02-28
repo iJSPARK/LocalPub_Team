@@ -16,12 +16,14 @@ class userViewController: UIViewController {
     @IBOutlet var imageUser: UIImageView!
     @IBOutlet var lblName: UILabel!
     
+    @IBOutlet weak var profileInfoLabel: UILabel!
+    @IBOutlet weak var LanguageLabel: UILabel!
+    @IBOutlet weak var selfIntroduceLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
-        SetLocalized()
         
         userUID = self.myUserDefaults.string( forKey: UserDefault.UID.toString() ) ?? ""
         
@@ -34,11 +36,14 @@ class userViewController: UIViewController {
         GetUserImage()
         
         lblName.text = myUserDefaults.string(forKey: UserDefault.Name.toString() )
+    
+        SetLocalized()
     }
 
     func SetLocalized() {
-        
- 
+        profileInfoLabel.text = "ProfileInformation".localized()
+        LanguageLabel.text = "SelectLanguages".localized()
+        selfIntroduceLabel.text = "SelfIntroduce".localized()
     }
     
     @IBAction func didTapUserImageView(_ sender: UITapGestureRecognizer) {

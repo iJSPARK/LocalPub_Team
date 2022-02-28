@@ -64,7 +64,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P7x-Xx-9yz">
                                                 <rect key="frame" x="0.0" y="0.0" width="272" height="44"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="PhoneNumberBox" translatesAutoresizingMaskIntoConstraints="NO" id="BVE-RZ-jYw">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PhoneNumberBox" translatesAutoresizingMaskIntoConstraints="NO" id="BVE-RZ-jYw">
                                                         <rect key="frame" x="0.0" y="0.0" width="272" height="44"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="9ep-pG-6fw"/>
@@ -101,6 +101,7 @@
                                                     <constraint firstAttribute="width" constant="272" id="Vqz-xH-uoi"/>
                                                     <constraint firstAttribute="bottom" secondItem="wRn-yf-mzh" secondAttribute="bottom" id="fBv-R8-f0f"/>
                                                     <constraint firstAttribute="trailing" secondItem="wRn-yf-mzh" secondAttribute="trailing" constant="10" id="hU4-CS-Lsr"/>
+                                                    <constraint firstItem="BVE-RZ-jYw" firstAttribute="top" secondItem="wRn-yf-mzh" secondAttribute="top" id="unV-jG-IUu"/>
                                                     <constraint firstItem="BVE-RZ-jYw" firstAttribute="leading" secondItem="P7x-Xx-9yz" secondAttribute="leading" id="zxy-td-Eh9"/>
                                                 </constraints>
                                             </view>
