@@ -93,7 +93,7 @@ class languageViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     
         var foreginCellCount: Int = 1
-        print("selectedForign \(selectedForeignLanguages)")
+
         if let selectedForeignLanguages = selectedForeignLanguages {
             if selectedForeignLanguages.count < 3 {
                 foreginCellCount = selectedForeignLanguages.count + 1
