@@ -17,10 +17,14 @@ class LevelLanguageViewController: UIViewController, UITableViewDelegate, UITabl
 
     @IBOutlet weak var levelTableView: UITableView!
     
+    @IBOutlet weak var LevelLabel: UINavigationItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         levelTableView.delegate = self
         levelTableView.dataSource = self
+        
+        LevelLabel.title = selectedForeignLanguage?.toString().localized() ?? "" 
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -28,10 +32,14 @@ class LevelLanguageViewController: UIViewController, UITableViewDelegate, UITabl
             let selectedLevel = levels[indexPath.row]
             print("Level index \(indexForegin)")
             
-            if indexForegin < L.selectedForeignLanguages.count {
-                L.selectedForeignLanguages[indexForegin] = LanguageInfo(language: selectedForeignLanguage!, level: selectedLevel)
+        
+            // L.selectedForeignLanguages = L.selectedForeignLanguages ?? [] // []? > []
+            
+            print("현재 외국어 개수\(L.selectedForeignLanguages?.count ?? 0)")
+            if indexForegin == L.selectedForeignLanguages?.count ?? 0 {
+                L.selectedForeignLanguages?.insert(LanguageInfo(language: selectedForeignLanguage!, level: selectedLevel), at: indexForegin)
             } else {
-                L.selectedForeignLanguages.insert(LanguageInfo(language: selectedForeignLanguage!, level: selectedLevel), at: indexForegin)
+                L.selectedForeignLanguages?[indexForegin] = LanguageInfo(language: selectedForeignLanguage!, level: selectedLevel)
             }
         }
     }
@@ -46,22 +54,8 @@ class LevelLanguageViewController: UIViewController, UITableViewDelegate, UITabl
         
         let level = levels[indexPath.row].toString()
         
-        cell?.textLabel?.text = level
+        cell?.textLabel?.text = level.localized()
         
         return cell!
     }
-    
-    
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

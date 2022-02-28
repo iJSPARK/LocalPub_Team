@@ -64,7 +64,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P7x-Xx-9yz">
                                                 <rect key="frame" x="0.0" y="0.0" width="272" height="44"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="PhoneNumberBox" translatesAutoresizingMaskIntoConstraints="NO" id="BVE-RZ-jYw">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PhoneNumberBox" translatesAutoresizingMaskIntoConstraints="NO" id="BVE-RZ-jYw">
                                                         <rect key="frame" x="0.0" y="0.0" width="272" height="44"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="9ep-pG-6fw"/>
@@ -101,6 +101,7 @@
                                                     <constraint firstAttribute="width" constant="272" id="Vqz-xH-uoi"/>
                                                     <constraint firstAttribute="bottom" secondItem="wRn-yf-mzh" secondAttribute="bottom" id="fBv-R8-f0f"/>
                                                     <constraint firstAttribute="trailing" secondItem="wRn-yf-mzh" secondAttribute="trailing" constant="10" id="hU4-CS-Lsr"/>
+                                                    <constraint firstItem="BVE-RZ-jYw" firstAttribute="top" secondItem="wRn-yf-mzh" secondAttribute="top" id="unV-jG-IUu"/>
                                                     <constraint firstItem="BVE-RZ-jYw" firstAttribute="leading" secondItem="P7x-Xx-9yz" secondAttribute="leading" id="zxy-td-Eh9"/>
                                                 </constraints>
                                             </view>
@@ -176,6 +177,8 @@
                         <outlet property="btnSendPhoneVerificationCode" destination="U9Q-ca-CJI" id="3x2-cW-9ek"/>
                         <outlet property="countryCodeButton" destination="Olc-Gw-SiP" id="jib-Z7-haR"/>
                         <outlet property="navLoginPhone" destination="aq3-ue-qR9" id="UfH-Rb-eYA"/>
+                        <outlet property="phoneVerificationDescriptionLabel" destination="FHA-vT-8tG" id="G48-c0-7lf"/>
+                        <outlet property="phoneVerificationLabel" destination="woZ-uy-0kw" id="b3Z-LW-T6q"/>
                         <outlet property="txtPhoneCode" destination="NEd-vU-EfR" id="yZZ-IB-VVM"/>
                         <outlet property="txtPhoneNo" destination="wRn-yf-mzh" id="WLl-rY-SjC"/>
                     </connections>

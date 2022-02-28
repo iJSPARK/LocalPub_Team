@@ -11,6 +11,11 @@ class intorduceViewController: UIViewController, UITextViewDelegate {
 
     let myUserDefaults = UserDefaults.standard
     
+
+    @IBOutlet weak var introduceLabel: UILabel!
+    
+    @IBOutlet weak var introduceDescriptionLabel: UILabel!
+    
     @IBOutlet var navIntroduce: UINavigationItem!
 
     @IBOutlet var lblAboutMe: UILabel!
@@ -19,20 +24,26 @@ class intorduceViewController: UIViewController, UITextViewDelegate {
 
     @IBOutlet weak var btnNext: UIButton!
     
+    @IBOutlet weak var leastCharacters: UILabel!
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
         txtAboutMe.addDoneButtonOnKeyboard()
-        
-        placeholderSet(txtAboutMe)
-        
-        btnNext.isEnabled = false
        
         SetLocalized()
+        
+        UICheckJoined()
        
         txtAboutMe.text = myUserDefaults.string( forKey: UserDefault.AboutMe.toString() )
+        
+        txtAboutMe.textColor = .black
+        
+        btnNext.isEnabled = checkAllValues()
+        
+        placeholderSet(txtAboutMe)
     }
 
     func SetLocalized() {
@@ -43,10 +54,14 @@ class intorduceViewController: UIViewController, UITextViewDelegate {
         
         btnNext.setTitle( "Continue".localized(), for: .normal )
         
+        leastCharacters.text = "FailLanguagesEdit".localized()
+        
+        introduceLabel.text = "Introduce".localized()
+        introduceDescriptionLabel.text = "IntroduceDescription".localized()
+        
         txtAboutMe.layer.borderWidth = 1.0
         txtAboutMe.layer.borderColor = UIColor.gray.cgColor
         txtAboutMe.layer.cornerRadius = 10
-        
     }
     
     func placeholderSet(_ textView: UITextView) {
@@ -65,23 +80,61 @@ class intorduceViewController: UIViewController, UITextViewDelegate {
     }
     
     func textViewDidChange(_ textView: UITextView) {
+        btnNext.isEnabled = checkAllValues()
+    }
+    
+    func checkAllValues() -> Bool {
         if txtAboutMe.text.count > 30 {
-            btnNext.isEnabled = true
+            leastCharacters.textColor = .blue
+            return true
+        } else {
+            leastCharacters.textColor = .red
+            return false
         }
     }
-
+    
+    func saveData() {
+        SaveUserDefault( key: UserDefault.AboutMe.toString(), value: txtAboutMe.text! )
+    }
+    
     @IBAction func Next(_ sender: UIButton) {
         
-        SaveUserDefault( key: UserDefault.AboutMe.toString(), value: txtAboutMe.text! )
+        saveData()
         
-        if Joined() {
-            
-            dismiss(animated: true)
-            
+        self.performSegue( withIdentifier: "Picture", sender: self )
+        
+//        if Joined() {
+//
+//            dismiss(animated: true)
+//
+//        } else {
+//
+//            self.performSegue( withIdentifier: "Picture", sender: self )
+//
+//        }
+    }
+    
+    @IBAction func saveDataAferJoined(_ sender: Any) {
+        if checkAllValues() {
+            saveData()
+        AlertOK( title: "IntroduceEditSuccessed".localized(), message: "SuccessIntroduceEdit".localized(), viewController: self )
+            saveData()
         } else {
-
-            self.performSegue( withIdentifier: "Picture", sender: self )
-            
+            AlertOK( title: "IntroduceEditFailed".localized(), message: "FailLanguagesEdit".localized(), viewController: self )
+        }
+    }
+    
+    func UICheckJoined() {
+        
+        if Joined()
+        {
+            btnNext.isHidden = true
+            self.navigationItem.rightBarButtonItem = self.navIntroduce.rightBarButtonItem
+        }
+        else
+        {
+            btnNext.isHidden = false
+            self.navIntroduce.rightBarButtonItem = nil
         }
     }
 }
@@ -107,7 +160,6 @@ extension UITextView {
     
     @objc func doneButtonPressed() {
         self.resignFirstResponder()
-        
     }
 }
 

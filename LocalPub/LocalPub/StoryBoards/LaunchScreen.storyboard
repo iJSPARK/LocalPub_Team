@@ -15,31 +15,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LocalPub_basecolor" translatesAutoresizingMaskIntoConstraints="NO" id="Rnd-RR-ZUa">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LanchScreen" translatesAutoresizingMaskIntoConstraints="NO" id="V6a-kW-L1N">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BoxWhite" translatesAutoresizingMaskIntoConstraints="NO" id="vEm-Uz-bsO">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="308"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BoxWave" translatesAutoresizingMaskIntoConstraints="NO" id="BQR-FC-9rA">
-                                <rect key="frame" x="0.0" y="155" width="414" height="217"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Local Pub" translatesAutoresizingMaskIntoConstraints="NO" id="sPz-BX-NkZ">
-                                <rect key="frame" x="20" y="66" width="227" height="62"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LocalPub_logo" translatesAutoresizingMaskIntoConstraints="NO" id="fFC-pa-bbp">
-                                <rect key="frame" x="177" y="418" width="60" height="60"/>
-                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <constraints>
-                            <constraint firstItem="fFC-pa-bbp" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="hw8-8w-L5W"/>
-                            <constraint firstItem="fFC-pa-bbp" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="osP-ru-TbI"/>
+                            <constraint firstItem="V6a-kW-L1N" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Hil-Lc-t5x"/>
+                            <constraint firstItem="V6a-kW-L1N" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="i0K-am-Xtc"/>
+                            <constraint firstAttribute="bottom" secondItem="V6a-kW-L1N" secondAttribute="bottom" id="wf3-RT-fXi"/>
+                            <constraint firstItem="V6a-kW-L1N" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="zLD-gY-ys4"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -49,10 +34,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="BoxWave" width="391" height="197"/>
-        <image name="BoxWhite" width="390" height="290"/>
-        <image name="Local Pub" width="208" height="33"/>
-        <image name="LocalPub_basecolor" width="6" height="6"/>
-        <image name="LocalPub_logo" width="60" height="60"/>
+        <image name="LanchScreen" width="390" height="844"/>
     </resources>
 </document>

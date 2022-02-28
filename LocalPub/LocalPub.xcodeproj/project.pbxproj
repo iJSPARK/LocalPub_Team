@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7921087327CCD86A00E18DFF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7921087227CCD86A00E18DFF /* Images.xcassets */; };
 		796A8FD627BE0D390051B543 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796A8FD527BE0D390051B543 /* Language.swift */; };
 		7980EDB027AF82B4000578A5 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7980EDAF27AF82B4000578A5 /* Country.swift */; };
 		7980EDB627AF9F68000578A5 /* CountryCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7980EDB527AF9F68000578A5 /* CountryCodeViewController.swift */; };
@@ -18,6 +19,7 @@
 		79A6F70B27B8F1FF00D0872C /* LanguageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A6F70A27B8F1FF00D0872C /* LanguageTableViewCell.swift */; };
 		79B6276427C51E080012C396 /* LevelLanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B6276327C51E080012C396 /* LevelLanguageViewController.swift */; };
 		79B6276627C51E980012C396 /* LevelLanguage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79B6276527C51E980012C396 /* LevelLanguage.storyboard */; };
+		79C5421A27CBC8840092200B /* UserStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79C5421927CBC8840092200B /* UserStoryboard.storyboard */; };
 		84168B1327C3BE4300EF0A22 /* LoginNavStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84168B1227C3BE4300EF0A22 /* LoginNavStoryboard.storyboard */; };
 		84168B1527C3BE4E00EF0A22 /* LoginViewConrtoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84168B1427C3BE4E00EF0A22 /* LoginViewConrtoller.swift */; };
 		84168B1727C3D31500EF0A22 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84168B1627C3D31500EF0A22 /* Login.swift */; };
@@ -46,7 +48,6 @@
 		8470BDC927B3915D00D1A7C6 /* CallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470BDC827B3915D00D1A7C6 /* CallViewController.swift */; };
 		8470BDCB27B44A8B00D1A7C6 /* FindFriendStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8470BDCA27B44A8B00D1A7C6 /* FindFriendStoryboard.storyboard */; };
 		8470BDCD27B44AA500D1A7C6 /* CallListStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8470BDCC27B44AA500D1A7C6 /* CallListStoryboard.storyboard */; };
-		8470BDCF27B44AB700D1A7C6 /* UserStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8470BDCE27B44AB700D1A7C6 /* UserStoryboard.storyboard */; };
 		8470BDD927B5A13200D1A7C6 /* AgreementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470BDD827B5A13200D1A7C6 /* AgreementViewController.swift */; };
 		8470BDDB27B5A16000D1A7C6 /* AgreementStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8470BDDA27B5A16000D1A7C6 /* AgreementStoryboard.storyboard */; };
 		8470C00227B5A1B100D1A7C6 /* MyCheckBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470C00127B5A1B100D1A7C6 /* MyCheckBtn.swift */; };
@@ -75,6 +76,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7921087227CCD86A00E18DFF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		796A8FD527BE0D390051B543 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		7980EDAF27AF82B4000578A5 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		7980EDB527AF9F68000578A5 /* CountryCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCodeViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 		79A6F70A27B8F1FF00D0872C /* LanguageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageTableViewCell.swift; sourceTree = "<group>"; };
 		79B6276327C51E080012C396 /* LevelLanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelLanguageViewController.swift; sourceTree = "<group>"; };
 		79B6276527C51E980012C396 /* LevelLanguage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LevelLanguage.storyboard; sourceTree = "<group>"; };
+		79C5421927CBC8840092200B /* UserStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UserStoryboard.storyboard; sourceTree = "<group>"; };
 		84168B1227C3BE4300EF0A22 /* LoginNavStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginNavStoryboard.storyboard; sourceTree = "<group>"; };
 		84168B1427C3BE4E00EF0A22 /* LoginViewConrtoller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewConrtoller.swift; sourceTree = "<group>"; };
 		84168B1627C3D31500EF0A22 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
@@ -102,7 +105,6 @@
 		8470BDC827B3915D00D1A7C6 /* CallViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallViewController.swift; sourceTree = "<group>"; };
 		8470BDCA27B44A8B00D1A7C6 /* FindFriendStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FindFriendStoryboard.storyboard; sourceTree = "<group>"; };
 		8470BDCC27B44AA500D1A7C6 /* CallListStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CallListStoryboard.storyboard; sourceTree = "<group>"; };
-		8470BDCE27B44AB700D1A7C6 /* UserStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserStoryboard.storyboard; sourceTree = "<group>"; };
 		8470BDD827B5A13200D1A7C6 /* AgreementViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgreementViewController.swift; sourceTree = "<group>"; };
 		8470BDDA27B5A16000D1A7C6 /* AgreementStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AgreementStoryboard.storyboard; sourceTree = "<group>"; };
 		8470C00127B5A1B100D1A7C6 /* MyCheckBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCheckBtn.swift; sourceTree = "<group>"; };
@@ -186,10 +188,10 @@
 		8470BDB827B2FDAF00D1A7C6 /* StoryBoards */ = {
 			isa = PBXGroup;
 			children = (
+				79C5421927CBC8840092200B /* UserStoryboard.storyboard */,
 				8470BDB927B2FDAF00D1A7C6 /* HomeTabStoryboard.storyboard */,
 				8470BDCA27B44A8B00D1A7C6 /* FindFriendStoryboard.storyboard */,
 				8470BDCC27B44AA500D1A7C6 /* CallListStoryboard.storyboard */,
-				8470BDCE27B44AB700D1A7C6 /* UserStoryboard.storyboard */,
 			);
 			path = StoryBoards;
 			sourceTree = "<group>";
@@ -245,6 +247,7 @@
 				8470BD8827B2F8FE00D1A7C6 /* LocalPub.xcdatamodeld */,
 				84A1D5DC279C825000CF7104 /* GoogleService-Info.plist */,
 				84A1D53827980EB000CF7104 /* Localizable.strings */,
+				7921087227CCD86A00E18DFF /* Images.xcassets */,
 			);
 			path = LocalPub;
 			sourceTree = "<group>";
@@ -370,8 +373,8 @@
 			files = (
 				84A1D5C2279C65AD00CF7104 /* Main.storyboard in Resources */,
 				84E2269527A6E5C700097CF5 /* LoginPhoneStoryboard.storyboard in Resources */,
-				8470BDCF27B44AB700D1A7C6 /* UserStoryboard.storyboard in Resources */,
 				84A1D5D6279C790A00CF7104 /* LaunchScreen.storyboard in Resources */,
+				79C5421A27CBC8840092200B /* UserStoryboard.storyboard in Resources */,
 				84E2269727A6E6C100097CF5 /* LoginEmailStoryboard.storyboard in Resources */,
 				84A1D5DD279C825000CF7104 /* GoogleService-Info.plist in Resources */,
 				79A6F70927B8E09600D0872C /* SelectLanguage.storyboard in Resources */,
@@ -383,6 +386,7 @@
 				79B6276627C51E980012C396 /* LevelLanguage.storyboard in Resources */,
 				84E2268527A41D5500097CF5 /* IntroduceStoryboard.storyboard in Resources */,
 				84E2268127A41D3900097CF5 /* ProfileStoryboard.storyboard in Resources */,
+				7921087327CCD86A00E18DFF /* Images.xcassets in Resources */,
 				84A1D53627980EB000CF7104 /* Localizable.strings in Resources */,
 				84168B1327C3BE4300EF0A22 /* LoginNavStoryboard.storyboard in Resources */,
 				84E2268327A41D4700097CF5 /* LanguageStoryboard.storyboard in Resources */,
@@ -612,11 +616,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 478WSZA2DC;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LocalPub/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Test Camera";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Test Photo Library";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -641,11 +649,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 478WSZA2DC;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LocalPub/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Test Camera";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Test Photo Library";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

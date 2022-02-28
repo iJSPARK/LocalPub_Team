@@ -8,11 +8,11 @@
 
 "CurrentLanguage"= "현재 언어";
 
-"Agreement" = "약관 동의 (Agreement)";
-"ProfileInformation" = "개인 정보 (Profile Information)";
-"SelectLanguages" = "언어 선택 (Select Language)";
-"SelfIntroduce" = "자기 소개 (Self Introduce)";
-"GetPicture" = "사진 가져오기 (Get Picture)";
+"Agreement" = "약관 동의";
+"ProfileInformation" = "개인 정보";
+"SelectLanguages" = "언어 선택";
+"SelfIntroduce" = "자기 소개";
+"GetPicture" = "사진 가져오기";
 
 "Verification" = "승인";
 "Join" = "가입";
@@ -108,8 +108,70 @@
 "CameraError" = "카메라 실행 오류!";
 "CameraRunError" = "카메라를 실행할 수 없습니다.";
 
+
 "AA" = "전체동의";
 "TC" = "약관1 이용약관(필수사항)";
 "PTC" = "약관2 개인정보취급방침(필수사항)";
 "TL" = "약관3 위치기반 이용약관(선택사항)";
 "MA" = "약관4 마케팅 동의(선택사항)";
+
+"User" = "사용자 정보";
+
+"AA" = "모두 Accept all";
+"TC" = "약관1 Terms and conditions (required)";
+"PTC" = "약관2 Privacy terms and conditions(required)";
+"TL" = "약관3 Terms and Conditions of Location-Based
+Services (optional)";
+"MA" = "약관4 Marketing Agreement (optional)";
+
+"ProfileEditSuccess" = "프로필 편집 성공";
+"SuccessProfileEdit" = "프로필 편집이 완료되었습니다.";
+
+"ProfileEditFail" = "프로필 편집 실패";
+"FailProfileEdit" = "프로필 정보를 모두 기입하세요";
+
+
+"LanguagesEditSuccess" = "언어 편집 성공";
+"SueccesLanguagesEdit" = "언어 편집이 완료되었습니다.";
+
+"LanguagesEditFail" = "언어 편집 실패";
+"FailLanguagesEdit" = "모국어와 외국어를 입력해주세요.";
+
+"IntroduceEditSuccessed" = "자기소개 편집 성공";
+"SuccessIntroduceEdit" = "자기소개 편집이 완료되었습니다.";
+
+"IntroduceEditFailed" = "자기소개 편집 실패";
+"FailLanguagesEdit" = "최소 30자 이상 입력하세요";
+
+"PhoneVerification" = "전화번호 인증";
+"PhoneVerificationDescription" = "걱정마세요! 전화번호는 안전하게 보관되고 절대 공유 되지 않습니다.";
+
+"ProfileInformation" = "프로필 정보";
+"ProfileInformationDescription" = "친구들에게 보여질 중요한 내용입니다.";
+
+"SelectLanguages" = "언어 선택";
+"SelectLangagesDescription" = "당신이 할수 있는 언어로 상대방과 매칭할 수 있습니다.";
+
+"Introduce" = "친구들에게 나에 대해서 더 말해볼까요?";
+"IntroduceDescription" = "친구에게 신뢰를 주기 위해 누구인지, 무엇을 하고 있는지 등등 설명해주세요!";
+
+"ChooseNatvieLanguages" = "모국어를 선택하세요.";
+"ChooseForeignLanguages"= "대화 할수 있는 외국어를 선택하세요";
+
+"AddLanguage" = "언어 추가";
+
+"English" = "English";
+"Korean" = "한국어";
+"Japanese" = "日本語";
+"Russian" = "Pусский";
+"Chinese" = "中国人";
+"Ukraine" = "українська мова";
+"French" = "français";
+"German" = "Destsch";
+"Italian" = "Italian";
+"Spanish" = "Español";
+
+"Fluent" = "유창함";
+"Good" = "잘함";
+"Soso" = "보통";
+"Little" = "초보";

@@ -114,3 +114,57 @@
 "TL" = "Terms and Conditions of Location-Based
 Services (optional)";
 "MA" = "Marketing Agreement (optional)";
+
+"ProfileEditSuccess" = "Profile edit successed";
+"SuccessProfileEdit" = "Profile edit completed";
+
+"ProfileEditFail" = "Profile edit failed";
+"FailProfileEdit" = "Input all profile Information";
+
+"LanguagesEditSuccess" = "Languages edit successed";
+"SueccesLanguagesEdit" = "Languages edit completed";
+
+"LanguagesEditFail" = "Languages edit failed";
+"FailLanguagesEdit" = "Input native language and foreign language";
+
+"IntroduceEditSuccessed" = "Self introduce edit successed";
+"SuccessIntroduceEdit" = "Self introduce edit completed";
+
+"IntroduceEditFailed" = "Self introduce edit failed";
+"FailLanguagesEdit" = "Write at least 30 characters";
+
+"PhoneVerification" = "Phone Verification";
+"PhoneVerificationDescription" = "Don’t worry! Your phone number is safely stored and will never be shared
+";
+
+"ProfileInformation" = "Profile Information";
+"ProfileInformationDescription" = "It’s important information for your friends to know you";
+
+"SelectLanguages" = "Select Languages";
+"SelectLangagesDescription" = "You will be matched with the other person in your language.";
+
+"Introduce" = "Will you tell your friend more?";
+"IntroduceDescription" = "This page gives a lot of trust to your friends, so be detailed  about who you are, what are you doing, etc.
+";
+
+
+"ChooseNatvieLanguages" = "Choose your native languages";
+"ChooseForeignLanguages"= "Choose a foreign languages you can speak";
+
+"AddLanguage" = "Add Language";
+
+"English" = "English";
+"Korean" = "한국어";
+"Japanese" = "日本語";
+"Russian" = "Pусский";
+"Chinese" = "中国人";
+"Ukraine" = "українська мова";
+"French" = "français";
+"German" = "Destsch";
+"Italian" = "Italian";
+"Spanish" = "Español";
+
+"Fluent" = "Fluent";
+"Good" = "Good";
+"Soso" = "Soso";
+"Little" = "Little";

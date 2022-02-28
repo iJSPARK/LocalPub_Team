@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Level Language View Controller-->
+        <!--Title-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="levelLanguage" id="Y6W-OH-hqX" customClass="LevelLanguageViewController" customModule="LocalPub" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="levelLanguage" hidesBottomBarWhenPushed="YES" id="Y6W-OH-hqX" customClass="LevelLanguageViewController" customModule="LocalPub" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -43,7 +43,9 @@
                             <constraint firstItem="bd2-hZ-5WZ" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="Qsj-JM-JO5"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="iq9-Jj-FaL"/>
                     <connections>
+                        <outlet property="LevelLabel" destination="iq9-Jj-FaL" id="Dfx-ui-ryh"/>
                         <outlet property="levelTableView" destination="bd2-hZ-5WZ" id="7tZ-jm-8M3"/>
                     </connections>
                 </viewController>

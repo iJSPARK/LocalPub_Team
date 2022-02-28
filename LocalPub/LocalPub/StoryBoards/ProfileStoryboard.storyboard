@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Profile Information-->
+        <!--Profile View Controller-->
         <scene sceneID="mJg-Fs-qPm">
             <objects>
-                <viewController storyboardIdentifier="profileController" id="f14-Ci-hzE" customClass="profileViewController" customModule="LocalPub" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="profileController" hidesBottomBarWhenPushed="YES" id="f14-Ci-hzE" customClass="profileViewController" customModule="LocalPub" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oKw-jF-AXG">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -139,7 +139,7 @@
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <segue destination="2kB-Hz-jWn" kind="presentation" modalPresentationStyle="fullScreen" id="t9L-Cf-qmX"/>
+                                                    <segue destination="2kB-Hz-jWn" kind="presentation" modalPresentationStyle="pageSheet" id="t9L-Cf-qmX"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -201,12 +201,20 @@
                             <constraint firstItem="dzM-JG-TQv" firstAttribute="leading" secondItem="qeU-GO-Qn6" secondAttribute="leading" constant="16" id="vle-qQ-JNi"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Profile Information" id="h4R-2C-LKO" userLabel="I"/>
+                    <navigationItem key="navigationItem" id="h4R-2C-LKO" userLabel="Nav Profile">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="70X-Or-K5H">
+                            <connections>
+                                <action selector="saveDataAferJoined:" destination="f14-Ci-hzE" id="sWf-fb-ONX"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="birthDateTextField" destination="wGp-Nx-EXf" id="UYd-Ux-ekg"/>
                         <outlet property="btnNext" destination="dzM-JG-TQv" id="z8j-dR-BXG"/>
                         <outlet property="nationalityButton" destination="hB0-ju-Ec2" id="C0j-Xm-uiF"/>
                         <outlet property="navProfile" destination="h4R-2C-LKO" id="Jqj-sQ-StF"/>
+                        <outlet property="profileInfomationDescriptionLabel" destination="hHQ-S9-zV1" id="f9f-kj-9d5"/>
+                        <outlet property="profileInformationLabel" destination="4Xk-9M-C4Q" id="Gf7-ff-hT6"/>
                         <outlet property="scGender" destination="lOp-K3-6Hj" id="40N-dt-kII"/>
                         <outlet property="txtName" destination="VpP-Hg-9dm" id="rPE-al-5HO"/>
                         <outlet property="txtResidence" destination="Fz1-5z-3iB" id="C8i-fT-boh"/>

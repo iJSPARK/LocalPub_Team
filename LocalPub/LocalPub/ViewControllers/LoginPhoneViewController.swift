@@ -16,6 +16,10 @@ class loginPhoneViewController: UIViewController {
     
     var selectedCountryCode = countryInfo[0]
     
+    @IBOutlet weak var phoneVerificationLabel: UILabel!
+    
+    @IBOutlet weak var phoneVerificationDescriptionLabel: UILabel!
+    
     @IBOutlet var navLoginPhone: UINavigationItem!
     
     @IBOutlet var txtPhoneNo: UITextField! 
@@ -66,6 +70,10 @@ class loginPhoneViewController: UIViewController {
         txtPhoneNo.placeholder = "InputPhone".localized()
         txtPhoneCode.placeholder = "InputVerificationCode".localized()
         btnPhoneVerification.setTitle( "Verification".localized(), for: .normal )
+        
+        phoneVerificationLabel.text = "PhoneVerification".localized()
+        
+        phoneVerificationDescriptionLabel.text = "PhoneVerificationDescription".localized()
     }
     
     func LogIn() {
