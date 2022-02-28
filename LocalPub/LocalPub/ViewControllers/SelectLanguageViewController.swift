@@ -27,6 +27,14 @@ class SelectLanguageViewController: UIViewController, UITableViewDelegate, UITab
         // Do any additional setup after loading the view.
     }
     
+    func SetLocalized() {
+        if section == 0 {
+            self.navigationItem.title = "NativeLanguage".localized()
+        } else {
+            self.navigationItem.title = "ForeignLanguage".localized()
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let indexPath = self.selectLanguageTableView.indexPathForSelectedRow {
             
@@ -51,14 +59,6 @@ class SelectLanguageViewController: UIViewController, UITableViewDelegate, UITab
                     print("Language 선택 인덱스 \(indexForeign)")
                 }
             }
-        }
-    }
-    
-    func SetLocalized() {
-        if section == 0 {
-            self.navigationItem.title = "NativeLanguage".localized()
-        } else {
-            self.navigationItem.title = "ForeignLanguage".localized()
         }
     }
     

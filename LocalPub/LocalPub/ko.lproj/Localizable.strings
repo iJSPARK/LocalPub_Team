@@ -91,6 +91,8 @@
 "Nationality" = "국적";
 "SelectLanguage" = "언어 선택";
 
+"UserPicture" = "사용자 사진";
+
 "UploadPicture" = "사진을 업로드해 주세요";
 "UploadPictureDescription" = "당신의 사진은 지정하지 않은 다른 사용자에게 절대 보여지지 않습니다.";
 "SecurityCalls" = "사진은 안전한 통화를 위한 것입니다.";
@@ -116,13 +118,6 @@
 "MA" = "약관4 마케팅 동의(선택사항)";
 
 "User" = "사용자 정보";
-
-"AA" = "모두 Accept all";
-"TC" = "약관1 Terms and conditions (required)";
-"PTC" = "약관2 Privacy terms and conditions(required)";
-"TL" = "약관3 Terms and Conditions of Location-Based
-Services (optional)";
-"MA" = "약관4 Marketing Agreement (optional)";
 
 "ProfileEditSuccess" = "프로필 편집 성공";
 "SuccessProfileEdit" = "프로필 편집이 완료되었습니다.";

@@ -52,8 +52,6 @@ class intorduceViewController: UIViewController, UITextViewDelegate {
         
         navIntroduce.title = "SelfIntroduce".localized()
         
-        btnNext.setTitle( "Continue".localized(), for: .normal )
-        
         leastCharacters.text = "FailLanguagesEdit".localized()
         
         introduceLabel.text = "Introduce".localized()
@@ -62,6 +60,8 @@ class intorduceViewController: UIViewController, UITextViewDelegate {
         txtAboutMe.layer.borderWidth = 1.0
         txtAboutMe.layer.borderColor = UIColor.gray.cgColor
         txtAboutMe.layer.cornerRadius = 10
+        
+        btnNext.setTitle( "Continue".localized(), for: .normal )
     }
     
     func placeholderSet(_ textView: UITextView) {
@@ -100,7 +100,6 @@ class intorduceViewController: UIViewController, UITextViewDelegate {
     @IBAction func Next(_ sender: UIButton) {
         
         saveData()
-        
         self.performSegue( withIdentifier: "Picture", sender: self )
         
 //        if Joined() {

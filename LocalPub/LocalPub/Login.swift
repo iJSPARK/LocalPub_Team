@@ -9,7 +9,6 @@ import Foundation
 import UIKit
 import Firebase
 
-
 func LoggedInCheck() {
 
     if let user = Auth.auth().currentUser {
@@ -27,23 +26,19 @@ func LoggedInCheck() {
     }
 }
 
-    
 func Login() {
 
     setRootViewController( "LoginNavStoryboard", "loginNavController" )
-    
 }
 
 func GoHome() {
 
     setRootViewController( "HomeTabStoryboard", "homeTabController" )
-    
 }
 
 func setRootViewController(_ storyboardName: String, _ identifier: String ) {
     
     (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.setRootViewController( storyboardName, identifier )
-
 }
 
 func LogOut() {

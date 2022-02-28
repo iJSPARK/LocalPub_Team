@@ -40,6 +40,16 @@ class languageViewController: UIViewController, UITableViewDelegate, UITableView
         selectedForeignLanguages = changedForeignFromDB()
     }
     
+    func SetLocalized() {
+        
+        self.navigationItem.title = "SelectLanguage".localized()
+        
+        selectLanguagesLabel.text = "SelectLanguages".localized()
+        selectLanguagesDescriptionLabel.text = "SelectLangagesDescription".localized()
+        
+        btnNext.setTitle( "Continue".localized(), for: .normal )
+    }
+    
     func changedNativeFromDB() -> LanguageInfo? {
         
         let decoder = JSONDecoder()
@@ -112,12 +122,6 @@ class languageViewController: UIViewController, UITableViewDelegate, UITableView
         default:
             return 0
         }
-    }
-    
-    func SetLocalized() {
-        self.navigationItem.title = "SelectLanguage".localized()
-        selectLanguagesLabel.text = "SelectLanguages".localized()
-        selectLanguagesDescriptionLabel.text = "SelectLangagesDescription".localized()
     }
     
     func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
@@ -231,8 +235,8 @@ class languageViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     @IBAction func Next(_ sender: Any) {
-        saveData()
         
+        saveData()
         self.performSegue( withIdentifier: "Introduce", sender: self )
         
 //        if Joined() {
@@ -244,6 +248,7 @@ class languageViewController: UIViewController, UITableViewDelegate, UITableView
 //            self.performSegue( withIdentifier: "Introduce", sender: self )
 //
 //        }
+        
     }
     
     @IBAction func saveDataAferJoined(_ sender: Any) {

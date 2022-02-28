@@ -9,9 +9,6 @@ import UIKit
 
 class findFriendViewController: UIViewController {
     
-    @IBOutlet var lblCurrentLanguage: UILabel!
-    @IBOutlet var btnLogOut: UIButton!
-    
     @IBOutlet var btnFindFriend: UIButton!
     
     override func viewDidLoad() {
@@ -22,38 +19,13 @@ class findFriendViewController: UIViewController {
     }
     
     func SetLocalized() {
-
-        let locale = NSLocale.autoupdatingCurrent
-        let languageCode = locale.languageCode!
-        let language = locale.localizedString(forLanguageCode: languageCode)!
-        let currentLanguage = String( format: NSLocalizedString( "CurrentLanguage", comment: "Current Language") )
-        
-        lblCurrentLanguage.text = " \(currentLanguage) : \(language)(\(languageCode))"
-        
-        btnLogOut.setTitle( "Logout".localized(), for: .normal )
         
         btnFindFriend.setTitle( "FindFriend".localized(), for: .normal )
-        
-    }
-        
-    @IBAction func tabLogOut(_ sender: UIButton) {
-        
-        LogOut()
-        
     }
     
     @IBAction func GetCall(_ sender: UIButton) {
         
         MakeUserCall()
-        
-    }
-    
-    @IBAction func unwindToHome(_ segue: UIStoryboardSegue ) {
-
-//        if let sourceVC = segue.source as? CallViewController {
-//            print("callName: \(sourceVC.callName!)")
-//        }
-        
     }
     
 }
