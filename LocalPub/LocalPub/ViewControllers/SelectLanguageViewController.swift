@@ -56,9 +56,9 @@ class SelectLanguageViewController: UIViewController, UITableViewDelegate, UITab
     
     func SetLocalized() {
         if section == 0 {
-            self.navigationItem.title = "Native Language".localized()
+            self.navigationItem.title = "NativeLanguage".localized()
         } else {
-            self.navigationItem.title = "Foreign Language".localized()
+            self.navigationItem.title = "ForeignLanguage".localized()
         }
     }
     

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7921087327CCD86A00E18DFF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7921087227CCD86A00E18DFF /* Images.xcassets */; };
 		796A8FD627BE0D390051B543 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796A8FD527BE0D390051B543 /* Language.swift */; };
 		7980EDB027AF82B4000578A5 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7980EDAF27AF82B4000578A5 /* Country.swift */; };
 		7980EDB627AF9F68000578A5 /* CountryCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7980EDB527AF9F68000578A5 /* CountryCodeViewController.swift */; };
@@ -75,6 +76,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7921087227CCD86A00E18DFF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		796A8FD527BE0D390051B543 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		7980EDAF27AF82B4000578A5 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		7980EDB527AF9F68000578A5 /* CountryCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCodeViewController.swift; sourceTree = "<group>"; };
@@ -245,6 +247,7 @@
 				8470BD8827B2F8FE00D1A7C6 /* LocalPub.xcdatamodeld */,
 				84A1D5DC279C825000CF7104 /* GoogleService-Info.plist */,
 				84A1D53827980EB000CF7104 /* Localizable.strings */,
+				7921087227CCD86A00E18DFF /* Images.xcassets */,
 			);
 			path = LocalPub;
 			sourceTree = "<group>";
@@ -383,6 +386,7 @@
 				79B6276627C51E980012C396 /* LevelLanguage.storyboard in Resources */,
 				84E2268527A41D5500097CF5 /* IntroduceStoryboard.storyboard in Resources */,
 				84E2268127A41D3900097CF5 /* ProfileStoryboard.storyboard in Resources */,
+				7921087327CCD86A00E18DFF /* Images.xcassets in Resources */,
 				84A1D53627980EB000CF7104 /* Localizable.strings in Resources */,
 				84168B1327C3BE4300EF0A22 /* LoginNavStoryboard.storyboard in Resources */,
 				84E2268327A41D4700097CF5 /* LanguageStoryboard.storyboard in Resources */,
@@ -612,11 +616,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 478WSZA2DC;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LocalPub/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Test Camera";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Test Photo Library";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -641,11 +649,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 478WSZA2DC;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LocalPub/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Test Camera";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Test Photo Library";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

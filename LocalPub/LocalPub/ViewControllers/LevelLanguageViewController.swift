@@ -17,10 +17,14 @@ class LevelLanguageViewController: UIViewController, UITableViewDelegate, UITabl
 
     @IBOutlet weak var levelTableView: UITableView!
     
+    @IBOutlet weak var LevelLabel: UINavigationItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         levelTableView.delegate = self
         levelTableView.dataSource = self
+        
+        LevelLabel.title = selectedForeignLanguage?.toString().localized() ?? "" 
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
