@@ -219,6 +219,7 @@
                         <outlet property="txtName" destination="VpP-Hg-9dm" id="rPE-al-5HO"/>
                         <outlet property="txtResidence" destination="Fz1-5z-3iB" id="C8i-fT-boh"/>
                         <segue destination="WQD-L4-Vqq" kind="show" identifier="Language" id="VNa-3W-ssO"/>
+                        <segue destination="WSH-0E-RwT" kind="show" identifier="Introduce" id="jrn-eF-UQ2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t44-gN-K5p" sceneMemberID="firstResponder"/>
@@ -242,6 +243,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CuV-oG-teB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3701" y="476"/>
+        </scene>
+        <!--introduceController-->
+        <scene sceneID="ChZ-o6-u8k">
+            <objects>
+                <viewControllerPlaceholder storyboardName="IntroduceStoryboard" referencedIdentifier="introduceController" id="WSH-0E-RwT" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="dMo-xQ-fmV"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UP9-vL-hjL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3699" y="608"/>
         </scene>
     </scenes>
     <resources>

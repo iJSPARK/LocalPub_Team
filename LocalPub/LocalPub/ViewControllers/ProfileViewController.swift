@@ -257,7 +257,8 @@ class profileViewController: UIViewController, UITextFieldDelegate {
     @IBAction func Next(_ sender: UIButton) {
 
         saveData()
-        self.performSegue( withIdentifier: "Language", sender: self )
+        //self.performSegue( withIdentifier: "Language", sender: self )
+        self.performSegue( withIdentifier: "Introduce", sender: self )
         
 //        if Joined() {
 //

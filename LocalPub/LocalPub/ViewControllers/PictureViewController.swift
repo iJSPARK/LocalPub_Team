@@ -191,7 +191,7 @@ class pictureViewController: UIViewController {
     func checkNextEnable() {
 
         btnNext.isEnabled = ( imageMainView.image != nil  && imageSecondaryView.image != nil )
-        
+        print( "checkNextEnable")
     }
     
     func saveImage(_ isMainImage: Bool ) {
@@ -223,17 +223,17 @@ class pictureViewController: UIViewController {
     }
     
     @IBAction func didTapMainImageView(_ sender: UITapGestureRecognizer) {
+        
         print("did tap Main image view", sender)
         isMainImage = true
         GetUserImage()
-        checkNextEnable()
     }
     
     @IBAction func didTapSecondaryImageView(_ sender: UITapGestureRecognizer) {
+        
         print("did tap Secondary image view", sender)
         isMainImage = false
         GetUserImage()
-        checkNextEnable()
     }
     
     @IBAction func Next(_ sender: UIButton) {
@@ -285,6 +285,8 @@ extension pictureViewController : UIImagePickerControllerDelegate, UINavigationC
             } else {
                 self.imageSecondaryView.image = userImage
             }
+            
+            checkNextEnable()
  
         }
         

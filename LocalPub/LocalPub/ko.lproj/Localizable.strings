@@ -31,6 +31,7 @@
 "PW" = "암호";
 "PhoneNo" = "휴대폰";
 "PhoneCode" = "승인번호";
+"Send" = "전송";
 
 "Name" = "이름";
 "Gender" = "성별";

@@ -17,7 +17,15 @@ func LoggedInCheck() {
         
         print( "Aleady Logined! - eMail:\(user.email ?? "") / Phone:  \(user.phoneNumber ?? "")")
         
-        GoHome()
+        if Joined() {
+            
+            GoHome()
+            
+        } else {
+            
+            Login()
+            
+        }
         
     } else {
         
