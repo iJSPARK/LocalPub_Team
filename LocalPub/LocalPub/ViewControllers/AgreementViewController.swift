@@ -92,7 +92,8 @@ class agreementViewController: UIViewController {
             //self.navigationController?.popViewController( animated: true )
             
             // Present 사용시
-            dismiss( animated: true )
+            //dismiss( animated: true )
+            GoHome()
             
         } else {
 

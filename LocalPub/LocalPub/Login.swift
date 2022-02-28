@@ -15,7 +15,7 @@ func LoggedInCheck() {
         
         Auth.auth().languageCode = NSLocale.autoupdatingCurrent.languageCode!
         
-        print( "Aleady Logined! - eMail:\(user.email ?? "") / Phone:  \(user.phoneNumber ?? "")")
+        print( "Aleady connected! - eMail:\(user.email ?? "") / Phone:  \(user.phoneNumber ?? "")")
         
         if Joined() {
             
