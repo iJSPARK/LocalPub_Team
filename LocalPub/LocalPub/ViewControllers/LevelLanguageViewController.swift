@@ -32,14 +32,12 @@ class LevelLanguageViewController: UIViewController, UITableViewDelegate, UITabl
             let selectedLevel = levels[indexPath.row]
             print("Level index \(indexForegin)")
             
-//             L.selectedForeignLanguages = L.selectedForeignLanguages ?? [] // []? > []
             if L.selectedForeignLanguages == nil {
                 L.selectedForeignLanguages = []
             }
+            //             L.selectedForeignLanguages = L.selectedForeignLanguages ?? [] // []? > []
             
             if indexForegin == L.selectedForeignLanguages?.count ?? 0 {
-                print("들어옴")
-                // L.selectedForeignLanguages = []
                 L.selectedForeignLanguages!.insert(LanguageInfo(language: selectedForeignLanguage!, level: selectedLevel), at: indexForegin)
             } else {
                 L.selectedForeignLanguages?[indexForegin] = LanguageInfo(language: selectedForeignLanguage!, level: selectedLevel)
