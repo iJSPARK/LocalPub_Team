@@ -92,18 +92,13 @@ class agreementViewController: UIViewController {
             //self.navigationController?.popViewController( animated: true )
             
             // Present 사용시
-            dismiss( animated: true )
+            //dismiss( animated: true )
+            GoHome()
             
         } else {
 
             // Segue 사용시
             self.performSegue( withIdentifier: "Profile", sender: self )
-            
-            // Navigation Controller 사용시 - Push
-//            let storyboard = UIStoryboard( name: "PictureStoryboard", bundle: nil )
-//            if let vc = storyboard.instantiateViewController( identifier: "pictureController" ) as? pictureViewController {
-//                self.navigationController?.pushViewController( vc, animated: true )
-//            }
             
         }
     }

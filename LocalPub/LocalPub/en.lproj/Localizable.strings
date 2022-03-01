@@ -30,6 +30,7 @@
 "PW" = "PW";
 "PhoneNo" = "Cell Phone No.";
 "PhoneCode" = "Code";
+"Send" = "Send";
 
 "Name" = "Name";
 "Gender" = "Gender";
@@ -88,6 +89,8 @@
 "Continue" = "Continue";
 "Nationality" = "Nationality";
 
+"UserPicture" = "User Picture";
+
 "UploadPicture" = "Please upload your photos";
 "UploadPictureDescription" = "Your photos will never be shown to unspecified random users";
 "SecurityCalls" = "Picture for safe calls";
@@ -113,6 +116,8 @@
 "TL" = "Terms and Conditions of Location-Based
 Services (optional)";
 "MA" = "Marketing Agreement (optional)";
+
+"User" = "User Information";
 
 "ProfileEditSuccess" = "Profile edit successed";
 "SuccessProfileEdit" = "Profile edit completed";

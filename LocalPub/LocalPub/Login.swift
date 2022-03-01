@@ -9,16 +9,23 @@ import Foundation
 import UIKit
 import Firebase
 
-
 func LoggedInCheck() {
 
     if let user = Auth.auth().currentUser {
         
         Auth.auth().languageCode = NSLocale.autoupdatingCurrent.languageCode!
         
-        print( "Aleady Logined! - eMail:\(user.email ?? "") / Phone:  \(user.phoneNumber ?? "")")
+        print( "Aleady connected! - eMail:\(user.email ?? "") / Phone:  \(user.phoneNumber ?? "")")
         
-        GoHome()
+        if Joined() {
+            
+            GoHome()
+            
+        } else {
+            
+            Login()
+            
+        }
         
     } else {
         
@@ -27,23 +34,19 @@ func LoggedInCheck() {
     }
 }
 
-    
 func Login() {
 
     setRootViewController( "LoginNavStoryboard", "loginNavController" )
-    
 }
 
 func GoHome() {
 
     setRootViewController( "HomeTabStoryboard", "homeTabController" )
-    
 }
 
 func setRootViewController(_ storyboardName: String, _ identifier: String ) {
     
     (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.setRootViewController( storyboardName, identifier )
-
 }
 
 func LogOut() {

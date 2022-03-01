@@ -64,7 +64,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2U5-Vy-7Jw">
                                                 <rect key="frame" x="0.0" y="0.0" width="272" height="44"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="PhoneNumberBox" translatesAutoresizingMaskIntoConstraints="NO" id="yEy-3S-TPn">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PhoneNumberBox" translatesAutoresizingMaskIntoConstraints="NO" id="yEy-3S-TPn">
                                                         <rect key="frame" x="0.0" y="0.0" width="272" height="44"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="HMg-Z5-i7R"/>
@@ -95,6 +95,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="272" id="5LO-Ky-zsr"/>
                                                     <constraint firstItem="yEy-3S-TPn" firstAttribute="leading" secondItem="2U5-Vy-7Jw" secondAttribute="leading" id="6ab-nX-oXs"/>
+                                                    <constraint firstItem="yEy-3S-TPn" firstAttribute="top" secondItem="ys3-az-ebY" secondAttribute="top" id="8tM-CW-pkY"/>
                                                     <constraint firstAttribute="trailing" secondItem="2Yb-ie-l7B" secondAttribute="trailing" constant="10" id="CTu-xq-K2Y"/>
                                                     <constraint firstAttribute="bottom" secondItem="ys3-az-ebY" secondAttribute="bottom" id="Mly-cm-pc3"/>
                                                     <constraint firstItem="ys3-az-ebY" firstAttribute="leading" secondItem="2U5-Vy-7Jw" secondAttribute="leading" id="YW8-db-kkI"/>
@@ -176,6 +177,8 @@
                         <outlet property="btnSendPhoneVerificationCode" destination="R8D-0n-kNV" id="HDr-fg-sdx"/>
                         <outlet property="countryCodeButton" destination="ys3-az-ebY" id="Yqt-WL-Uig"/>
                         <outlet property="navLoginPhone" destination="yRp-ru-3pq" id="SAL-vj-H56"/>
+                        <outlet property="phoneVerificationDescriptionLabel" destination="zpj-ds-DRl" id="ELg-86-tU5"/>
+                        <outlet property="phoneVerificationLabel" destination="bS7-Ps-N8m" id="D7c-aY-TJI"/>
                         <outlet property="txtPhoneCode" destination="Ly0-5k-mzG" id="KCc-N4-w5f"/>
                         <outlet property="txtPhoneNo" destination="2Yb-ie-l7B" id="TaA-vM-Y0L"/>
                         <segue destination="0tQ-0n-Qnc" kind="show" identifier="Agreement" id="BoH-YY-wBo"/>

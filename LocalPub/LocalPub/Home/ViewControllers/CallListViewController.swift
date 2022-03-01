@@ -119,12 +119,12 @@ class CallListViewController: UIViewController {
 
 //               callList.forEach { call in
 //                   print( call.callUID! )
-//                    print( call.callDate! )
+//                   print( call.callDate! )
 //                   print( call.callName! )
-//                    print( call.callGender )
-//                    print( call.callTime )
-//                    print( call.callImage! )
-//                    print( "\n" )
+//                   print( call.callGender )
+//                   print( call.callTime )
+//                   print( call.callImage! )
+//                   print( "\n" )
 //                }
 
                 callListTable.reloadData()

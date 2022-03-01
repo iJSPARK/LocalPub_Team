@@ -67,12 +67,11 @@ class profileViewController: UIViewController, UITextFieldDelegate {
     }
     
     func SetLocalized() {
+        
         navProfile.title = "ProfileInformation".localized()
         birthDateTextField.placeholder = "Birth".localized()
 
         txtName.placeholder = "InputName".localized()
-        
-        btnNext.setTitle( "Continue".localized(), for: .normal )
         
         nationalityButton.setTitle("Nationality".localized(), for: .normal)
         nationalityButton.setTitleColor(.opaqueSeparator, for: .normal)
@@ -86,6 +85,8 @@ class profileViewController: UIViewController, UITextFieldDelegate {
         profileInformationLabel.text = "ProfileInformation".localized()
         
         profileInfomationDescriptionLabel.text = "ProfileInformationDescription".localized()
+        
+        btnNext.setTitle( "Continue".localized(), for: .normal )
     }
     
     func nationalityExpression() -> String {
@@ -259,7 +260,7 @@ class profileViewController: UIViewController, UITextFieldDelegate {
         self.performSegue( withIdentifier: "Language", sender: self )
         
 //        if Joined() {
-//            
+//
 //            dismiss(animated: true)
 //
 //        } else {

@@ -27,6 +27,9 @@ class loginViewController: UIViewController {
     @IBOutlet var btnPhoneVerification: UIButton!
     @IBOutlet weak var countryCodeButton: UIButton!
     
+    @IBOutlet weak var phoneVerificationLabel: UILabel!
+    @IBOutlet weak var phoneVerificationDescriptionLabel: UILabel!
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -70,7 +73,12 @@ class loginViewController: UIViewController {
         
         txtPhoneNo.placeholder = "InputPhone".localized()
         txtPhoneCode.placeholder = "InputVerificationCode".localized()
+
+        btnSendPhoneVerificationCode.setTitle( "Send".localized(), for: .normal )
         btnPhoneVerification.setTitle( "Verification".localized(), for: .normal )
+        
+        phoneVerificationLabel.text = "PhoneVerification".localized()
+        phoneVerificationDescriptionLabel.text = "PhoneVerificationDescription".localized()
     
     }
     

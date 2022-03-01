@@ -188,10 +188,10 @@
 		8470BDB827B2FDAF00D1A7C6 /* StoryBoards */ = {
 			isa = PBXGroup;
 			children = (
-				79C5421927CBC8840092200B /* UserStoryboard.storyboard */,
 				8470BDB927B2FDAF00D1A7C6 /* HomeTabStoryboard.storyboard */,
 				8470BDCA27B44A8B00D1A7C6 /* FindFriendStoryboard.storyboard */,
 				8470BDCC27B44AA500D1A7C6 /* CallListStoryboard.storyboard */,
+				79C5421927CBC8840092200B /* UserStoryboard.storyboard */,
 			);
 			path = StoryBoards;
 			sourceTree = "<group>";

@@ -18,6 +18,8 @@ class pictureViewController: UIViewController {
     
     private var isMainImage: Bool = true
     
+    @IBOutlet var navPicture: UINavigationItem!
+    
     @IBOutlet var stackSecurity: UIStackView!
    
     @IBOutlet var imageMainView: UIImageView!
@@ -126,6 +128,8 @@ class pictureViewController: UIViewController {
     // setLocalized
     func SetLocalized() {
         
+        navPicture.title = "UserPicture".localized()
+        
         lblUploadPicture.text = "UploadPicture".localized()
         lblUploadPictureDescription.text = "UploadPictureDescription".localized()
         lblSecurityCalls.text = "SecurityCalls".localized()
@@ -134,7 +138,7 @@ class pictureViewController: UIViewController {
         lblMainPicture.text = "MainPicture".localized()
         lblSecondaryPicture.text = "SecondaryPicture".localized()
         
-        btnNext.setTitle( "Continue".localized(), for: .normal )
+        btnNext.setTitle( ( Joined() ? "Save".localized() : "Continue".localized() ), for: .normal )
 
     }
     
@@ -187,7 +191,7 @@ class pictureViewController: UIViewController {
     func checkNextEnable() {
     
         btnNext.isEnabled = ( imageMainView.image != nil  && imageSecondaryView.image != nil )
-        
+        print( "checkNextEnable")
     }
     
     func saveImage(_ isMainImage: Bool ) {
@@ -219,17 +223,17 @@ class pictureViewController: UIViewController {
     }
     
     @IBAction func didTapMainImageView(_ sender: UITapGestureRecognizer) {
+        
         print("did tap Main image view", sender)
         isMainImage = true
         GetUserImage()
-        checkNextEnable()
     }
     
     @IBAction func didTapSecondaryImageView(_ sender: UITapGestureRecognizer) {
+        
         print("did tap Secondary image view", sender)
         isMainImage = false
         GetUserImage()
-        checkNextEnable()
     }
     
     @IBAction func Next(_ sender: UIButton) {
@@ -238,16 +242,12 @@ class pictureViewController: UIViewController {
         saveImage(false)
         
         if Joined() {
-            
-            // Navigation Controller 사용시 - Pop
-            //self.navigationController?.popViewController( animated: true )
-            
-            // Present 사용시
-            dismiss( animated: true )
+    
+            //dismiss( animated: true )
             
         } else {
 
-            //Joined( true )
+            _ = Joined( true )
             GoHome()
             
         }
@@ -285,6 +285,8 @@ extension pictureViewController : UIImagePickerControllerDelegate, UINavigationC
             } else {
                 self.imageSecondaryView.image = userImage
             }
+            
+            checkNextEnable()
  
         }
         
