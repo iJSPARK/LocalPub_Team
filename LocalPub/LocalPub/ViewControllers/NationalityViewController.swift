@@ -23,7 +23,6 @@ class NationalityViewController: UIViewController, UITableViewDelegate, UITableV
         if let indexPath = self.nationalityTableView.indexPathForSelectedRow, let P = segue.destination as? profileViewController {
             let selectedData = countryInfo[indexPath.row]
             P.selectedNationality = selectedData
-            
         }
     }
     
