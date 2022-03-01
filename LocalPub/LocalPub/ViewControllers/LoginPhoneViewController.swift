@@ -33,21 +33,10 @@ class loginPhoneViewController: UIViewController {
         
         super.viewDidLoad()
         
-        // textField 값 읽어 들이기
-        // Oulet 없이 실행
-        // Target: txtPhoneCode 눌렀을때 실행할 함수가 있는 object (self)
-        // #selector: 실행할 함수 선택
-        // text 값 바뀔때마다 글자수 감시
         txtPhoneCode.addTarget(self, action: #selector(textFieldDidChanged(textField:)), for: .editingDidEnd)
-        
         SetLocalized()
         btnPhoneVerification.isEnabled = false
         txtPhoneNo.text = myUserDefaults.string( forKey: UserDefault.PhoneNo.toString() )
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        let text = NSAttributedString(string: selectedCountryCode.countryEmoji + " " + selectedCountryCode.countryCode, attributes: [.font: UIFont.systemFont(ofSize: 15)])
-        countryCodeButton.setAttributedTitle(text, for: .normal)
     }
     
     // 6 자리면 승인 버튼 ON
@@ -70,9 +59,8 @@ class loginPhoneViewController: UIViewController {
         txtPhoneNo.placeholder = "InputPhone".localized()
         txtPhoneCode.placeholder = "InputVerificationCode".localized()
         btnPhoneVerification.setTitle( "Verification".localized(), for: .normal )
-        
+        btnSendPhoneVerificationCode.setTitle("Send", for: .normal)
         phoneVerificationLabel.text = "PhoneVerification".localized()
-        
         phoneVerificationDescriptionLabel.text = "PhoneVerificationDescription".localized()
     }
     
@@ -167,9 +155,11 @@ class loginPhoneViewController: UIViewController {
             
     }
  
-    // Cell IBA 연결이 안됨
     @IBAction func unwindToLoginPhone(_ unwindSegue: UIStoryboardSegue) {
-        //let sourceViewController = unwindSegue.source
+        // let sourceViewController = unwindSegue.source
+        
+        let text = selectedCountryCode.countryEmoji + " " + selectedCountryCode.countryCode
+        countryCodeButton.setTitle(text, for: .normal)
     }
 }
 
