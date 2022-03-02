@@ -100,7 +100,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="0jf-9J-XQx">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Jf8-7I-hTg"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Jf8-7I-hTg">
+                            <connections>
+                                <action selector="saveDataAferJoined:" destination="4GL-i9-6Mz" id="eVd-Wh-0H0"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="btnNext" destination="6S3-04-mBh" id="5lm-uo-q0Y"/>
