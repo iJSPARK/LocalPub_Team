@@ -274,8 +274,8 @@ class profileViewController: UIViewController, UITextFieldDelegate {
     @IBAction func saveDataAferJoined(_ sender: Any) {
         
         if checkAllValues() {
-        AlertOK( title: "ProfileEditSuccess".localized(), message: "SuccessProfileEdit".localized(), viewController: self )
             saveData()
+        AlertOK( title: "ProfileEditSuccess".localized(), message: "SuccessProfileEdit".localized(), viewController: self )
         } else {
             AlertOK( title: "ProfileEditFail".localized(), message: "FailProfileEdit".localized(), viewController: self )
         }

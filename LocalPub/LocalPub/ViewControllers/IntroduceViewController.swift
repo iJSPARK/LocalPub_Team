@@ -116,8 +116,7 @@ class intorduceViewController: UIViewController, UITextViewDelegate {
     @IBAction func saveDataAferJoined(_ sender: Any) {
         if checkAllValues() {
             saveData()
-        AlertOK( title: "IntroduceEditSuccessed".localized(), message: "SuccessIntroduceEdit".localized(), viewController: self )
-            saveData()
+            AlertOK( title: "IntroduceEditSuccessed".localized(), message: "SuccessIntroduceEdit".localized(), viewController: self )
         } else {
             AlertOK( title: "IntroduceEditFailed".localized(), message: "FailLanguagesEdit".localized(), viewController: self )
         }

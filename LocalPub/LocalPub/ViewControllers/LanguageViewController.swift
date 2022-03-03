@@ -254,7 +254,6 @@ class languageViewController: UIViewController, UITableViewDelegate, UITableView
         if checkAllValues() {
             saveData()
         AlertOK( title: "LanguagesEditSuccess".localized(), message: "SueccesLanguagesEdit".localized(), viewController: self )
-            saveData()
         } else {
             AlertOK( title: "LanguagesEditFail".localized(), message: "FailLanguagesEdit".localized(), viewController: self )
         }

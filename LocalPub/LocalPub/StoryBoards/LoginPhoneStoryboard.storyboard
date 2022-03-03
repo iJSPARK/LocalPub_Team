@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5mW-x9-1PZ">
-                                <rect key="frame" x="16" y="740" width="358" height="50"/>
+                                <rect key="frame" x="20" y="740" width="471.66666666666669" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="xCy-IS-otL"/>
                                 </constraints>
@@ -31,10 +31,10 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="SwB-0i-uyD" userLabel="Label Stack View">
-                                <rect key="frame" x="16" y="64" width="343.33333333333331" height="62"/>
+                                <rect key="frame" x="20" y="64" width="471.66666666666669" height="62"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Verification" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="woZ-uy-0kw">
-                                        <rect key="frame" x="0.0" y="0.0" width="343.33333333333331" height="24"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="471.66666666666669" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="yTc-Qv-Gg2"/>
                                         </constraints>
@@ -43,7 +43,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FHA-vT-8tG">
-                                        <rect key="frame" x="0.0" y="28" width="343.33333333333331" height="34"/>
+                                        <rect key="frame" x="0.0" y="28" width="471.66666666666669" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="34" id="FhA-5m-OPl"/>
                                         </constraints>
@@ -56,7 +56,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="4SH-aK-cC4">
-                                <rect key="frame" x="16" y="146" width="358" height="104"/>
+                                <rect key="frame" x="20" y="146" width="358" height="104"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="2kK-2N-2JS">
                                         <rect key="frame" x="0.0" y="0.0" width="358" height="44"/>
@@ -161,13 +161,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="4SH-aK-cC4" firstAttribute="top" secondItem="SwB-0i-uyD" secondAttribute="bottom" constant="20" id="5sv-f1-mNp"/>
-                            <constraint firstItem="4SH-aK-cC4" firstAttribute="leading" secondItem="RlP-u2-svO" secondAttribute="leading" constant="16" id="Ggc-dS-byw"/>
-                            <constraint firstItem="SwB-0i-uyD" firstAttribute="leading" secondItem="RlP-u2-svO" secondAttribute="leading" constant="16" id="KbN-Fa-8wy"/>
-                            <constraint firstItem="RlP-u2-svO" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="SwB-0i-uyD" secondAttribute="trailing" constant="16" id="Rjp-qY-0Yf"/>
-                            <constraint firstItem="RlP-u2-svO" firstAttribute="trailing" secondItem="5mW-x9-1PZ" secondAttribute="trailing" constant="16" id="SNT-iE-8js"/>
+                            <constraint firstItem="4SH-aK-cC4" firstAttribute="leading" secondItem="RlP-u2-svO" secondAttribute="leading" constant="20" id="Ggc-dS-byw"/>
+                            <constraint firstItem="SwB-0i-uyD" firstAttribute="leading" secondItem="RlP-u2-svO" secondAttribute="leading" constant="20" id="KbN-Fa-8wy"/>
+                            <constraint firstItem="RlP-u2-svO" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="SwB-0i-uyD" secondAttribute="trailing" constant="20" id="Rjp-qY-0Yf"/>
+                            <constraint firstItem="RlP-u2-svO" firstAttribute="trailing" secondItem="5mW-x9-1PZ" secondAttribute="trailing" constant="20" id="SNT-iE-8js"/>
                             <constraint firstItem="RlP-u2-svO" firstAttribute="bottom" secondItem="5mW-x9-1PZ" secondAttribute="bottom" constant="20" id="TQR-Ks-MNj"/>
-                            <constraint firstItem="5mW-x9-1PZ" firstAttribute="leading" secondItem="RlP-u2-svO" secondAttribute="leading" constant="16" id="nKb-Ly-0B7"/>
-                            <constraint firstItem="RlP-u2-svO" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="4SH-aK-cC4" secondAttribute="trailing" constant="16" id="tN9-tY-4cw"/>
+                            <constraint firstItem="5mW-x9-1PZ" firstAttribute="leading" secondItem="RlP-u2-svO" secondAttribute="leading" constant="20" id="nKb-Ly-0B7"/>
+                            <constraint firstItem="RlP-u2-svO" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="4SH-aK-cC4" secondAttribute="trailing" constant="20" id="tN9-tY-4cw"/>
                             <constraint firstItem="SwB-0i-uyD" firstAttribute="top" secondItem="RlP-u2-svO" secondAttribute="top" constant="20" id="u1h-yr-Lkp"/>
                         </constraints>
                     </view>
