@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Voice Call View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="VoiceCallController" id="Y6W-OH-hqX" customClass="VoiceCallViewController" customModule="LocalPub" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CallUser1" translatesAutoresizingMaskIntoConstraints="NO" id="l4w-HL-K8J">
+                                <rect key="frame" x="66" y="174" width="258" height="152"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="152" id="Mfr-B2-dJ4"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CallUser2" translatesAutoresizingMaskIntoConstraints="NO" id="pQa-f7-tNf">
+                                <rect key="frame" x="66" y="446" width="258" height="152"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="152" id="djh-Lw-A9n"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVa-bD-umq">
+                                <rect key="frame" x="20" y="736" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="N5v-od-ycC"/>
+                                    <constraint firstAttribute="width" constant="44" id="nIS-bB-xjv"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="OutButton" title=""/>
+                                <connections>
+                                    <segue destination="7T2-AO-wcv" kind="unwind" unwindAction="unwindToFindFriend:" id="Q4x-x8-bBr"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TimeBar" translatesAutoresizingMaskIntoConstraints="NO" id="r29-AB-Gbj">
+                                <rect key="frame" x="16" y="64" width="358" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="w1W-r0-gKc"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pQa-f7-tNf" firstAttribute="top" secondItem="l4w-HL-K8J" secondAttribute="bottom" constant="120" id="Fzl-yt-fZS"/>
+                            <constraint firstItem="r29-AB-Gbj" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="IW8-nu-NFU"/>
+                            <constraint firstItem="l4w-HL-K8J" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="chl-w7-Bmu"/>
+                            <constraint firstItem="r29-AB-Gbj" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="hmE-ZD-eVA"/>
+                            <constraint firstItem="l4w-HL-K8J" firstAttribute="top" secondItem="r29-AB-Gbj" secondAttribute="bottom" constant="60" id="kCs-Lg-bVu"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="LVa-bD-umq" secondAttribute="bottom" constant="30" id="q9s-RQ-cq9"/>
+                            <constraint firstItem="pQa-f7-tNf" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="slH-lo-YTF"/>
+                            <constraint firstItem="LVa-bD-umq" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="yvA-ds-32Z"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="7T2-AO-wcv" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="63.768115942028992" y="57.589285714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="CallUser1" width="258" height="152"/>
+        <image name="CallUser2" width="258" height="152"/>
+        <image name="OutButton" width="48" height="48"/>
+        <image name="TimeBar" width="358" height="50"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

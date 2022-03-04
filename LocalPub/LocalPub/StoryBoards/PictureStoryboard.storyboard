@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MvX-uI-U7b">
-    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,20 +13,20 @@
             <objects>
                 <viewController storyboardIdentifier="pictureController" hidesBottomBarWhenPushed="YES" id="MvX-uI-U7b" customClass="pictureViewController" customModule="LocalPub" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="O6B-G2-Xre">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="usC-GF-m8M">
-                                <rect key="frame" x="16" y="80" width="354" height="61.666666666666657"/>
+                                <rect key="frame" x="16" y="36" width="339" height="61.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please upload your photos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EZo-DH-qFr">
-                                        <rect key="frame" x="0.0" y="0.0" width="354" height="24"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="339" height="24"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your photos will never be shown to unspecified random users" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N98-um-PJ9">
-                                        <rect key="frame" x="0.0" y="27.999999999999996" width="354" height="33.666666666666657"/>
+                                        <rect key="frame" x="0.0" y="28" width="339" height="33.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -34,22 +34,22 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Picture for safe calls" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GWI-8D-p1L">
-                                <rect key="frame" x="20" y="171.66666666666666" width="131.66666666666666" height="17"/>
+                                <rect key="frame" x="20" y="127.5" width="131.5" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" systemColor="tintColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="obw-wF-AjN">
-                                <rect key="frame" x="20" y="203.66666666666666" width="350" height="89.999999999999972"/>
+                                <rect key="frame" x="20" y="159.5" width="335" height="90"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.shield.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="oR7-Ig-5Gb">
-                                        <rect key="frame" x="0.0" y="1" width="30" height="88.333333333333329"/>
+                                        <rect key="frame" x="0.0" y="0.5" width="30" height="89"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="30" id="pXn-J8-Dqe"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pictures are needed to prevent malicious users. Please upload 1+ photo that clearly shows your face." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5qC-3B-uPP">
-                                        <rect key="frame" x="30" y="0.0" width="320" height="90"/>
+                                        <rect key="frame" x="30" y="0.0" width="305" height="90"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -59,8 +59,8 @@
                                     <constraint firstAttribute="height" constant="90" id="7Dd-EW-k1s"/>
                                 </constraints>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="kXp-6d-la0">
-                                <rect key="frame" x="37.666666666666657" y="313.66666666666669" width="315" height="225.00000000000006"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="kXp-6d-la0">
+                                <rect key="frame" x="22.5" y="269.5" width="330" height="225"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Yjj-wW-x0O">
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="225"/>
@@ -89,7 +89,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="FnR-RV-16q">
-                                        <rect key="frame" x="165" y="0.0" width="150" height="225"/>
+                                        <rect key="frame" x="180" y="0.0" width="150" height="225"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ewI-tc-Vuc">
                                                 <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
@@ -119,7 +119,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="daI-cO-9sD">
-                                <rect key="frame" x="20" y="740" width="350" height="50"/>
+                                <rect key="frame" x="20" y="597" width="335" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="KGs-D5-mj5"/>
                                 </constraints>

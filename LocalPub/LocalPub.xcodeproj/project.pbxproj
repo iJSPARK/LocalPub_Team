@@ -19,6 +19,8 @@
 		79A6F70B27B8F1FF00D0872C /* LanguageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A6F70A27B8F1FF00D0872C /* LanguageTableViewCell.swift */; };
 		79B6276427C51E080012C396 /* LevelLanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B6276327C51E080012C396 /* LevelLanguageViewController.swift */; };
 		79B6276627C51E980012C396 /* LevelLanguage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79B6276527C51E980012C396 /* LevelLanguage.storyboard */; };
+		79C4A27527D1A82600AA48E7 /* VoiceCall.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79C4A27427D1A82600AA48E7 /* VoiceCall.storyboard */; };
+		79C4A27727D1ADC600AA48E7 /* VoiceCallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C4A27627D1ADC600AA48E7 /* VoiceCallViewController.swift */; };
 		79C5421A27CBC8840092200B /* UserStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79C5421927CBC8840092200B /* UserStoryboard.storyboard */; };
 		84168B1327C3BE4300EF0A22 /* LoginNavStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84168B1227C3BE4300EF0A22 /* LoginNavStoryboard.storyboard */; };
 		84168B1527C3BE4E00EF0A22 /* LoginViewConrtoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84168B1427C3BE4E00EF0A22 /* LoginViewConrtoller.swift */; };
@@ -88,6 +90,8 @@
 		79A6F70A27B8F1FF00D0872C /* LanguageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageTableViewCell.swift; sourceTree = "<group>"; };
 		79B6276327C51E080012C396 /* LevelLanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelLanguageViewController.swift; sourceTree = "<group>"; };
 		79B6276527C51E980012C396 /* LevelLanguage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LevelLanguage.storyboard; sourceTree = "<group>"; };
+		79C4A27427D1A82600AA48E7 /* VoiceCall.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = VoiceCall.storyboard; path = LocalPub/Home/StoryBoards/VoiceCall.storyboard; sourceTree = SOURCE_ROOT; };
+		79C4A27627D1ADC600AA48E7 /* VoiceCallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VoiceCallViewController.swift; path = LocalPub/Home/ViewControllers/VoiceCallViewController.swift; sourceTree = SOURCE_ROOT; };
 		79C5421927CBC8840092200B /* UserStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UserStoryboard.storyboard; sourceTree = "<group>"; };
 		84168B1227C3BE4300EF0A22 /* LoginNavStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginNavStoryboard.storyboard; sourceTree = "<group>"; };
 		84168B1427C3BE4E00EF0A22 /* LoginViewConrtoller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewConrtoller.swift; sourceTree = "<group>"; };
@@ -190,6 +194,7 @@
 			children = (
 				8470BDB927B2FDAF00D1A7C6 /* HomeTabStoryboard.storyboard */,
 				8470BDCA27B44A8B00D1A7C6 /* FindFriendStoryboard.storyboard */,
+				79C4A27427D1A82600AA48E7 /* VoiceCall.storyboard */,
 				8470BDCC27B44AA500D1A7C6 /* CallListStoryboard.storyboard */,
 				79C5421927CBC8840092200B /* UserStoryboard.storyboard */,
 			);
@@ -200,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				8470BDBE27B2FDAF00D1A7C6 /* FindFriendViewController.swift */,
+				79C4A27627D1ADC600AA48E7 /* VoiceCallViewController.swift */,
 				8470BDBD27B2FDAF00D1A7C6 /* CallListViewController.swift */,
 				8470BDC827B3915D00D1A7C6 /* CallViewController.swift */,
 				8470BDBF27B2FDAF00D1A7C6 /* UserViewController.swift */,
@@ -391,6 +397,7 @@
 				84168B1327C3BE4300EF0A22 /* LoginNavStoryboard.storyboard in Resources */,
 				84E2268327A41D4700097CF5 /* LanguageStoryboard.storyboard in Resources */,
 				8470BDCB27B44A8B00D1A7C6 /* FindFriendStoryboard.storyboard in Resources */,
+				79C4A27527D1A82600AA48E7 /* VoiceCall.storyboard in Resources */,
 				8470C06527B8362200D1A7C6 /* PictureStoryboard.storyboard in Resources */,
 				84A1D52A2797DC5100CF7104 /* Assets.xcassets in Resources */,
 			);
@@ -470,6 +477,7 @@
 				7980EDB627AF9F68000578A5 /* CountryCodeViewController.swift in Sources */,
 				796A8FD627BE0D390051B543 /* Language.swift in Sources */,
 				84E2269B27A6E81700097CF5 /* LoginPhoneViewController.swift in Sources */,
+				79C4A27727D1ADC600AA48E7 /* VoiceCallViewController.swift in Sources */,
 				8470BDC427B2FDAF00D1A7C6 /* CallListViewController.swift in Sources */,
 				8470C06727B8388200D1A7C6 /* ImageManager.swift in Sources */,
 				84A1D53B2799526C00CF7104 /* ProfileViewController.swift in Sources */,

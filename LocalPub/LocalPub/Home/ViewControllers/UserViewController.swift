@@ -21,9 +21,9 @@ class userViewController: UIViewController {
     @IBOutlet var imageUser: UIImageView!
     @IBOutlet var lblName: UILabel!
     
-    @IBOutlet weak var profileInfoLabel: UILabel!
-    @IBOutlet weak var LanguageLabel: UILabel!
-    @IBOutlet weak var selfIntroduceLabel: UILabel!
+    @IBOutlet weak var profileButton: UIButton!
+    @IBOutlet weak var languageButton: UIButton!
+    @IBOutlet weak var selfIntroduceButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,10 +63,11 @@ class userViewController: UIViewController {
         
         navUser.title = "User".localized()
         
-        profileInfoLabel.text = "ProfileInformation".localized()
-        LanguageLabel.text = "SelectLanguages".localized()
-        selfIntroduceLabel.text = "SelfIntroduce".localized()
+        profileButton.setTitle("ProfileInformation".localized(), for: .normal)
         
+        languageButton.setTitle("SelectLanguages".localized(), for: .normal)
+        
+        selfIntroduceButton.setTitle("SelfIntroduce".localized(), for: .normal)
     }
     
     func RefreshUserInfo() {
@@ -105,5 +106,4 @@ class userViewController: UIViewController {
                         
         //}
     }
-    
 }

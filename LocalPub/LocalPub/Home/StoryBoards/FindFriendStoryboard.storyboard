@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FHG-28-cTh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EaP-Im-BjB">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -11,7 +11,7 @@
         <!--Find Friend View Controller-->
         <scene sceneID="l0s-jj-wzP">
             <objects>
-                <viewController storyboardIdentifier="findFriendController" id="FHG-28-cTh" customClass="findFriendViewController" customModule="LocalPub" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="FHG-28-cTh" customClass="findFriendViewController" customModule="LocalPub" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0eM-lc-yh2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -30,6 +30,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="GetCall:" destination="FHG-28-cTh" eventType="touchUpInside" id="x3t-Me-UoH"/>
+                                    <segue destination="XfU-hN-HPH" kind="show" id="oJ6-Kj-szI"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -40,12 +41,41 @@
                             <constraint firstItem="OkU-TW-ZVD" firstAttribute="centerX" secondItem="0eM-lc-yh2" secondAttribute="centerX" id="ejb-ho-Iyq"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" image="house" catalog="system" id="y62-8x-CeL"/>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <navigationItem key="navigationItem" id="Njg-ju-26s"/>
                     <connections>
                         <outlet property="btnFindFriend" destination="OkU-TW-ZVD" id="JWf-i9-LdW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5YE-OB-MMY" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-923.1884057971015" y="822.99107142857144"/>
+        </scene>
+        <!--VoiceCallController-->
+        <scene sceneID="kKE-q8-sGA">
+            <objects>
+                <viewControllerPlaceholder storyboardName="VoiceCall" referencedIdentifier="VoiceCallController" id="XfU-hN-HPH" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="HWN-tn-4zy"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NIT-KX-b97" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-92.028985507246389" y="763.39285714285711"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="C0m-0r-276">
+            <objects>
+                <navigationController storyboardIdentifier="findFriendController" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="EaP-Im-BjB" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" image="house" catalog="system" id="y62-8x-CeL"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="W8q-HQ-dxl">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="FHG-28-cTh" kind="relationship" relationship="rootViewController" id="jaZ-xo-Jhs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L9I-em-LzN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1833.3333333333335" y="822.99107142857144"/>
         </scene>
